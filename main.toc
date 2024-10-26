@@ -17,18 +17,22 @@
 \contentsline {section}{\numberline {2.1}Sformułowanie problemu}{5}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Osadzenie tematu w kontekście aktualnego stanu wiedzy (\textit {state of the art})}{5}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Studia literaturowe}{5}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Wymagania i narzędzia}{7}{chapter.3}%
-\contentsline {chapter}{\numberline {4}[Właściwy dla kierunku -- np. Specyfikacja zewnętrzna]}{9}{chapter.4}%
-\contentsline {chapter}{\numberline {5}[Właściwy dla kierunku -- np. Specyfikacja wewnętrzna]}{11}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Weryfikacja i walidacja}{13}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Podsumowanie i wnioski}{15}{chapter.7}%
-\contentsline {chapter}{Bibliografia}{17}{chapter*.11}%
-\contentsline {chapter}{Spis skrótów i symboli}{21}{appendix*.12}%
+\contentsline {chapter}{\numberline {3}Wymagania i narzędzia}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Wymagania funkcjonalne i niefunkcjonalne}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Przypadki użycia i diagramy UML}{10}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Opis narzędzi i metod}{10}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Metodyka pracy nad projektowaniem i implementacją}{10}{section.3.4}%
+\contentsline {chapter}{\numberline {4}[Właściwy dla kierunku -- np. Specyfikacja zewnętrzna]}{11}{chapter.4}%
+\contentsline {chapter}{\numberline {5}[Właściwy dla kierunku -- np. Specyfikacja wewnętrzna]}{13}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Weryfikacja i walidacja}{15}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Podsumowanie i wnioski}{17}{chapter.7}%
+\contentsline {chapter}{Bibliografia}{19}{chapter*.13}%
+\contentsline {chapter}{Spis skrótów i symboli}{23}{appendix*.14}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {chapter}{Źródła}{23}{appendix*.13}%
-\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{25}{appendix*.14}%
-\contentsline {chapter}{Spis rysunków}{27}{appendix*.15}%
-\contentsline {chapter}{Spis tabel}{29}{appendix*.16}%
+\contentsline {chapter}{Źródła}{25}{appendix*.15}%
+\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{27}{appendix*.16}%
+\contentsline {chapter}{Spis rysunków}{29}{appendix*.17}%
+\contentsline {chapter}{Spis tabel}{31}{appendix*.18}%
