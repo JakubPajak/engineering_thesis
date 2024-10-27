@@ -1,7 +1,156 @@
-\chapter{[Właściwy dla kierunku -- np. Specyfikacja zewnętrzna]}
+\chapter{Specyfikacja zewnętrzna}
 \label{ch:04}
 
-Jeśli „Specyfikacja zewnętrzna”:
+W poniższym rozdziale szczegółowo opisano wymagania sprzętowe i programowe, sposób instalacji, aktywacji oraz wszystkie inne informacje konieczne dla użytkownika, które są niezbędne do skutecznego działania platformy mobilnej. 
+
+\section{Wymagania sprzętowe i programowe}
+
+Podstawowym założeniem było wykorzystanie mikrokomputera Raspberry Pi, który stanowi centralny element systemu. Ze względu na jego kompaktowe rozmiary, niską wagę oraz odpowiednią moc obliczeniową, Raspberry Pi idealnie wpisuje się w potrzeby projektu.
+
+\subsubsection*{Wymagania sprzętowe}
+
+\begin{itemize}
+    \item Mikrokomputer Raspberry Pi – wybrany model Raspberry Pi 4 Model B, który charakteryzuje się czterordzeniowym procesorem, co zapewnia wystarczającą moc obliczeniową do przetwarzania obrazu oraz zarządzania algorytmami sterowania.
+    \item Kamera – zastosowano dedykowaną kamerę kompatybilną z Raspberry Pi, która umożliwia przechwytywanie obrazów w wysokiej rozdzielczości. Kamera jest podłączona przez interfejs CSI (ang. \english{Camera Serial Interface}), co zapewnia niskie opóźnienia i wysoką jakość obrazu.
+    \item Silniki i napęd różnicowy – do napędu platformy wykorzystano silniki prądu stałego z enkoderami, które umożliwiają precyzyjne sterowanie ruchem robota oraz monitorowanie jego pozycji.
+    \item Zasilanie – system zasilany jest z pakietu czterech ogniw litowo-jonowych, dostarczających wysatraczjącą ilość napięcia oraz umożliwiających pracę przez odpowieni czas.
+    \item Chwytak - wykorzystano chwytak zasilany jednym serwomechanizmem, wystarczający do realizacji zadań. 
+\end{itemize}
+
+\subsubsection*{Wymagania programowe}
+\begin{itemize}
+    \item Python - język programowania bardzo dobrze sprawdzający się przy wykorzystaniu komputera Raspberry Pi.
+    \item OpenCV - biblioteka umożliwiająca bardzo dużą ilość operacji na obrazie cyfrowym.
+    \item Libcamera2 - biblioteka konieczna do poprawnego wykorzystywania kamery wraz z OpenCV na komputerze Raspberry Pi.
+    \item Raspbian OS - system operacyjny, będący specjalną implementacją systemu Linux, posiadającą wiele wbudwanych biliotek oraz innych udogodnień wspomagająych rozwój oprogramowania na komputerze Raspberry Pi. 
+    \item git - system kontroli wersji, wykorzystany w celu spełnienia standardów rozwoju oprogramowania.
+\end{itemize}
+
+\section{Sposób instalacji}
+
+\subsection{Instalacja systemu operacyjnego}
+
+Pierwszym krokiem w procesie instalacji systemu kontroli robota jest zainstalowanie systemu operacyjnego Raspbian na jednostce centralnej mikrokomputera Raspberry Pi. W celu skutecznej realizacji tego zadania zaleca się skorzystanie z oprogramowania dostarczanego przez firmę Raspberry Pi Ltd, które umożliwia utworzenie przenośnego dysku uruchomieniowego. Dysk ten może przyjąć postać karty microSD lub przenośnego dysku USB. Istnieje również szereg innych programów, które mogą spełniać tę funkcję; jednakże najbardziej rekomendowanym rozwiązaniem jest użycie aplikacji \textit{Raspberry Pi Imager}. Program ten, oprócz możliwości utworzenia dysku startowego, oferuje opcję pobrania odpowiedniej wersji systemu Raspbian lub innego dystrybucji systemu Linux, co czyni go bardzo elastycznym narzędziem, dopasowanym do potrzeb użytkownika.
+
+Zaleca się korzystanie z 64-bitowej wersji systemu Raspbian, zapewnia to lepszą wydajność i większą kompatybilność z aplikacjami.
+
+Po utworzeniu nośnika rozruchowego, należy umieścić kartę microSD lub przenośny dysk USB w odpowiednim gnieździe mikrokomputera Raspberry Pi. Następnie, po podłączeniu urządzenia do źródła zasilania, rozpocznie się proces instalacji systemu operacyjnego. W przypadku, gdy obraz nie jest wyświetlany po podłączeniu mikrokomputera do monitora za pomocą kabla microHDMI, użytkownik powinien zweryfikować ustawienia pliku konfiguracyjnego \textit{config.txt} znajdującego się na nośniku startowym. W szczególności, aby dostosować rozdzielczość wyświetlacza, należy dodać lub zmodyfikować odpowiednie linie w tym pliku. Przykładowy fragment kodu, który można umieścić w pliku \textit{config.txt}, aby ustawić rozdzielczość na 1920x1080, wygląda następująco:
+
+\begin{lstlisting}
+    hdmi_group=1
+    hdmi_mode=16
+\end{lstlisting}
+
+Powyższe parametry konfiguracyjne odpowiadają za wybór standardu HDMI oraz określenie trybu rozdzielczości, gdzie wartość 16 oznacza rozdzielczość 1080p. Po wprowadzeniu zmian w pliku konfiguracyjnym, należy zapisać plik i ponownie uruchomić mikrokomputer.
+
+W przypadku problemów z wyświetlaniem obrazu warto również przetestować inny monitor, jeśli jest on dostępny, ponieważ istnieje możliwość, że dany model monitora nie obsługuje określonego formatu sygnału HDMI.
+
+\vspace*{1cm}
+
+Po instalacji systemu operacyjnego Raspbian na urządzeniu Raspberry Pi, kolejnym istotnym etapem jest instalacja wymaganych pakietów oraz bibliotek, które zapewnią funkcjonalność kluczowych elementów systemu sterowania robota. Wśród podstawowych bibliotek, niezbędnych do poprawnego działania systemu, znajdują się: Python, OpenCV, Libcamera2 oraz RPi.GPIO.
+
+Wszystkie poniższe komendy należy wykonać w terminalu Raspberry Pi, aby pobrać i zainstalować odpowiednie pakiety. Warto zauważyć, że przed przystąpieniem do instalacji zaleca się aktualizację pakietów systemowych.
+
+\subsection{Aktualizacja systemu}
+Dobrą praktyką, umożliwiającą uniknięcie wielu błędów wynikających z braku kompatybilności systemu bazującego na jądrze Linux jest wykonywanie aktualizacji oraz uaktualnienia zainstalowanych pakietów poprzez zdalne repozytorium \textit{apt} wykonując poniższe komendy. 
+
+\begin{lstlisting}[language=bash]
+sudo apt update
+sudo apt upgrade -y
+\end{lstlisting}
+
+\subsection{Instalacja Python}
+Python jest podstawowym językiem programowania, w którym napisana została aplikacja sterująca robotem. Raspbian posiada zazwyczaj zainstalowaną wersję Python, jednak można zainstalować lub zaktualizować go do nowszej lub wymaganej wersji przy użyciu następującej komendy. Niektóre biblioteki lub pakiety wymagają konkretnej wersji Python, na przykład w wersji 3.10, podczas gdy najnowsza wykracza poza wersję 3.12. W związku z powyższym możliwe jest zaistnienie problemu kompatybilności, przez co zaleca się zweryfikowanie, która wersja będzie odpowiednia. W przypadku poniższego projektu wersja 3.10 będzie odpowiednia. 
+
+\begin{lstlisting}[language=bash]
+sudo apt install -y python3 python3-pip
+\end{lstlisting}
+
+\subsection{Instalacja OpenCV}
+OpenCV (ang. \english{Open Source Computer Vision Library}) to biblioteka służąca do przetwarzania obrazu i analizy wizyjnej. W projekcie OpenCV zostanie wykorzystane m.in. do detekcji koloru klocków. Instalacja OpenCV jest możliwa za pomocą menedżera pakietów pip:
+
+\begin{lstlisting}[language=bash]
+pip3 install opencv-python-headless
+\end{lstlisting}
+
+\subsection{Instalacja Libcamera2}
+Biblioteka \textit{Libcamera2} jest odpowiedzialna za obsługę kamery, która jest podłączona do złącza CSI Raspberry Pi. Aby zainstalować pakiet Libcamera2, należy wykonać następujące polecenie (więcej informacji można znaleźć w dokumentacji[\cite{bib:manualLibcamera2}]):
+
+\begin{lstlisting}[language=bash]
+    sudo apt install -y python3-picamera2
+\end{lstlisting}
+
+\subsection{Instalacja RPi.GPIO}
+Biblioteka \textit{RPi.GPIO} zapewnia interfejs programistyczny do korzystania z pinów GPIO (ang. \english{General Purpose Input/Output}) mikrokomputera Raspberry Pi. Zalecana jest instalacja poprzez repozytorium \textit{apt} zamiast \textit{pip}, przez wzgląd na możliwe probkemy z kompatybilnością.
+
+\begin{lstlisting}[language=bash]
+    sudo apt-get update
+    sudo apt-get -y install python-rpi.gpio
+\end{lstlisting}
+
+\vspace*{1cm}
+
+Po zakończeniu instalacji wszystkich wymienionych pakietów i bibliotek, system Raspberry Pi jest gotowy do uruchomienia aplikacji kontrolującej robota. Przed przystąpieniem do pracy zaleca się również zweryfikowanie poszczególnych bibliotek.
+
+\subsection{Weryfikacja instalacji pakietów}
+
+Po zakończeniu procesu instalacji pakietów i bibliotek warto przeprowadzić weryfikację, aby upewnić się, że wszystkie komponenty zostały zainstalowane poprawnie i są gotowe do użycia. Testowanie każdego pakietu z osobna pozwala na szybkie wykrycie ewentualnych problemów i zapewnia, że środowisko pracy jest w pełni skonfigurowane.
+
+\subsubsection{Weryfikacja instalacji Python}
+Aby sprawdzić, czy Python jest poprawnie zainstalowany, w terminalu wpisz:
+
+\begin{lstlisting}[language=bash]
+python3 --version
+\end{lstlisting}
+
+Komenda ta powinna wyświetlić zainstalowaną wersję Python, np. \texttt{Python 3.x.x}. Jeśli polecenie działa bez błędów, oznacza to, że Python jest zainstalowany poprawnie.
+
+\subsubsection{Weryfikacja instalacji OpenCV}
+Aby upewnić się, że biblioteka OpenCV jest dostępna, można przeprowadzić test bezpośrednio w Python. Uruchom interpreter Python komendą:
+
+\begin{lstlisting}[language=bash]
+python3
+\end{lstlisting}
+
+Następnie zaimportuj bibliotekę OpenCV, wpisując:
+
+\begin{lstlisting}[language=Python]
+import cv2
+print(cv2.__version__)
+\end{lstlisting}
+
+Polecenie to wyświetli wersję OpenCV, np. \texttt{4.5.x}. Jeśli import przebiegnie bez błędów, oznacza to, że biblioteka OpenCV działa poprawnie.
+
+\subsubsection{Weryfikacja instalacji Libcamera2}
+Aby sprawdzić poprawność instalacji biblioteki Libcamera2 oraz połączenie kamery, wykonaj testowe przechwycenie obrazu za pomocą poniższej komendy:
+
+\begin{lstlisting}[language=bash]
+libcamera-still -o test_image.jpg
+\end{lstlisting}
+
+Jeżeli kamera działa poprawnie, komenda ta zapisze zdjęcie o nazwie \texttt{test\_image.jpg} w katalogu domyślnym. Otwarcie pliku i weryfikacja jego zawartości potwierdzi działanie kamery i poprawność instalacji.
+
+\section{Sposób aktywacji}
+
+
+\section{Kategorie użytkowników}
+
+
+\section{Sposób obsługi}
+
+
+\section{Administracja systemem}
+
+
+\section{Kwestie bezpieczeństwa}
+
+
+\section{Przykład działania}
+
+
+\section{Scenariusze korzystania z systemu}
+
+
 \begin{itemize}
 \item  wymagania sprzętowe i programowe
 \item  sposób instalacji
@@ -13,6 +162,9 @@ Jeśli „Specyfikacja zewnętrzna”:
 \item  przykład działania
 \item  scenariusze korzystania z systemu (ilustrowane zrzutami z ekranu lub generowanymi dokumentami)
 \end{itemize}
+\
+
+
 
 %%%%%%%%%%%%%%%%%%%%%
 %% RYSUNEK Z PLIKU
@@ -61,31 +213,4 @@ Jeśli „Specyfikacja zewnętrzna”:
 %Rys. \ref{fig:wiele-rysunkow} przestawia wiele ważnych informacji, np. rys. \ref{fig:prawy-gorny} jest na prawo u góry.
 %%%%%%%%%%%%%%%%%%%%%
 
-
- 
-\begin{figure}
-\centering
-\begin{tikzpicture}
-\begin{axis}[
-    y tick label style={
-        /pgf/number format/.cd,
-            fixed,   % po zakomentowaniu os rzednych jest indeksowana wykladniczo
-            fixed zerofill, % 1.0 zamiast 1
-            precision=1,
-        /tikz/.cd
-    },
-    x tick label style={
-        /pgf/number format/.cd,
-            fixed,
-            fixed zerofill,
-            precision=2,
-        /tikz/.cd
-    }
-]
-\addplot [domain=0.0:0.1] {rnd};
-\end{axis} 
-\end{tikzpicture}
-\caption{Podpis rysunku po rysunkiem.}
-\label{fig:2}
-\end{figure}
 
