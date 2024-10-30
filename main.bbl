@@ -45,6 +45,35 @@
     \field{year}{2020}
   \endentry
 
+  \entry{bib:encoders-pid}{article}{}{}
+    \name{author}{2}{}{%
+      {{hash=BR}{%
+         family={Bitriá},
+         familyi={B\bibinitperiod},
+         given={Ricard},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=PJ}{%
+         family={Palacín},
+         familyi={P\bibinitperiod},
+         given={Jordi},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BRPJ1}
+    \strng{fullhash}{BRPJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{Optimal PID Control of a Brushed DC Motor with an Embedded
+  Low-Cost Magnetic Quadrature Encoder for Improved Step Overshoot and
+  Undershoot Responses in a Mobile Robot Application}
+    \field{journaltitle}{Robotics Laboratory, Universitat de Lleida, Jaume II
+  69, 25001 Lleida, Spain}
+    \field{year}{2022}
+  \endentry
+
   \entry{bib:ksiazka}{book}{}{}
     \name{author}{2}{}{%
       {{hash=BG}{%
@@ -133,37 +162,6 @@
     \field{pages}{6}
     \field{title}{PID CONTROLLER FOR A DIFFERENTIAL STEERING MOBILE PLATFORM}
     \field{year}{2015}
-  \endentry
-
-  \entry{bib:internet}{online}{}{}
-    \name{author}{2}{}{%
-      {{hash=NI}{%
-         family={Nazwisko},
-         familyi={N\bibinitperiod},
-         given={Imię},
-         giveni={I\bibinitperiod},
-      }}%
-      {{hash=NI}{%
-         family={Nazwisko},
-         familyi={N\bibinitperiod},
-         given={Imię},
-         giveni={I\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{NINI1}
-    \strng{fullhash}{NINI1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{N}
-    \field{sortinithash}{N}
-    \field{title}{Tytuł strony internetowej}
-    \verb{url}
-    \verb http://gdzies/w/internecie/internet.html
-    \endverb
-    \field{year}{2021}
-    \field{urlday}{30}
-    \field{urlmonth}{09}
-    \field{urlyear}{2021}
   \endentry
 
   \entry{bib:artykul1}{article}{}{}

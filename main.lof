@@ -8,6 +8,9 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Schamat UML zawierający podstawowe funkcjonalności}}{10}{figure.caption.8}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Rysunek przedstawiający ideowo budowę enkodera kwadraturowego oraz sygnałów przez niego generowanych - źródło \blx@tocontentsinit {0}\cite {bib:encoders-pid}}}{14}{figure.caption.9}%
 \addvspace {10\p@ }
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
@@ -16,7 +19,7 @@
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Pseudokod w \texttt {listings}.}}{18}{figure.caption.13}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Pseudokod w \texttt {listings}.}}{25}{figure.caption.15}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -24,5 +27,4 @@
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\addvspace {10\p@ }
 \addvspace {10\p@ }

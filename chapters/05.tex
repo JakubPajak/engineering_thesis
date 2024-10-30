@@ -1,65 +1,224 @@
-\chapter{[Właściwy dla kierunku -- np. Specyfikacja wewnętrzna]}
-\label{ch:05}
+\chapter{Wymagania i specyfikacja użytkowa}
+\label{ch:04}
 
+W poniższym rozdziale szczegółowo opisano wymagania sprzętowe i programowe, sposób instalacji, aktywacji oraz wszystkie inne informacje konieczne dla użytkownika, które są niezbędne do skutecznego działania platformy mobilnej. 
 
-Jeśli „Specyfikacja wewnętrzna”:
+\section{Wymagania sprzętowe i programowe}
+
+Podstawowym założeniem było wykorzystanie mikrokomputera Raspberry Pi, który stanowi centralny element systemu. Ze względu na jego kompaktowe rozmiary, niską wagę oraz odpowiednią moc obliczeniową, Raspberry Pi idealnie wpisuje się w potrzeby projektu.
+
+\subsubsection*{Wymagania sprzętowe}
+
 \begin{itemize}
-\item przedstawienie idei
-\item architektura systemu
-\item opis struktur danych (i organizacji baz danych)
-\item komponenty, moduły, biblioteki, przegląd ważniejszych klas (jeśli występują)
-\item przegląd ważniejszych algorytmów (jeśli występują)
-\item szczegóły implementacji wybranych fragmentów, zastosowane wzorce projektowe
-\item diagramy UML
+    \item Mikrokomputer Raspberry Pi – wybrany model Raspberry Pi 4 Model B, który charakteryzuje się czterordzeniowym procesorem, co zapewnia wystarczającą moc obliczeniową do przetwarzania obrazu oraz zarządzania algorytmami sterowania.
+    \item Kamera – zastosowano dedykowaną kamerę kompatybilną z Raspberry Pi, która umożliwia przechwytywanie obrazów w wysokiej rozdzielczości. Kamera jest podłączona przez interfejs CSI (ang. \english{Camera Serial Interface}), co zapewnia niskie opóźnienia i wysoką jakość obrazu.
+    \item Silniki i napęd różnicowy – do napędu platformy wykorzystano silniki prądu stałego z enkoderami, które umożliwiają precyzyjne sterowanie ruchem robota oraz monitorowanie jego pozycji.
+    \item Zasilanie – system zasilany jest z pakietu czterech ogniw litowo-jonowych, dostarczających wysatraczjącą ilość napięcia oraz umożliwiających pracę przez odpowieni czas.
+    \item Chwytak - wykorzystano chwytak zasilany jednym serwomechanizmem, wystarczający do realizacji zadań. 
 \end{itemize}
 
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-% Pakiet minted wymaga importu: \usepackage{minted}                 %
-% i specjalnego kompilowania:                                       %
-% pdflatex -shell-escape main                                       %
-% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\subsubsection*{Wymagania programowe}
+\begin{itemize}
+    \item Python - język programowania bardzo dobrze sprawdzający się przy wykorzystaniu komputera Raspberry Pi.
+    \item OpenCV - biblioteka umożliwiająca bardzo dużą ilość operacji na obrazie cyfrowym.
+    \item Libcamera2 - biblioteka konieczna do poprawnego wykorzystywania kamery wraz z OpenCV na komputerze Raspberry Pi.
+    \item Raspbian OS - system operacyjny, będący specjalną implementacją systemu Linux, posiadającą wiele wbudwanych biliotek oraz innych udogodnień wspomagająych rozwój oprogramowania na komputerze Raspberry Pi. 
+    \item git - system kontroli wersji, wykorzystany w celu spełnienia standardów rozwoju oprogramowania.
+\end{itemize}
 
+\section{Sposób instalacji}
 
-Krótka wstawka kodu w linii tekstu jest możliwa, np.  \lstinline|int a;| (biblioteka \texttt{listings})% lub  \mintinline{C++}|int a;| (biblioteka \texttt{minted})
-. 
-Dłuższe fragmenty lepiej jest umieszczać jako rysunek, np. kod na rys \ref{fig:pseudokod:listings}% i rys. \ref{fig:pseudokod:minted}
-, a naprawdę długie fragmenty – w załączniku.
+\subsection{Instalacja systemu operacyjnego}
 
+Pierwszym krokiem w procesie instalacji systemu kontroli robota jest zainstalowanie systemu operacyjnego Raspbian na jednostce centralnej mikrokomputera Raspberry Pi. W celu skutecznej realizacji tego zadania zaleca się skorzystanie z oprogramowania dostarczanego przez firmę Raspberry Pi Ltd, które umożliwia utworzenie przenośnego dysku uruchomieniowego. Dysk ten może przyjąć postać karty microSD lub przenośnego dysku USB. Istnieje również szereg innych programów, które mogą spełniać tę funkcję; jednakże najbardziej rekomendowanym rozwiązaniem jest użycie aplikacji \textit{Raspberry Pi Imager}. Program ten, oprócz możliwości utworzenia dysku startowego, oferuje opcję pobrania odpowiedniej wersji systemu Raspbian lub innego dystrybucji systemu Linux, co czyni go bardzo elastycznym narzędziem, dopasowanym do potrzeb użytkownika.
 
-\begin{figure}
-\centering
+Zaleca się korzystanie z 64-bitowej wersji systemu Raspbian, zapewnia to lepszą wydajność i większą kompatybilność z aplikacjami.
+
+Po utworzeniu nośnika rozruchowego, należy umieścić kartę microSD lub przenośny dysk USB w odpowiednim gnieździe mikrokomputera Raspberry Pi. Następnie, po podłączeniu urządzenia do źródła zasilania, rozpocznie się proces instalacji systemu operacyjnego. W przypadku, gdy obraz nie jest wyświetlany po podłączeniu mikrokomputera do monitora za pomocą kabla microHDMI, użytkownik powinien zweryfikować ustawienia pliku konfiguracyjnego \textit{config.txt} znajdującego się na nośniku startowym. W szczególności, aby dostosować rozdzielczość wyświetlacza, należy dodać lub zmodyfikować odpowiednie linie w tym pliku. Przykładowy fragment kodu, który można umieścić w pliku \textit{config.txt}, aby ustawić rozdzielczość na 1920x1080, wygląda następująco:
+
 \begin{lstlisting}
-class test : public basic
-{
-    public:
-      test (int a);
-      friend std::ostream operator<<(std::ostream & s, 
-                                     const test & t);
-    protected:
-      int _a;  
-      
-};
+    hdmi_group=1
+    hdmi_mode=16
 \end{lstlisting}
-\caption{Pseudokod w \texttt{listings}.}
-\label{fig:pseudokod:listings}
-\end{figure}
 
+Powyższe parametry konfiguracyjne odpowiadają za wybór standardu HDMI oraz określenie trybu rozdzielczości, gdzie wartość 16 oznacza rozdzielczość 1080p. Po wprowadzeniu zmian w pliku konfiguracyjnym, należy zapisać plik i ponownie uruchomić mikrokomputer.
+
+W przypadku problemów z wyświetlaniem obrazu warto również przetestować inny monitor, jeśli jest on dostępny, ponieważ istnieje możliwość, że dany model monitora nie obsługuje określonego formatu sygnału HDMI.
+
+\vspace*{1cm}
+
+Po instalacji systemu operacyjnego Raspbian na urządzeniu Raspberry Pi, kolejnym istotnym etapem jest instalacja wymaganych pakietów oraz bibliotek, które zapewnią funkcjonalność kluczowych elementów systemu sterowania robota. Wśród podstawowych bibliotek, niezbędnych do poprawnego działania systemu, znajdują się: Python, OpenCV, Libcamera2 oraz RPi.GPIO.
+
+Wszystkie poniższe komendy należy wykonać w terminalu Raspberry Pi, aby pobrać i zainstalować odpowiednie pakiety. Warto zauważyć, że przed przystąpieniem do instalacji zaleca się aktualizację pakietów systemowych.
+
+\subsection{Aktualizacja systemu}
+Dobrą praktyką, umożliwiającą uniknięcie wielu błędów wynikających z braku kompatybilności systemu bazującego na jądrze Linux jest wykonywanie aktualizacji oraz uaktualnienia zainstalowanych pakietów poprzez zdalne repozytorium \textit{apt} wykonując poniższe komendy. 
+
+\begin{lstlisting}[language=bash]
+sudo apt update
+sudo apt upgrade -y
+\end{lstlisting}
+
+\subsection{Instalacja Python}
+Python jest podstawowym językiem programowania, w którym napisana została aplikacja sterująca robotem. Raspbian posiada zazwyczaj zainstalowaną wersję Python, jednak można zainstalować lub zaktualizować go do nowszej lub wymaganej wersji przy użyciu następującej komendy. Niektóre biblioteki lub pakiety wymagają konkretnej wersji Python, na przykład w wersji 3.10, podczas gdy najnowsza wykracza poza wersję 3.12. W związku z powyższym możliwe jest zaistnienie problemu kompatybilności, przez co zaleca się zweryfikowanie, która wersja będzie odpowiednia. W przypadku poniższego projektu wersja 3.10 będzie odpowiednia. 
+
+\begin{lstlisting}[language=bash]
+sudo apt install -y python3 python3-pip
+\end{lstlisting}
+
+\subsection{Instalacja OpenCV}
+OpenCV (ang. \english{Open Source Computer Vision Library}) to biblioteka służąca do przetwarzania obrazu i analizy wizyjnej. W projekcie OpenCV zostanie wykorzystane m.in. do detekcji koloru klocków. Instalacja OpenCV jest możliwa za pomocą menedżera pakietów pip:
+
+\begin{lstlisting}[language=bash]
+pip3 install opencv-python-headless
+\end{lstlisting}
+
+\subsection{Instalacja Libcamera2}
+Biblioteka \textit{Libcamera2} jest odpowiedzialna za obsługę kamery, która jest podłączona do złącza CSI Raspberry Pi. Aby zainstalować pakiet Libcamera2, należy wykonać następujące polecenie (więcej informacji można znaleźć w dokumentacji[\cite{bib:manualLibcamera2}]):
+
+\begin{lstlisting}[language=bash]
+    sudo apt install -y python3-picamera2
+\end{lstlisting}
+
+\subsection{Instalacja RPi.GPIO}
+Biblioteka \textit{RPi.GPIO} zapewnia interfejs programistyczny do korzystania z pinów GPIO (ang. \english{General Purpose Input/Output}) mikrokomputera Raspberry Pi. Zalecana jest instalacja poprzez repozytorium \textit{apt} zamiast \textit{pip}, przez wzgląd na możliwe probkemy z kompatybilnością.
+
+\begin{lstlisting}[language=bash]
+    sudo apt-get update
+    sudo apt-get -y install python-rpi.gpio
+\end{lstlisting}
+
+\vspace*{1cm}
+
+Po zakończeniu instalacji wszystkich wymienionych pakietów i bibliotek, system Raspberry Pi jest gotowy do uruchomienia aplikacji kontrolującej robota. Przed przystąpieniem do pracy zaleca się również zweryfikowanie poszczególnych bibliotek.
+
+\subsection{Weryfikacja instalacji pakietów}
+
+Po zakończeniu procesu instalacji pakietów i bibliotek warto przeprowadzić weryfikację, aby upewnić się, że wszystkie komponenty zostały zainstalowane poprawnie i są gotowe do użycia. Testowanie każdego pakietu z osobna pozwala na szybkie wykrycie ewentualnych problemów i zapewnia, że środowisko pracy jest w pełni skonfigurowane.
+
+\subsubsection{Weryfikacja instalacji Python}
+Aby sprawdzić, czy Python jest poprawnie zainstalowany, w terminalu wpisz:
+
+\begin{lstlisting}[language=bash]
+python3 --version
+\end{lstlisting}
+
+Komenda ta powinna wyświetlić zainstalowaną wersję Python, np. \texttt{Python 3.x.x}. Jeśli polecenie działa bez błędów, oznacza to, że Python jest zainstalowany poprawnie.
+
+\subsubsection{Weryfikacja instalacji OpenCV}
+Aby upewnić się, że biblioteka OpenCV jest dostępna, można przeprowadzić test bezpośrednio w Python. Uruchom interpreter Python komendą:
+
+\begin{lstlisting}[language=bash]
+python3
+\end{lstlisting}
+
+Następnie zaimportuj bibliotekę OpenCV, wpisując:
+
+\begin{lstlisting}[language=Python]
+import cv2
+print(cv2.__version__)
+\end{lstlisting}
+
+Polecenie to wyświetli wersję OpenCV, np. \texttt{4.5.x}. Jeśli import przebiegnie bez błędów, oznacza to, że biblioteka OpenCV działa poprawnie.
+
+\subsubsection{Weryfikacja instalacji Libcamera2}
+Aby sprawdzić poprawność instalacji biblioteki Libcamera2 oraz połączenie kamery, wykonaj testowe przechwycenie obrazu za pomocą poniższej komendy:
+
+\begin{lstlisting}[language=bash]
+libcamera-still -o test_image.jpg
+\end{lstlisting}
+
+Jeżeli kamera działa poprawnie, komenda ta zapisze zdjęcie o nazwie \texttt{test\_image.jpg} w katalogu domyślnym. Otwarcie pliku i weryfikacja jego zawartości potwierdzi działanie kamery i poprawność instalacji.
+
+\subsection{Sposób aktywacji}
+\label{sekcja:43}
+Proces aktywacji systemu sterowania robotem jest stosunkowo prosty, zakładając poprawną instalację wszystkich wymaganych bibliotek i pakietów. Należy jednak przed przystąpieniem do aktywacji zweryfikować, czy wszystkie wymagane komponenty zostały poprawnie zainstalowane, aby uniknąć potencjalnych problemów.
+
+Po upewnieniu się, że wszystkie pakiety są zainstalowane poprawnie, można przystąpić do pobrania repozytorium zawierającego kod aplikacji. Aby to wykonać, należy w terminalu wprowadzić poniższe polecenie:
+
+\begin{lstlisting}[language=bash]
+    git clone https://github.com/JakubPajak/robot-control-system.git
+\end{lstlisting}
+
+Po udanym sklonowaniu repozytorium należy przejść do katalogu z pobranymi plikami, aby uzyskać dostęp do aplikacji:
+
+\begin{lstlisting}[language=bash]
+    cd current_v2/control_system/
+\end{lstlisting}
+
+Następnie uruchomić główny plik aplikacji:
+
+\begin{lstlisting}[language=bash]
+    python3 main.py
+\end{lstlisting}
+
+Po wykonaniu powyższych kroków aplikacja uruchomi się w trybie terminalowym. Planowane jest, aby przyszłe wersje aplikacji zostały dostosowane do uruchamiania w przeglądarce, poprawi jakoś użytkowania oraz umożliwi wprowadzenie dodatkowych funkcji.
+
+Po uruchomieniu aplikacji wyświetli się menu wyboru trybu pracy, w którym użytkownik może wybrać tryb odpowiedni dla swoich potrzeb. Domyślnym trybem pracy robota jest tryb automatyczny, który nie wymaga ingerencji operatora. Inne opcje umożliwiają ręczną weryfikację działania systemów, takich jak system wizji komputerowej czy tryb sterowania manualnego.
+
+\subsection{Kategorie użytkowników}
+Obecna wersja systemu sterowania robotem nie różnicuje ról użytkowników, co oznacza, że każda osoba mająca dostęp do terminala może swobodnie obsługiwać robota. W planowanych przyszłych wersjach aplikacji, szczególnie tych działających w przeglądarce, zostanie wprowadzona autoryzacja użytkowników. Dzięki niej system będzie posiadał bazę danych użytkowników oraz przypisane im role, co zapewni lepsze zarządzanie dostępem zgodnie z kompetencjami użytkowników.
+
+\subsection{Sposób obsługi}
+Aby rozpocząć pracę z robotem, należy ustawić go w pozycji startowej, zamieszczonej w załączniku [DODAC ZAŁĄCZNIK] oraz uruchomić aplikację zgodnie z instrukcją zawartą w sekcji \textit{Sposób aktywacji}. Robot automatycznie rozpocznie wykonywanie zadań w trybie autonomicznym, co oznacza, że obsługa użytkownika ograniczy się jedynie do monitorowania pracy robota i ewentualnej korekty ścieżki za pomocą dostępnych opcji sterowania manualnego.
+
+\subsection{Kwestie bezpieczeństwa}
+W związku z tym, że robot wykorzystuje komponenty mechaniczne oraz podzespoły elektroniczne, przestrzeganie zasad bezpieczeństwa jest kluczowe dla ochrony użytkownika i urządzenia. Przed uruchomieniem robota należy upewnić się, że w jego otoczeniu nie znajdują się żadne przeszkody lub przedmioty, które mogłyby zakłócić jego pracę. W trakcie działania należy unikać bezpośredniego kontaktu z ruchomymi częściami robota. W przypadku ręcznej kontroli urządzenia sugeruje się korzystanie z trybu terminalowego lub przeglądarkowego, który zminimalizuje ryzyko kontaktu z urządzeniem.
+
+\subsection{Przykład działania}
+Aby zapoznać się z przykładowym działaniem robotycznego systemu sortowania, użytkownik może obejrzeć nagrania zamieszczone na dołączonym nośniku CD. Nagrania ilustrują funkcjonowanie systemu podczas sortowania elementów według ustalonych kryteriów i przedstawiają interakcje pomiędzy poszczególnymi modułami.
+
+\subsection{Scenariusze korzystania z systemu}
+System sortowania został zaprojektowany z myślą o szerokim zastosowaniu w różnych gałęziach przemysłu, takich jak produkcja i zarządzanie powierzchniami magazynowymi. Dzięki elastycznej budowie robot może zostać rozbudowany o dodatkowe funkcje, które umożliwią wykorzystanie go w grupach autonomicznych robotów. Tego rodzaju rozwiązania mogą znaleźć zastosowanie w zadaniach wymagających pełnej autonomii, jak na przykład transport materiałów w rozbudowanych konfiguracjach magazynowych i produkcyjnych, zwiększając efektywność i automatyzację procesów.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%
+%% RYSUNEK Z PLIKU
+%
 %\begin{figure}
 %\centering
-%\begin{minted}[linenos,frame=lines]{c++}
-%class test : public basic
-%{
-%    public:
-%      test (int a);
-%      friend std::ostream operator<<(std::ostream & s, 
-%                                     const test & t);
-%    protected:
-%      int _a;  
-%      
-%};
-%\end{minted}
-%\caption{Pseudokod w \texttt{minted}.}
-%\label{fig:pseudokod:minted}
+%\includegraphics[width=0.5\textwidth]{./graf/politechnika_sl_logo_bw_pion_pl.pdf}
+%\caption{Podpis rysunku zawsze pod rysunkiem.}
+%\label{fig:etykieta-rysunku}
 %\end{figure}
+%Rys. \ref{fig:etykieta-rysunku} przestawia …
+%%%%%%%%%%%%%%%%%%%%%
+%
+%%%%%%%%%%%%%%%%%%%%%
+%% WIELE RYSUNKÓW 
+%
+%\begin{figure}
+%\centering
+%\begin{subfigure}{0.4\textwidth}
+%    \includegraphics[width=\textwidth]{./graf/politechnika_sl_logo_bw_pion_pl.pdf}
+%    \caption{Lewy górny rysunek.}
+%    \label{fig:lewy-gorny}
+%\end{subfigure}
+%\hfill
+%\begin{subfigure}{0.4\textwidth}
+%    \includegraphics[width=\textwidth]{./graf/politechnika_sl_logo_bw_pion_pl.pdf}
+%    \caption{Prawy górny rysunek.}
+%    \label{fig:prawy-gorny}
+%\end{subfigure}
+%
+%\begin{subfigure}{0.4\textwidth}
+%    \includegraphics[width=\textwidth]{./graf/politechnika_sl_logo_bw_pion_pl.pdf}
+%    \caption{Lewy dolny rysunek.}
+%    \label{fig:lewy-dolny}
+%\end{subfigure}
+%\hfill
+%\begin{subfigure}{0.4\textwidth}
+%    \includegraphics[width=\textwidth]{./graf/politechnika_sl_logo_bw_pion_pl.pdf}
+%    \caption{Prawy dolny rysunek.}
+%    \label{fig:prawy-dolny}
+%\end{subfigure}
+%        
+%\caption{Wspólny podpis kilku rysunków.}
+%\label{fig:wiele-rysunkow}
+%\end{figure}
+%Rys. \ref{fig:wiele-rysunkow} przestawia wiele ważnych informacji, np. rys. \ref{fig:prawy-gorny} jest na prawo u góry.
+%%%%%%%%%%%%%%%%%%%%%
 
 
