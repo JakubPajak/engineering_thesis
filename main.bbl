@@ -74,6 +74,27 @@
     \field{year}{2022}
   \endentry
 
+  \entry{bib:botland-hall}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=B}{%
+         family={Botland.pl},
+         familyi={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{B1}
+    \strng{fullhash}{B1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{Botland.pl}
+    \verb{url}
+    \verb https://botland.com.pl/silniki-dc-z-przekladnia-i-enkoderami/6288-sil
+    \verb nik-katowy-z-przekladnia-sj02-1201-6v-160rpm-enkoder-6959420910199.ht
+    \verb ml
+    \endverb
+  \endentry
+
   \entry{bib:ksiazka}{book}{}{}
     \name{author}{2}{}{%
       {{hash=BG}{%
@@ -122,6 +143,27 @@
     \field{sortinit}{C}
     \field{sortinithash}{C}
     \field{title}{Introduction to Arduino}
+  \endentry
+
+  \entry{bib:hall_net}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=E}{%
+         family={EBMiA},
+         familyi={E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{E1}
+    \strng{fullhash}{E1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \field{title}{EBMiA.pl}
+    \verb{url}
+    \verb https://www.ebmia.pl/wiedza/porady/automatyka-porady/czujnik-halla-co
+    \verb -to-jest-jak-dziala-i-jak-sprawdzic/
+    \endverb
+    \field{year}{2023}
   \endentry
 
   \entry{bib:manualLibcamera2}{manual}{}{}
@@ -186,6 +228,85 @@
     \field{volume}{4}
     \field{journaltitle}{IRE Journals}
     \field{year}{2021}
+  \endentry
+
+  \entry{bib:rgb-model}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=R}{%
+         family={ReearchGate.net},
+         familyi={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{R1}
+    \strng{fullhash}{R1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{title}{ResearchGate}
+    \verb{url}
+    \verb https://www.researchgate.net/figure/a-RGB-Color-Space-7-b-YCbCr-Color
+    \verb -Space-8_fig1_298734907
+    \endverb
+  \endentry
+
+  \entry{bib:hsv-model}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=R}{%
+         family={ReearchGate.net},
+         familyi={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{R1}
+    \strng{fullhash}{R1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{title}{ResearchGate}
+    \verb{url}
+    \verb https://www.researchgate.net/figure/HSV-color-space-and-RGB-color-tra
+    \verb nsformation_fig4_312678134
+    \endverb
+  \endentry
+
+  \entry{bib:ycrcb-model}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=R}{%
+         family={ReearchGate.net},
+         familyi={R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{R1}
+    \strng{fullhash}{R1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{R}
+    \field{sortinithash}{R}
+    \field{title}{ResearchGate}
+    \verb{url}
+    \verb https://www.researchgate.net/figure/YCbCr-Color-Space-4_fig3_35759458
+    \verb 7
+    \endverb
+  \endentry
+
+  \entry{bib:wiki-regulacja}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=W}{%
+         family={Wikipedia.com},
+         familyi={W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{W1}
+    \strng{fullhash}{W1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{W}
+    \field{sortinithash}{W}
+    \field{title}{Układ regulacji (automatyka)}
+    \verb{url}
+    \verb https://pl.wikipedia.org/wiki/Uk%C5%82ad_regulacji_%28automatyka%29
+    \endverb
   \endentry
 
   \entry{bib:artykul}{article}{}{}

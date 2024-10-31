@@ -26,45 +26,72 @@
 \contentsline {section}{\numberline {3.4}Metodyka pracy i etapy projektu}{11}{section.3.4}%
 \contentsline {chapter}{\numberline {4}Podstawy teoretyczne}{13}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Enkodery}{13}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Enkodery kwadraturowe}{13}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Enkodery kwadraturowe w odometrii}{14}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.1}Rodzaje enkoderów}{13}{subsection.4.1.1}%
+\contentsline {subsubsection}{Efekt Hall'a}{14}{section*.9}%
+\contentsline {subsection}{\numberline {4.1.2}Enkodery kwadraturowe}{14}{subsection.4.1.2}%
 \contentsline {section}{\numberline {4.2}Regulator PID}{15}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Podstawy wykrywania krawędzi w wizji komputerowej}{15}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Podstawy rozpoznawania kolorów w wizji komputerowej}{15}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Wymagania i specyfikacja użytkowa}{17}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Wymagania sprzętowe i programowe}{17}{section.5.1}%
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\contentsline {section}{\numberline {5.2}Sposób instalacji}{18}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Instalacja systemu operacyjnego}{18}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Aktualizacja systemu}{19}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Instalacja Python}{19}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Instalacja OpenCV}{20}{subsection.5.2.4}%
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\contentsline {subsection}{\numberline {5.2.5}Instalacja Libcamera2}{20}{subsection.5.2.5}%
-\contentsline {subsection}{\numberline {5.2.6}Instalacja RPi.GPIO}{20}{subsection.5.2.6}%
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\contentsline {subsection}{\numberline {5.2.7}Weryfikacja instalacji pakietów}{20}{subsection.5.2.7}%
-\contentsline {subsubsection}{Weryfikacja instalacji Python}{21}{section*.12}%
-\contentsline {subsubsection}{Weryfikacja instalacji OpenCV}{21}{section*.13}%
-\contentsline {subsubsection}{Weryfikacja instalacji Libcamera2}{21}{section*.14}%
-\contentsline {subsection}{\numberline {5.2.8}Sposób aktywacji}{21}{subsection.5.2.8}%
-\contentsline {subsection}{\numberline {5.2.9}Kategorie użytkowników}{22}{subsection.5.2.9}%
-\contentsline {subsection}{\numberline {5.2.10}Sposób obsługi}{22}{subsection.5.2.10}%
-\contentsline {subsection}{\numberline {5.2.11}Kwestie bezpieczeństwa}{22}{subsection.5.2.11}%
-\contentsline {subsection}{\numberline {5.2.12}Przykład działania}{23}{subsection.5.2.12}%
-\contentsline {subsection}{\numberline {5.2.13}Scenariusze korzystania z systemu}{23}{subsection.5.2.13}%
-\contentsline {chapter}{\numberline {6}Specyfikacja techniczna}{25}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Weryfikacja i walidacja}{27}{chapter.7}%
-\contentsline {chapter}{Bibliografia}{29}{chapter*.17}%
-\contentsline {chapter}{Podsumowanie i wnioski}{33}{appendix*.18}%
-\contentsline {chapter}{Spis skrótów i symboli}{35}{appendix*.19}%
+\contentsline {subsection}{\numberline {4.2.1}Ogólny schemat układu regulacji}{16}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Działanie regulatora PID}{16}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Składnik proporcjonalny $P$}{16}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Składnik całkujący $I$}{17}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Składnik różniczkujący $D$}{17}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}Pełne równanie regulatora PID}{17}{subsection.4.2.6}%
+\contentsline {subsection}{\numberline {4.2.7}Zastosowanie regulatora PID w sterowaniu robotem mobilnym}{18}{subsection.4.2.7}%
+\contentsline {section}{\numberline {4.3}Podstawy wykrywania krawędzi w wizji komputerowej}{18}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Algorytm Canny’ego}{18}{subsection.4.3.1}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {chapter}{Źródła}{37}{appendix*.20}%
-\contentsline {chapter}{Spis rysunków}{39}{appendix*.21}%
-\contentsline {chapter}{Spis tabel}{41}{appendix*.22}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {section}{\numberline {4.4}Podstawy rozpoznawania kolorów w wizji komputerowej}{19}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Teoria koloru}{19}{subsection.4.4.1}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {subsection}{\numberline {4.4.2}Proces rozpoznawania kolorów}{20}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Algorytmy rozpoznawania kolorów}{20}{subsection.4.4.3}%
+\contentsline {chapter}{\numberline {5}Wymagania i specyfikacja użytkowa}{23}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Wymagania sprzętowe i programowe}{23}{section.5.1}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {section}{\numberline {5.2}Sposób instalacji}{24}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Instalacja systemu operacyjnego}{24}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Aktualizacja systemu}{25}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Instalacja Python}{25}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Instalacja OpenCV}{26}{subsection.5.2.4}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {subsection}{\numberline {5.2.5}Instalacja Libcamera2}{26}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}Instalacja RPi.GPIO}{26}{subsection.5.2.6}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {subsection}{\numberline {5.2.7}Weryfikacja instalacji pakietów}{26}{subsection.5.2.7}%
+\contentsline {subsubsection}{Weryfikacja instalacji Python}{27}{section*.19}%
+\contentsline {subsubsection}{Weryfikacja instalacji OpenCV}{27}{section*.20}%
+\contentsline {subsubsection}{Weryfikacja instalacji Libcamera2}{27}{section*.21}%
+\contentsline {subsection}{\numberline {5.2.8}Sposób aktywacji}{27}{subsection.5.2.8}%
+\contentsline {subsection}{\numberline {5.2.9}Kategorie użytkowników}{28}{subsection.5.2.9}%
+\contentsline {subsection}{\numberline {5.2.10}Sposób obsługi}{28}{subsection.5.2.10}%
+\contentsline {subsection}{\numberline {5.2.11}Kwestie bezpieczeństwa}{28}{subsection.5.2.11}%
+\contentsline {subsection}{\numberline {5.2.12}Przykład działania}{29}{subsection.5.2.12}%
+\contentsline {subsection}{\numberline {5.2.13}Scenariusze korzystania z systemu}{29}{subsection.5.2.13}%
+\contentsline {chapter}{\numberline {6}Specyfikacja techniczna}{31}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Weryfikacja i walidacja}{33}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Podsumowanie i wnioski}{35}{chapter.8}%
+\contentsline {chapter}{Bibliografia}{38}{chapter*.24}%
+\contentsline {chapter}{Spis skrótów i symboli}{41}{appendix*.25}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {chapter}{Źródła}{43}{appendix*.26}%
+\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{45}{appendix*.27}%
+\contentsline {chapter}{Spis rysunków}{47}{appendix*.28}%
+\contentsline {chapter}{Spis tabel}{49}{appendix*.29}%

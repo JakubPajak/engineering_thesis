@@ -10,7 +10,27 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Schamat UML zawierający podstawowe funkcjonalności}}{10}{figure.caption.8}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Rysunek przedstawiający ideowo budowę enkodera kwadraturowego oraz sygnałów przez niego generowanych - źródło \blx@tocontentsinit {0}\cite {bib:encoders-pid}}}{14}{figure.caption.9}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Rysunek przedstawiający zasadę działania czujnika Hall'a \blx@tocontentsinit {0}\cite {bib:hall_net}}}{14}{figure.caption.10}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Rysunek przedstawiający ideowo budowę enkodera kwadraturowego oraz sygnałów przez niego generowanych \blx@tocontentsinit {0}\cite {bib:encoders-pid}}}{15}{figure.caption.11}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Rysunek przedstawiający przykładowy wygląd enkodera opartego o efekt Hall'a. Czerwonymi kwadratami są zaznaczone tranzystory wykrywające zmianę pola magnetycznego podczas obrotu wału \blx@tocontentsinit {0}\cite {bib:botland-hall}}}{15}{figure.caption.12}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Rysunek przedstawiający ogólny schemat układu regulacji automatycznej \blx@tocontentsinit {0}\cite {bib:wiki-regulacja}}}{16}{figure.caption.13}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Rysunek przedstawiający wizualizację przestrzeni kolorów RGB \blx@tocontentsinit {0}\cite {bib:rgb-model}}}{21}{figure.caption.14}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Rysunek przedstawiający wizualizację przestrzeni HSV \blx@tocontentsinit {0}\cite {bib:hsv-model}}}{21}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Rysunek przedstawiający wizualizację przestrzeni YCrCb \blx@tocontentsinit {0}\cite {bib:ycrcb-model}}}{21}{figure.caption.16}%
 \addvspace {10\p@ }
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
@@ -19,7 +39,7 @@
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Pseudokod w \texttt {listings}.}}{25}{figure.caption.15}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Pseudokod w \texttt {listings}.}}{31}{figure.caption.22}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -27,4 +47,5 @@
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
+\addvspace {10\p@ }
 \addvspace {10\p@ }
