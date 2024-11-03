@@ -1,5 +1,117 @@
 \chapter{Specyfikacja techniczna}
-\label{ch:05}
+\label{ch:06}
+
+\section{Konstrukcja}
+Proces konstrukcji robota przebiegał w dwóch głównych etapach, z których każdy miał na celu stopniowe zwiększanie funkcjonalności, stabilności oraz dokładności działania platformy mobilnej, co było konieczne do realizacji wszystkich założonych celów projektu.
+
+Pierwszy etap polegał na przygotowaniu prototypowej wersji robota, która spełniała podstawowe wymagania wynikające z założeń konstrukcyjnych dotyczących napędu oraz sterowania. W fazie prototypowej zdecydowano się na wykorzystanie sklejki brzozowej – materiału taniego, lekkiego oraz łatwego w obróbce. Platforma bazowa prototypu miała wymiary 240 mm długości oraz 220 mm szerokości, co pozwalało na osadzenie silników w osi centralnej zgodnie z przyjętym projektem napędu. Taka konfiguracja umożliwiła szybką weryfikację działania elementów wykonawczych oraz systemu sterowania, jeszcze przed przystąpieniem do bardziej zaawansowanych prac konstrukcyjnych.
+
+W toku prac nad prototypem, po osiągnięciu zadowalającej precyzji sterowania, do konstrukcji dołączono przednią ścianę, do której przymocowano chwytak. Umożliwiło to przetestowanie poprawności działania wszystkich elementów wykonawczych obecnych na platformie mobilnej. Dodatkowo, równocześnie przeprowadzono testy pełnej komunikacji między kontrolerem silników a komputerem Raspberry Pi (SBC), który pełnił rolę głównej jednostki obliczeniowej robota. W tym kroku zweryfikowano, czy platforma poprawnie reaguje na przesyłane komendy oraz czy nie występują żadne błędy w komunikacji lub wykonaniu poleceń.
+
+Po pozytywnym zakończeniu walidacji funkcjonowania algorytmów sterowania i komunikacji, przystąpiono do drugiego etapu konstrukcji – zaprojektowania i wytworzenia docelowej obudowy bazowej robota. Obudowa została wykonana przy użyciu technologii druku 3D, co pozwoliło na uzyskanie wyższej precyzji oraz wprowadzenie niezbędnych modyfikacji konstrukcyjnych w stosunku do prototypu. Ze względu na ograniczenia przestrzeni roboczej urządzenia drukującego, wymiary podstawy platformy zostały zmienione na plan kwadratu o boku 220 mm. Finalny projekt podstawy, przygotowany w programie AutoCAD Fusion 360, został przedstawiony na rysunku \ref{fig:final-base-design}.
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.5\textwidth]{./graf/final-base-design.png}
+%     \caption{Projekt końcowej wersji podstawy robota wykonany w AutoCAD Fusion 360.}
+%     \label{fig:final-base-design}
+% \end{figure}
+
+Technologia druku 3D umożliwiła precyzyjne rozmieszczenie mocowań na silniki oraz zastosowanie podpór kulowych na spodzie platformy, co zwiększyło stabilność konstrukcji. Przednia ściana została zaprojektowana jako integralna część podłogi, aby zapewnić jej odpowiednią sztywność i wytrzymałość. Wewnątrz konstrukcji zainstalowano centralnie umieszczony element wspornikowy, który służy jako oparcie dla drugiego poziomu platformy. Na tej wyższej warstwie znajdują się komputer Raspberry Pi oraz kamera odpowiedzialna za wizyjne śledzenie otoczenia.
+
+Drugi etap obejmował również zaprojektowanie oraz implementację górnej części obudowy, która pełni funkcję ochronną oraz pozwala na łatwy dostęp do niżej położonych elementów robota. W tym celu zastosowano specjalnie zaprojektowane mocowania, umożliwiające łatwe zdejmowanie i zakładanie górnej części obudowy na podstawę, co znacząco ułatwia konserwację oraz serwisowanie wewnętrznych komponentów.
+
+Ostateczna wersja platformy mobilnej, zaprezentowana na poniższych rysunkach oraz na nagraniach dołączonych do pracy, stanowi w pełni funkcjonalny model robota gotowy do realizacji zaplanowanych zadań w zakresie nawigacji i interakcji z otoczeniem.
+
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=0.7\textwidth]{./graf/final-robot-design.png}
+%     \caption{Finalna wersja konstrukcji robota z widocznymi elementami obudowy oraz rozmieszczeniem podzespołów.}
+%     \label{fig:final-robot-design}
+% \end{figure}
+
+
+\section{Implementacja kontrolera silników}
+
+Aplikacja kontrolera silników została zaimplementowana w środowisku Arduino IDE, co było podyktowane użyciem mikrokontrolera ATMega328P na płytce Arduino UNO R3. Celem kontrolera jest generowanie sygnału PWM oraz realizacja sterowania za pomocą regulatora PID. W tej sekcji opisano kluczowe elementy aplikacji, w tym konfigurację pinów, algorytmy sterujące oraz komunikację z enkoderami.
+
+\subsection{Konfiguracja pinów i ustawienia PWM}
+
+W kontrolerze skonfigurowano piny mikrokontrolera odpowiadające za obsługę enkoderów oraz sterowanie kierunkiem i prędkością silników za pomocą sygnałów PWM. Poniższy kod definiuje przypisanie pinów do odpowiednich funkcji, takich jak odczyt kanałów enkoderów oraz wyjść sterujących silnikami:
+
+\begin{figure}
+  \centering
+  \begin{lstlisting}
+    #define ENCA1 2 
+    #define ENCB1 4 
+    #define ENCA2 3 
+    #define ENCB2 5 
+    
+    #define PWM1 10
+    #define DIR1 13
+    #define PWM2 11
+    #define DIR2 12
+    
+    #define SERVO_PIN 9
+  \end{lstlisting}
+  \caption{Pseudokod przedstawiający konfigurację pinów}
+  \label{fig:pseudokod:config}
+  \end{figure}
+
+\subsection{Algorytm sterowania PID}
+
+Algorytm sterowania PID odpowiada za utrzymanie zadanej prędkości kątowej każdego z silników poprzez dostosowanie sygnału PWM. Wyjście regulatora PID jest obliczane na podstawie bieżącego błędu pozycji enkodera, wartości całki i pochodnej błędu. Parametry regulatora, takie jak wzmocnienie proporcjonalne (\texttt{Kp}), całkujące (\texttt{Ki}) oraz różniczkujące (\texttt{Kd}), zostały dobrane eksperymentalnie:
+
+\begin{figure}[H]
+  \centering
+  \begin{lstlisting}
+    float Kp = 0.8; 
+    float Ki = 0.5; 
+    float Kd = 0.1; 
+  \end{lstlisting}
+  \caption{Pseudokod przedstawiający konfigurację parametrów PID}
+  \label{fig:pseudokod:config-pid}
+  \end{figure}
+
+Na podstawie obliczonego błędu funkcja \texttt{performDrive()} dokonuje aktualizacji sygnału sterującego dla każdego silnika, uwzględniając przy tym warunki zatrzymania po osiągnięciu zadanej pozycji. Wartość wyjścia jest ograniczana do przedziału \( \pm 70 \), aby zapobiec zbyt dużemu skokowi napięcia sterującego:
+
+\begin{figure}[H]
+  \centering
+  \begin{lstlisting}
+    float error1 = targetCountsWheelRight - abs(pos1);
+    integral1 = error1 * deltaT;
+    float derivative1 = (error1 - previousError1) / deltaT;
+    output1 = Kp * error1 + Ki * integral1 + Kd * derivative1;
+    output1 = constrain(output1, -70, 70);
+  \end{lstlisting}
+  \caption{Pseudokod przedstawiający realizację regulacji}
+  \label{fig:pseudokod:pid}
+  \end{figure}
+
+\subsection{Funkcja obsługi przerwań dla enkoderów}
+
+Dla uzyskania dokładnych odczytów pozycji, w kontrolerze zastosowano obsługę przerwań na pinach podłączonych do enkoderów. Funkcje \texttt{readEncoder1()} i \texttt{readEncoder2()} zliczają impulsy z enkoderów, aktualizując wartość liczników pozycji. W ten sposób każda zmiana sygnału na kanale enkodera jest przetwarzana w czasie rzeczywistym, co umożliwia precyzyjne śledzenie pozycji kół:
+
+\begin{figure}[H]
+  \centering
+  \begin{lstlisting}
+    void readEncoder1() {
+      static int lastEncoded1 = 0;
+      int MSB1 = digitalRead(ENCA1); // Najbardziej znaczący bit
+      int LSB1 = digitalRead(ENCB1); // Najmniej znaczący bit
+      int encoded1 = (MSB1 << 1) | LSB1; // Łączenie dwóch bitów
+      if (MSB1 == LSB1) posi1++; else posi1--;
+      lastEncoded1 = encoded1;
+    }
+  \end{lstlisting}
+  \caption{Pseudokod przedstawiający funkcję zliczającą impulsy enkodera}
+  \label{fig:pseudokod:config-pid}
+\end{figure}
+
+
+\section{Implementacja głównej aplikacji sterującej}
+
+
 
 \begin{itemize}
 \item przedstawienie idei

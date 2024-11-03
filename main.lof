@@ -39,7 +39,11 @@
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Pseudokod w \texttt {listings}.}}{31}{figure.caption.22}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Pseudokod przedstawiający konfigurację pinów}}{33}{figure.caption.22}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Pseudokod przedstawiający konfigurację parametrów PID}}{34}{figure.caption.23}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Pseudokod przedstawiający realizację regulacji}}{34}{figure.caption.24}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Pseudokod przedstawiający funkcję zliczającą impulsy enkodera}}{34}{figure.caption.25}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Pseudokod w \texttt {listings}.}}{35}{figure.caption.26}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
