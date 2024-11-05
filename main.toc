@@ -109,14 +109,25 @@
 \contentsline {subsubsection}{Detekcja i klasyfikacja kształtów}{47}{section*.55}%
 \contentsline {subsubsection}{Wizualizacja wyników}{47}{section*.57}%
 \contentsline {chapter}{\numberline {7}Weryfikacja i walidacja}{51}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Podsumowanie i wnioski}{53}{chapter.8}%
-\contentsline {chapter}{Bibliografia}{56}{chapter*.60}%
-\contentsline {chapter}{Spis skrótów i symboli}{59}{appendix*.61}%
+\contentsline {section}{\numberline {7.1}Sposób testowania}{51}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Wykryte i usunięte błędy}{51}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Błąd nieskończonej pracy silników}{51}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Błąd odbierania i wysyłania poleceń}{52}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Błąd dokładności jazdy}{52}{subsection.7.2.3}%
+\contentsline {chapter}{\numberline {8}Podsumowanie i wnioski}{55}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Podsumowanie}{55}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Kierunki ewentualnych przyszłych prac}{55}{section.8.2}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {chapter}{Źródła}{61}{appendix*.62}%
-\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{63}{appendix*.63}%
-\contentsline {chapter}{Spis rysunków}{66}{appendix*.64}%
-\contentsline {chapter}{Spis tabel}{67}{appendix*.65}%
+\contentsline {chapter}{Bibliografia}{58}{chapter*.59}%
+\contentsline {chapter}{Spis skrótów i symboli}{61}{appendix*.60}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {chapter}{Źródła}{63}{appendix*.61}%
+\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{65}{appendix*.62}%
+\contentsline {chapter}{Spis rysunków}{68}{appendix*.63}%
+\contentsline {chapter}{Spis tabel}{69}{appendix*.64}%

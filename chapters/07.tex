@@ -1,37 +1,40 @@
 \chapter{Weryfikacja i walidacja}
-\label{ch:06}
-\begin{itemize}
-\item sposób testowania w ramach pracy (np. odniesienie do modelu V)
-\item organizacja eksperymentów
-\item przypadki testowe zakres testowania (pełny/niepełny)
-\item wykryte i usunięte błędy
-\item opcjonalnie wyniki badań eksperymentalnych
-\end{itemize}
+\label{ch:07}
 
-\begin{table}
-\centering
-\caption{Nagłówek tabeli jest nad tabelą.}
-\label{id:tab:wyniki}
-\begin{tabular}{rrrrrrrr}
-\toprule
-	         &                                     \multicolumn{7}{c}{metoda}                                      \\
-	         \cmidrule{2-8}
-	         &         &         &        \multicolumn{3}{c}{alg. 3}        & \multicolumn{2}{c}{alg. 4, $\gamma = 2$} \\
-	         \cmidrule(r){4-6}\cmidrule(r){7-8}
-	$\zeta$ &     alg. 1 &   alg. 2 & $\alpha= 1.5$ & $\alpha= 2$ & $\alpha= 3$ &   $\beta = 0.1$  &   $\beta = -0.1$ \\
-\midrule
-	       0 &  8.3250 & 1.45305 &       7.5791 &    14.8517 &    20.0028 & 1.16396 &                       1.1365 \\
-	       5 &  0.6111 & 2.27126 &       6.9952 &    13.8560 &    18.6064 & 1.18659 &                       1.1630 \\
-	      10 & 11.6126 & 2.69218 &       6.2520 &    12.5202 &    16.8278 & 1.23180 &                       1.2045 \\
-	      15 &  0.5665 & 2.95046 &       5.7753 &    11.4588 &    15.4837 & 1.25131 &                       1.2614 \\
-	      20 & 15.8728 & 3.07225 &       5.3071 &    10.3935 &    13.8738 & 1.25307 &                       1.2217 \\
-	      25 &  0.9791 & 3.19034 &       5.4575 &     9.9533 &    13.0721 & 1.27104 &                       1.2640 \\
-	      30 &  2.0228 & 3.27474 &       5.7461 &     9.7164 &    12.2637 & 1.33404 &                       1.3209 \\
-	      35 & 13.4210 & 3.36086 &       6.6735 &    10.0442 &    12.0270 & 1.35385 &                       1.3059 \\
-	      40 & 13.2226 & 3.36420 &       7.7248 &    10.4495 &    12.0379 & 1.34919 &                       1.2768 \\
-	      45 & 12.8445 & 3.47436 &       8.5539 &    10.8552 &    12.2773 & 1.42303 &                       1.4362 \\
-	      50 & 12.9245 & 3.58228 &       9.2702 &    11.2183 &    12.3990 & 1.40922 &                       1.3724 \\
-\bottomrule
-\end{tabular}
-\end{table}  
+\section{Sposób testowania}
 
+Testy platformy mobilnej można podzielić na dwa etapy. Pierwszy z nich polegał na weryfikacji ilości impulsów zliczonych przez enkodery podczas ruchu robota. Był to kluczowy etap, pozwalający na wczesne wykrycie ewentualnych niedokładności związanych z algorytmem sterującym. 
+
+Drugi etap można nazwać właściwym procesem jakości algorytmów sterowania, ponieważ odbywał się on w warunkach zbliżonych do rzeczywistych. Robot poruszał się zgodnie z preprogramowaną ścieżką, nastomiast weryfikacja była możliwa dzięki naklejonej taśmie malarskiej zgodnie z wytyczoną drogą. Był to prosty i efektywny sposób testowania jakości algorytmów. 
+
+
+\section{Wykryte i usunięte błędy}
+
+
+\subsection{Błąd nieskończonej pracy silników}
+Ważnym aspektem wykrytym w pierwszej fazie testów było niepoprawne zatrzymanie silników. Jeżeli silniki nie pracowały jednakowo, to znaczy, ich odczyty impulsów enkoderów nie były do siebie zbliżone, istniało duże ryzyko nieskończonej pracy silników. 
+
+Powodem takiego nieporządanego działania był warunek zakończenia pracy silników - fragment kodu znajduje się w spisie [\ref{fig:pseudokod:pid}]. Widoczna instrukcja warunkowa sprawdza czy wartość bezwzględna błędu ruchu jest mniejsza niż wartość stałej tolerancji niedokładności. Jeżeli wartość błędu jest wyższa, naturalnie silniki pracują zgodnie z mocą wyznaczoną przez regulator PID, jeżeli natomiast wartość jest niższa, silniki zostają zatrzymane. Ze względu na pewną bezwładność elementów wykonawczych, mimo ich zatrzymania w pewnej iteracji \textit{n}, w kolejnej iteracji \textit{n+1} wartość błędu będzie wynosić więcej niż stała tolerancji. Z tego powodu silniki ponownie rozpoczną pracę nieskończenie zwiększając wartość błędu. 
+
+W związku z powyższym, została dodana flaga widoczna w spisie [\ref{fig:pseudokod:pid}], zapewniająca poprawność działania kodu w każdych warunkach. Jeżeli silnik raz osiągną wartość założoną, flaga uniemożliwia ponowne wejście programu do wznowienia pracy silnika. Stan zmiennej binarnej zostaje zmieniony dopiero po otrzymaniu nowych instrukcji z komputera nadrzędnego. 
+
+\subsection{Błąd odbierania i wysyłania poleceń}
+Podczas testów przeprowadzonych w fazie pierwszej, zaobserowane zostało problematyczne zachowanie komunikacji między SBC Raspberry Pi a kontrolerem silników Ardunino UNO R3. Błąd polegał na zbyt wczesnym wysyłaniu kolejnych poleceń. Z pozoru łatwy do rozwiązania problem, okazał się nie tak trywialny. 
+
+Pierwsza wersja komunikacji polegała na stałym opóźnieniu z wykorzystaniem metody dostarczanej przez klasę time - \textit{sleep()}. Metoda ta umożliwia uśpienie wątku na określony czas (w sekundach). To podejście ma bardzo poważną wadę - jest nieelastyczne względem wysyłanych komunikatów. Oznacza to, że niezależnie od odległości jaką robot ma przebyć, kolejna komenda zostanie wysłana na przykład po czterech sekundach. 
+
+Kolejnym podejściem, było zastosowanie pewnej flagi lub znacznika, który umożliwi określenie zakończenia pracy robota oraz wykorzystanie go jako warunku kontynuowania. W tym celu dotychczas istniejący kod został umieszczony wewnątrz pętli \textit{while}, co umożliwiło poprawne oczekiwanie na ukończenie zadania. 
+
+Po zastosowaniu wyżej opisanego podejścia, opóźnienie było tak małe, że w warunkach rzeczywistych nieosiągalne, co zmusiło autora do dodania pewnego dodatkowego krótkiego opóźnienia między kolejnymi komendami. 
+
+\subsection{Błąd dokładności jazdy}
+
+Poważnym problemem okazała się dokładność jazdy platformy mobilnej. Mimo, że względem wczesnych wersji algorytmów zostały poczynione znaczne postępy, robot nie osiągnął idelanej dokładności, w szczególności podczas obrotów. 
+
+Pierwsze wersje sterowania opierały się na obrocie względem układu współrzędnych, którego środek znajdował się w punkcie styku jednego koła z podłożem. Innymi słowy, robot obracał się o zadany kąt poruszając się tylko jednym kołem, co nie do końca spełniało wymaganie projektowe, jakim było zastosowanie napędu różnicowego. Dokładność osiągnięta w tej konfiguracji była jednak zadowalająca. 
+
+Po wprowadzeniu napędu różnicowego, pojawiły się większe błędy wynikające z mniej dokładnego zliczania impulsów o znaku ujemnym, a więc podczas ruchu kół do tyłu. Wymagania projektowe zostały spełnione, jednak kosztem dokładności, która we wczesnych wersjach była nienajlepsza. 
+
+Po bardzo wielu próbach i zmianach w ustawieniu parametrów regulatora oraz ogranicznika mocy silników udało się osiągnąć, jak się wydaje, maksymalną dokładność jaką umożliwiają zasotosowane komponenty elektroniczne, a w szczególności kontroler silników. 
+
+Ze względu na nieidealną dokładność, autor wprowadził specjalne szyny naprowadzające znajdujące się bezpośrednio przed podajnikiem oraz pudełkami. Umożliwiają one mechaniczną korekcję toru jazdy, tym samym niwelując błędy powstałe podczas pracy robota. Podobne podejście zostało wymienione w znanej pracy naukowców z Uniwersytetu w Michigan pod tytułem "Where am I", co po polsku znaczy "Gdzie jestem?"\cite{bib:where-am-i}. Wynika z niej, że podczas implementacji algorytmów sterowania opierających się jedynie na odczytach z enkoderów małe błędy, w przypadku powyższego projektu poniżej 1\%, potęgują się w czasie, co uniemożliwia długofalową pracę bez wsparcia na przykład wcześniej wymienionych szyn.  
