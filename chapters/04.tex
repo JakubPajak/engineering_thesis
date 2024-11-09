@@ -10,7 +10,7 @@ W dalszej części omówiono wybrane algorytmy z zakresu wizji komputerowej, tak
 
 \section{Enkodery}
 
-Enkodery są urządzeniami pomiarowymi, które umożliwiają śledzenie ruchu obrotowego lub liniowego. W zastosowaniach robotycznych, takich jak opisywana platforma mobilna, enkodery umożliwiają śledzenie prędkości i pozycji, co jest kluczowe dla poprawnej implementacji odometrii – procesu śledzenia pozycji robota w przestrzeni. Enkodery dzielą się na enkodery optyczne, magnetyczne i mechaniczne, w zależności od zastosowanej technologii detekcji. W omawianym projekcie szczególne zastosowanie znajdują enkodery kwadraturowe, montowane przy silnikach odpowiedzialnych za napęd różnicowy robota.
+Enkodery są urządzeniami pomiarowymi, które umożliwiają śledzenie ruchu obrotowego lub liniowego. W zastosowaniach z zakresu robotyki, takich jak opisywana platforma mobilna, enkodery umożliwiają śledzenie prędkości i pozycji, co jest kluczowe dla poprawnej implementacji odometrii – procesu śledzenia pozycji robota w przestrzeni. Enkodery dzielą się na enkodery optyczne, magnetyczne i mechaniczne, w zależności od zastosowanej technologii detekcji. W omawianym projekcie szczególne zastosowanie znajdują enkodery kwadraturowe, montowane przy silnikach odpowiedzialnych za napęd różnicowy robota.
 
 \subsection{Rodzaje enkoderów}
 
@@ -21,7 +21,6 @@ Enkodery klasyfikowane są na podstawie zasady ich działania, co wpływa na pre
     \item \textbf{Enkodery magnetyczne} - działają w oparciu o zmiany pola magnetycznego, zwykle generowane przez magnes przymocowany do osi. Zastosowanie efektu Hall'a w tych enkoderach pozwala na wykrywanie zmian w polu magnetycznym, co jest kluczowe w enkoderach kwadraturowych. Są wytrzymałe i odporne na kurz czy wibracje, przez co dobrze sprawdzają się w trudnych warunkach.
     \item \textbf{Enkodery mechaniczne} - najprostszy rodzaj enkoderów, wykorzystujący mechaniczne styki do generowania impulsów. Ze względu na ograniczoną trwałość są rzadziej stosowane w precyzyjnych aplikacjach.
 \end{itemize}
-
 
 
 \subsubsection{Efekt Hall'a}
@@ -55,6 +54,8 @@ Enkodery kwadraturowe to specjalny rodzaj enkoderów, które umożliwiają nie t
     \caption{Rysunek przedstawiający przykładowy wygląd enkodera opartego o efekt Hall'a. Czerwonymi kwadratami są zaznaczone tranzystory wykrywające zmianę pola magnetycznego podczas obrotu wału \cite{bib:botland-hall}}
     \label{rys2:encoders-graf}
 \end{figure}
+
+\clearpage
 
 \section{Regulator PID}
 
@@ -193,6 +194,8 @@ oraz jego kierunek:
 
 5. \textbf{Śledenie krawędzi z histerezą} (ang. \english{Edge tracking by hysteresis}): Ostatnim krokiem jest śledzenie krawędzi, gdzie słabe krawędzie są zachowywane, jeśli są połączone z mocnymi krawędziami. To pozwala na eliminację przypadkowych detekcji krawędzi i zapewnia spójność wyników.
 
+\clearpage
+
 \section{Podstawy rozpoznawania kolorów w wizji komputerowej}
 
 Rozpoznawanie kolorów w wizji komputerowej to kluczowy aspekt w wielu aplikacjach automatyki, robotyki oraz sztucznej inteligencji. W kontekście robotyki, techniki te pozwalają na identyfikację i klasyfikację obiektów w otoczeniu robota, co jest istotne dla jego nawigacji oraz interakcji z otoczeniem. W niniejszej sekcji omówione zostaną podstawowe zasady oraz techniki wykorzystywane w procesie rozpoznawania kolorów.
@@ -200,31 +203,32 @@ Rozpoznawanie kolorów w wizji komputerowej to kluczowy aspekt w wielu aplikacja
 \subsection{Teoria koloru}
 
 
-Kolor jest percepcją widzialnego spektrum światła, które jest odbierane przez ludzkie oczy i interpretowane przez mózg. W wizji komputerowej kolory są często reprezentowane za pomocą różnych modeli kolorów, w tym w przestrzeni kolorów RGB (ang. \english{Red, Green, Blue}) \textit{rys. [\ref{rys2:rgb1}]}, HSV (ang. \english{Hue, Saturation, Value}) \textit{rys. [\ref{rys2:hsv1}]} oraz YCrCb (ang. \english{Luminance, Chrominance}) \textit{rys. [\ref{rys2:ycrcb1}]}. W modelu RGB kolory są definiowane przez intensywności trzech składowych kolorów, podczas gdy w modelu HSV kolory są określane na podstawie ich odcienia, nasycenia i jasności, co ułatwia przetwarzanie i rozpoznawanie kolorów w kontekście wizji komputerowej. Model YCrCb, z kolei, oddziela informację o luminancji (jasności) od informacji o chrominancji (kolorze), co jest szczególnie przydatne w kompresji obrazów oraz w systemach wizyjnych, umożliwiając efektywną analizę kolorów przy jednoczesnym zredukowaniu wpływu zmian oświetleniowych.
+Kolor jest percepcją widzialnego spektrum światła, które jest odbierane przez ludzkie oczy i interpretowane przez mózg. W wizji komputerowej kolory są często reprezentowane za pomocą różnych modeli kolorów, w tym w przestrzeni kolorów RGB (ang. \english{Red, Green, Blue}) \textit{rys.} [\ref{rys2:rgb1}], HSV (ang. \english{Hue, Saturation, Value}) \textit{rys.} [\ref{rys2:hsv1}] oraz YCrCb (ang. \english{Luminance, Chrominance}) \textit{rys.} [\ref{rys2:ycrcb1}]. W modelu RGB kolory są definiowane przez intensywności trzech składowych kolorów, podczas gdy w modelu HSV kolory są określane na podstawie ich odcienia, nasycenia i jasności, co ułatwia przetwarzanie i rozpoznawanie kolorów w kontekście wizji komputerowej. Model YCrCb, z kolei, oddziela informację o luminancji (jasności) od informacji o chrominancji (kolorze), co jest szczególnie przydatne w kompresji obrazów oraz w systemach wizyjnych, umożliwiając efektywną analizę kolorów przy jednoczesnym zredukowaniu wpływu zmian oświetleniowych.
 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{./graf/rgb-model.png}
+    \includegraphics[width=0.6\textwidth]{./graf/rgb-model.png}
     \caption{Rysunek przedstawiający wizualizację przestrzeni kolorów RGB \cite{bib:rgb-model}}
     \label{rys2:rgb1}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{./graf/hsv-model.png}
+    \includegraphics[width=0.6\textwidth]{./graf/hsv-model.png}
     \caption{Rysunek przedstawiający wizualizację przestrzeni HSV \cite{bib:hsv-model}}
     \label{rys2:hsv1}
 \end{figure}
 
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{./graf/ycrcb-model.png}
+    \includegraphics[width=0.6\textwidth]{./graf/ycrcb-model.png}
     \caption{Rysunek przedstawiający wizualizację przestrzeni YCrCb \cite{bib:ycrcb-model}}
     \label{rys2:ycrcb1}
 \end{figure}
 
+\clearpage
 
 \subsection{Proces rozpoznawania kolorów}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.4)  5 NOV 2024 22:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.4)  9 NOV 2024 19:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1276,6 +1276,17 @@ File: lstlang1.sty 2024/03/11 1.10a listings language file
 )
 (C:\Users\jakub\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2024/03/11 1.10a (Carsten Heinz)
+)
+(C:\Users\jakub\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count479
+\float@exts=\toks53
+\float@box=\box69
+\@float@everytoks=\toks54
+\@floatcapt=\box70
+)
+(C:\Users\jakub\AppData\Local\Programs\MiKTeX\tex/latex/placeins\placeins.sty
+Package: placeins 2005/04/18  v 2.2
 ))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -1283,7 +1294,6 @@ Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'polish'.
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
 7.
-
 (C:\Users\jakub\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (main.aux
@@ -1356,17 +1366,17 @@ LaTeX Font Info:    ... okay on input line 117.
 (C:\Users\jakub\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count479
+\scratchcounter=\count480
 \scratchdimen=\dimen320
-\scratchbox=\box69
-\nofMPsegments=\count480
-\nofMParguments=\count481
-\everyMPshowfont=\toks53
-\MPscratchCnt=\count482
+\scratchbox=\box71
+\nofMPsegments=\count481
+\nofMParguments=\count482
+\everyMPshowfont=\toks55
+\MPscratchCnt=\count483
 \MPscratchDim=\dimen321
-\MPnumerator=\count483
-\makeMPintoPDFobject=\count484
-\everyMPtoPDFconversion=\toks54
+\MPnumerator=\count484
+\makeMPintoPDFobject=\count485
+\everyMPtoPDFconversion=\toks56
 )
 (C:\Users\jakub\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
@@ -1391,6 +1401,7 @@ your preamble.
  on input line 117.
 
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package biblatex Info: Trying to load language 'polish'...
@@ -1425,7 +1436,7 @@ Package biblatex Info: ... file 'main.bbl' found.
  (main.bbl)
 Package biblatex Info: Reference section=0 on input line 117.
 Package biblatex Info: Reference segment=0 on input line 117.
-\c@lstlisting=\count485
+\c@lstlisting=\count486
  (config/titlepage.tex
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
@@ -1480,7 +1491,13 @@ b/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc} <./graf/politechn
 ika_sl_logo_bw_pion_pl.pdf>]) [2
 
 
-] (chapters/00.tex) [3] [4
+] (chapters/00.tex
+Overfull \hbox (7.4019pt too wide) in paragraph at lines 9--10
+[]\T1/lmr/m/n/12 Wymagania: zna-jo-mo�� pro-gra-mo-wa-nia uk�a-d�w SBC (Ra-sp-b
+erry Pi), Py-thon, OpenCV 
+ []
+
+) [3] [4
 
 ] (main.toc
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
@@ -1527,28 +1544,53 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 [5{C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.en
 c}]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.83 ...PP TO DO ZMIANY !!!}{28}{subsection.5.2.9}
+                                                  %
+? 
+! Extra }, or forgotten $.
+<argument> ...-->> JESLI WEB_APP TO DO ZMIANY !!!}
+                                                  \Hy@toclinkend 
+l.83 ...PP TO DO ZMIANY !!!}{28}{subsection.5.2.9}
+                                                  %
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.83 ...PP TO DO ZMIANY !!!}{28}{subsection.5.2.9}
+                                                  %
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.83 ...PP TO DO ZMIANY !!!}{28}{subsection.5.2.9}
+                                                  %
+? 
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 9
-6.
- (C:\Users\jakub\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+9.
+(C:\Users\jakub\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-[6])
+) [6{C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}
+])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
- [7] [8
+ [7]
+[8
 
 ] (chapters/01.tex
 Rozdzia\l  1.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1237) has occurred while \output is active []
 
  [1
 
 
 ]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 3
-3.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
+2.
 
 (C:\Users\jakub\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1585,11 +1627,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 ]
 Rozdzia\l  2.
 [5]
-Overfull \hbox (14.8746pt too wide) in paragraph at lines 25--26
-[]\T1/lmr/m/n/12 W celu bar-dziej za-awan-so-wa-nego prze-twa-rza-nia ob-razu w
-y-ko-rzy-stano bi-blio-tek� OpenCV.
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1620,13 +1657,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 Rozdzia\l  3.
-[9]
-<./graf/uml.png, id=507, 1029.8475pt x 434.07169pt>
+<./graf/uml.png, id=506, 1029.8475pt x 434.07169pt>
 File: ./graf/uml.png Graphic file (type png)
 <use ./graf/uml.png>
-Package pdftex.def Info: ./graf/uml.png  used on input line 28.
+Package pdftex.def Info: ./graf/uml.png  used on input line 21.
 (pdftex.def)             Requested size: 455.24411pt x 191.87965pt.
 
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[9]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1635,7 +1674,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[10 <./graf/uml.png>]
+[10 <./graf/uml.png>]) (chapters/04.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1644,7 +1683,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[11]) (chapters/04.tex
+[11]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1658,10 +1697,10 @@ Rozdzia\l  4.
 [13
 
 ]
-<./graf/halla-enc.jpg, id=528, 372.39125pt x 262.9825pt>
+<./graf/halla-enc.jpg, id=531, 372.39125pt x 262.9825pt>
 File: ./graf/halla-enc.jpg Graphic file (type jpg)
 <use ./graf/halla-enc.jpg>
-Package pdftex.def Info: ./graf/halla-enc.jpg  used on input line 34.
+Package pdftex.def Info: ./graf/halla-enc.jpg  used on input line 33.
 (pdftex.def)             Requested size: 227.62206pt x 160.75214pt.
 
 
@@ -1673,21 +1712,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [14 <./graf/halla-enc.jpg>]
-<./graf/enkoders.png, id=538, 1249.66875pt x 581.92406pt>
+<./graf/enkoders.png, id=541, 1249.66875pt x 581.92406pt>
 File: ./graf/enkoders.png Graphic file (type png)
 <use ./graf/enkoders.png>
-Package pdftex.def Info: ./graf/enkoders.png  used on input line 46.
+Package pdftex.def Info: ./graf/enkoders.png  used on input line 45.
 (pdftex.def)             Requested size: 364.19667pt x 169.58832pt.
-<./graf/enkoder-silnik.png, id=541, 1023.825pt x 858.95906pt>
+<./graf/enkoder-silnik.png, id=544, 1023.825pt x 858.95906pt>
 File: ./graf/enkoder-silnik.png Graphic file (type png)
 <use ./graf/enkoder-silnik.png>
-Package pdftex.def Info: ./graf/enkoder-silnik.png  used on input line 54.
+Package pdftex.def Info: ./graf/enkoder-silnik.png  used on input line 53.
 (pdftex.def)             Requested size: 227.62206pt x 190.96379pt.
-<./graf/regulacja1.png, id=544, 688.5725pt x 223.83624pt>
-File: ./graf/regulacja1.png Graphic file (type png)
-<use ./graf/regulacja1.png>
-Package pdftex.def Info: ./graf/regulacja1.png  used on input line 67.
-(pdftex.def)             Requested size: 227.62206pt x 73.99255pt.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1698,28 +1732,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [15 <./graf/enkoders.png> <./graf/enkoder-silnik.png>]
+<./graf/regulacja1.png, id=557, 688.5725pt x 223.83624pt>
+File: ./graf/regulacja1.png Graphic file (type png)
+<use ./graf/regulacja1.png>
+Package pdftex.def Info: ./graf/regulacja1.png  used on input line 68.
+(pdftex.def)             Requested size: 227.62206pt x 73.99255pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 93.
+(Font)              <14.4> on input line 94.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 93.
+(Font)              <10> on input line 94.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 93.
+(Font)              <7> on input line 94.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 93.
+(hyperref)                removing `math shift' on input line 94.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 93.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 103.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 103.
+(hyperref)                removing `math shift' on input line 94.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1729,17 +1760,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[16{C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{
-C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{
-C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc} 
-<./graf/regulacja1.png>]
+[16
+
+{C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}
+{C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}
+ <./graf/regulacja1.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 113.
+(hyperref)                removing `math shift' on input line 104.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 113.
+(hyperref)                removing `math shift' on input line 104.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 114.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 114.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1750,14 +1790,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [17]
-Overfull \hbox (0.94795pt too wide) in paragraph at lines 148--149
+Overfull \hbox (0.94795pt too wide) in paragraph at lines 149--150
 []\T1/lmr/m/n/12 Jedn� z naj-bar-dziej po-pu-lar-nych me-tod wy-kry-wa-nia kra-
 w�-dzi jest al-go-rytm Canny'ego,
  []
-
-
-Underfull \vbox (badness 2012) has occurred while \output is active []
-
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1768,7 +1804,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [18]
-Overfull \hbox (4.00931pt too wide) in paragraph at lines 190--191
+Overfull \hbox (4.00931pt too wide) in paragraph at lines 191--192
 []\T1/lmr/m/n/12 3. \T1/lmr/bx/n/12 T�u-mie-nie nie-maksymalne \T1/lmr/m/n/12 (
 ang. [][]\T1/lmr/m/it/12 Non-maximum sup-pres-sion[][]\T1/lmr/m/n/12 ): W ko-le
 j-nym kroku
@@ -1783,52 +1819,28 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [19]
-
-! LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.206 \begin{figure}[H]
-                       
-? 
-<./graf/rgb-model.png, id=593, 401.5pt x 295.1025pt>
+<./graf/rgb-model.png, id=591, 401.5pt x 295.1025pt>
 File: ./graf/rgb-model.png Graphic file (type png)
 <use ./graf/rgb-model.png>
-Package pdftex.def Info: ./graf/rgb-model.png  used on input line 208.
-(pdftex.def)             Requested size: 227.62206pt x 167.30507pt.
-
-! LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.213 \begin{figure}[H]
-                       
-? 
-<./graf/hsv-model.png, id=596, 853.1875pt x 505.89pt>
+Package pdftex.def Info: ./graf/rgb-model.png  used on input line 211.
+(pdftex.def)             Requested size: 273.14923pt x 200.7796pt.
+<./graf/hsv-model.png, id=594, 853.1875pt x 505.89pt>
 File: ./graf/hsv-model.png Graphic file (type png)
 <use ./graf/hsv-model.png>
-Package pdftex.def Info: ./graf/hsv-model.png  used on input line 215.
-(pdftex.def)             Requested size: 227.62206pt x 134.96335pt.
+Package pdftex.def Info: ./graf/hsv-model.png  used on input line 218.
+(pdftex.def)             Requested size: 273.14923pt x 161.96529pt.
 
-! LaTeX Error: Unknown float option `H'.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.221 \begin{figure}[H]
-                       
-? 
-<./graf/ycrcb-model.png, id=599, 340.8735pt x 248.72925pt>
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./graf/ycrcb-model.png, id=597, 340.8735pt x 248.72925pt>
 File: ./graf/ycrcb-model.png Graphic file (type png)
 <use ./graf/ycrcb-model.png>
-Package pdftex.def Info: ./graf/ycrcb-model.png  used on input line 223.
-(pdftex.def)             Requested size: 227.62206pt x 166.09741pt.
-) (chapters/05.tex
+Package pdftex.def Info: ./graf/ycrcb-model.png  used on input line 226.
+(pdftex.def)             Requested size: 273.14923pt x 199.32524pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1837,7 +1849,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[20]
+[20
+
+ <./graf/rgb-model.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1846,7 +1860,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[21 <./graf/rgb-model.png> <./graf/hsv-model.png> <./graf/ycrcb-model.png>]
+[21 <./graf/hsv-model.png> <./graf/ycrcb-model.png>]) (chapters/05.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1859,7 +1873,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 Rozdzia\l  5.
-[23]
+[23
+
+]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1898,6 +1914,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [26]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 101.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 101
+.
+
+
+Overfull \hbox (0.94627pt too wide) in paragraph at lines 105--106
+[]\T1/lmr/m/n/12 Po in-sta-la-cji mo�-liwe jest utwo-rze-nie lo-kal-nego ser-we
+ra, do kt�-rego do-st�p maj� wszyst-
+ []
+
 (C:\Users\jakub\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2024/03/11 1.10a listings language file
 )
@@ -1910,6 +1939,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [27]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.145 ...cji --->> JESLI WEB_APP TO DO ZMIANY !!!}
+                                                  
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.145 ...cji --->> JESLI WEB_APP TO DO ZMIANY !!!}
+                                                  
+? 
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 145.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1940,97 +1985,50 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 Rozdzia\l  6.
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   !
+l.7 \vspace{0.5}
+                
+? 
+
+LaTeX Warning: Reference `zdj:prototyp' on page 31 undefined on input line 11.
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   !
+l.13 \vspace{0.5}
+                 
+? 
+
+LaTeX Warning: Reference `zdj:prototyp-chwytak' on page 31 undefined on input l
+ine 15.
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   !
+l.17 \vspace{0.5}
+                 
+? 
 [31]
-
-! LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.15 \begin{figure}[H]
-                      
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   !
+l.23 \vspace{0.5}
+                 
 ? 
-<./graf/motor-close.png, id=699, 1506.3778pt x 759.58781pt>
-File: ./graf/motor-close.png Graphic file (type png)
-<use ./graf/motor-close.png>
-Package pdftex.def Info: ./graf/motor-close.png  used on input line 17.
-(pdftex.def)             Requested size: 227.62206pt x 114.76776pt.
 
-! LaTeX Error: Unknown float option `H'.
+LaTeX Warning: Reference `fig ' on page 32 undefined on input line 34.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.22 \begin{figure}[H]
-                      
-? 
-<./graf/ball-close.png, id=700, 581.17125pt x 302.63063pt>
-File: ./graf/ball-close.png Graphic file (type png)
-<use ./graf/ball-close.png>
-Package pdftex.def Info: ./graf/ball-close.png  used on input line 24.
-(pdftex.def)             Requested size: 227.62206pt x 118.5288pt.
-
-! LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.29 \begin{figure}[H]
-                      
-? 
-<./graf/base-full.png, id=701, 1202.24156pt x 773.89125pt>
-File: ./graf/base-full.png Graphic file (type png)
-<use ./graf/base-full.png>
-Package pdftex.def Info: ./graf/base-full.png  used on input line 31.
-(pdftex.def)             Requested size: 409.71692pt x 263.73358pt.
-
-! LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.40 \begin{figure}[H]
-                      
-? 
-<./graf/upper.png, id=702, 1099.10625pt x 948.54375pt>
+<./graf/upper.png, id=704, 1099.10625pt x 948.54375pt>
 File: ./graf/upper.png Graphic file (type png)
 <use ./graf/upper.png>
-Package pdftex.def Info: ./graf/upper.png  used on input line 42.
+Package pdftex.def Info: ./graf/upper.png  used on input line 39.
 (pdftex.def)             Requested size: 318.66948pt x 275.01274pt.
 
-! LaTeX Error: Unknown float option `H'.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.47 \begin{figure}[H]
-                      
-? 
-<./graf/full-close.png, id=703, 1554.55782pt x 797.98125pt>
-File: ./graf/full-close.png Graphic file (type png)
-<use ./graf/full-close.png>
-Package pdftex.def Info: ./graf/full-close.png  used on input line 49.
-(pdftex.def)             Requested size: 318.66948pt x 163.57503pt.
 
-! LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.56 \begin{figure}[H]
-                      
-? 
-<./graf/full.png, id=704, 1559.07469pt x 1035.11719pt>
-File: ./graf/full.png Graphic file (type png)
-<use ./graf/full.png>
-Package pdftex.def Info: ./graf/full.png  used on input line 58.
-(pdftex.def)             Requested size: 409.71692pt x 272.01453pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2040,6 +2038,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [32]
+<./graf/full-close.png, id=711, 1554.55782pt x 797.98125pt>
+File: ./graf/full-close.png Graphic file (type png)
+<use ./graf/full-close.png>
+Package pdftex.def Info: ./graf/full-close.png  used on input line 46.
+(pdftex.def)             Requested size: 318.66948pt x 163.57503pt.
+<./graf/motor-close.png, id=712, 1506.3778pt x 759.58781pt>
+File: ./graf/motor-close.png Graphic file (type png)
+<use ./graf/motor-close.png>
+Package pdftex.def Info: ./graf/motor-close.png  used on input line 54.
+(pdftex.def)             Requested size: 227.62206pt x 114.76776pt.
+<./graf/ball-close.png, id=713, 581.17125pt x 302.63063pt>
+File: ./graf/ball-close.png Graphic file (type png)
+<use ./graf/ball-close.png>
+Package pdftex.def Info: ./graf/ball-close.png  used on input line 61.
+(pdftex.def)             Requested size: 227.62206pt x 118.5288pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2048,7 +2062,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[33 <./graf/motor-close.png> <./graf/ball-close.png> <./graf/base-full.png>]
+[33 <./graf/upper.png> <./graf/full-close.png> <./graf/motor-close.png>]
+<./graf/base-full.png, id=724, 1202.24156pt x 773.89125pt>
+File: ./graf/base-full.png Graphic file (type png)
+<use ./graf/base-full.png>
+Package pdftex.def Info: ./graf/base-full.png  used on input line 68.
+(pdftex.def)             Requested size: 409.71692pt x 263.73358pt.
+<./graf/full.png, id=725, 1559.07469pt x 1035.11719pt>
+File: ./graf/full.png Graphic file (type png)
+<use ./graf/full.png>
+Package pdftex.def Info: ./graf/full.png  used on input line 76.
+(pdftex.def)             Requested size: 409.71692pt x 272.01453pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2057,7 +2085,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[34 <./graf/upper.png> <./graf/full-close.png>]
+[34 <./graf/ball-close.png> <./graf/base-full.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2067,156 +2095,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [35 <./graf/full.png>]
-
-! LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.75 \begin{figure}[H]
-                      
-? 
-
-! LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.101 \begin{figure}[H]
-                       
-? 
-
-! LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.114 \begin{figure}[H]
-                       
-? 
-
-! LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.152 \begin{figure}[H]
-                       
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.157 ...talRead(ENCA1); // Najbardziej znaczący 
-                                                  bit
-? 
-
-! LaTeX Error: Invalid UTF-8 byte "85.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.157 ...talRead(ENCA1); // Najbardziej znaczący 
-                                                  bit
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.158 ...igitalRead(ENCB1); // Najmniej znaczący 
-                                                  bit
-? 
-
-! LaTeX Error: Invalid UTF-8 byte "85.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.158 ...igitalRead(ENCB1); // Najmniej znaczący 
-                                                  bit
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.159 ...ded1 = (MSB1 << 1) | LSB1; // Łączenie 
-                                                  dwóch bitów
-? 
-
-! LaTeX Error: Invalid UTF-8 byte "81.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.159 ...ded1 = (MSB1 << 1) | LSB1; // Łączenie 
-                                                  dwóch bitów
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (�\lst@EC�).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.159 ...ded1 = (MSB1 << 1) | LSB1; // Łączenie 
-                                                  dwóch bitów
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.159 ...(MSB1 << 1) | LSB1; // Łączenie dwóch 
-                                                  bitów
-? 
-
-! LaTeX Error: Invalid UTF-8 byte "B3.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.159 ...(MSB1 << 1) | LSB1; // Łączenie dwóch 
-                                                  bitów
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.159 ...<< 1) | LSB1; // Łączenie dwóch bitów
-                                                  
-? 
-
-! LaTeX Error: Invalid UTF-8 byte "B3.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.159 ...<< 1) | LSB1; // Łączenie dwóch bitów
-                                                  
-? 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2229,26 +2107,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 
-! LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.184 \begin{figure}[H]
-                       
-? 
-
-! LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.215 \begin{figure}[H]
-                       
-? 
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -2258,6 +2116,116 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [37]
 
+! LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.175 ...talRead(ENCA1); // Najbardziej znaczący 
+                                                  bit
+? 
+
+! LaTeX Error: Invalid UTF-8 byte "85.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.175 ...talRead(ENCA1); // Najbardziej znaczący 
+                                                  bit
+? 
+
+! LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.176 ...igitalRead(ENCB1); // Najmniej znaczący 
+                                                  bit
+? 
+
+! LaTeX Error: Invalid UTF-8 byte "85.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.176 ...igitalRead(ENCB1); // Najmniej znaczący 
+                                                  bit
+? 
+
+! LaTeX Error: Invalid UTF-8 byte sequence (�\lst@FillFixed@).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.177 ...ded1 = (MSB1 << 1) | LSB1; // Łączenie 
+                                                  dwóch bitów
+? 
+
+! LaTeX Error: Invalid UTF-8 byte "81.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.177 ...ded1 = (MSB1 << 1) | LSB1; // Łączenie 
+                                                  dwóch bitów
+? 
+
+! LaTeX Error: Invalid UTF-8 byte sequence (�\lst@EC�).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.177 ...ded1 = (MSB1 << 1) | LSB1; // Łączenie 
+                                                  dwóch bitów
+? 
+
+! LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.177 ...(MSB1 << 1) | LSB1; // Łączenie dwóch 
+                                                  bitów
+? 
+
+! LaTeX Error: Invalid UTF-8 byte "B3.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.177 ...(MSB1 << 1) | LSB1; // Łączenie dwóch 
+                                                  bitów
+? 
+
+! LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.177 ...<< 1) | LSB1; // Łączenie dwóch bitów
+                                                  
+? 
+
+! LaTeX Error: Invalid UTF-8 byte "B3.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.177 ...<< 1) | LSB1; // Łączenie dwóch bitów
+                                                  
+? 
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -2266,6 +2234,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [38]
+Underfull \vbox (badness 5274) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2285,31 +2256,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [40]
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 255.
-
-
-! LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.261 \begin{figure}[H]
-                       
-? 
-
-! LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.291 \begin{figure}[H]
-                       
-? 
-
-Underfull \vbox (badness 2735) has occurred while \output is active []
-
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 273.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2331,53 +2278,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [42]
-
-! LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.320 \begin{figure}[H]
-                       
-? 
-
-! LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.339 \begin{figure}[H]
-                       
-? 
-
-Overfull \hbox (21.60538pt too wide) in paragraph at lines 357--358
+Overfull \hbox (21.60538pt too wide) in paragraph at lines 375--376
 []\T1/lmr/m/n/12 Dodatkowo, funk-cja \T1/lmtt/m/n/12 start_web_app_task() \T1/l
 mr/m/n/12 ini-cjuje apli-ka-cj� wi-zu-ali-za-cyjn� \T1/lmtt/m/n/12 WebAppVisu\T
 1/lmr/m/n/12 ,
  []
 
-
-! LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.359 \begin{figure}[H]
-                       
-? 
-
-! LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.382 \begin{figure}[H]
-                       
-? 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2387,6 +2293,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [43]
+Underfull \vbox (badness 1303) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2397,23 +2306,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [44]
 
-! LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.402 \begin{figure}[H]
-                       
-? 
-
 ! LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.407         # Wyślij 
+l.425         # Wyślij 
                         ramkę danych
 ? 
 
@@ -2423,7 +2322,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.407         # Wyślij 
+l.425         # Wyślij 
                         ramkę danych
 ? 
 
@@ -2433,7 +2332,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.407         # Wyślij ramkę 
+l.425         # Wyślij ramkę 
                                danych
 ? 
 
@@ -2443,18 +2342,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.407         # Wyślij ramkę 
+l.425         # Wyślij ramkę 
                                danych
-? 
-
-! LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.422 \begin{figure}[H]
-                       
 ? 
 
 ! LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
@@ -2463,7 +2352,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.425 # Sprawdź,
+l.443 # Sprawdź,
                   czy są dostępne dane do odczytu
 ? 
 
@@ -2473,7 +2362,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.425 # Sprawdź,
+l.443 # Sprawdź,
                   czy są dostępne dane do odczytu
 ? 
 
@@ -2483,7 +2372,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.425 # Sprawdź, czy są 
+l.443 # Sprawdź, czy są 
                           dostępne dane do odczytu
 ? 
 
@@ -2493,7 +2382,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.425 # Sprawdź, czy są 
+l.443 # Sprawdź, czy są 
                           dostępne dane do odczytu
 ? 
 
@@ -2503,7 +2392,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.425 # Sprawdź, czy są dostępne 
+l.443 # Sprawdź, czy są dostępne 
                                     dane do odczytu
 ? 
 
@@ -2513,19 +2402,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.425 # Sprawdź, czy są dostępne 
+l.443 # Sprawdź, czy są dostępne 
                                     dane do odczytu
 ? 
 
-! LaTeX Error: Unknown float option `H'.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.452 \begin{figure}[H]
-                       
-? 
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2544,47 +2427,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [46]
+Underfull \vbox (badness 3930) has occurred while \output is active []
 
-! LaTeX Error: Unknown float option `H'.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.471 \begin{figure}[H]
-                       
-? 
-
-! LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.492 \begin{figure}[H]
-                       
-? 
-
-! LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.520 \begin{figure}[H]
-                       
-? 
-
-! LaTeX Error: Unknown float option `H'.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.544 \begin{figure}[H]
-                       
-? 
-) (chapters/07.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2594,6 +2439,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [47]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2611,7 +2459,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[49]
+[49]) (chapters/07.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2620,11 +2468,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[50
+[50]
+Rozdzia\l  7.
+[51
 
 ]
-Rozdzia\l  7.
-[51]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -3234,7 +3082,7 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A622BD51E8DF3481891420385B934EF2;15520.
+(rerunfilecheck)             Checksum: 91A9FFD0D25E9243A76A1797A25D6CAB;15799.
 
 Package biblatex Warning: Please (re)run BibTeX on the file(s):
 (biblatex)                main
@@ -3251,10 +3099,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 ### semi simple group (level 1) entered at line 15 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 46489 strings out of 474424
- 1017749 string characters out of 5741740
- 2203496 words of memory out of 5000000
- 67575 multiletter control sequences out of 15000+600000
+ 46582 strings out of 474424
+ 1019521 string characters out of 5741740
+ 2084496 words of memory out of 5000000
+ 67658 multiletter control sequences out of 15000+600000
  642855 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,12n,96p,1954b,5202s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3263,6 +3111,7 @@ c/lm/lmbx12.pfb><C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/publi
 c/lm/lmbxi10.pfb><C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/lm/lmcsc10.pfb><C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/lm/lmex10.pfb><C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/lm/lmmi10.pfb><C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/lm/lmmi12.pfb><C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/lm/lmmi8.pfb><C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/lm/lmr12.pfb><C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/publi
@@ -3275,9 +3124,9 @@ lm/lmsy10.pfb><C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/
 lm/lmtk10.pfb><C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/
 lm/lmtt12.pfb><C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/
 amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (77 pages, 3386388 bytes).
+Output written on main.pdf (77 pages, 3396992 bytes).
 PDF statistics:
- 1387 PDF objects out of 1440 (max. 8388607)
- 500 named destinations out of 1000 (max. 500000)
+ 1396 PDF objects out of 1440 (max. 8388607)
+ 502 named destinations out of 1000 (max. 500000)
  720 words of extra memory for PDF output out of 10000 (max. 10000000)
 

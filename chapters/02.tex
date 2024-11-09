@@ -1,32 +1,34 @@
 \chapter{Analiza tematu}
 \label{ch:analiza}
 
-W rozdziale tym zostanie przeanalizowany temat projektu, z uwzględnieniem aktualnego stanu wiedzy oraz znanych rozwiązań dotyczących automatycznych systemów sortowania za pomocą wizji komputerowej.
+W tym rozdziale zostanie przeanalizowany temat projektu, z uwzględnieniem aktualnego stanu wiedzy oraz znanych rozwiązań sterowania robotem mobilnym z napędem różnicowym oraz rozpoznawania kolorów z wykorzystaniem wizji komputerowej.
 
 \section{Sformułowanie problemu}
 \label{sec:sformulowanie_problemu}
 
-Głównym problemem rozwiązywanym w tym projekcie jest automatyzacja procesu sortowania obiektów według ich cech wizualnych, w tym przypadku koloru. Tradycyjne metody sortowania wymagają interwencji człowieka lub stosowania mechanicznych sorterów, które często są mniej elastyczne i mniej precyzyjne w identyfikacji złożonych cech. Celem projektu jest wykorzystanie technologii wizji komputerowej, aby umożliwić robotowi autonomiczne rozpoznawanie i sortowanie klocków według koloru.
+Głównym problemem rozwiązywanym projekcie jest automatyzacja procesu sortowania obiektów według ich cech wizualnych, w tym przypadku koloru. Tradycyjne metody sortowania wymagają interwencji człowieka lub stosowania mechanicznych sorterów, które często są mniej elastyczne i mniej precyzyjne w identyfikacji złożonych cech. Celem projektu jest wykorzystanie technologii wizji komputerowej, aby umożliwić robotowi autonomiczne rozpoznawanie i klasyfikację obiektu.
 
 \section{Osadzenie tematu w kontekście aktualnego stanu wiedzy (\textit{state of the art})}
 \label{sec:state_of_the_art}
 
-Temat projektu osadza się w dziedzinach robotyki mobilnej oraz wizji komputerowej, które rozwijają się bardzo dynamicznie w ostatnich latach. Rozwiązania oparte na wizji komputerowej, zwłaszcza w połączeniu z platformami SBC (Single-Board Computer), takimi jak Raspberry Pi, stają się coraz bardziej popularne w automatyzacji procesów przemysłowych i logistyce. Wykorzystanie takich narzędzi jak OpenCV w projektach robotycznych pozwala na zwiększenie elastyczności i precyzji systemów sortujących.
+Temat projektu osadza się w dziedzinach robotyki mobilnej oraz wizji komputerowej. W ciągu ostatnich lat dynamiczny rozwój wizji komputerowej poskutkował liczną ilością artykułów oraz książek poświęconych tej tematyce. Robotyka mobilna, kinematyka robotów oraz teoria sterowania obecna w środowisku naukowym od wielu lat, dzięki czemu z łatwością można znaleźć wiele materiałów poświęconych tej problematyce. 
 
 \section{Studia literaturowe}
 \label{sec:studia_literaturowe}
 
-Podczas prac nad poszczególnym elementami projektu istoną rolę odgrywała analiza dostępnej literatury naukowej. Poniżej zajduje się spis artykułów, książek, dokumentacji oraz stron internetowych, których treść okazała się przydatna podczas pracy. 
+Podczas prac nad poszczególnym elementami projektu istoną rolę odgrywała analiza dostępnej literatury naukowej. Poniżej zajduje się analiza artykułów, książek, dokumentacji oraz stron internetowych, których treść okazała się przydatna podczas pracy. 
 
 \subsection{Opracowanie systemu wizyjnego}
 
-Projektowy system wizyjny oparty został na dedykowanej kamerze dla platformy Raspberry Pi oraz na popularnej bibliotece OpenCV, co pozwala na efektywną analizę obrazu i wykrywanie obiektów w czasie rzeczywistym. W tym celu kluczowa okazała się dokumentacja biblioteki Libcamera2 \cite{bib:manualLibcamera2}, oferująca szczegółowe informacje na temat konfiguracji kamery, procedur inicjalizacji, oraz wykorzystania łącza CSI (Camera Serial Interface) do przesyłu obrazu. Dokumentacja dostarczona przez Raspberry Pi Ltd zawiera obszerne wytyczne dotyczące ustawień obrazu, obsługi błędów oraz optymalizacji parametrów obrazu pod kątem specyficznych wymagań, co stanowiło cenną pomoc podczas implementacji i konfiguracji systemu wizyjnego.
+System wizyjny oparty został na dedykowanej kamerze dla platformy Raspberry Pi oraz na popularnej bibliotece OpenCV, co pozwala na efektywną analizę obrazu i klasyfikację obiektów w czasie rzeczywistym. 
 
-W celu bardziej zaawansowanego przetwarzania obrazu wykorzystano bibliotekę OpenCV. Dla zrozumienia jej funkcjonalności, zwłaszcza w kontekście realizacji projektu, cennym źródłem była literatura specjalistyczna, m.in. książka \cite{bib:ksiazka}, która stanowi kompleksowy przegląd możliwości tej biblioteki. Książka ta obejmuje szeroką gamę algorytmów i metod przetwarzania obrazu, z których jedynie wybrane fragmenty — jak detekcja krawędzi za pomocą algorytmu Canny’ego oraz analiza barw — zostały zaimplementowane w niniejszym projekcie. Wybór tych technik wynikał z ich efektywności oraz dostosowania do wymagań projektu, jakim jest klasyfikacja obiektów na podstawie koloru.
+W tym celu kluczowa okazała się dokumentacja biblioteki Libcamera2 \cite{bib:manualLibcamera2}, oferująca szczegółowe informacje na temat instalacji, konfiguracji kamery, oraz wykorzystania łącza CSI (ang. \english{Camera Serial Interface}) do przesyłu obrazu. Dokumentacja dostarczona przez Raspberry Pi Ltd zawiera obszerne wytyczne dotyczące ustawień obrazu, obsługi błędów oraz optymalizacji parametrów obrazu pod kątem specyficznych wymagań, co stanowiło cenną pomoc podczas implementacji i konfiguracji systemu wizyjnego.
+
+W celu zaawansowanego przetwarzania obrazu wykorzystano bibliotekę OpenCV. Dla zrozumienia jej funkcjonalności, zwłaszcza w kontekście realizacji projektu, cennym źródłem była literatura specjalistyczna, m.in. książka \cite{bib:ksiazka}, która stanowi kompleksowy przegląd możliwości tej biblioteki. Książka ta obejmuje szeroką gamę algorytmów i metod przetwarzania obrazu, z których jedynie wybrane fragmenty — jak detekcja krawędzi za pomocą algorytmu Canny’ego oraz analiza barw — zostały zaimplementowane w niniejszym projekcie. Wybór tych technik wynikał z ich efektywności oraz dostosowania do wymagań projektu, jakim jest klasyfikacja obiektów na podstawie koloru.
 
 Przy opracowywaniu metody rozpoznawania kolorów wykorzystano również wyniki badań z publikacji \cite{bib:artykul2}, opisującej różnorodne metody i algorytmy analizy wizyjnej, stosowane w procesie klasyfikacji obiektów na podstawie ich cech kolorystycznych. Dzięki znajomości podstaw teoretycznych zaprezentowanych w tym dokumencie, wybór odpowiednich technik przetwarzania obrazu oraz implementacja algorytmu klasyfikacji kolorów przebiegały bardziej efektywnie.
 
-Kolejnym istotnym krokiem była analiza metod detekcji krawędzi, przy czym szczególna uwaga została poświęcona algorytmom i funkcjom dostępnym w bibliotece OpenCV. Jednym z analizowanych dokumentów był artykuł \cite{bib:artykul}, który szczegółowo omawia różne techniki detekcji krawędzi. Po dokonaniu analizy, jako metoda najbardziej odpowiednia dla projektu została wybrana detekcja krawędzi metodą Canny’ego, ze względu na jej skuteczność w kontekście warunków oświetleniowych oraz wysoką precyzję w identyfikacji krawędzi obiektów.
+Kolejnym istotnym krokiem była analiza metod detekcji krawędzi w celu wykrycia klocka, przy czym szczególna uwaga została poświęcona algorytmom i funkcjom dostępnym w bibliotece OpenCV. Jednym z analizowanych dokumentów był artykuł \cite{bib:artykul}, który szczegółowo omawia różne techniki detekcji krawędzi. Po dokonaniu analizy, jako metoda najbardziej odpowiednia dla projektu została wybrana detekcja krawędzi metodą Canny’ego, ze względu na jej skuteczność w kontekście warunków oświetleniowych oraz wysoką precyzję w identyfikacji krawędzi obiektów.
 
 
 \subsection{Opracowanie systemu kontroli silników}
@@ -35,4 +37,4 @@ System kontroli silników dla platformy mobilnej oparto o napęd różnicowy, kt
 
 Istotnym elementem systemu kontroli była również implementacja systemu enkoderów, które monitorują ruch robota i pozwalają na dokładną analizę przebytej drogi oraz prędkości. W projekcie dostępne były dwie metody odczytywania impulsów generowanych przez enkodery: poprzez przerwania generowane przy każdym impulsie oraz przy użyciu wbudowanego licznika mikrokontrolera. Wybór metody wiązał się z koniecznością dokładnego zrozumienia zarówno korzyści, jak i ograniczeń każdej z nich.
 
-Dzięki analizie dokumentacji mikrokontrolera ATMega328 \cite{bib:manualarduino} oraz literatury opisującej przerwania \cite{bib:artykul1}, możliwe było dogłębne zrozumienie mechanizmów przerwań, co stanowiło podstawę do implementacji wybranego algorytmu. Dokumentacja mikrokontrolera dostarcza szczegółowych informacji na temat możliwości wykorzystywania przerwań i liczników, co pozwala na optymalizację algorytmu kontroli silników oraz dostosowanie jego parametrów do wymogów projektu. Analiza tych źródeł umożliwiła autorowi wybór optymalnego rozwiązania, które zwiększa precyzję pomiaru pozycji i prędkości przy jednoczesnym zachowaniu wydajności systemu.
+Dzięki analizie dokumentacji mikrokontrolera ATMega328 \cite{bib:manualarduino} oraz literatury opisującej przerwania \cite{bib:artykul1}, możliwe było zrozumienie mechanizmów przerwań, co stanowiło podstawę do implementacji wybranego algorytmu. Dokumentacja mikrokontrolera dostarcza szczegółowych informacji na temat możliwości wykorzystywania przerwań i liczników, co pozwala na optymalizację algorytmu kontroli silników oraz dostosowanie jego parametrów do wymogów projektu. Analiza tych źródeł umożliwiła autorowi wybór optymalnego rozwiązania, które zwiększa precyzję pomiaru pozycji i prędkości przy jednoczesnym zachowaniu wydajności systemu.

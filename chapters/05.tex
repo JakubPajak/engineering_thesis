@@ -92,6 +92,18 @@ Biblioteka \textit{RPi.GPIO} zapewnia interfejs programistyczny do korzystania z
 
 Po zakończeniu instalacji wszystkich wymienionych pakietów i bibliotek, system Raspberry Pi jest gotowy do uruchomienia aplikacji kontrolującej robota. Przed przystąpieniem do pracy zaleca się również zweryfikowanie poszczególnych bibliotek.
 
+\subsection{Instalacja środowiska Python Flask}
+
+Struktura programowania Flask umożliwia proste utworzenie aplikacji internetowej bazującej na szablonie HTML oraz kaskadowym arkuszu stylów (ang. \english{Cascading Style Sheets} [CSS]) zapewniającym pożądany wygląd aplikacji. 
+
+Instalacja przebiega za pomocą menadżęra pakietów \textit{pip}:
+
+\begin{lstlisting}[language=bash][H]
+    pip install flask
+\end{lstlisting}
+
+Po instalacji możliwe jest utworzenie lokalnego serwera, do którego dostęp mają wszystkie urządzenie sieci lokalnej, co jest bardzo wygodne biorąc pod uwagę specyfikę wykorzystania tej aplikacji. 
+
 \subsection{Weryfikacja instalacji pakietów}
 
 Po zakończeniu procesu instalacji pakietów i bibliotek warto przeprowadzić weryfikację, aby upewnić się, że wszystkie komponenty zostały zainstalowane poprawnie i są gotowe do użycia. Testowanie każdego pakietu z osobna pozwala na szybkie wykrycie ewentualnych problemów i zapewnia, że środowisko pracy jest w pełni skonfigurowane.
@@ -130,7 +142,7 @@ libcamera-still -o test_image.jpg
 
 Jeżeli kamera działa poprawnie, komenda ta zapisze zdjęcie o nazwie \texttt{test\_image.jpg} w katalogu domyślnym. Otwarcie pliku i weryfikacja jego zawartości potwierdzi działanie kamery i poprawność instalacji.
 
-\subsection{Sposób aktywacji}
+\subsection{Sposób aktywacji --->> JESLI WEB_APP TO DO ZMIANY !!!}
 \label{sekcja:43}
 Proces aktywacji systemu sterowania robotem jest stosunkowo prosty, zakładając poprawną instalację wszystkich wymaganych bibliotek i pakietów. Należy jednak przed przystąpieniem do aktywacji zweryfikować, czy wszystkie wymagane komponenty zostały poprawnie zainstalowane, aby uniknąć potencjalnych problemów.
 
@@ -161,9 +173,6 @@ Obecna wersja systemu sterowania robotem nie różnicuje ról użytkowników, co
 
 \subsection{Sposób obsługi}
 Aby rozpocząć pracę z robotem, należy ustawić go w pozycji startowej, zamieszczonej w załączniku [DODAC ZAŁĄCZNIK] oraz uruchomić aplikację zgodnie z instrukcją zawartą w sekcji \textit{Sposób aktywacji}. Robot automatycznie rozpocznie wykonywanie zadań w trybie autonomicznym, co oznacza, że obsługa użytkownika ograniczy się jedynie do monitorowania pracy robota i ewentualnej korekty ścieżki za pomocą dostępnych opcji sterowania manualnego.
-
-\subsection{Kwestie bezpieczeństwa}
-W związku z tym, że robot wykorzystuje komponenty mechaniczne oraz podzespoły elektroniczne, przestrzeganie zasad bezpieczeństwa jest kluczowe dla ochrony użytkownika i urządzenia. Przed uruchomieniem robota należy upewnić się, że w jego otoczeniu nie znajdują się żadne przeszkody lub przedmioty, które mogłyby zakłócić jego pracę. W trakcie działania należy unikać bezpośredniego kontaktu z ruchomymi częściami robota. W przypadku ręcznej kontroli urządzenia sugeruje się korzystanie z trybu terminalowego lub przeglądarkowego, który zminimalizuje ryzyko kontaktu z urządzeniem.
 
 \subsection{Przykład działania}
 Aby zapoznać się z przykładowym działaniem robotycznego systemu sortowania, użytkownik może obejrzeć nagrania zamieszczone na dołączonym nośniku CD. Nagrania ilustrują funkcjonowanie systemu podczas sortowania elementów według ustalonych kryteriów i przedstawiają interakcje pomiędzy poszczególnymi modułami.

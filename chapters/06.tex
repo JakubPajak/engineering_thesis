@@ -2,15 +2,52 @@
 \label{ch:06}
 
 \section{Konstrukcja}
-Proces konstrukcji robota przebiegał w dwóch głównych etapach. Pierwszy z nich miał na celu przygotowanie prototypowej wersji robota, która spełnia podstawowe wymagania wynikające z założeń konstrukcyjnych dotyczących napędu oraz sterowania. Drugi etap opiewał na wykonanie pełnego projektu robota w programie Autodesk Fusion 360, spełniającego wszystkie techniczne wymogi projektu, z bardzo dobrą dokładnością, w celu wyeliminowania błędów płynących z konstrukcji mechanicznej.
+Proces konstrukcji robota przebiegał w dwóch głównych etapach. Pierwszy z nich miał na celu przygotowanie prototypowej wersji robota, która spełnia podstawowe wymagania wynikające z założeń konstrukcyjnych dotyczących napędu oraz sterowania. Drugi etap opiewał na wykonanie pełnego projektu robota w programie Autodesk Fusion 360, spełniającego wszystkie techniczne wymogi projektu, z bardzo dobrą dokładnością, w celu wyeliminowania błędów wynikających z konstrukcji mechanicznej.
 
-W fazie prototypowej zdecydowano się na wykorzystanie sklejki brzozowej – materiału taniego, lekkiego oraz łatwego w obróbce. Platforma bazowa prototypu miała wymiary 240 mm długości oraz 220 mm szerokości, co pozwalało na osadzenie silników w osi centralnej zgodnie z przyjętym projektem napędu. Taka konfiguracja umożliwiła szybką weryfikację działania elementów wykonawczych oraz systemu sterowania, jeszcze przed przystąpieniem do bardziej zaawansowanych prac konstrukcyjnych.
+\vspace{0.5}
 
-W toku prac nad prototypem, po osiągnięciu zadowalającej precyzji sterowania, do konstrukcji dołączono przednią ścianę, do której przymocowano chwytak. Umożliwiło to przetestowanie poprawności działania wszystkich elementów wykonawczych obecnych na platformie mobilnej. Dodatkowo, równocześnie przeprowadzono testy pełnej komunikacji między kontrolerem silników a komputerem Raspberry Pi, który pełnił rolę głównej jednostki obliczeniowej robota. W tym kroku zweryfikowano, czy platforma poprawnie reaguje na przesyłane komendy oraz czy nie występują żadne błędy w komunikacji lub wykonaniu poleceń.
+W fazie prototypowej zdecydowano się na wykorzystanie sklejki brzozowej – materiału taniego, lekkiego oraz łatwego w obróbce. Platforma bazowa prototypu miała wymiary: 240 mm długości oraz 220 mm szerokości. Silniki zostały osadzone na osi poprzecznej robota, zgodnie z wymogami nakładanymi przez sposób napędu. 
 
-Po pozytywnym zakończeniu walidacji funkcjonowania algorytmów sterowania i komunikacji, przystąpiono do drugiego etapu konstrukcji – zaprojektowania i wytworzenia docelowej obudowy bazowej robota. Obudowa została wykonana przy użyciu technologii druku 3D, co pozwoliło na uzyskanie wysokiej precyzji oraz wprowadzenie niezbędnych modyfikacji konstrukcyjnych w stosunku do prototypu. Ze względu na ograniczenia przestrzeni roboczej urządzenia drukującego, wymiary podstawy platformy zostały zmienione na plan kwadratu o boku 220 mm. Finalny projekt podstawy, przygotowany w programie Autodesk Fusion 360, został przedstawiony na rysunku \ref{fig:full}.
+Taka konfiguracja umożliwiła szybką weryfikację działania elementów wykonawczych oraz systemu sterowania, jeszcze przed przystąpieniem do bardziej zaawansowanych prac konstrukcyjnych. Zdjęcie [\ref{zdj:prototyp}] przedstawia opisany prototyp. 
 
-Poniżej zostały zamieszczone zrzuty ekranu z programu Fusion 360 w celu zobrazowania, zdaniem autora, najważniejszych elementów. Obudowa była projektowana w dwóch częściach, najpierw baza, a po ukończeniu fazy testów została wydrukowana górna część konstrukcji. 
+\vspace{0.5}
+
+W toku prac nad wczesną wersją, po osiągnięciu zadowalającej precyzji sterowania, do konstrukcji dołączono przednią ścianę, do której przymocowano chwytak [\ref{zdj:prototyp-chwytak}]. Umożliwiło to przetestowanie poprawności działania wszystkich elementów wykonawczych obecnych na platformie mobilnej. Dodatkowo, równocześnie przeprowadzono testy pełnej komunikacji między kontrolerem silników a komputerem Raspberry Pi, który pełnił rolę głównej jednostki obliczeniowej robota. W tym kroku zweryfikowano, czy platforma poprawnie reaguje na przesyłane komendy oraz czy nie występują żadne błędy w komunikacji lub wykonaniu poleceń.
+
+\vspace{0.5}
+
+Po pozytywnym zakończeniu walidacji funkcjonowania algorytmów sterowania i komunikacji, przystąpiono do drugiego etapu konstrukcji – zaprojektowania i wytworzenia docelowej obudowy bazowej robota. Obudowa została wykonana przy użyciu technologii druku 3D, co pozwoliło na uzyskanie wysokiej precyzji oraz wprowadzeniu niezbędnych modyfikacji konstrukcyjnych w stosunku do prototypu. Ze względu na ograniczenia przestrzeni roboczej urządzenia drukującego, wymiary podstawy platformy zostały przeniesione na plan kwadratu o boku 220 mm.
+Przednia ściana została zaprojektowana jako część podłogi, w celu zwiększenia sztywności konstrukcji. Najcięższym elementem całego robota jest chwytak wraz z serwomechanizmem, przez co wytrzymałość przedniej ściany oraz podłogi była kluczowa. Zgodnie z osią do wewnątrz robota została poprowadzona przegroda, pełniąca funkcję podpory dla górnej części platformy.
+Finalny projekt podstawy, przygotowany w programie Autodesk Fusion 360, został przedstawiony na rysunku [\ref{fig:full}].
+
+\vspace{0.5}
+
+Ostatni etap obejmował zaprojektowanie górnej części obudowy, na której zostanie osadzony komputer Raspberry Pi oraz przymocowany uchwyt na kamerę. Sposób osadzenia górnej części na dolnym segmencie opiera się na precyzyjnie wykonanej przerwie, w którą wsuwa się wspornik bazy. Dzięki takiemu rozwiązaniu, w prosty i szybki sposób można zdjąć górną część i dokonać potrzebnych zmian lub modyfikacji. Te atrybuty są szczególnie przydatne podczas fazy testów i ciągłego ulepszania robota.
+
+W wersji docelowej, przeznaczonej do komercyjnego użytkowania, omawiane mocowanie zostałoby zastąpione przez standardowe połączenia śrubowe lub sklejenie, co zwiększyłoby stabilność i trwałość obudowy.
+
+Ostateczna wersja platformy mobilnej została zaprezentowana na zdjęciu [\ref{fig:base-full}] oraz jest widoczna na nagraniach załączonych do pracy. Model obudowy stanowi w pełni funkcjonalny, zgodny z założeniami, robot, jednak część mocowań w wersji przeznaczonej do sprzedaży należy zmienić. 
+
+W tym celu zastosowano mocowania, umożliwiające łatwe zdejmowanie i zakładanie górnej części obudowy na podstawę, co znacząco ułatwia konserwację oraz serwisowanie wewnętrznych komponentów.
+
+Finalna wersja platformy mobilnej została zaprezentowana na ilustracji \ref{fig
+}, a także na załączonych nagraniach.
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{./graf/upper.png}
+  \caption{Przybliżenie miejsca mocowania kulek podporowych w osi robota}
+  \label{fig:ball-close}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{./graf/full-close.png}
+  \caption{Przybliżenie sposobu połączenia górnej części obudowy z dolną. Widoczny jest również otwór przeznaczony na przewody połączeniowe}
+  \label{fig:full-close}
+\end{figure}
+
 
 \begin{figure}[H]
   \centering
@@ -33,25 +70,6 @@ Poniżej zostały zamieszczone zrzuty ekranu z programu Fusion 360 w celu zobraz
   \label{fig:base-full}
 \end{figure}
 
-Technologia druku 3D umożliwiła precyzyjne rozmieszczenie mocowań na silniki oraz zastosowanie podpór kulowych na spodzie platformy, co zwiększyło stabilność konstrukcji. Przednia ściana została zaprojektowana jako integralna część podłogi, aby zapewnić jej odpowiednią sztywność i wytrzymałość. Wewnątrz konstrukcji zainstalowano centralnie umieszczony element wspornikowy, który służy jako oparcie dla drugiego poziomu platformy. Na wyższej warstwie znajdują się komputer Raspberry Pi oraz kamera odpowiedzialna za wizyjne śledzenie otoczenia.
-
-Ostatni etap obejmował zaprojektowanie górnej części obudowy, która pełni funkcję ochronną oraz pozwala na łatwy dostęp do niżej położonych elementów robota. W tym celu zastosowano mocowania, umożliwiające łatwe zdejmowanie i zakładanie górnej części obudowy na podstawę, co znacząco ułatwia konserwację oraz serwisowanie wewnętrznych komponentów.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.7\textwidth]{./graf/upper.png}
-  \caption{Przybliżenie miejsca mocowania kulek podporowych w osi robota}
-  \label{fig:ball-close}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.7\textwidth]{./graf/full-close.png}
-  \caption{Przybliżenie sposobu połączenia górnej części obudowy z dolną. Widoczny jest również otwór przeznaczony na przewody połączeniowe}
-  \label{fig:full-close}
-\end{figure}
-
-Ostateczna wersja platformy mobilnej, zaprezentowana na poniższej grafice oraz na nagraniach dołączonych do pracy, stanowi w pełni funkcjonalny model robota gotowy do realizacji zaplanowanych zadań w zakresie nawigacji i interakcji z otoczeniem.
 
 \begin{figure}[H]
   \centering
@@ -551,3 +569,16 @@ cv2.putText(frame, name, (cx, cy), cv2.FONT_HERSHEY_SIMPLEX, 1, display_color, 2
   \caption{Kod wizualizacji wyników detekcji kolorów i kształtów}
   \label{fig:visualization}
 \end{figure}
+
+\section{Implementacja panelu operatorskiego}
+
+Implementacja panelu operatorskiego wybiega poza minimalne założenia projektowe, jednak ze względu na sposób pracy robota, została uznana za pomocną. Dzięki temu, użytkownik w czasie rzeczywistym może obserwować jakość działania systemu oraz w razie potrzeby stosownie zareagować. 
+
+System podglądu pracy robota został utworzony bazując na strukturze programowania Flask. Jest to popularny schemat tworzenia aplikacji internetowych, ponieważ zapewnia on możliwość utworzenia lekkiego i szybkiego serwera działającego lokalnie na maszynie. Jest to istotna kwestia, biorąc pod uwagę, komputer na którm aplikacja pracuje. 
+
+Struktura projektu jest relatywnie prosta, zawiera trzy główne składniki:
+\begin{itemize}
+  \item folder \textit{static} - zawiera wszystkie statyczne zasoby strony internetowej, takie jak pliki CSS odpowiadające za wygląd, obrazy oraz inne pliki multimedialne, które są ładowane po stronie klienta bez potrzeby ponownego przetwarzania przez serwer,
+  \item folder \textit{templates} - przechowuje pliki HTML, które definiują strukturę i wygląd interfejsu użytkownika. Flask wykorzystuje mechanizm szablonów Jinja2, co pozwala na dynamiczne wstawianie zmiennych i generowanie treści w zależności od danych otrzymywanych z robota w czasie rzeczywistym,
+  \item plik \textit{app.py} -  pełni rolę głównego pliku aplikacji, obsługując zapytania HTTP oraz zarządzając komunikacją pomiędzy częścią serwerową a front-endem aplikacji. Plik ten inicjalizuje serwer Flask, odpowiada za odbieranie danych z robota oraz wysyłanie ich do szablonów HTML.
+\end{itemize} 

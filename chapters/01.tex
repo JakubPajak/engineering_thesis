@@ -1,28 +1,37 @@
 \chapter{Wstęp}
 \label{ch:wstep}
 
-Niniejsza praca inżynierska koncentruje się na zaprojektowaniu i budowie autonomicznej platformy jezdnej, której zadaniem jest sortowanie klocków na podstawie ich koloru. W dobie rozwijającej się automatyzacji i robotyzacji coraz większą rolę odgrywają systemy zdolne do autonomicznego wykonywania zadań, które wcześniej wymagały udziału człowieka. Projekt ten wkomponowuje się w ten trend, mając na celu zautomatyzowanie procesu sortowania elementów w środowisku przemysłowym lub magazynowym. W tym rozdziale zostaną omówione kluczowe aspekty projektu, w tym wprowadzenie w problem, osadzenie go w odpowiednim kontekście naukowym oraz zakres i cele pracy.
+Niniejsza praca inżynierska stanowi propozycję rozwiązania problemu automatycznego sortowania klocków na podstawie analizy wizyjnej, a dokładnie rozpoznania koloru. Temat pracy jest niezwykle aktualny, ze względu na bardzo dynamicznie rozwijający się przemysł 4.0 oraz powrzechną robotyzację i automatyzację procesów. Projekt ten wpisuje się w trend stwarzając możliwość wykorzystania go w szeroko pojętym przemyśle oraz powierzchniach magazynowych. 
+
+W tym rozdziale zostanie omówiony problem, którego rozwiązaniem jest robot mobilny, osadzenie problemu w dziedzinie, cel pracy oraz krótki opis poszczególnych rozdziałów. 
 
 \section{Wprowadzenie w problem}
 \label{sec:wprowadzenie}
 
-Problem, który stara się rozwiązać niniejszy projekt, dotyczy automatyzacji procesów sortowania w różnych środowiskach przemysłowych, takich jak linie produkcyjne czy magazyny. W tradycyjnym podejściu sortowanie odbywa się ręcznie lub z wykorzystaniem prostych mechanicznych sorterów, które często są mało elastyczne i kosztowne w utrzymaniu. W odpowiedzi na to wyzwanie, projekt ten przewiduje stworzenie autonomicznego robota mobilnego, wykorzystującego kamerę i algorytmy wizji komputerowej do rozpoznawania kolorów klocków oraz następnie do przewiezienia ich do odpowiednich pojemników.
+Proces sortowania przedmiotów jest zadaniem, do którego wykonania konieczni byli ludzie, ze względu na umiejętność klasyfikowania obiektów na podstawie ich wizualnych aspektów. Wraz z rozwojem wizji komputerowej, możliwe stało się, aby oprogramowanie dokonywało podobnej klasyfikacji. Obecnie zaawansowane algorytmy uczenia maszynowego nierzadko są bardziej skuteczne od ludzi. 
 
-Takie rozwiązanie jest szczególnie przydatne w sytuacjach, gdzie istnieje potrzeba dynamicznej zmiany parametrów sortowania lub tam, gdzie wymagana jest szybka reakcja na zmiany w procesie produkcyjnym. Automatyzacja pozwala również na zmniejszenie kosztów operacyjnych, zwiększenie efektywności oraz redukcję błędów ludzkich w procesie sortowania.
+Jednak, żeby przeprowadzić proces sortowania w dynamicznym środowisku, obecność medium transportowego jest wymagana. W tym miejscu na przeciw wychodzi robotyka. Połączenie platformy mobilnej wraz z wizją komputerową pozwala na uzyskanie bardzo skutecznej formy sortowania obiektów. 
+
+Zastosowanie mobilnej platformy wyposażonej w kamerę jest szczególnie przydatne w dynamicznym środowisku przemysłowym lub magazynowym, gdzie istotna jest elastyczność i możliwość dostosowania trasy robota do aktualnych warunków. 
+
+Sam fakt automatyzacji procesu sortowania niesie ze sobą dużo krzyści takich jak: zmniejszenie kosztów operacyjnych, zwiększenie efektywności oraz redukcję błędów ludzkich w procesie sortowania.  
 
 \section{Osadzenie problemu w dziedzinie}
 \label{sec:osadzenie}
 
-Tematyka projektu wpisuje się w kilka dynamicznie rozwijających się dziedzin, takich jak robotyka mobilna, automatyzacja przemysłowa oraz wizja komputerowa. Roboty mobilne, zdolne do samodzielnej nawigacji oraz wykonywania skomplikowanych zadań, znajdują coraz szersze zastosowanie w przemyśle, logistyce, a także w gospodarstwach domowych. W kontekście niniejszego projektu, kluczową rolę odgrywa zastosowanie odometrii oraz systemów napędowych, które pozwalają na precyzyjną kontrolę ruchu robota.
+Projekt można osadzić w dziedzinie robotyki mobilnej wspartej wizją komputerową. Roboty mobilne, zdolne do samodzielnej lub częściowo samodzielnej nawigacji oraz wykonywania skomplikowanych zadań, znajdują coraz szersze zastosowanie w przemyśle lub logistyce. W kontekście niniejszego projektu, kluczową rolę odgrywa zastosowanie odometrii oraz systemów napędowych, które pozwalają na precyzyjną kontrolę ruchu robota.
 
-Wizja komputerowa, z kolei, umożliwia rozpoznawanie obiektów na podstawie ich cech wizualnych, takich jak kolor czy kształt. Technologia ta, oparta na bibliotekach takich jak OpenCV, stała się dostępna nawet dla małych systemów wbudowanych, takich jak Raspberry Pi. W niniejszym projekcie robot wykorzystuje kamerę do rejestrowania obrazów klocków, które następnie są analizowane w czasie rzeczywistym w celu określenia koloru, a na tej podstawie podejmowana jest decyzja gdzie analizowany klocek powinien zostać przetransportowany.
+Wizja komputerowa, z kolei, umożliwia rozpoznawanie obiektów na podstawie ich cech wizualnych. Technologia ta, oparta na bibliotekach takich jak OpenCV, stała się dostępna nawet dla małych systemów wbudowanych, na przykład Raspberry Pi. W niniejszym projekcie robot wykorzystuje kamerę do rejestrowania obrazów klocków, które następnie są analizowane w czasie rzeczywistym w celu określenia koloru, a na tej podstawie podejmowana jest decyzja gdzie bieżący klocek powinien zostać przetransportowany.
 
 \section{Cel pracy}
 \label{sec:cel}
 
-Głównym celem projektu jest zaprojektowanie i zbudowanie autonomicznej platformy jezdnej, która potrafi sortować klocki na podstawie ich koloru. Robot będzie wykorzystywał kamerę oraz algorytmy wizji komputerowej do identyfikacji kolorów takich jak czerwony, zielony oraz niebieski, a następnie będzie odpowiednio przekierowywał klocki do odpowiednich pojemników. Proces ten ma odbywać się w pełni automatycznie, bez potrzeby ingerencji człowieka.
+Celem projektu jest zaprojektowanie oraz zbudowanie platformy jezdnej pracującej w trybie automatycznym. Ponadto celem jest implementacja systemu kontroli robota, umożliwiającego samodzielne podejmowanie decyzji o wyborze miejsca docelowego dla danego obiektu.
 
-Dodatkowym celem jest stworzenie systemu kontroli, który pozwoli na bieżąco monitorować pracę robota oraz ewentualnie wprowadzać modyfikacje w jego działaniu. System powinien być elastyczny, umożliwiający łatwe rozszerzenie o dodatkowe funkcje, takie jak rozpoznawanie większej liczby kolorów lub innych cech klocków.
+Istotnym założeniem poprawności działania platformy jest dokładność i powtarzalność działania, wpływająca na możliwość automatycznej pracy bez ingerencji człowieka.
+
+Dodatkowo system powinien być elastyczny, umożliwiający łatwe rozszerzenie o dodatkowe funkcje, takie jak rozpoznawanie większej liczby kolorów lub innych cech klocków.
+
 
 \section{Zakres pracy}
 \label{sec:zakres}
@@ -30,13 +39,11 @@ Dodatkowym celem jest stworzenie systemu kontroli, który pozwoli na bieżąco m
 Projekt obejmuje szeroki zakres działań, zarówno w zakresie sprzętowym, jak i programistycznym. Poniżej przedstawiono główne etapy realizacji:
 
 \begin{itemize}
-    \item Zbudowanie fizycznej platformy jezdnej, w tym konstrukcji mechanicznej oraz systemu napędowego z enkoderami,
-    \item Implementacja systemu rozpoznawania kolorów za pomocą kamery oraz algorytmów wizji komputerowej z użyciem Raspberry Pi i biblioteki OpenCV,
-    \item Opracowanie algorytmu podejmowania decyzji na podstawie rozpoznanego koloru i przekierowania klocka do odpowiedniego pojemnika,
-    \item Testowanie i optymalizacja działania systemu, aby zapewnić jego poprawne funkcjonowanie w rzeczywistych warunkach, takich jak linie produkcyjne czy magazyny.
+    \item Zbudowanie fizycznej platformy jezdnej, w tym konstrukcji mechanicznej oraz systemu napędowego.
+    \item Implementacja systemu rozpoznawania kolorów za pomocą kamery oraz algorytmów wizji komputerowej z użyciem Raspberry Pi i biblioteki OpenCV.
+    \item Opracowanie algorytmu podejmowania decyzji na podstawie rozpoznanego koloru i przekierowania klocka do odpowiedniego pojemnika.
+    \item Testowanie i optymalizacja działania systemu, aby zapewnić jego poprawne funkcjonowanie w rzeczywistych warunkach.
 \end{itemize}
-
-Zakres projektu przewiduje także możliwość dalszej rozbudowy o nowe funkcjonalności, co zwiększa elastyczność i potencjalne zastosowanie platformy w innych dziedzinach, takich jak automatyczne sortowanie elementów na podstawie kształtu czy materiału.
 
 \section{Zwięzła charakterystyka rozdziałów}
 \label{sec:charakterystyka}
@@ -46,14 +53,15 @@ Struktura pracy została podzielona na następujące rozdziały:
 \begin{itemize}
     \item \textbf{Rozdział 1: Wstęp} – Przedstawienie problemu, celów oraz zakresu projektu.
     \item \textbf{Rozdział 2: Analiza tematu} – Przegląd dostępnych rozwiązań, technik oraz technologii stosowanych w podobnych systemach, a także omówienie aktualnego stanu wiedzy w tej dziedzinie.
-    \item \textbf{Rozdział 3: Wymagania i narzędzia} – Opis wymagań projektowych oraz narzędzi, takich jak Raspberry Pi, OpenCV oraz Python, które zostaną użyte do realizacji projektu.
-    \item \textbf{Rozdział 4: Specyfikacja zewnętrzna} – Opis funkcjonalności systemu z perspektywy użytkownika, w tym interfejsu oraz interakcji z otoczeniem.
-    \item \textbf{Rozdział 5: Specyfikacja wewnętrzna} – Szczegółowa analiza architektury wewnętrznej systemu, w tym struktury oprogramowania i integracji z komponentami sprzętowymi.
-    \item \textbf{Rozdział 6: Weryfikacja i walidacja} – Opis przeprowadzonych testów, ocena efektywności systemu oraz zgodności z założeniami projektowymi.
-    \item \textbf{Rozdział 7: Podsumowanie i wnioski} – Zakończenie projektu, omówienie osiągniętych celów, a także wskazanie możliwych kierunków rozwoju systemu.
+    \item \textbf{Rozdział 3: Założenia wstępne} – Opis wymagań projektowych, przedstawienie diagramów funkcjonalnych, opis wykorzystanego sprzętu elekronicznego oraz metodyka pracy. 
+    \item \textbf{Rozdział 4: Podstawy teoretyczne} – Przedstawienie teoretycznych podstaw działania wykorzystanych techonologii. 
+    \item \textbf{Rozdział 5: Wymagania i specyfikacja użytkowa} – Opis funkcjonalności systemu z perspektywy użytkownika,w tym sposobu instalacji oraz wykorzystania. 
+    \item \textbf{Rozdział 6: Specyfikacja techniczna} – Szczegółowa analiza implementacji systemu, w tym struktury oprogramowania i integracji z komponentami sprzętowymi.
+    \item \textbf{Rozdział 7: Weryfikacja i walidacja} – Opis przeprowadzonych testów, ocena efektywności systemu oraz zgodności z założeniami projektowymi.
+    \item \textbf{Rozdział 8: Podsumowanie i wnioski} – Zakończenie projektu, omówienie osiągniętych celów, a także wskazanie możliwych kierunków rozwoju systemu.
 \end{itemize}
 
-\section{Wkład autora}
-\label{sec:wklad}
+% \section{Wkład autora}
+% \label{sec:wklad}
 
-Projekt został w pełni zrealizowany przez autora. Autor odpowiada za wszystkie etapy pracy, począwszy od projektowania i budowy platformy, poprzez implementację algorytmów rozpoznawania kolorów i sterowania ruchem robota, aż po testowanie i optymalizację systemu. Ponadto, autor zaprojektował system kontrolny, który pozwala na monitorowanie pracy robota w czasie rzeczywistym oraz umożliwia wprowadzenie ewentualnych korekt.
+% Projekt został w pełni zrealizowany przez autora. Autor odpowiada za wszystkie etapy pracy, począwszy od projektowania i budowy platformy, poprzez implementację algorytmów rozpoznawania kolorów i sterowania ruchem robota, aż po testowanie i optymalizację systemu. Ponadto, autor zaprojektował system kontrolny, który pozwala na monitorowanie pracy robota w czasie rzeczywistym oraz umożliwia wprowadzenie ewentualnych korekt.
