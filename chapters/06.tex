@@ -4,40 +4,37 @@
 \section{Konstrukcja}
 Proces konstrukcji robota przebiegał w dwóch głównych etapach. Pierwszy z nich miał na celu przygotowanie prototypowej wersji robota, która spełnia podstawowe wymagania wynikające z założeń konstrukcyjnych dotyczących napędu oraz sterowania. Drugi etap opiewał na wykonanie pełnego projektu robota w programie Autodesk Fusion 360, spełniającego wszystkie techniczne wymogi projektu, z bardzo dobrą dokładnością, w celu wyeliminowania błędów wynikających z konstrukcji mechanicznej.
 
-\vspace{0.5}
-
 W fazie prototypowej zdecydowano się na wykorzystanie sklejki brzozowej – materiału taniego, lekkiego oraz łatwego w obróbce. Platforma bazowa prototypu miała wymiary: 240 mm długości oraz 220 mm szerokości. Silniki zostały osadzone na osi poprzecznej robota, zgodnie z wymogami nakładanymi przez sposób napędu. 
 
 Taka konfiguracja umożliwiła szybką weryfikację działania elementów wykonawczych oraz systemu sterowania, jeszcze przed przystąpieniem do bardziej zaawansowanych prac konstrukcyjnych. Zdjęcie [\ref{zdj:prototyp}] przedstawia opisany prototyp. 
 
-\vspace{0.5}
+\hspace{1cm}
 
 W toku prac nad wczesną wersją, po osiągnięciu zadowalającej precyzji sterowania, do konstrukcji dołączono przednią ścianę, do której przymocowano chwytak [\ref{zdj:prototyp-chwytak}]. Umożliwiło to przetestowanie poprawności działania wszystkich elementów wykonawczych obecnych na platformie mobilnej. Dodatkowo, równocześnie przeprowadzono testy pełnej komunikacji między kontrolerem silników a komputerem Raspberry Pi, który pełnił rolę głównej jednostki obliczeniowej robota. W tym kroku zweryfikowano, czy platforma poprawnie reaguje na przesyłane komendy oraz czy nie występują żadne błędy w komunikacji lub wykonaniu poleceń.
-
-\vspace{0.5}
 
 Po pozytywnym zakończeniu walidacji funkcjonowania algorytmów sterowania i komunikacji, przystąpiono do drugiego etapu konstrukcji – zaprojektowania i wytworzenia docelowej obudowy bazowej robota. Obudowa została wykonana przy użyciu technologii druku 3D, co pozwoliło na uzyskanie wysokiej precyzji oraz wprowadzeniu niezbędnych modyfikacji konstrukcyjnych w stosunku do prototypu. Ze względu na ograniczenia przestrzeni roboczej urządzenia drukującego, wymiary podstawy platformy zostały przeniesione na plan kwadratu o boku 220 mm.
 Przednia ściana została zaprojektowana jako część podłogi, w celu zwiększenia sztywności konstrukcji. Najcięższym elementem całego robota jest chwytak wraz z serwomechanizmem, przez co wytrzymałość przedniej ściany oraz podłogi była kluczowa. Zgodnie z osią do wewnątrz robota została poprowadzona przegroda, pełniąca funkcję podpory dla górnej części platformy.
 Finalny projekt podstawy, przygotowany w programie Autodesk Fusion 360, został przedstawiony na rysunku [\ref{fig:full}].
 
-\vspace{0.5}
+\hspace{1cm} 
 
 Ostatni etap obejmował zaprojektowanie górnej części obudowy, na której zostanie osadzony komputer Raspberry Pi oraz przymocowany uchwyt na kamerę. Sposób osadzenia górnej części na dolnym segmencie opiera się na precyzyjnie wykonanej przerwie, w którą wsuwa się wspornik bazy. Dzięki takiemu rozwiązaniu, w prosty i szybki sposób można zdjąć górną część i dokonać potrzebnych zmian lub modyfikacji. Te atrybuty są szczególnie przydatne podczas fazy testów i ciągłego ulepszania robota.
 
-W wersji docelowej, przeznaczonej do komercyjnego użytkowania, omawiane mocowanie zostałoby zastąpione przez standardowe połączenia śrubowe lub sklejenie, co zwiększyłoby stabilność i trwałość obudowy.
+W wersji docelowej, przeznaczonej do komercyjnego użytkowania, omawiane mocowanie zostałoby zastąpione przez standardowe połączenia śrubowe lub sklejenie, co zwiększyłoby trwałość obudowy.
+
+\hspace{1cm}
 
 Ostateczna wersja platformy mobilnej została zaprezentowana na zdjęciu [\ref{fig:base-full}] oraz jest widoczna na nagraniach załączonych do pracy. Model obudowy stanowi w pełni funkcjonalny, zgodny z założeniami, robot, jednak część mocowań w wersji przeznaczonej do sprzedaży należy zmienić. 
 
 W tym celu zastosowano mocowania, umożliwiające łatwe zdejmowanie i zakładanie górnej części obudowy na podstawę, co znacząco ułatwia konserwację oraz serwisowanie wewnętrznych komponentów.
 
-Finalna wersja platformy mobilnej została zaprezentowana na ilustracji \ref{fig
-}, a także na załączonych nagraniach.
+Finalna wersja platformy mobilnej została zaprezentowana na ilustracji \ref{fig:full}, a także na załączonych nagraniach.
 
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.7\textwidth]{./graf/upper.png}
-  \caption{Przybliżenie miejsca mocowania kulek podporowych w osi robota}
+  \caption{Model górnej części obudowy}
   \label{fig:ball-close}
 \end{figure}
 
@@ -62,14 +59,6 @@ Finalna wersja platformy mobilnej została zaprezentowana na ilustracji \ref{fig
   \caption{Przybliżenie miejsca mocowania kulek podporowych w osi robota}
   \label{fig:ball-close}
 \end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.9\textwidth]{./graf/base-full.png}
-  \caption{Projekt podwozia robota wraz z większością elementów w celu zobrazowania gotowej wersji}
-  \label{fig:base-full}
-\end{figure}
-
 
 \begin{figure}[H]
   \centering

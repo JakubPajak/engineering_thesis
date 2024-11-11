@@ -1,32 +1,63 @@
 \chapter{Podstawy teoretyczne}
 \label{ch:podstawy-teoretyczne}
 
+W niniejszym rozdziale przedstawiono zagadnienia teoretyczne, które stanowią fundament techniczny realizowanego projektu. Przedstawienie podstaw działania zastosowanych elementów pozwoli lepiej zrozumieć wyzwania projektowe oraz przyjęte metody rozwiązywania problemów związanych ze sterowaniem i kontrolą mobilnej platformy robotycznej.
 
-W niniejszym rozdziale przedstawiono kluczowe zagadnienia teoretyczne, które stanowią fundament techniczny realizowanego projektu. Przedstawienie podstaw działania zastosowanych elementów pozwoli lepiej zrozumieć wyzwania projektowe oraz przyjęte metody rozwiązywania problemów związanych ze sterowaniem i nawigacją mobilnej platformy robotycznej.
-
-Omówione zostaną najważniejsze zasady funkcjonowania enkoderów kwadraturowych, które umożliwiają monitorowanie ruchu - podstawowej odometrii. Zaprezentowane zostaną także zasady działania regulatora PID, powszechnie stosowanego w układach sterowania.
+Omówione zostaną najważniejsze zasady funkcjonowania enkoderów kwadraturowych, wykorzystanych do monitorowania ruchu robota - podstawowej odometrii. Zaprezentowane zostaną także zasady działania regulatora PID, powszechnie stosowanego w układach sterowania.
 
 W dalszej części omówiono wybrane algorytmy z zakresu wizji komputerowej, takie jak detekcja krawędzi i rozpoznawanie kolorów, które stanowią istotne elementy systemu wizyjnego robota.
 
 \section{Enkodery}
+Enkodery są urządzeniami pomiarowymi, które umożliwiają śledzenie ruchu obrotowego lub liniowego. W zastosowaniach z zakresu robotyki, takich jak opisywana platforma mobilna, enkodery umożliwiają śledzenie oraz manipulowanie prędkością lub położeniem robota w przedstzeni dwuwymiarowej. Monitorowanie położenia robota za pomocą między innymi odczytów impulsów z enkoderów stanowi podstawę szerokiej dziedziny robotyki mobilnej - odometrii. W zależości od potrzeb, dodatkowym sensorem możliwym do wykorzystania jest czujnik żyroskopowy IMU - zwracający wartości przyspieszeń liniowych oraz kątowych. W tym projekcie zostały wykorzystane jedynie enkodery, ze względu na sposób poruszania się robota. 
 
-Enkodery są urządzeniami pomiarowymi, które umożliwiają śledzenie ruchu obrotowego lub liniowego. W zastosowaniach z zakresu robotyki, takich jak opisywana platforma mobilna, enkodery umożliwiają śledzenie prędkości i pozycji, co jest kluczowe dla poprawnej implementacji odometrii – procesu śledzenia pozycji robota w przestrzeni. Enkodery dzielą się na enkodery optyczne, magnetyczne i mechaniczne, w zależności od zastosowanej technologii detekcji. W omawianym projekcie szczególne zastosowanie znajdują enkodery kwadraturowe, montowane przy silnikach odpowiedzialnych za napęd różnicowy robota.
+Enkodery dzielą się na enkodery optyczne, magnetyczne i mechaniczne, w zależności od zastosowanej technologii detekcji. Szczególna uwaga zostanie poświęcona enkoderom magnetycznym umożliwiających detekcję kierunku ruchu - enkoderom kwadraturowym. 
 
 \subsection{Rodzaje enkoderów}
 
-Enkodery klasyfikowane są na podstawie zasady ich działania, co wpływa na precyzję pomiarów oraz możliwości aplikacyjne. Główne typy enkoderów to:
+Enkodery klasyfikowane są na podstawie zjawisk fizycznych wykorzystywanych do wykrywania ruchu. Główne typy to\cite{bib:enkoder-mag-opt}:
 
 \begin{itemize}
-    \item \textbf{Enkodery optyczne} - działają na zasadzie przerywania wiązki światła przez tarczę z otworami, generując impulsy odpowiadające ruchowi. Ten typ enkoderów charakteryzuje się dużą precyzją, co czyni je popularnym wyborem w robotyce.
-    \item \textbf{Enkodery magnetyczne} - działają w oparciu o zmiany pola magnetycznego, zwykle generowane przez magnes przymocowany do osi. Zastosowanie efektu Hall'a w tych enkoderach pozwala na wykrywanie zmian w polu magnetycznym, co jest kluczowe w enkoderach kwadraturowych. Są wytrzymałe i odporne na kurz czy wibracje, przez co dobrze sprawdzają się w trudnych warunkach.
+    \item \textbf{Enkodery optyczne} - podstawę budowy stanowi przeźroczysta tarcza kodowa, przymocowana do wału silnika. Na tarczy znajdują się otwory w określonych miejscach, przez które na układ elementów światłoczułych pada wiązka światła podczerowego generowanego przez diodę IR LED. 
+    \item \textbf{Enkodery magnetyczne} - działają w oparciu o zmiany pola magnetycznego, zwykle generowanego przez magnes przymocowany do wału silnika. Zastosowanie efektu Hall'a w tych enkoderach pozwala na wykrywanie zmian w polu magnetycznym, poprzez generowanie napięcia w czujnikach Hall'a.
     \item \textbf{Enkodery mechaniczne} - najprostszy rodzaj enkoderów, wykorzystujący mechaniczne styki do generowania impulsów. Ze względu na ograniczoną trwałość są rzadziej stosowane w precyzyjnych aplikacjach.
 \end{itemize}
 
 
-\subsubsection{Efekt Hall'a}
+\subsection{Efekt Hall'a}
 
-Efekt Hall'a stanowi podstawę działania magnetycznych enkoderów kwadraturowych, a jego działanie opiera się na generowaniu napięcia (tzw. napięcia Hall'a) prostopadłego do kierunku przepływu prądu i linii pola magnetycznego. Gdy magnes jest umieszczony w pobliżu sensora Hall'a, zmiany pola magnetycznego wywołują impulsy wykrywane przez enkoder. W przypadku enkoderów kwadraturowych dwa czujniki Hall'a rozmieszczone pod kątem 90° umożliwiają rozróżnienie kierunku obrotu wału oraz precyzyjny pomiar przebytej odległości. Zastosowanie efektu Hall'a w enkoderach kwadraturowych daje możliwość tworzenia solidnych, odpornych na zużycie i precyzyjnych pomiarów.
+Efekt Halla \cite{bib:zjawisko-halla} stanowi podstawę działania magnetycznych enkoderów kwadraturowych, wykorzystywanych do pomiaru prędkości i kąta położenia wałów obrotowych. Odkryty przez Edwina Halla w 1879 roku, efekt ten polega na generowaniu tzw. napięcia Halla – różnicy potencjałów w przewodniku umieszczonym w zewnętrznym polu magnetycznym, przez który przepływa prąd. Zjawisko to wynika z działania siły Lorentza na nośniki ładunku w przewodniku, kierującej je w stronę prostopadłą do kierunku przepływu prądu oraz linii pola magnetycznego.
 
+Siła Lorentza działająca na nośniki ładunku jest opisana równaniem:
+\[
+\vec{F} = q \cdot (\vec{E} + \vec{v} \times \vec{B}),
+\]
+gdzie:
+\begin{itemize}
+    \item \( q \) - ładunek elektryczny nośnika prądu,
+    \item \( \vec{E} \) - wektor pola elektrycznego,
+    \item \( \vec{v} \) - prędkość nośnika ładunku,
+    \item \( \vec{B} \) - wektor indukcji magnetycznej.
+\end{itemize}
+
+Efektem działania siły Lorentza jest przemieszczenie nośników ładunku w kierunku prostopadłym do przepływu prądu i pola magnetycznego, prowadzące do powstania napięcia Halla (\( U_H \)) w poprzek przewodnika. Wartość tego napięcia jest opisana wzorem:
+\[
+U_H = \frac{I B}{n \cdot q \cdot d},
+\]
+gdzie:
+\begin{itemize}
+    \item \( I \) - natężenie prądu elektrycznego,
+    \item \( B \) – indukcja magnetyczna,
+    \item \( n \) – koncentracja nośników ładunku w materiale,
+    \item \( d \) – grubość przewodnika.
+\end{itemize}
+
+\subsection{Enkodery kwadraturowe oparte na efekcie Halla}
+
+Enkodery kwadraturowe są szeroko stosowane do precyzyjnego pomiaru prędkości i kąta obrotu silnika oraz umożliwiają określanie kierunku ruchu. W magnetycznych enkoderach kwadraturowych, zbudowanych w oparciu o efekt Halla, umieszcza się dwa czujniki Halla rozmieszczone pod kątem 90° względem siebie [\ref{rys2:encoders-sample}]. Podczas obrotu wału silnika wraz z magnesem, pole magnetyczne ulega zmianie wraz z obrotem, co powoduje zmiany w napięciu Halla i dalej do generowania impulsów oznaczjącyh ruch silnika. 
+
+Zastosowanie jednego czujnika umożliwia wykrycie ruchu oraz zliczanie ilości impulsów generowanych przez obrót. Pewnym mankamanetem wykorzystania tylko jednego czujnika jest brak możliwości wykrycia kierunku obrotu. Dzięki dodaniu drugiego sensora Halla, kierunek ruchu można wykryć na podstawie odczytu sygnalu generowanego przez enkoder, ponieważ jeden z kanałów enkodera jako pierwszy zwróci stan wysoki, co będzie oznaczało obrót w konkretną stronę. Wizualizacja sygnalu generowanego przez enkoder kwadraturowy znajduje się na grafice [\ref{rys2:encoders-graf}].
+
+Wysoka odporność na zużycie mechaniczne oraz stabilność działania w trudnych warunkach środowiskowych, takich jak wysoka wilgotność lub zapylenie, czynią magnetyczne enkodery kwadraturowe bardziej niezawodnymi niż ich optyczne odpowiedniki. Cechy te sprawiają, że magnetyczne enkodery kwadraturowe są szczególnie atrakcyjne w zastosowaniach przemysłowych oraz robotycznych, gdzie kluczowe są trwałość i precyzja.
 
 \begin{figure}[h]
     \centering
@@ -35,48 +66,53 @@ Efekt Hall'a stanowi podstawę działania magnetycznych enkoderów kwadraturowyc
     \label{rys2:encoders-graf}
 \end{figure}
 
-\subsection{Enkodery kwadraturowe}
-
-Enkodery kwadraturowe to specjalny rodzaj enkoderów, które umożliwiają nie tylko pomiar prędkości i położenia, ale także kierunku obrotu. Składają się z dwóch sygnałów wyjściowych – A i B – przesuniętych względem siebie o fazę 90°. Dzięki temu fazowemu przesunięciu system sterujący jest w stanie określić kierunek obrotu, analizując, który z sygnałów A lub B wyprzedza drugi. Każdy impuls generowany przez sygnały A i B odpowiada określonemu przemieszczeniu kątowemu, co pozwala na wyznaczenie pozycji kątowej osi obrotu z wysoką precyzją.
-
-
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{./graf/enkoders.png}
-    \caption{Rysunek przedstawiający ideowo budowę enkodera kwadraturowego oraz sygnałów przez niego generowanych \cite{bib:encoders-pid}}
+    \caption{Rysunek przedstawiający ideową budowę enkodera kwadraturowego oraz sygnały przez niego generowane \cite{bib:encoders-pid}}
     \label{rys2:encoders-graf}
 \end{figure}
-
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{./graf/enkoder-silnik.png}
-    \caption{Rysunek przedstawiający przykładowy wygląd enkodera opartego o efekt Hall'a. Czerwonymi kwadratami są zaznaczone tranzystory wykrywające zmianę pola magnetycznego podczas obrotu wału \cite{bib:botland-hall}}
-    \label{rys2:encoders-graf}
+    \caption{Przykładowy wygląd enkodera opartego o efekt Hall'a z oznaczonymi tranzystorami wykrywającymi zmiany pola magnetycznego podczas obrotu wału \cite{bib:botland-hall}}
+    \label{rys2:encoders-sample}
 \end{figure}
 
 \clearpage
 
 \section{Regulator PID}
 
-Regulator PID (ang. \textit{Proportional-Integral-Derivative}) jest jednym z najczęściej stosowanych regulatorów w systemach automatycznego sterowania, ze względu na swoją prostotę implementacji oraz skuteczność w wielu aplikacjach przemysłowych i robotycznych. Regulator ten wykorzystuje trzy składniki: proporcjonalny, całkujący oraz różniczkujący.
+Regulator PID (ang. \textit{Proportional-Integral-Derivative}) jest jednym z najczęściej stosowanych regulatorów w systemach automatycznego sterowania, ze względu na wysoką jakość regulacji gwarantującą uzyskanie zerwej wartości uchybu. Dodatkowo wykorzystanie aż trzech członów - proporcjonalnego, całkującego oraz różniczkującego, daje projektantowi duże możliwości dostosowania charakterystyki odpowiedzi czasowej regulatora, tak aby spełnić wymagania projektowe. 
 
 \subsection{Ogólny schemat układu regulacji}
 
+Grafika [\ref{rys2:regulacja1}] przedstawia ideowy schemat zamkniętego układu regulacji. Oznacza to, że występuje w nim pętla sprzężenia zwrotnego, a więc wartość wyjściowa zostaje dodana na wejściowy węzeł sumacyjny, w celu obliczenia uchybu. 
+
+Wartość zadana jest kierowana na wejście regulatora, obliczającego sterowanie, które następnie jest wejściem dla urządzenia wykonawczego. Ostatnim elementem jest odczyt wartości uzyskanych i ponowne przekazanie ich na wejście układu w celu korekcji sterowania.
+
+Na zaprezentowanym schemacie występuje również czynnik \(z(t)\), reprezentuje on zakłócenia wpływające na zachowanie wartości regulowanej. Wartość zakłócenia istotnie może zmienić wartość sterowania, która zostanie odpowiednio dostosowana poprzez regulatow w celu kompensacji szumu. 
+
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.5\textwidth]{./graf/regulacja1.png}
+    \includegraphics[width=1.0\textwidth]{./graf/regulacja1.png}
     \caption{Rysunek przedstawiający ogólny schemat układu regulacji automatycznej \cite{bib:wiki-regulacja}}
     \label{rys2:regulacja1}
 \end{figure}
 
 \subsection{Działanie regulatora PID}
 
-Działanie regulatora PID opiera się na przetwarzaniu sygnału uchybu $e(t)$, czyli różnicy między wartością zadaną $y_{set}$ a wartością rzeczywistą $y(t)$ wielkości regulowanej:
+Działanie regulatora PID opiera się na przetwarzaniu sygnału uchybu $e(t)$, różnicy między wartością zadaną $w(t)$ a wartością rzeczywistą $y(t)$ wielkości regulowanej:
 
 \begin{equation}
 e(t) = y_{set} - y(t)
 \end{equation}
+
+Uchyb jest jednym z podstawowych wskaźników jakości regulacji, określający jak dobrze wybrany regulator uzyskuje wartość zadaną. Cechą charakterystyczną regulatora PID jest całowika skuteczność uzyskania uchybu równego zero dla stabilnych układów dynamicznych. Zastosowanie innych regulatorów takich jak P (z jedynie członem proporcjonalnym) lub PI (z członem proporcjonalnym i drugim 
+członem całkującym) nie gwarantuje uzyskania uchuby równego zero. 
+
+\hspace{1cm}
 
 Regulator PID wyznacza wartość sygnału sterującego $u(t)$ jako sumę trzech składników:
 \begin{equation}
@@ -89,7 +125,7 @@ gdzie:
     \item $K_d$ – współczynnik różniczkujący, który reaguje na zmianę uchybu.
 \end{itemize}
 
-Każda ze składowych regulatora PID pełni inną funkcję, a ich kombinacja pozwala na precyzyjne kontrolowanie zachowania systemu.
+Każda ze składowych regulatora PID pełni inną funkcję. Połączenie ich w jedno równanie pozwala uzyskać bardzo dobrą jakość regulacji. 
 
 \subsection{Składnik proporcjonalny $P$}
 
@@ -99,17 +135,32 @@ Składnik proporcjonalny jest liniowo zależny od uchybu $e(t)$ i odpowiada za n
 P(t) = K_p e(t)
 \end{equation}
 
-Im większa wartość $K_p$, tym regulator bardziej dynamicznie reaguje na uchyb, co może przyspieszyć osiągnięcie wartości zadanej, ale przy zbyt dużych wartościach może prowadzić do przeregulowania lub oscylacji.
+Im większa wartość wzmocnienia proporcjonalnego $K_p$, tym regulator bardziej dynamicznie reaguje na uchyb, co przyspiesza osiągnięcie wartości zadanej, ale przy zbyt dużych wartościach może prowadzić do przeregulowania, a w konsekwencji oscylacji.
 
 \subsection{Składnik całkujący $I$}
 
-Składnik całkujący sumuje uchyby w czasie, co pozwala na eliminację uchybu statycznego – różnicy między wartością rzeczywistą a zadaną, która może utrzymywać się w przypadku stosowania tylko składnika proporcjonalnego. Składnik całkujący jest dany równaniem:
+Składnik całkujący sumuje wartości uchybu w czasie, co pozwala na eliminację uchybu ustalonego – różnicy między wartością zadaną a rzeczywiście uzyskaną w stanie ustalonym.
 
+\begin{equation}
+    e_u = \lim_{t \to \infty} e(t)
+    \label{eq:lim_stab}
+\end{equation}
+
+\begin{itemize}
+    \item $e_u$ - uchyb w stanie ustalonym,
+    \item $e(t)$ - funkcja wiążąca wartość uchybu z czasem
+\end{itemize}
+
+Dla stabilnych układów dynamicznych wartość uchybu w granicy, gdzie czas dąży do nieskończonośći, osiąga wartość stałą. Im jest mniejsza, tym jakość regulacji jest bardziej dokładna. 
+
+\hspace{1cm}
+
+Składnik całkujący jest dany równaniem:
 \begin{equation}
 I(t) = K_i \int_{0}^{t} e(\tau) d\tau
 \end{equation}
 
-Dzięki temu składnikowi, regulator PID potrafi zniwelować długotrwały uchyb, chociaż przy zbyt dużych wartościach $K_i$ może wystąpić zjawisko przeregulowania i niestabilność.
+Dzięki temu składnikowi, regulator PID potrafi zniwelować długotrwały uchyb, chociaż przy zbyt dużych wartościach wzmocnienia $K_i$ może wystąpić zjawisko przeregulowania oraz niestabilności ukłądu - opisanej w sekcji [\ref{sek:stab}].
 
 \subsection{Składnik różniczkujący $D$}
 
@@ -119,7 +170,7 @@ Składnik różniczkujący uwzględnia szybkość zmian uchybu $e(t)$, co pozwal
 D(t) = K_d \frac{de(t)}{dt}
 \end{equation}
 
-Ten składnik regulatora poprawia stabilność i tłumi oscylacje, jednak zbyt duża wartość $K_d$ może prowadzić do niestabilności układu, zwłaszcza w obecności szumów.
+Ten składnik regulatora poprawia stabilność i tłumi oscylacje, jednak zbyt duża wartość wzmocnienia $K_d$ może prowadzić do niestabilności układu, zwłaszcza w obecności szumów.
 
 \subsection{Pełne równanie regulatora PID}
 
@@ -136,115 +187,154 @@ gdzie:
     \item $K_d \frac{de(t)}{dt}$ – składnik różniczkujący, który przeciwdziała nagłym zmianom uchybu.
 \end{itemize}
 
+Często ze względu na realtywnie prostsze obliczenia, szczególnie podczas analizy stabilności oraz wyznaczania charakterystyk dynamicznych stosuje się postać operatorową (przekształcając równianie w postaci czasowej za pomocą operatora Laplace’a [\mathcal{L}]) regulatora PID. 
+
+\begin{equation}
+    U(s) = (K_p + \frac{K_i}{s} + K_d s) E(s),
+\end{equation}
+
+gdzie:
+\begin{itemize}
+    \item $E(s)$ - uchyb w dziedzinie operatorowej,
+    \item $K_p, K_i, K_d$ wartości wzmocnienień odpowiednich członów.
+\end{itemize}
+
+
 Regulacja parametrów $K_p$, $K_i$ i $K_d$ pozwala na dostosowanie charakterystyki regulatora PID do specyfiki sterowanego obiektu. Optymalne wartości tych parametrów zazwyczaj są dobierane metodą prób i błędów lub za pomocą metod takich jak strojenie Zieglera-Nicholsa.
+
+\subsection{Stabilność układów dynamicznych}
+\label{sek:stab}
+
+Stabilność układów dynamicznych jest kluczowym zagadnieniem podczas projektowania układu regulacji. W analizie stabilności sprawdza się, czy układ dąży do stanu równowagi - minimalizuje uchyb, aby fianlnie osiągnąć wartość minimalną, w przypadku regulatora PID jest to zero. W przypadku układów niestabilnych, wartość uchybu dąży do nieskończoności, co jest szczególnie nieporządane podczas projektowania rzeczywistych układów, ze względu na możliwe uszkodzenie elementów wykonawczych poprzez podanie na ich wejście zbyt dużych wartości napięcia, prądu. 
+
+W przypadku regulatora PID analiza stabilności opiera się wyznaczeniu charakterystyk dla zadanych nastaw - wartości parametrów wzmocnienia $K_p$, $K_i$, $K_d$. Najczęściej w celu weryfikacji stabilności układów stosuje się metody:
+\begin{itemize}
+    \item \textbf{Kryterium Hurwitza} – bazuje na analizie współczynników charakterystycznych układu dynamicznego w dziedzinie operatora Laplace’a. Metoda polega na ocenie znaku podwyznaczników macierzy Hurwitza, aby określić, czy wszystkie pierwiastki wielomianu charakterystycznego mają część rzeczywistą mniejszą od zera.
+    \item \textbf{Kryterium Nyquista} – metoda graficzna oparta na analizie funkcji transmitancji układu na wykresie Nyquista. Kryterium to bada, jak charakterystyka amplitudowo-fazowa zamkniętego układu reaguje na różne częstotliwości sygnału wejściowego. Wykres Nyquista pozwala ocenić stabilność systemu poprzez obserwację, czy jego kontur w dziedzinie częstotliwości otacza określony punkt krytyczny. Kryterium Nyquista nadaje się szczególnie do badania stabilności układów nieliniowych i bardziej złożonych systemów z opóźnieniami.
+\end{itemize}
+
+Teoretyczna analiza stabilności jest punktem wyjścia przy projektowaniu regulatorów PID, ponieważ zbyt duże wartości parametrów $K_p$, $K_i$, lub $K_d$ mogą prowadzić do niestabilnych oscylacji. Przykładowo, wysoka wartość wzmocnienia proporcjonalnego $K_p$ zwiększa szybkość reakcji układu, ale zbyt duża może powodować oscylacje wokół wartości zadanej. Z kolei nadmierne wzmocnienie członu różniczkującego $K_d$ prowadzi do niestabilności w obecności szumu. Metody Hurwitza i Nyquista pomagają przewidzieć te reakcje i dobrać parametry regulatora tak, aby uzyskać stabilność i oczekiwane właściwości dynamiczne układu.
 
 \subsection{Zastosowanie regulatora PID w sterowaniu robotem mobilnym}
 
-W omawianym projekcie regulator PID znajduje zastosowanie w kontrolowaniu odległości jaką pokonuje platforma mobilna poprzez odpowiednie sterowanie napięciem zasilania elementów wykonawczych. Nastawy regulatora zostały dostosowane metodą prób i błędów z racji trdudnego do zamodelowania układu dynamicznego. Uzyskana jakość regulacji jest wystarczająca do spełnienia wymagań projektowych. 
+W omawianym projekcie regulator PID znajduje zastosowanie w kontrolowaniu odległości jaką pokonuje platforma mobilna poprzez odpowiednie sterowanie napięciem zasilania elementów wykonawczych. Nastawy regulatora zostały dostosowane metodą prób i błędów. Uzyskana jakość regulacji jest wystarczająca do spełnienia wymagań projektowych. 
+
+\clearpage
 
 \section{Podstawy wykrywania krawędzi w wizji komputerowej}
 
-Wykrywanie krawędzi stanowi kluczowy element analizy obrazów w kontekście wizji komputerowej. Jest to technika mająca na celu identyfikację istotnych zmian w intensywności pikseli obrazu, które zazwyczaj wskazują na obecność krawędzi obiektów. Krawędzie odgrywają fundamentalną rolę w percepcji kształtów i struktur, dlatego ich wykrywanie jest podstawą wielu aplikacji, takich jak segmentacja obrazu, rozpoznawanie obiektów oraz analiza ruchu.
+Wykrywanie krawędzi to jedna z podstawowych technik przetwarzania obrazów stosowana w wizji komputerowej, umożliwiająca ekstrakcję istotnych informacji strukturalnych z obrazu. Proces ten polega na detekcji nagłych zmian intensywności pikseli, które odpowiadają krawędziom obiektów w przestrzeni obrazu. Krawędzie dostarczają kluczowych danych o kształtach i konturach obiektów, wspomagając zadania takie jak segmentacja obrazu, rozpoznawanie obiektów oraz analiza ruchu. Wysoka jakość detekcji krawędzi jest zatem niezbędna dla dokładności i skuteczności systemów wizji komputerowej.
 
-Jedną z najbardziej popularnych metod wykrywania krawędzi jest algorytm Canny’ego, który został zaproponowany przez Johna F. Canny'ego w 1986 roku. Metoda ta jest ceniona za swoją zdolność do wydobywania krawędzi z obrazów przy jednoczesnym zachowaniu ich jakości oraz redukcji szumów.
+Jednym z najbardziej uznanych algorytmów wykrywania krawędzi jest metoda Canny'ego, opracowana przez Johna F. Canny’ego w 1986 roku. Algorytm ten jest ceniony za swoje właściwości w zakresie selektywnej detekcji krawędzi przy jednoczesnym tłumieniu szumów, co zapewnia spójną i wyraźną detekcję konturów.
 
 \subsection{Algorytm Canny’ego}
 
-Algorytm Canny’ego składa się z kilku kluczowych kroków:
+Algorytm Canny’ego \cite{bib:canny-article} to złożona metoda wieloetapowa, której celem jest precyzyjna detekcja krawędzi przy minimalnym wpływie szumów. Składa się on z pięciu kluczowych etapów:
 
-1. \textbf{Wygładzenie} (ang. \english{Smoothing}): Na początku obraz poddawany jest filtracji w celu zredukowania szumów. Zazwyczaj stosuje się filtr Gaussa, który jest reprezentowany przez macierz:
+\begin{enumerate}
+    \item \textbf{Wygładzanie} (ang. \textit{Smoothing}): W celu redukcji wpływu szumów obraz jest najpierw poddawany filtracji za pomocą splotu z maską Gaussa, co pozwala na zachowanie istotnych struktur obrazu przy jednoczesnym tłumieniu drobnych zaburzeń. Przykładowa maska Gaussa o rozmiarze \(3 \times 3\) ma postać:
 
-\[
-G = \begin{bmatrix}
-\frac{1}{16} & \frac{1}{8} & \frac{1}{16} \\
-\frac{1}{8} & \frac{1}{4} & \frac{1}{8} \\
-\frac{1}{16} & \frac{1}{8} & \frac{1}{16}
-\end{bmatrix}
-\]
+    \[
+    G = \begin{bmatrix}
+    \frac{1}{16} & \frac{1}{8} & \frac{1}{16} \\
+    \frac{1}{8} & \frac{1}{4} & \frac{1}{8} \\
+    \frac{1}{16} & \frac{1}{8} & \frac{1}{16}
+    \end{bmatrix}
+    \]
 
-2. \textbf{Obliczenie gradientu:} Następnie obliczane są gradienty obrazu, aby zidentyfikować kierunki zmian intensywności. Używa się do tego macierzy \textit{Sobela}, które pozwalają na obliczenie gradientu w kierunkach poziomym (Gx) i pionowym (Gy):
+    \item \textbf{Obliczanie gradientu}: Po wygładzeniu obrazu przeprowadza się obliczenia gradientu intensywności dla każdego piksela, co pozwala na identyfikację miejsc o gwałtownych zmianach intensywności. Gradient jest obliczany w kierunkach poziomym (za pomocą maski Sobela \(S_x\)) i pionowym (za pomocą maski Sobela \(S_y\)):
 
-\[
-S_x = \begin{bmatrix}
--1 & 0 & 1 \\
--2 & 0 & 2 \\
--1 & 0 & 1
-\end{bmatrix}, \quad 
-S_y = \begin{bmatrix}
-1 & 2 & 1 \\
-0 & 0 & 0 \\
--1 & -2 & -1
-\end{bmatrix}
-\]
+    \[
+    S_x = \begin{bmatrix}
+    -1 & 0 & 1 \\
+    -2 & 0 & 2 \\
+    -1 & 0 & 1
+    \end{bmatrix}, \quad 
+    S_y = \begin{bmatrix}
+    1 & 2 & 1 \\
+    0 & 0 & 0 \\
+    -1 & -2 & -1
+    \end{bmatrix}
+    \]
 
-Gradient można obliczyć jako:
+    Na tej podstawie wyznaczana jest wielkość gradientu \(G\):
 
-\[
-G = \sqrt{G_x^2 + G_y^2}
-\]
-oraz jego kierunek:
+    \[
+    G = \sqrt{G_x^2 + G_y^2}
+    \]
 
-\[
-\Theta = \text{atan2}(G_y, G_x)
-\]
+    oraz jego kierunek:
 
-3. \textbf{Tłumienie nie-maksymalne} (ang. \english{Non-maximum suppression}): W kolejnym kroku następuje eliminacja pikseli, które nie są lokalnymi maksimami w kierunku gradientu, co pozwala na wyostrzenie krawędzi.
+    \[
+    \Theta = \text{atan2}(G_y, G_x)
+    \]
 
-4. \textbf{Podwójne progowanie} (ang. \english{Double thresholding}): Algorytm wprowadza dwa progi: wysoki i niski. Piksele, które przekraczają wysoki próg, są uznawane za krawędzie, natomiast te, które są poniżej niskiego progu, są odrzucane. Piksele, które mieszczą się między tymi dwoma progami, są klasyfikowane jako krawędzie słabe.
+    \item \textbf{Tłumienie nie-maksymalne} (ang. \textit{Non-maximum suppression}): W tym etapie algorytm identyfikuje i zachowuje jedynie lokalne maksima gradientu w kierunku krawędzi, co pozwala na wyostrzenie konturów krawędzi i eliminację nieistotnych pikseli, które nie leżą na krawędzi obiektów.
 
-5. \textbf{Śledenie krawędzi z histerezą} (ang. \english{Edge tracking by hysteresis}): Ostatnim krokiem jest śledzenie krawędzi, gdzie słabe krawędzie są zachowywane, jeśli są połączone z mocnymi krawędziami. To pozwala na eliminację przypadkowych detekcji krawędzi i zapewnia spójność wyników.
+    \item \textbf{Podwójne progowanie} (ang. \textit{Double thresholding}): Po wstępnej selekcji krawędzi, algorytm wprowadza dwa progi — wysoki i niski. Piksele o wartości gradientu przekraczającej wysoki próg uznaje się za pewne krawędzie, podczas gdy piksele o wartościach poniżej niskiego progu są eliminowane. Piksele mieszczące się pomiędzy progami są klasyfikowane jako krawędzie słabe, które wymagają dalszej analizy.
+
+    \item \textbf{Śledzenie krawędzi z histerezą} (ang. \textit{Edge tracking by hysteresis}): W końcowym kroku algorytm wykonuje śledzenie połączonych pikseli, aby zachować spójność krawędzi. Piksele oznaczone jako krawędzie słabe są akceptowane jako część krawędzi tylko wtedy, gdy są połączone z krawędziami silnymi. Ten proces zapobiega przypadkowej detekcji krawędzi i pozwala na eliminację fragmentarycznych lub pojedynczych pikseli wynikających z szumu.
+\end{enumerate}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{./graf/canny-edge.png}
+    \caption{Zdjęcie przedstawiające skuteczność wykrywania krawędzi algorytmem Canny'ego}
+\end{figure}
 
 \clearpage
 
 \section{Podstawy rozpoznawania kolorów w wizji komputerowej}
 
-Rozpoznawanie kolorów w wizji komputerowej to kluczowy aspekt w wielu aplikacjach automatyki, robotyki oraz sztucznej inteligencji. W kontekście robotyki, techniki te pozwalają na identyfikację i klasyfikację obiektów w otoczeniu robota, co jest istotne dla jego nawigacji oraz interakcji z otoczeniem. W niniejszej sekcji omówione zostaną podstawowe zasady oraz techniki wykorzystywane w procesie rozpoznawania kolorów.
+Istotnym elementem wizji komputerowej jest możliwość rozpoznawania kolorów. Funkcjonalność ta jest szczególnie przydatna w automatyce, robotyce oraz w metodach sztucznej inteligencji. Pozwala na klasyfikację obiektów przy pomocy prostych algorytmów analizy wizyjnej, jak ma to miejsce w przypadku tego projektu, ale również jest częścią zaawansowanego trenowania sieci neuronowych, tym samym umożlwiając bardzo dokładną klasyfikację obiektów o różnym kształcie i kolorze. 
+
+W tej sekcji omówione zostaną podstawowe zasady oraz techniki wykorzystywane w procesie rozpoznawania kolorów.
+
 
 \subsection{Teoria koloru}
 
+Kolor jest wynikiem interpretacji długości fali światła przez ludzki wzrok. W systemach wizyjnych kolor jest reprezentowany za pomocą modeli kolorów, które pozwalają na matematyczną reprezentację informacji o barwie i jej intensywności. Najczęściej stosowane modele kolorów to przestrzenie RGB (ang. \textit{Red, Green, Blue}), HSV (ang. \textit{Hue, Saturation, Value}) oraz YCrCb (ang. \textit{Luminance, Chrominance}).
 
-Kolor jest percepcją widzialnego spektrum światła, które jest odbierane przez ludzkie oczy i interpretowane przez mózg. W wizji komputerowej kolory są często reprezentowane za pomocą różnych modeli kolorów, w tym w przestrzeni kolorów RGB (ang. \english{Red, Green, Blue}) \textit{rys.} [\ref{rys2:rgb1}], HSV (ang. \english{Hue, Saturation, Value}) \textit{rys.} [\ref{rys2:hsv1}] oraz YCrCb (ang. \english{Luminance, Chrominance}) \textit{rys.} [\ref{rys2:ycrcb1}]. W modelu RGB kolory są definiowane przez intensywności trzech składowych kolorów, podczas gdy w modelu HSV kolory są określane na podstawie ich odcienia, nasycenia i jasności, co ułatwia przetwarzanie i rozpoznawanie kolorów w kontekście wizji komputerowej. Model YCrCb, z kolei, oddziela informację o luminancji (jasności) od informacji o chrominancji (kolorze), co jest szczególnie przydatne w kompresji obrazów oraz w systemach wizyjnych, umożliwiając efektywną analizę kolorów przy jednoczesnym zredukowaniu wpływu zmian oświetleniowych.
+\begin{itemize}
+    \item \textbf{Model RGB} [\ref{rys2:rgb1}] — Kolory reprezentowane są jako kombinacja trzech składowych: czerwonej, zielonej i niebieskiej. Jest to podstawowy model stosowany w systemach cyfrowych do rejestrowania i wyświetlania obrazów.
+    \item \textbf{Model HSV} [\ref{rys2:hsv1}]— Przestrzeń HSV, zdefiniowana przez odcień, nasycenie i jasność, jest bardziej zbliżona do ludzkiego postrzegania kolorów. Pozwala ona na łatwiejsze odróżnianie odcieni niezależnie od zmian oświetlenia, co czyni ją szczególnie przydatną w detekcji kolorów w wizji komputerowej.
+    \item \textbf{Model YCrCb} [\ref{rys2:ycrcb1}]— Oddziela jasność (luminancję) od informacji o kolorze (chrominancję). Ta przestrzeń kolorów jest powszechnie stosowana w kompresji obrazu i w systemach przetwarzania obrazu, gdyż zapewnia stabilność kolorów przy zmiennych warunkach oświetleniowych.
+\end{itemize}
 
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.6\textwidth]{./graf/rgb-model.png}
-    \caption{Rysunek przedstawiający wizualizację przestrzeni kolorów RGB \cite{bib:rgb-model}}
-    \label{rys2:rgb1}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.6\textwidth]{./graf/hsv-model.png}
-    \caption{Rysunek przedstawiający wizualizację przestrzeni HSV \cite{bib:hsv-model}}
-    \label{rys2:hsv1}
-\end{figure}
-
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.6\textwidth]{./graf/ycrcb-model.png}
-    \caption{Rysunek przedstawiający wizualizację przestrzeni YCrCb \cite{bib:ycrcb-model}}
-    \label{rys2:ycrcb1}
-\end{figure}
-
-\clearpage
 
 \subsection{Proces rozpoznawania kolorów}
-
-Proces rozpoznawania kolorów w obrazach polega na identyfikacji oraz klasyfikacji pikseli na podstawie ich wartości kolorystycznych. Kluczowe etapy tego procesu obejmują:
+Proces rozpoznawania kolorów obejmuje szereg etapów pozwalających na identyfikację pikseli o określonych wartościach kolorystycznych. Wyróżnić można następujące kroki:
 
 \begin{enumerate}
-    \item \textbf{Przechwytywanie obrazu:} Obraz jest przechwytywany za pomocą kamery cyfrowej, która generuje dane w formacie cyfrowym. 
-    \item \textbf{Przetwarzanie obrazu:} Na tym etapie obraz jest poddawany różnym operacjom, takim jak filtracja, segmentacja i transformacja kolorów, aby wyodrębnić istotne informacje. 
-    \item \textbf{Ekstrakcja cech:} Następnie przeprowadzana jest analiza danych kolorystycznych w celu identyfikacji i klasyfikacji obiektów na podstawie ich kolorów. 
-    \item \textbf{Decyzja:} Na końcu system podejmuje decyzje o klasifikacji obiektów bazując na wcześniej zebranych informacjach o kolorze.
+    \item \textbf{Przechwytywanie obrazu} — Obraz jest rejestrowany przy pomocy kamery, która przekazuje dane w formacie cyfrowym.
+    \item \textbf{Przetwarzanie obrazu} — Obraz przechodzi przez operacje wstępnego przetwarzania, takie jak filtrowanie i segmentacja, aby wyodrębnić istotne informacje kolorystyczne.
+    \item \textbf{Ekstrakcja cech} — Analizowane są wartości kolorystyczne pikseli, co umożliwia identyfikację obiektów na podstawie ich kolorów.
+    \item \textbf{Decyzja} — Na podstawie zebranych informacji o kolorze podejmowana jest decyzja o klasyfikacji obiektów.
 \end{enumerate}
 
 \subsection{Algorytmy rozpoznawania kolorów}
 
-W literaturze przedmiotu opisano wiele algorytmów wykorzystywanych w rozpoznawaniu kolorów, w tym metody oparte na histogramie, segmentacji obrazu oraz analizy cech. Histogramy kolorów są popularnym narzędziem do analizy rozkładu kolorów w obrazie, co pozwala na szybką identyfikację dominujących kolorów.
+W literaturze przedmiotu występuje wiele podejść do rozpoznawania kolorów, takich jak analiza histogramu, segmentacja obrazu oraz analiza cech. Histogramy kolorów pozwalają na szybkie określenie dominujących kolorów na obrazie, co może być użyteczne w aplikacjach czasu rzeczywistego. Segmentacja obrazu natomiast umożliwia wyodrębnienie obiektów o określonym kolorze, co może być realizowane przy pomocy algorytmów takich jak k-means clustering lub metoda watershed.
 
-Segmentacja obrazu to proces dzielenia obrazu na różne regiony na podstawie ich kolorów, co ułatwia identyfikację obiektów w danym kolorze. Algorytmy takie jak k-means clustering czy metoda watershed są często stosowane w celu wydzielenia obiektów o określonym kolorze z tła.
 
-DO POPRAWY - TRZEBA DO JESZCZE SENSOWNIE OPISAĆ (!!!!)
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{./graf/rgb-model.png}
+    \caption{Wizualizacja przestrzeni kolorów RGB \cite{bib:rgb-model}}
+    \label{rys2:rgb1}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{./graf/hsv-model.png}
+    \caption{Wizualizacja przestrzeni HSV \cite{bib:hsv-model}}
+    \label{rys2:hsv1}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{./graf/ycrcb-model.png}
+    \caption{Wizualizacja przestrzeni YCrCb \cite{bib:ycrcb-model}}
+    \label{rys2:ycrcb1}
+\end{figure}

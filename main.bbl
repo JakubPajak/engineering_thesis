@@ -17,6 +17,27 @@
 \endgroup
 
 \datalist[entry]{nty/global//global/global/global}
+  \entry{bib:enkoder-mag-opt}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=a}{%
+         family={apautomatyka.pl},
+         familyi={a\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{a1}
+    \strng{fullhash}{a1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{title}{Zasada działania enkoderów magnetycznych i optycznych
+  POSITAL}
+    \verb{url}
+    \verb https://apautomatyka.pl/zasada-dzialania-enkoderow-magnetycznych-i-op
+    \verb tycznych-posital/
+    \endverb
+  \endentry
+
   \entry{bib:artykul2}{article}{}{}
     \name{author}{2}{}{%
       {{hash=BA}{%
@@ -127,6 +148,27 @@
     \field{year}{2008}
   \endentry
 
+  \entry{bib:canny-article}{article}{}{}
+    \name{author}{1}{}{%
+      {{hash=CJ}{%
+         family={Canny},
+         familyi={C\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CJ1}
+    \strng{fullhash}{CJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{title}{A Computational Approach to Edge Detection}
+    \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}
+    \field{year}{1986}
+  \endentry
+
   \entry{bib:manualarduino}{manual}{}{}
     \name{author}{1}{}{%
       {{hash=CB}{%
@@ -164,6 +206,54 @@
     \verb -to-jest-jak-dziala-i-jak-sprawdzic/
     \endverb
     \field{year}{2023}
+  \endentry
+
+  \entry{bib:zjawisko-halla}{online}{}{}
+    \name{author}{1}{}{%
+      {{hash=e}{%
+         family={encyklopedia.pwn.pl},
+         familyi={e\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{e1}
+    \strng{fullhash}{e1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \field{title}{Halla zjawisko}
+    \verb{url}
+    \verb https://encyklopedia.pwn.pl/haslo/;3909634
+    \endverb
+  \endentry
+
+  \entry{bib:where-am-i}{book}{}{}
+    \name{author}{2}{}{%
+      {{hash=JBHE}{%
+         family={J.\bibnamedelima Borenstein},
+         familyi={J\bibinitperiod\bibinitdelim B\bibinitperiod},
+         given={H.R.\bibnamedelima Everett},
+         giveni={H\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=FL}{%
+         family={Feng},
+         familyi={F\bibinitperiod},
+         given={L.},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {University of Michigan}%
+    }
+    \strng{namehash}{JBHEFL1}
+    \strng{fullhash}{JBHEFL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{J}
+    \field{sortinithash}{J}
+    \field{title}{""Where am I?" Sensors and Methods for Mobile Robot
+  Positioning"}
+    \field{year}{1996}
   \endentry
 
   \entry{bib:manualLibcamera2}{manual}{}{}
