@@ -1,19 +1,19 @@
 \chapter{Wymagania i specyfikacja użytkowa}
 \label{ch:04}
 
-W poniższym rozdziale szczegółowo opisano wymagania sprzętowe i programowe, sposób instalacji, aktywacji oraz wszystkie inne informacje konieczne dla użytkownika, które są niezbędne do skutecznego działania platformy mobilnej. 
+W poniższym rozdziale szczegółowo opisano wymagania sprzętowe i programowe, sposób instalacji bibliotek oraz inne informacje niezbędne użytkownikowi do poprawnego uruchomienia i korzystania z systemu. 
 
 \section{Wymagania sprzętowe i programowe}
 
-Podstawowym założeniem było wykorzystanie mikrokomputera Raspberry Pi, który stanowi centralny element systemu. Ze względu na jego kompaktowe rozmiary, niską wagę oraz odpowiednią moc obliczeniową, Raspberry Pi idealnie wpisuje się w potrzeby projektu.
+Podstawowym założeniem było wykorzystanie mikrokomputera Raspberry Pi, który stanowi centralny element obliczeniowy systemu. Ze względu na jego kompaktowe rozmiary oraz odpowiednią moc obliczeniową, ten komputer SBC idealnie wpisuje się w potrzeby projektu.
 
 \subsubsection*{Wymagania sprzętowe}
 
 \begin{itemize}
-    \item Mikrokomputer Raspberry Pi – wybrany model Raspberry Pi 4 Model B, który charakteryzuje się czterordzeniowym procesorem, co zapewnia wystarczającą moc obliczeniową do przetwarzania obrazu oraz zarządzania algorytmami sterowania.
-    \item Kamera – zastosowano dedykowaną kamerę kompatybilną z Raspberry Pi, która umożliwia przechwytywanie obrazów w wysokiej rozdzielczości. Kamera jest podłączona przez interfejs CSI (ang. \english{Camera Serial Interface}), co zapewnia niskie opóźnienia i wysoką jakość obrazu.
-    \item Silniki i napęd różnicowy – do napędu platformy wykorzystano silniki prądu stałego z enkoderami, które umożliwiają precyzyjne sterowanie ruchem robota oraz monitorowanie jego pozycji.
-    \item Zasilanie – system zasilany jest z pakietu czterech ogniw litowo-jonowych, dostarczających wysatraczjącą ilość napięcia oraz umożliwiających pracę przez odpowieni czas.
+    \item Mikrokomputer Raspberry Pi – wybrany model Raspberry Pi 4 Model B, charakteryzuje się czterordzeniowym procesorem, zapewniającym wystarczającą moc obliczeniową do przetwarzania obrazu oraz zarządzania algorytmami sterowania.
+    \item Kamera – zastosowano dedykowaną kamerę kompatybilną z Raspberry Pi, która umożliwia przechwytywanie obrazów w wysokiej rozdzielczości - do 16MPx. Kamera jest podłączona przez interfejs CSI (ang. \english{Camera Serial Interface}), co zapewnia niskie opóźnienia i wysoką jakość obrazu.
+    \item Silniki i napęd różnicowy – do napędu platformy wykorzystano silniki prądu stałego z enkoderami, które umożliwiają precyzyjne kontrolowanie ruchu robota.
+    \item Zasilanie – robot zasilany jest z pakietu czterech ogniw litowo-jonowych, dostarczających wysatraczjącą ilość napięcia oraz umożliwiających pracę przez odpowieni czas.
     \item Chwytak - wykorzystano chwytak zasilany jednym serwomechanizmem, wystarczający do realizacji zadań. 
 \end{itemize}
 
@@ -104,7 +104,7 @@ Instalacja przebiega za pomocą menadżęra pakietów \textit{pip}:
 
 Po instalacji możliwe jest utworzenie lokalnego serwera, do którego dostęp mają wszystkie urządzenie sieci lokalnej, co jest bardzo wygodne biorąc pod uwagę specyfikę wykorzystania tej aplikacji. 
 
-\subsection{Weryfikacja instalacji pakietów}
+\subsection{Weryfikacja instalacji bibliotek}
 
 Po zakończeniu procesu instalacji pakietów i bibliotek warto przeprowadzić weryfikację, aby upewnić się, że wszystkie komponenty zostały zainstalowane poprawnie i są gotowe do użycia. Testowanie każdego pakietu z osobna pozwala na szybkie wykrycie ewentualnych problemów i zapewnia, że środowisko pracy jest w pełni skonfigurowane.
 

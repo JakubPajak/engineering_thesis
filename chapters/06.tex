@@ -161,9 +161,9 @@ Dla uzyskania dokładnych odczytów pozycji, w kontrolerze zastosowano obsługę
   \begin{lstlisting}
     void readEncoder1() {
       static int lastEncoded1 = 0;
-      int MSB1 = digitalRead(ENCA1); // Najbardziej znaczący bit
-      int LSB1 = digitalRead(ENCB1); // Najmniej znaczący bit
-      int encoded1 = (MSB1 << 1) | LSB1; // Łączenie dwóch bitów
+      int MSB1 = digitalRead(ENCA1); 
+      int LSB1 = digitalRead(ENCB1); 
+      int encoded1 = (MSB1 << 1) | LSB1; 
       if (MSB1 == LSB1) posi1++; else posi1--;
       lastEncoded1 = encoded1;
     }
