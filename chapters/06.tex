@@ -49,7 +49,7 @@ Finalna wersja platformy mobilnej została zaprezentowana na ilustracji \ref{fig
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.5\textwidth]{./graf/motor-close.png}
-  \caption{Przybliżenie miejsca na mocnowania silników}
+  \caption{Przybliżenie miejsca na mocowania silników}
   \label{fig:base-close}
 \end{figure}
 
@@ -77,16 +77,14 @@ W tej sekcji opisano kluczowe elementy aplikacji, w tym konfigurację pinów, al
 
 \subsection{Konfiguracja pinów i ustawienia PWM}
 
-W kontrolerze skonfigurowano piny odp owiadające za obsługę enkoderów oraz sterowanie kierunkiem i prędkością silników za pomocą sygnałów PWM. Poniższy kod definiuje przypisanie pinów do odpowiednich funkcji, takich jak odczyt kanałów enkoderów oraz wyjść sterujących silnikami:
+W kontrolerze skonfigurowano piny odpowiadające za obsługę enkoderów oraz sterowanie kierunkiem i prędkością silników za pomocą sygnałów PWM. Poniższy kod definiuje przypisanie pinów do odpowiednich funkcji, takich jak odczyt kanałów enkoderów oraz wyjść sterujących silnikami:
 
-\begin{figure}[H]
+\begin{figure}[h!]
   \centering
   \begin{lstlisting}
     // Encoders pins
     #define ENCA1 2 
-    #define ENCB1 4 
     #define ENCA2 3 
-    #define ENCB2 5 
     
     // Motor driver pins
     #define PWM1 10
@@ -105,7 +103,7 @@ W kontrolerze skonfigurowano piny odp owiadające za obsługę enkoderów oraz s
 
 Algorytm sterowania PID odpowiada za utrzymanie zadanej prędkości kątowej każdego z silników poprzez dostosowanie sygnału PWM. Wyjście regulatora PID jest obliczane na podstawie bieżącego błędu pozycji enkodera, wartości całki i pochodnej błędu. Parametry regulatora, takie jak wzmocnienie proporcjonalne (\texttt{Kp}), całkujące (\texttt{Ki}) oraz różniczkujące (\texttt{Kd}), zostały dobrane empirycznie i wynoszą:
 
-\begin{figure}[H]
+\begin{figure}[h!]
   \centering
   \begin{lstlisting}
     float Kp = 1.0; 
@@ -118,7 +116,7 @@ Algorytm sterowania PID odpowiada za utrzymanie zadanej prędkości kątowej ka�
 
 Na podstawie obliczonego błędu funkcja \texttt{performDrive()} dokonuje aktualizacji sygnału sterującego dla każdego silnika, uwzględniając przy tym warunki zatrzymania po osiągnięciu zadanej pozycji. Wartość wyjścia jest ograniczana do przedziału \( \pm 70 \), aby zapobiec zbyt dużemu skokowi napięcia sterującego:
 
-\begin{figure}[H]
+\begin{figure}[h!]
   \centering
   \begin{lstlisting}
     float error1 = targetCountsWheelRight - abs(pos1);
@@ -150,23 +148,30 @@ Na podstawie obliczonego błędu funkcja \texttt{performDrive()} dokonuje aktual
   \label{fig:pseudokod:pid}
 \end{figure}
 
-Dodatkowo został wykorzystany globalny marker \textit{stopCond1} odpowiedzialny za podtrzymanie silnika pierwszego (lub adekwatnie drugiego) w sytuacji, gdy pierwszy z nich zakończy pracę. Ze wzgledu na pewną bezwładność silnika i dużą czułość enkoderów, brak zastosowania tej zmiennej skutkował nieskończonym działaniem pętli. 
+Dodatkowo został wykorzystany globalny marker \textit{stopCond1} odpowiedzialny za podtrzymanie silnika pierwszego (lub adekwatnie drugiego) w sytuacji, gdy pierwszy z nich zakończy pracę. Ze względu na pewną bezwładność silnika i dużą czułość enkoderów, brak zastosowania tej zmiennej skutkował nieskończonym działaniem pętli. 
 
 \subsection{Funkcja zliczająca impulsy enkoderów}
 
 Dla uzyskania dokładnych odczytów pozycji, w kontrolerze zastosowano obsługę przerwań na pinach podłączonych do enkoderów. Funkcje \texttt{readEncoder1()} i \texttt{readEncoder2()} zliczają impulsy z enkoderów, aktualizując wartość liczników pozycji. W ten sposób każda zmiana sygnału na kanale enkodera jest przetwarzana w czasie rzeczywistym, co umożliwia precyzyjne śledzenie pozycji kół:
 
-\begin{figure}[H]
+\begin{figure}[h!]
   \centering
-  \begin{lstlisting}
-    void readEncoder1() {
-      static int lastEncoded1 = 0;
-      int MSB1 = digitalRead(ENCA1); 
-      int LSB1 = digitalRead(ENCB1); 
-      int encoded1 = (MSB1 << 1) | LSB1; 
-      if (MSB1 == LSB1) posi1++; else posi1--;
-      lastEncoded1 = encoded1;
+  \begin{lstlisting}   
+  void readEncoder1() {
+    int MSB1 = digitalRead(ENCA1);
+
+    if (MSB1) {  
+      posi1++;  
     }
+  }
+
+  void readEncoder2() {
+    int MSB2 = digitalRead(ENCA2);
+
+    if (MSB2) {  
+      posi2++; 
+    }
+  }
   \end{lstlisting}
   \caption{Funkcja zliczająca impulsy enkodera}
   \label{fig:enc-count}
@@ -177,18 +182,18 @@ Dla uzyskania dokładnych odczytów pozycji, w kontrolerze zastosowano obsługę
 Komunikacja została zaimplementowana z wykorzystaniem ramki bitowej składającej się z dwóch bajtów. Pierwszy bajt odpowiada za przekazanie informacji o typie ruchu takich jak:
 \begin{itemize}
   \item Typ ruchu - czy jest to ruch do przodu czy skręt.
-  \item Kierunek ruchu - jeśli tpy ruchu to skręt, ten bit odkreśla kierunek, w który robot ma się przemieścić.
+  \item Kierunek ruchu - jeśli typ ruchu to skręt, ten bit odkreśla kierunek, w który robot ma się przemieścić.
   \item Ruch serwa - flaga określająca czy serwo ma wykonać ruch.
   \item Typ ruchu serwa - informuje mikrokontroler, czy serwo powinno się zamknąć czy otworzyć. 
 \end{itemize}
 
 Drugi bajt odpowiada za przekazanie informacji o odległości jaką ma przejechać robot lub o jaki kąt powinien się obrócić. 
 
-Odczyt z magistrali szeregowej odbywa się w momencie, gdy są możliwe do odczytania dokładnie dwa bajty. Zrealizowane jest to za pomocą wbuydowanej funkcji \textit{Serial.available() >= 2}. Jeżeli warunek jest spełniony następuje odczytanie zawartości ramki oraz przepisanie jej wartości do zmiennych globalnych mikrokontrolera. 
+Odczyt z magistrali szeregowej odbywa się w momencie, gdy są możliwe do odczytania dokładnie dwa bajty. Zrealizowane jest to za pomocą wbudowanej funkcji \textit{Serial.available() >= 2}. Jeżeli warunek jest spełniony następuje odczytanie zawartości ramki oraz przepisanie jej wartości do zmiennych globalnych mikrokontrolera. 
 
 Fragment kodu realizujący odczyt znajduje się poniżej.
 
-\begin{figure}[H]
+\begin{figure}[h!]
   \centering
   \begin{lstlisting}
     if (Serial.available() >= 2) {  
@@ -213,13 +218,13 @@ Fragment kodu realizujący odczyt znajduje się poniżej.
 
 \subsection{Pętla główna programu}
 
-Pętla główna programu opiera się na sprawdzaniu warunku dostępności dwóch bajtów w magistrali szeregowej. Jeżeli nie ma żadnych danych lub jest ich za mało, program przechodzi do sprawdzania kolejnych warunków. Jeżeli nastąpił odzczyt, któryś z ich na pewno zostanie spełniony. 
+Pętla główna programu opiera się na sprawdzaniu warunku dostępności dwóch bajtów w magistrali szeregowej. Jeżeli nie ma żadnych danych lub jest ich za mało, program przechodzi do sprawdzania kolejnych warunków. Jeżeli nastąpił odczyt, któryś z ich na pewno zostanie spełniony. 
 
-W kolejnych instukcjach warunkowych znajdują się wywołania odpowienich funkcji, realizujących ruch. Każda funkcja wykonawcza zwraca wartość typu \textit{Boolean}, a więc prawda lub fałsz. Jeżeli zadanie zostanie poprawnie zrealizowane, zwrócona zostanie wartość \english{true}, a tym samym ostatnia instruckaj warunkowa, wysyłająca informację do komputera Raspberry Pi informację, że zadanie zostało ukończone i można przejść do kolejnej instrukcji oraz następuje wyzerowanie zmiennych. 
+W kolejnych instrukcjach warunkowych znajdują się wywołania odpowiednich funkcji, realizujących ruch. Każda funkcja wykonawcza zwraca wartość typu \textit{Boolean}, a więc prawda lub fałsz. Jeżeli zadanie zostanie poprawnie zrealizowane, zwrócona zostanie wartość \english{true}, a tym samym ostatnia instrukcja warunkowa, wysyłająca informację do komputera Raspberry Pi informację, że zadanie zostało ukończone i można przejść do kolejnej instrukcji oraz następuje wyzerowanie zmiennych. 
 
-Fragment ralizujący zarządzanie zadaniami znajduje się poniżej. 
+Fragment realizujący zarządzanie zadaniami znajduje się poniżej. 
 
-\begin{figure}[H]
+\begin{figure}[h!]
   \centering
   \begin{lstlisting}
     if(movementType == 1 && targetCounts != 0){
@@ -265,7 +270,7 @@ Funkcja \texttt{mainTask()} pełni rolę głównej pętli zarządzającej dział
 
 W poniższym kodzie, fragment wstępny inicjalizuje odpowiednie elementy biblioteki \texttt{threading}, takie jak flaga statusu \texttt{status} (typ \texttt{Event}), która umożliwia asynchroniczne monitorowanie stanu zakończenia poszczególnych zadań, co pozwala na bezpieczne zakończenie każdego procesu:
 
-\begin{figure}[H]
+\begin{figure}[h!]
   \centering
   \begin{lstlisting}
 import threading
@@ -295,7 +300,7 @@ Tryb automatyczny, aktywowany wyborem opcji 1, uruchamia niezależny wątek kont
 
 Wątek \texttt{auto\_control\_thread} jest uruchamiany wewnątrz instrukcji \texttt{try-except}, co zabezpiecza program przed niespodziewanymi wyjątkami w trakcie jego działania, jak pokazano poniżej:
 
-\begin{figure}[H]
+\begin{figure}[h!]
   \centering
   \begin{lstlisting}
 if choice == '1':
@@ -324,7 +329,7 @@ Opcja 2, reprezentująca tryb manualny, jest zarezerwowana na dalszą implementa
 
 Opcja 3 natomiast uruchamia wątek \texttt{camera\_module\_task}, który włącza panel operatorski z wizualizacją kamery przy użyciu biblioteki OpenCV. Działa on poprzez funkcję \texttt{start\_web\_app\_task()}, która inicjalizuje obiekt klasy \texttt{WebAppVisu} i wywołuje metodę \texttt{run()} odpowiedzialną za uruchomienie serwera aplikacji wizualizacyjnej. Wybór trybu ręcznego i uruchomienie panelu operatorskiego przedstawiono poniżej:
 
-\begin{figure}[H]
+\begin{figure}[h!]
   \centering
   \begin{lstlisting}
 elif choice == '3':
@@ -343,7 +348,7 @@ elif choice == '3':
 
 Wybór opcji 5 inicjuje procedurę zakończenia pracy programu. Zaimplementowana instrukcja warunkowa sprawdza, czy wątek \texttt{auto\_control\_thread} jest aktywny. W przypadku jego działania ustawiany jest \texttt{status} jako zakończony, co umożliwia bezpieczne zamknięcie wątku poprzez wywołanie metody \texttt{join()}, a następnie bezpieczne zamknięcie aplikacji.
 
-\begin{figure}[H]
+\begin{figure}[h!]
   \centering
   \begin{lstlisting}
 elif choice == '5':
@@ -363,7 +368,7 @@ Funkcja \texttt{start\_auto\_control\_task()} inicjuje działanie klasy \texttt{
 
 Dodatkowo, funkcja \texttt{start\_web\_app\_task()} inicjuje aplikację wizualizacyjną \texttt{WebAppVisu}, umożliwiającą przesyłanie i odbiór danych z kamery robota, co daje operatorowi podgląd w czasie rzeczywistym.
 
-\begin{figure}[H]
+\begin{figure}[h!]
   \centering
   \begin{lstlisting}
 def start_auto_control_task(serial_com, status):
@@ -386,7 +391,7 @@ Komunikacja szeregowa między jednostką sterującą (Raspberry Pi) a mikrokontr
 
 Klasa \texttt{SerialCommunication} otwiera połączenie szeregowe na wybranym porcie (w tym przypadku \texttt{/dev/ttyUSB0}) oraz ustawia szybkość transmisji (baud rate) na poziomie 250000 bps, co pozwala na szybkie przesyłanie danych w czasie rzeczywistym. Podczas inicjalizacji sprawdzane jest, czy port został otwarty poprawnie, a następnie następuje reset buforów wejściowego i wyjściowego w celu zapewnienia spójności przesyłanych danych.
 
-\begin{figure}[H]
+\begin{figure}[h!]
   \centering
   \begin{lstlisting}
 def __init__(self):
@@ -406,7 +411,7 @@ def __init__(self):
 
 Metoda \texttt{send\_data} w klasie \texttt{SerialCommunication} odpowiada za przesyłanie preformatowanych instrukcji (dwubajtowych ramek binarnych) do Arduino. Funkcja przyjmuje jako argument \texttt{bytearray}, który reprezentuje ramkę danych składającą się z informacji dotyczących typu oraz parametrów ruchu robota. Każda ramka binarna jest zapisywana bezpośrednio do portu szeregowego jako surowe dane binarne, co zapewnia, że dane przesyłane są dokładnie w formacie oczekiwanym przez Arduino, bez dodatkowych konwersji.
 
-\begin{figure}[H]
+\begin{figure}[h!]
   \centering
   \begin{lstlisting}
 def send_data(self, data):
@@ -426,7 +431,7 @@ Po wysłaniu ramki \texttt{send\_data} oczekuje na potwierdzenie zakończenia za
 
 W przypadku obecności danych w buforze, metoda odczytuje zawartość jako strumień bajtów, konwertuje na tekst i sprawdza, czy zawiera on potwierdzenie zakończenia. Jeśli Arduino przesłało frazę \texttt{"FINISH"}, metoda zwraca wartość \texttt{True}, co wskazuje, że zadanie zostało wykonane pomyślnie. W przeciwnym razie, jeśli brak jest danych w buforze lub wystąpił błąd, metoda zwraca \texttt{False}.
 
-\begin{figure}[H]
+\begin{figure}[h!]
   \centering
   \begin{lstlisting}
 # Sprawdź, czy są dostępne dane do odczytu
@@ -456,7 +461,7 @@ Komunikacja szeregowa między Raspberry Pi a Arduino, mimo że jest stosunkowo n
 
 Dzięki temu rozwiązaniu aplikacja jest bardziej odporna na nieprzewidziane błędy i może odpowiednio reagować w sytuacjach awaryjnych, takich jak utrata łączności.
 
-\begin{figure}[H]
+\begin{figure}[h!]
   \centering
   \begin{lstlisting}
     except Exception as e:
@@ -475,7 +480,7 @@ Moduł kamery odpowiedzialny jest za detekcję klocków oraz rozpoznawanie ich k
 
 Aby zidentyfikować kolory klocków, każdy kolor definiowany jest przez odpowiedni zakres wartości HSV. Zakresy te określają dolną i górną granicę składowych H (Hue), S (Saturation) i V (Value), umożliwiając tworzenie masek kolorystycznych, które izolują wybrane kolory w obrazie.
 
-\begin{figure}[H]
+\begin{figure}[h!]
   \centering
   \begin{lstlisting}
 colors = {
@@ -496,7 +501,7 @@ Funkcja \texttt{find\_color} przetwarza obraz w przestrzeni HSV w celu detekcji 
 
 Dla każdego wykrytego konturu obliczane są jego momenty, co umożliwia wyznaczenie środka masy (współrzędnych \texttt{cx} oraz \texttt{cy}). Jeśli kolorowy kontur zostanie wykryty, funkcja zwraca kontur oraz jego położenie, co pozwala na dalsze przetwarzanie w klasie \texttt{CameraModule}.
 
-\begin{figure}[H]
+\begin{figure}[h!]
   \centering
   \begin{lstlisting}
 def find_color(frame, points):
@@ -524,7 +529,7 @@ Po przekształceniu obrazu na odcienie szarości generowany jest binarny obraz p
 
 Po rozpoznaniu kwadratu obliczane są jego momenty w celu określenia współrzędnych środka. Kwadraty oznaczane są zielonym konturem oraz etykietą „Square”, co pozwala na wizualne potwierdzenie ich detekcji w obrazie.
 
-\begin{figure}[H]
+\begin{figure}[h!]
   \centering
   \begin{lstlisting}
 for contour in contours:
@@ -548,7 +553,7 @@ for contour in contours:
 
 Wyniki detekcji są wizualizowane w czasie rzeczywistym na przechwyconym obrazie. Dla każdego zidentyfikowanego koloru rysowany jest kontur, etykieta koloru oraz punkt w centrum kształtu. W przypadku rozpoznania kwadratu, wokół konturu rysowana jest zielona ramka, a w jego środku wyświetlana etykieta „Square”. Proces przetwarzania kontynuowany jest w pętli, co pozwala na analizę kolejnych klatek obrazu w czasie rzeczywistym, aż do momentu zatrzymania programu.
 
-\begin{figure}[H]
+\begin{figure}[h!]
   \centering
   \begin{lstlisting}
 cv2.drawContours(frame, [c], -1, display_color, 3)
@@ -563,7 +568,7 @@ cv2.putText(frame, name, (cx, cy), cv2.FONT_HERSHEY_SIMPLEX, 1, display_color, 2
 
 Implementacja panelu operatorskiego wybiega poza minimalne założenia projektowe, jednak ze względu na sposób pracy robota, została uznana za pomocną. Dzięki temu, użytkownik w czasie rzeczywistym może obserwować jakość działania systemu oraz w razie potrzeby stosownie zareagować. 
 
-System podglądu pracy robota został utworzony bazując na strukturze programowania Flask. Jest to popularny schemat tworzenia aplikacji internetowych, ponieważ zapewnia on możliwość utworzenia lekkiego i szybkiego serwera działającego lokalnie na maszynie. Jest to istotna kwestia, biorąc pod uwagę, komputer na którm aplikacja pracuje. 
+System podglądu pracy robota został utworzony bazując na strukturze programowania Flask. Jest to popularny schemat tworzenia aplikacji internetowych, ponieważ zapewnia on możliwość utworzenia lekkiego i szybkiego serwera działającego lokalnie na maszynie. Jest to istotna kwestia, biorąc pod uwagę, komputer na którym aplikacja pracuje. 
 
 Struktura projektu jest relatywnie prosta, zawiera trzy główne składniki:
 \begin{itemize}

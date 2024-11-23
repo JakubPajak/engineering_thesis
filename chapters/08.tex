@@ -4,27 +4,30 @@
 
 Finalna wersja platformy mobilnej sortującej klocki zgodnie z ich kolorem spełnia wszystkie wymagania projektowe w sposób dostateczny. Po zastosowaniu dodatkowych szyn naprowadzających robot wykonuje swoją pracę w sposób dobry. 
 
-Mimo napotkanych trudności i błędów wymagania projektowe zostały spełnione. Bazując na zdobytym doświadczeniu kolejna generacja robota z całą pewnością zostałaby znacznie poprawniona, a sam czas prototypowania skróciłby się drastycznie.
+Mimo napotkanych trudności i błędów wymagania projektowe zostały spełnione. Bazując na zdobytym doświadczeniu kolejna generacja robota z całą pewnością zostałaby znacznie poprawiona, a sam czas prototypowania skróciłby się drastycznie.
 
 W dalszej części rozdziału zostały opisane usprawnienia, które zdaniem autora warto wprowadzić w kolejnych iteracjach projektu. 
 
 \section{Kierunki ewentualnych przyszłych prac}
 
-Platforma będąca przedmiotem niniejszej pracy umożliwia bardzo szeroki wachlarz możliwości dalszego rozwoju. Obecnie robot wykorzystuje podstawowe przetwarzanie informacji wyzyjnej ze względu na charakter sortowanych przedmiotów. Rozpoznawanie kolorów wystarcza, aby robot pomyślnie określił gdzie należy umieścić klocek. W przypadku bardziej zaawansowanych przedmiotów, takich jak części produkcyjne lub paczki magazynowe opisane na przykład kodem lub specjalną etykietą, warto rozwazyć wprowadzenie bardziej zaawansowanej formy wizji komputerowej z wykorzystaniem uczenia maszynowego. Dzięki dużym możliwościom obliczeniowym mikrokomputera Raspberry Pi, wdrożenie uczenia maszynowego nie będzie wymagało zmiany układu SBC. 
+Platforma będąca przedmiotem niniejszej pracy umożliwia bardzo szeroki wachlarz możliwości dalszego rozwoju. Obecnie robot wykorzystuje podstawowe przetwarzanie informacji wizyjnej ze względu na charakter sortowanych przedmiotów. Rozpoznawanie kolorów wystarcza, aby robot pomyślnie określił gdzie należy umieścić klocek. W przypadku bardziej zaawansowanych przedmiotów, takich jak części produkcyjne lub paczki magazynowe opisane na przykład kodem lub specjalną etykietą, warto rozważyć wprowadzenie bardziej zaawansowanej formy wizji komputerowej z wykorzystaniem uczenia maszynowego. Dzięki dużym możliwościom obliczeniowym mikrokomputera Raspberry Pi, wdrożenie uczenia maszynowego nie będzie wymagało zmiany układu SBC. 
 
-Dodatkowym aspektem wizji komputerowej, który warto rozważyć jest wprowadzenie systmeu bezpieczeństwa, wykrywającego przedmioty na swojej drodze oraz ludzi. Umożliwi to pracę platformy mobilnej w sposób bezpieczny w dynamicznym środowisku niekoniecznie odizolowanym. 
+Dodatkowym aspektem wizji komputerowej, który warto rozważyć jest wprowadzenie systemu bezpieczeństwa, wykrywającego przedmioty na swojej drodze oraz ludzi. Umożliwi to pracę platformy mobilnej w sposób bezpieczny w dynamicznym środowisku niekoniecznie odizolowanym. 
 
-\hspace{lcm}
+
 
 Kolejnym ulepszeniem, tym razem bardziej wymagającym, jest zastosowanie technologii mapowania środowiska pracy za pomocą metody SLAM z użyciem czujnika LIDAR. Robot za pomocą tego systemu mógłby autonomicznie obliczać trasę, co znacznie poprawiłoby jego elastyczność. 
 
-\hspace{lcm}
-Następnym rozwiązaniem, które warto rozważyć jest migracja systemu kontroli robota do środowiska programistycznego ROS2 (ang. \english{Robot Operating System}). Jest to środowisko umożliwiające przystępne skalowanie projektu, dzięki jasno określonym zasadom komunikacji oraz dużej dostępności gotowych rozwiązań. Na przykład wyżej wymienione kwestie mapowania oraz autonomicznej nawigacji realtywnie prosto można wdrożyć wykorzystując biblioteki takie jak "slam\_toolbox" oraz "Nav2". Są to rozwiązania dostarczone przez zespół programistyczny rozwijający środowisko ROS2. 
 
-Wielką zaletą tego środowiska jest jego głęboko zakorzenione nawiązanie do idei wolnego oprogramowania (ang. \english{open source}), wywodzącego się z jądra systemu operacyjnego jakim jest Linux. Oznacza to, że cała społeczność może bezpłatnie korzystać z rozwiązań dostarczonych nie tylko bezpieśredno przez producenta, ale również przez użytkowników. 
 
-Jeżeli migracja systmeu kontroli robota istotnia miałaby miejsce, rozsądnym byłoby, aby umieścić aplikację wewnątrz kontenera Docker. Jest to kolejne środowisko programistyczne, umożliwiające bardzo dobrą spójność działania aplikacji, dzięki "spakowaniu" wszystkich zależności oraz bibliotek do mikroserwisu. Dzięki temu zabiegowi aplikacja będzie działała w ten sam sposób na wszystkich urządzeniach mających zainstalowego Dockera. 
 
-\hspace{lcm}
+Następnym rozwiązaniem, które warto rozważyć jest migracja systemu kontroli robota do środowiska programistycznego ROS2 (ang. \english{Robot Operating System}). Jest to środowisko umożliwiające przystępne skalowanie projektu, dzięki jasno określonym zasadom komunikacji oraz dużej dostępności gotowych rozwiązań. Na przykład wyżej wymienione kwestie mapowania oraz autonomicznej nawigacji relatywnie prosto można wdrożyć wykorzystując biblioteki takie jak "slam\_toolbox" oraz "Nav2". Są to rozwiązania dostarczone przez zespół programistyczny rozwijający środowisko ROS2. 
+
+Wielką zaletą tego środowiska jest jego głęboko zakorzenione nawiązanie do idei wolnego oprogramowania (ang. \english{open source}), wywodzącego się z jądra systemu operacyjnego jakim jest Linux. Oznacza to, że cała społeczność może bezpłatnie korzystać z rozwiązań dostarczonych nie tylko bezpośrednio przez producenta, ale również przez użytkowników. 
+
+Jeżeli migracja systemu kontroli robota istotnie miałaby miejsce, rozsądnym byłoby, aby umieścić aplikację wewnątrz kontenera Docker. Jest to kolejne środowisko programistyczne, umożliwiające bardzo dobrą spójność działania aplikacji, dzięki "spakowaniu" wszystkich zależności oraz bibliotek do kontenera. Dzięki temu zabiegowi aplikacja będzie działała w ten sam sposób na wszystkich urządzeniach mających zainstalowano Docker'a. 
+
+
+
 
 Ostatnim usprawnieniem, które zadaniem autora warto rozważyć jest rozwinięcie panelu operatorskiego jako aplikacji internetowej. Aktualna wersja aplikacji nie umożliwia wystarczającej kontroli na robotem oraz nad parametrami jego pracy. Rozwinięcie tego rozwiązania umożliwi znacznie bardziej przystępną obsługę robota, wraz z programowaniem nowych ścieżek lub nowych zadań.

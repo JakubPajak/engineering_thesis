@@ -10,16 +10,17 @@
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Schamat UML zawierający podstawowe funkcjonalności}}{10}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Schemat UML zawierający podstawowe funkcjonalności}}{10}{figure.caption.8}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Rysunek przedstawiający zasadę działania czujnika Hall'a \blx@tocontentsinit {0}\cite {bib:hall_net}}}{16}{figure.caption.9}%
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Rysunek przedstawiający ideową budowę enkodera kwadraturowego oraz sygnały przez niego generowane \blx@tocontentsinit {0}\cite {bib:encoders-pid}}}{16}{figure.caption.10}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Przykładowy wygląd enkodera opartego o efekt Hall'a z oznaczonymi tranzystorami wykrywającymi zmiany pola magnetycznego podczas obrotu wału \blx@tocontentsinit {0}\cite {bib:botland-hall}}}{16}{figure.caption.11}%
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Rysunek przedstawiający ogólny schemat układu regulacji automatycznej \blx@tocontentsinit {0}\cite {bib:wiki-regulacja}}}{17}{figure.caption.12}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Zdjęcie przedstawiające skuteczność wykrywania krawędzi algorytmem Canny'ego}}{23}{figure.caption.13}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Wizualizacja przestrzeni kolorów RGB \blx@tocontentsinit {0}\cite {bib:rgb-model}}}{25}{figure.caption.14}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Wizualizacja przestrzeni HSV \blx@tocontentsinit {0}\cite {bib:hsv-model}}}{26}{figure.caption.15}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Wizualizacja przestrzeni YCrCb \blx@tocontentsinit {0}\cite {bib:ycrcb-model}}}{26}{figure.caption.16}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Grafika stanowiąca wizualizację przekształceń kinematyki robota \blx@tocontentsinit {0}\cite {bib:konferencja}}}{23}{figure.caption.13}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Zdjęcie przedstawiające skuteczność wykrywania krawędzi algorytmem Canny'ego}}{25}{figure.caption.14}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Wizualizacja przestrzeni kolorów RGB \blx@tocontentsinit {0}\cite {bib:rgb-model}}}{27}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Wizualizacja przestrzeni HSV \blx@tocontentsinit {0}\cite {bib:hsv-model}}}{28}{figure.caption.16}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Wizualizacja przestrzeni YCrCb \blx@tocontentsinit {0}\cite {bib:ycrcb-model}}}{28}{figure.caption.17}%
 \addvspace {10\p@ }
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
@@ -30,33 +31,36 @@
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Model górnej części obudowy}}{37}{figure.caption.22}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Przybliżenie sposobu połączenia górnej części obudowy z dolną. Widoczny jest również otwór przeznaczony na przewody połączeniowe}}{37}{figure.caption.23}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Przybliżenie miejsca na mocnowania silników}}{37}{figure.caption.24}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Przybliżenie miejsca mocowania kulek podporowych w osi robota}}{38}{figure.caption.25}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Prezentacja finalnej wersji obudowy robota}}{38}{figure.caption.26}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Model górnej części obudowy}}{39}{figure.caption.23}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Przybliżenie sposobu połączenia górnej części obudowy z dolną. Widoczny jest również otwór przeznaczony na przewody połączeniowe}}{39}{figure.caption.24}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Przybliżenie miejsca na mocowania silników}}{39}{figure.caption.25}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Przybliżenie miejsca mocowania kulek podporowych w osi robota}}{40}{figure.caption.26}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Prezentacja finalnej wersji obudowy robota}}{40}{figure.caption.27}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Fragment przedstawiający konfigurację pinów}}{41}{figure.caption.28}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Wartości parametrów regulatora PID}}{42}{figure.caption.29}%
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Fragment przedstawiający realizację regulacji PID}}{42}{figure.caption.30}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Funkcja zliczająca impulsy enkodera}}{43}{figure.caption.31}%
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Fragment przedstawiający odczyt ramki bitowej z magistrali szeregowej}}{44}{figure.caption.32}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Fragment przedstawiający konfigurację pinów}}{41}{figure.caption.27}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Wartości parametrów regulatora PID}}{41}{figure.caption.28}%
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Fragment przedstawiający realizację regulacji PID}}{42}{figure.caption.29}%
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Funkcja zliczająca impulsy enkodera}}{42}{figure.caption.30}%
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Fragment przedstawiający odczyt ramki bitowej z magistrali szeregowej}}{43}{figure.caption.31}%
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Fragment przedstawiający logikę zarządzania otrzymanym zadaniem}}{43}{figure.caption.32}%
-\contentsline {figure}{\numberline {6.12}{\ignorespaces Importowanie bibliotek i modułów sterujących aplikacją}}{45}{figure.caption.33}%
-\contentsline {figure}{\numberline {6.13}{\ignorespaces Wybór i uruchomienie trybu automatycznego}}{45}{figure.caption.35}%
-\contentsline {figure}{\numberline {6.14}{\ignorespaces Uruchomienie panelu operatorskiego z wizualizacją}}{47}{figure.caption.37}%
-\contentsline {figure}{\numberline {6.15}{\ignorespaces Kod zamykający wątki i kończący działanie aplikacji}}{47}{figure.caption.39}%
-\contentsline {figure}{\numberline {6.16}{\ignorespaces Kod funkcji uruchamiających zadania kontrolne robota}}{47}{figure.caption.41}%
-\contentsline {figure}{\numberline {6.17}{\ignorespaces Kod inicjalizujący połączenie szeregowe}}{49}{figure.caption.43}%
-\contentsline {figure}{\numberline {6.18}{\ignorespaces Kod odpowiedzialny za wysyłanie danych do Arduino}}{49}{figure.caption.45}%
-\contentsline {figure}{\numberline {6.19}{\ignorespaces Kod odbierający dane potwierdzające zakończenie zadania}}{49}{figure.caption.47}%
-\contentsline {figure}{\numberline {6.20}{\ignorespaces Obsługa błędów komunikacji szeregowej}}{49}{figure.caption.49}%
-\contentsline {figure}{\numberline {6.21}{\ignorespaces Definicje zakresów kolorów dla identyfikacji klocków}}{51}{figure.caption.51}%
-\contentsline {figure}{\numberline {6.22}{\ignorespaces Kod odpowiedzialny za detekcję kolorów klocków}}{51}{figure.caption.53}%
-\contentsline {figure}{\numberline {6.23}{\ignorespaces Kod detekcji i klasyfikacji kształtów kwadratowych}}{53}{figure.caption.55}%
-\contentsline {figure}{\numberline {6.24}{\ignorespaces Kod wizualizacji wyników detekcji kolorów i kształtów}}{53}{figure.caption.57}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Fragment przedstawiający logikę zarządzania otrzymanym zadaniem}}{45}{figure.caption.33}%
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Importowanie bibliotek i modułów sterujących aplikacją}}{46}{figure.caption.34}%
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Wybór i uruchomienie trybu automatycznego}}{47}{figure.caption.36}%
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Uruchomienie panelu operatorskiego z wizualizacją}}{48}{figure.caption.38}%
+\contentsline {figure}{\numberline {6.15}{\ignorespaces Kod zamykający wątki i kończący działanie aplikacji}}{48}{figure.caption.40}%
+\contentsline {figure}{\numberline {6.16}{\ignorespaces Kod funkcji uruchamiających zadania kontrolne robota}}{49}{figure.caption.42}%
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Kod inicjalizujący połączenie szeregowe}}{49}{figure.caption.44}%
+\contentsline {figure}{\numberline {6.18}{\ignorespaces Kod odpowiedzialny za wysyłanie danych do Arduino}}{50}{figure.caption.46}%
+\contentsline {figure}{\numberline {6.19}{\ignorespaces Kod odbierający dane potwierdzające zakończenie zadania}}{50}{figure.caption.48}%
+\contentsline {figure}{\numberline {6.20}{\ignorespaces Obsługa błędów komunikacji szeregowej}}{51}{figure.caption.50}%
+\contentsline {figure}{\numberline {6.21}{\ignorespaces Definicje zakresów kolorów dla identyfikacji klocków}}{52}{figure.caption.52}%
+\contentsline {figure}{\numberline {6.22}{\ignorespaces Kod odpowiedzialny za detekcję kolorów klocków}}{52}{figure.caption.54}%
+\contentsline {figure}{\numberline {6.23}{\ignorespaces Kod detekcji i klasyfikacji kształtów kwadratowych}}{53}{figure.caption.56}%
+\contentsline {figure}{\numberline {6.24}{\ignorespaces Kod wizualizacji wyników detekcji kolorów i kształtów}}{53}{figure.caption.58}%
 \addvspace {10\p@ }
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Zdjęcie przedstawiające stację dokującą oraz miejsce docelowe}}{58}{figure.caption.59}%
 \addvspace {10\p@ }
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 

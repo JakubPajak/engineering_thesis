@@ -72,9 +72,9 @@
 \newlabel{ch:zalozenia-wstepne}{{3}{9}{Założenia wstępne}{chapter.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}Wymagania funkcjonalne}{9}{section.3.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}Przypadki użycia i diagramy UML}{9}{section.3.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Schamat UML zawierający podstawowe funkcjonalności}}{10}{figure.caption.8}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Schemat UML zawierający podstawowe funkcjonalności}}{10}{figure.caption.8}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{rys1:schemat_uml}{{3.1}{10}{Schamat UML zawierający podstawowe funkcjonalności}{figure.caption.8}{}}
+\newlabel{rys1:schemat_uml}{{3.1}{10}{Schemat UML zawierający podstawowe funkcjonalności}{figure.caption.8}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.3}Opis wykorzystanego sprzętu elektronicznego}{10}{section.3.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {3.4}Metodyka pracy i etapy projektu}{11}{section.3.4}\protected@file@percent }
 \citation{bib:enkoder-mag-opt}
@@ -134,15 +134,26 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.7}Stabilność układów dynamicznych}{20}{subsection.4.2.7}\protected@file@percent }
 \newlabel{sek:stab}{{4.2.7}{20}{Stabilność układów dynamicznych}{subsection.4.2.7}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.8}Zastosowanie regulatora PID w sterowaniu robotem mobilnym}{21}{subsection.4.2.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Napęd różnicowy}{22}{section.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Kinematyka napędu różnicowego}{22}{subsection.4.3.1}\protected@file@percent }
+\newlabel{eq:linear}{{4.9}{22}{Kinematyka napędu różnicowego}{equation.4.3.9}{}}
+\newlabel{eq:angular}{{4.10}{22}{Kinematyka napędu różnicowego}{equation.4.3.10}{}}
+\citation{bib:konferencja}
+\abx@aux@cite{0}{bib:konferencja}
+\abx@aux@segm{0}{0}{bib:konferencja}
+\citation{bib:konferencja}
+\abx@aux@cite{0}{bib:konferencja}
+\abx@aux@segm{0}{0}{bib:konferencja}
 \citation{bib:canny-article}
 \abx@aux@cite{0}{bib:canny-article}
 \abx@aux@segm{0}{0}{bib:canny-article}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Podstawy wykrywania krawędzi w wizji komputerowej}{22}{section.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Algorytm Canny’ego}{22}{subsection.4.3.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Zdjęcie przedstawiające skuteczność wykrywania krawędzi algorytmem Canny'ego}}{23}{figure.caption.13}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Podstawy rozpoznawania kolorów w wizji komputerowej}{24}{section.4.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Teoria koloru}{24}{subsection.4.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Proces rozpoznawania kolorów}{24}{subsection.4.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Grafika stanowiąca wizualizację przekształceń kinematyki robota \blx@tocontentsinit {0}\cite {bib:konferencja}}}{23}{figure.caption.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Podstawy wykrywania krawędzi w wizji komputerowej}{23}{section.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Algorytm Canny’ego}{23}{subsection.4.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Zdjęcie przedstawiające skuteczność wykrywania krawędzi algorytmem Canny'ego}}{25}{figure.caption.14}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Podstawy rozpoznawania kolorów w wizji komputerowej}{26}{section.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}Teoria koloru}{26}{subsection.4.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}Proces rozpoznawania kolorów}{26}{subsection.4.5.2}\protected@file@percent }
 \citation{bib:rgb-model}
 \abx@aux@cite{0}{bib:rgb-model}
 \abx@aux@segm{0}{0}{bib:rgb-model}
@@ -161,138 +172,142 @@
 \citation{bib:ycrcb-model}
 \abx@aux@cite{0}{bib:ycrcb-model}
 \abx@aux@segm{0}{0}{bib:ycrcb-model}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}Algorytmy rozpoznawania kolorów}{25}{subsection.4.4.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Wizualizacja przestrzeni kolorów RGB \blx@tocontentsinit {0}\cite {bib:rgb-model}}}{25}{figure.caption.14}\protected@file@percent }
-\newlabel{rys2:rgb1}{{4.6}{25}{Wizualizacja przestrzeni kolorów RGB \cite {bib:rgb-model}}{figure.caption.14}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Wizualizacja przestrzeni HSV \blx@tocontentsinit {0}\cite {bib:hsv-model}}}{26}{figure.caption.15}\protected@file@percent }
-\newlabel{rys2:hsv1}{{4.7}{26}{Wizualizacja przestrzeni HSV \cite {bib:hsv-model}}{figure.caption.15}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Wizualizacja przestrzeni YCrCb \blx@tocontentsinit {0}\cite {bib:ycrcb-model}}}{26}{figure.caption.16}\protected@file@percent }
-\newlabel{rys2:ycrcb1}{{4.8}{26}{Wizualizacja przestrzeni YCrCb \cite {bib:ycrcb-model}}{figure.caption.16}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Wymagania i specyfikacja użytkowa}{27}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.3}Algorytmy rozpoznawania kolorów}{27}{subsection.4.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Wizualizacja przestrzeni kolorów RGB \blx@tocontentsinit {0}\cite {bib:rgb-model}}}{27}{figure.caption.15}\protected@file@percent }
+\newlabel{rys2:rgb1}{{4.7}{27}{Wizualizacja przestrzeni kolorów RGB \cite {bib:rgb-model}}{figure.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.8}{\ignorespaces Wizualizacja przestrzeni HSV \blx@tocontentsinit {0}\cite {bib:hsv-model}}}{28}{figure.caption.16}\protected@file@percent }
+\newlabel{rys2:hsv1}{{4.8}{28}{Wizualizacja przestrzeni HSV \cite {bib:hsv-model}}{figure.caption.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.9}{\ignorespaces Wizualizacja przestrzeni YCrCb \blx@tocontentsinit {0}\cite {bib:ycrcb-model}}}{28}{figure.caption.17}\protected@file@percent }
+\newlabel{rys2:ycrcb1}{{4.9}{28}{Wizualizacja przestrzeni YCrCb \cite {bib:ycrcb-model}}{figure.caption.17}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Wymagania i specyfikacja użytkowa}{29}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:04}{{5}{27}{Wymagania i specyfikacja użytkowa}{chapter.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Wymagania sprzętowe i programowe}{27}{section.5.1}\protected@file@percent }
+\newlabel{ch:04}{{5}{29}{Wymagania i specyfikacja użytkowa}{chapter.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Wymagania sprzętowe i programowe}{29}{section.5.1}\protected@file@percent }
 \babel@aux{british}{}
 \babel@aux{polish}{}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Sposób instalacji}{28}{section.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Instalacja systemu operacyjnego}{28}{subsection.5.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Aktualizacja systemu}{29}{subsection.5.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Instalacja Python}{29}{subsection.5.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Sposób instalacji}{30}{section.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Instalacja systemu operacyjnego}{30}{subsection.5.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Aktualizacja systemu}{31}{subsection.5.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Instalacja Python}{31}{subsection.5.2.3}\protected@file@percent }
 \citation{bib:manualLibcamera2}
 \abx@aux@cite{0}{bib:manualLibcamera2}
 \abx@aux@segm{0}{0}{bib:manualLibcamera2}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.4}Instalacja OpenCV}{30}{subsection.5.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.4}Instalacja OpenCV}{32}{subsection.5.2.4}\protected@file@percent }
 \babel@aux{british}{}
 \babel@aux{polish}{}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.5}Instalacja Libcamera2}{30}{subsection.5.2.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.6}Instalacja RPi.GPIO}{30}{subsection.5.2.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.5}Instalacja Libcamera2}{32}{subsection.5.2.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.6}Instalacja RPi.GPIO}{32}{subsection.5.2.6}\protected@file@percent }
 \babel@aux{british}{}
 \babel@aux{polish}{}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.7}Instalacja środowiska Python Flask}{30}{subsection.5.2.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.7}Instalacja środowiska Python Flask}{32}{subsection.5.2.7}\protected@file@percent }
 \babel@aux{british}{}
 \babel@aux{polish}{}
-\@writefile{lol}{\contentsline {lstlisting}{[}{31}{lstlisting.5.-7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.8}Weryfikacja instalacji bibliotek}{31}{subsection.5.2.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Weryfikacja instalacji Python}{31}{section*.19}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Weryfikacja instalacji OpenCV}{31}{section*.20}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Weryfikacja instalacji Libcamera2}{31}{section*.21}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.9}Sposób aktywacji --->> JESLI WEB_APP TO DO ZMIANY !!!}{32}{subsection.5.2.9}\protected@file@percent }
-\newlabel{sekcja:43}{{5.2.9}{32}{Sposób aktywacji --->> JESLI WEB_APP TO DO ZMIANY !!!}{subsection.5.2.9}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.10}Kategorie użytkowników}{32}{subsection.5.2.10}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.11}Sposób obsługi}{33}{subsection.5.2.11}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.12}Przykład działania}{33}{subsection.5.2.12}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.13}Scenariusze korzystania z systemu}{33}{subsection.5.2.13}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Specyfikacja techniczna}{35}{chapter.6}\protected@file@percent }
+\@writefile{lol}{\contentsline {lstlisting}{[}{33}{lstlisting.5.-7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.8}Weryfikacja instalacji bibliotek}{33}{subsection.5.2.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Weryfikacja instalacji Python}{33}{section*.20}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Weryfikacja instalacji OpenCV}{33}{section*.21}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Weryfikacja instalacji Libcamera2}{33}{section*.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.9}Sposób aktywacji}{34}{subsection.5.2.9}\protected@file@percent }
+\newlabel{sekcja:43}{{5.2.9}{34}{Sposób aktywacji}{subsection.5.2.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.10}Kategorie użytkowników}{34}{subsection.5.2.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.11}Sposób obsługi}{35}{subsection.5.2.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.12}Przykład działania}{35}{subsection.5.2.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.13}Scenariusze korzystania z systemu}{35}{subsection.5.2.13}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Specyfikacja techniczna}{37}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:06}{{6}{35}{Specyfikacja techniczna}{chapter.6}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Konstrukcja}{35}{section.6.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Model górnej części obudowy}}{37}{figure.caption.22}\protected@file@percent }
-\newlabel{fig:ball-close}{{6.1}{37}{Model górnej części obudowy}{figure.caption.22}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Przybliżenie sposobu połączenia górnej części obudowy z dolną. Widoczny jest również otwór przeznaczony na przewody połączeniowe}}{37}{figure.caption.23}\protected@file@percent }
-\newlabel{fig:full-close}{{6.2}{37}{Przybliżenie sposobu połączenia górnej części obudowy z dolną. Widoczny jest również otwór przeznaczony na przewody połączeniowe}{figure.caption.23}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces Przybliżenie miejsca na mocnowania silników}}{37}{figure.caption.24}\protected@file@percent }
-\newlabel{fig:base-close}{{6.3}{37}{Przybliżenie miejsca na mocnowania silników}{figure.caption.24}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.4}{\ignorespaces Przybliżenie miejsca mocowania kulek podporowych w osi robota}}{38}{figure.caption.25}\protected@file@percent }
-\newlabel{fig:ball-close}{{6.4}{38}{Przybliżenie miejsca mocowania kulek podporowych w osi robota}{figure.caption.25}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.5}{\ignorespaces Prezentacja finalnej wersji obudowy robota}}{38}{figure.caption.26}\protected@file@percent }
-\newlabel{fig:full}{{6.5}{38}{Prezentacja finalnej wersji obudowy robota}{figure.caption.26}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Implementacja kontrolera silników}{39}{section.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}Konfiguracja pinów i ustawienia PWM}{39}{subsection.6.2.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.2}Algorytm sterowania PID}{39}{subsection.6.2.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.3}Funkcja zliczająca impulsy enkoderów}{39}{subsection.6.2.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.4}Realizacja komunikacji z Raspberry Pi}{40}{subsection.6.2.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.5}Pętla główna programu}{40}{subsection.6.2.5}\protected@file@percent }
+\newlabel{ch:06}{{6}{37}{Specyfikacja techniczna}{chapter.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Konstrukcja}{37}{section.6.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Model górnej części obudowy}}{39}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:ball-close}{{6.1}{39}{Model górnej części obudowy}{figure.caption.23}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Przybliżenie sposobu połączenia górnej części obudowy z dolną. Widoczny jest również otwór przeznaczony na przewody połączeniowe}}{39}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:full-close}{{6.2}{39}{Przybliżenie sposobu połączenia górnej części obudowy z dolną. Widoczny jest również otwór przeznaczony na przewody połączeniowe}{figure.caption.24}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces Przybliżenie miejsca na mocowania silników}}{39}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:base-close}{{6.3}{39}{Przybliżenie miejsca na mocowania silników}{figure.caption.25}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.4}{\ignorespaces Przybliżenie miejsca mocowania kulek podporowych w osi robota}}{40}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:ball-close}{{6.4}{40}{Przybliżenie miejsca mocowania kulek podporowych w osi robota}{figure.caption.26}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.5}{\ignorespaces Prezentacja finalnej wersji obudowy robota}}{40}{figure.caption.27}\protected@file@percent }
+\newlabel{fig:full}{{6.5}{40}{Prezentacja finalnej wersji obudowy robota}{figure.caption.27}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Implementacja kontrolera silników}{41}{section.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.1}Konfiguracja pinów i ustawienia PWM}{41}{subsection.6.2.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.6}{\ignorespaces Fragment przedstawiający konfigurację pinów}}{41}{figure.caption.28}\protected@file@percent }
+\newlabel{fig:config}{{6.6}{41}{Fragment przedstawiający konfigurację pinów}{figure.caption.28}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.2}Algorytm sterowania PID}{41}{subsection.6.2.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.7}{\ignorespaces Wartości parametrów regulatora PID}}{42}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:config-pid}{{6.7}{42}{Wartości parametrów regulatora PID}{figure.caption.29}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.8}{\ignorespaces Fragment przedstawiający realizację regulacji PID}}{42}{figure.caption.30}\protected@file@percent }
+\newlabel{fig:pseudokod:pid}{{6.8}{42}{Fragment przedstawiający realizację regulacji PID}{figure.caption.30}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.3}Funkcja zliczająca impulsy enkoderów}{42}{subsection.6.2.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.9}{\ignorespaces Funkcja zliczająca impulsy enkodera}}{43}{figure.caption.31}\protected@file@percent }
+\newlabel{fig:enc-count}{{6.9}{43}{Funkcja zliczająca impulsy enkodera}{figure.caption.31}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.4}Realizacja komunikacji z Raspberry Pi}{43}{subsection.6.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2.5}Pętla główna programu}{43}{subsection.6.2.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.10}{\ignorespaces Fragment przedstawiający odczyt ramki bitowej z magistrali szeregowej}}{44}{figure.caption.32}\protected@file@percent }
+\newlabel{fig:read-uart}{{6.10}{44}{Fragment przedstawiający odczyt ramki bitowej z magistrali szeregowej}{figure.caption.32}{}}
 \babel@aux{british}{}
 \babel@aux{polish}{}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.6}{\ignorespaces Fragment przedstawiający konfigurację pinów}}{41}{figure.caption.27}\protected@file@percent }
-\newlabel{fig:config}{{6.6}{41}{Fragment przedstawiający konfigurację pinów}{figure.caption.27}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.7}{\ignorespaces Wartości parametrów regulatora PID}}{41}{figure.caption.28}\protected@file@percent }
-\newlabel{fig:config-pid}{{6.7}{41}{Wartości parametrów regulatora PID}{figure.caption.28}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.8}{\ignorespaces Fragment przedstawiający realizację regulacji PID}}{42}{figure.caption.29}\protected@file@percent }
-\newlabel{fig:pseudokod:pid}{{6.8}{42}{Fragment przedstawiający realizację regulacji PID}{figure.caption.29}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.9}{\ignorespaces Funkcja zliczająca impulsy enkodera}}{42}{figure.caption.30}\protected@file@percent }
-\newlabel{fig:enc-count}{{6.9}{42}{Funkcja zliczająca impulsy enkodera}{figure.caption.30}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.10}{\ignorespaces Fragment przedstawiający odczyt ramki bitowej z magistrali szeregowej}}{43}{figure.caption.31}\protected@file@percent }
-\newlabel{fig:read-uart}{{6.10}{43}{Fragment przedstawiający odczyt ramki bitowej z magistrali szeregowej}{figure.caption.31}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.11}{\ignorespaces Fragment przedstawiający logikę zarządzania otrzymanym zadaniem}}{43}{figure.caption.32}\protected@file@percent }
-\newlabel{fig:manage-ex}{{6.11}{43}{Fragment przedstawiający logikę zarządzania otrzymanym zadaniem}{figure.caption.32}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.3}Implementacja głównej aplikacji sterującej}{44}{section.6.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}Opis funkcji głównej aplikacji \texttt  {mainTask()}}{44}{subsection.6.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Tryb automatyczny}{44}{section*.34}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.12}{\ignorespaces Importowanie bibliotek i modułów sterujących aplikacją}}{45}{figure.caption.33}\protected@file@percent }
-\newlabel{fig:imported_modules}{{6.12}{45}{Importowanie bibliotek i modułów sterujących aplikacją}{figure.caption.33}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.13}{\ignorespaces Wybór i uruchomienie trybu automatycznego}}{45}{figure.caption.35}\protected@file@percent }
-\newlabel{fig:automode_choice}{{6.13}{45}{Wybór i uruchomienie trybu automatycznego}{figure.caption.35}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Tryb ręczny i panel operatorski}{46}{section*.36}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Zakończenie działania aplikacji}{46}{section*.38}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Inicjalizacja funkcji pomocniczych}{46}{section*.40}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}Opis sposobu komunikacji szeregowej}{46}{subsection.6.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Inicjalizacja połączenia szeregowego}{46}{section*.42}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.14}{\ignorespaces Uruchomienie panelu operatorskiego z wizualizacją}}{47}{figure.caption.37}\protected@file@percent }
-\newlabel{fig:panel_task}{{6.14}{47}{Uruchomienie panelu operatorskiego z wizualizacją}{figure.caption.37}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.15}{\ignorespaces Kod zamykający wątki i kończący działanie aplikacji}}{47}{figure.caption.39}\protected@file@percent }
-\newlabel{fig:app_exit}{{6.15}{47}{Kod zamykający wątki i kończący działanie aplikacji}{figure.caption.39}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.16}{\ignorespaces Kod funkcji uruchamiających zadania kontrolne robota}}{47}{figure.caption.41}\protected@file@percent }
-\newlabel{fig:tasks_start}{{6.16}{47}{Kod funkcji uruchamiających zadania kontrolne robota}{figure.caption.41}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Wysyłanie danych do Arduino}{48}{section*.44}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Odbiór i potwierdzenie zakończenia operacji}{48}{section*.46}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Obsługa błędów w komunikacji szeregowej}{48}{section*.48}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.3}Opis sposobu detekcji klocka oraz rozpoznawania koloru}{48}{subsection.6.3.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.17}{\ignorespaces Kod inicjalizujący połączenie szeregowe}}{49}{figure.caption.43}\protected@file@percent }
-\newlabel{fig:serial_init}{{6.17}{49}{Kod inicjalizujący połączenie szeregowe}{figure.caption.43}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.18}{\ignorespaces Kod odpowiedzialny za wysyłanie danych do Arduino}}{49}{figure.caption.45}\protected@file@percent }
-\newlabel{fig:serial_send}{{6.18}{49}{Kod odpowiedzialny za wysyłanie danych do Arduino}{figure.caption.45}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.19}{\ignorespaces Kod odbierający dane potwierdzające zakończenie zadania}}{49}{figure.caption.47}\protected@file@percent }
-\newlabel{fig:serial_receive}{{6.19}{49}{Kod odbierający dane potwierdzające zakończenie zadania}{figure.caption.47}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.20}{\ignorespaces Obsługa błędów komunikacji szeregowej}}{49}{figure.caption.49}\protected@file@percent }
-\newlabel{fig:serial_exception}{{6.20}{49}{Obsługa błędów komunikacji szeregowej}{figure.caption.49}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Definicja zakresów kolorów}{50}{section*.50}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Detekcja koloru}{50}{section*.52}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Detekcja i klasyfikacja kształtów}{50}{section*.54}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Wizualizacja wyników}{50}{section*.56}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.21}{\ignorespaces Definicje zakresów kolorów dla identyfikacji klocków}}{51}{figure.caption.51}\protected@file@percent }
-\newlabel{fig:color_definitions}{{6.21}{51}{Definicje zakresów kolorów dla identyfikacji klocków}{figure.caption.51}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.22}{\ignorespaces Kod odpowiedzialny za detekcję kolorów klocków}}{51}{figure.caption.53}\protected@file@percent }
-\newlabel{fig:color_detection}{{6.22}{51}{Kod odpowiedzialny za detekcję kolorów klocków}{figure.caption.53}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.4}Implementacja panelu operatorskiego}{52}{section.6.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {6.23}{\ignorespaces Kod detekcji i klasyfikacji kształtów kwadratowych}}{53}{figure.caption.55}\protected@file@percent }
-\newlabel{fig:square_detection}{{6.23}{53}{Kod detekcji i klasyfikacji kształtów kwadratowych}{figure.caption.55}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.24}{\ignorespaces Kod wizualizacji wyników detekcji kolorów i kształtów}}{53}{figure.caption.57}\protected@file@percent }
-\newlabel{fig:visualization}{{6.24}{53}{Kod wizualizacji wyników detekcji kolorów i kształtów}{figure.caption.57}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Weryfikacja i walidacja}{55}{chapter.7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.11}{\ignorespaces Fragment przedstawiający logikę zarządzania otrzymanym zadaniem}}{45}{figure.caption.33}\protected@file@percent }
+\newlabel{fig:manage-ex}{{6.11}{45}{Fragment przedstawiający logikę zarządzania otrzymanym zadaniem}{figure.caption.33}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Implementacja głównej aplikacji sterującej}{46}{section.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}Opis funkcji głównej aplikacji \texttt  {mainTask()}}{46}{subsection.6.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.12}{\ignorespaces Importowanie bibliotek i modułów sterujących aplikacją}}{46}{figure.caption.34}\protected@file@percent }
+\newlabel{fig:imported_modules}{{6.12}{46}{Importowanie bibliotek i modułów sterujących aplikacją}{figure.caption.34}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Tryb automatyczny}{47}{section*.35}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.13}{\ignorespaces Wybór i uruchomienie trybu automatycznego}}{47}{figure.caption.36}\protected@file@percent }
+\newlabel{fig:automode_choice}{{6.13}{47}{Wybór i uruchomienie trybu automatycznego}{figure.caption.36}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Tryb ręczny i panel operatorski}{47}{section*.37}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.14}{\ignorespaces Uruchomienie panelu operatorskiego z wizualizacją}}{48}{figure.caption.38}\protected@file@percent }
+\newlabel{fig:panel_task}{{6.14}{48}{Uruchomienie panelu operatorskiego z wizualizacją}{figure.caption.38}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Zakończenie działania aplikacji}{48}{section*.39}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.15}{\ignorespaces Kod zamykający wątki i kończący działanie aplikacji}}{48}{figure.caption.40}\protected@file@percent }
+\newlabel{fig:app_exit}{{6.15}{48}{Kod zamykający wątki i kończący działanie aplikacji}{figure.caption.40}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Inicjalizacja funkcji pomocniczych}{48}{section*.41}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.2}Opis sposobu komunikacji szeregowej}{48}{subsection.6.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.16}{\ignorespaces Kod funkcji uruchamiających zadania kontrolne robota}}{49}{figure.caption.42}\protected@file@percent }
+\newlabel{fig:tasks_start}{{6.16}{49}{Kod funkcji uruchamiających zadania kontrolne robota}{figure.caption.42}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Inicjalizacja połączenia szeregowego}{49}{section*.43}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.17}{\ignorespaces Kod inicjalizujący połączenie szeregowe}}{49}{figure.caption.44}\protected@file@percent }
+\newlabel{fig:serial_init}{{6.17}{49}{Kod inicjalizujący połączenie szeregowe}{figure.caption.44}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Wysyłanie danych do Arduino}{49}{section*.45}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.18}{\ignorespaces Kod odpowiedzialny za wysyłanie danych do Arduino}}{50}{figure.caption.46}\protected@file@percent }
+\newlabel{fig:serial_send}{{6.18}{50}{Kod odpowiedzialny za wysyłanie danych do Arduino}{figure.caption.46}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Odbiór i potwierdzenie zakończenia operacji}{50}{section*.47}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.19}{\ignorespaces Kod odbierający dane potwierdzające zakończenie zadania}}{50}{figure.caption.48}\protected@file@percent }
+\newlabel{fig:serial_receive}{{6.19}{50}{Kod odbierający dane potwierdzające zakończenie zadania}{figure.caption.48}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Obsługa błędów w komunikacji szeregowej}{50}{section*.49}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.20}{\ignorespaces Obsługa błędów komunikacji szeregowej}}{51}{figure.caption.50}\protected@file@percent }
+\newlabel{fig:serial_exception}{{6.20}{51}{Obsługa błędów komunikacji szeregowej}{figure.caption.50}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3.3}Opis sposobu detekcji klocka oraz rozpoznawania koloru}{51}{subsection.6.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Definicja zakresów kolorów}{51}{section*.51}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Detekcja koloru}{51}{section*.53}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.21}{\ignorespaces Definicje zakresów kolorów dla identyfikacji klocków}}{52}{figure.caption.52}\protected@file@percent }
+\newlabel{fig:color_definitions}{{6.21}{52}{Definicje zakresów kolorów dla identyfikacji klocków}{figure.caption.52}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.22}{\ignorespaces Kod odpowiedzialny za detekcję kolorów klocków}}{52}{figure.caption.54}\protected@file@percent }
+\newlabel{fig:color_detection}{{6.22}{52}{Kod odpowiedzialny za detekcję kolorów klocków}{figure.caption.54}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Detekcja i klasyfikacja kształtów}{52}{section*.55}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.23}{\ignorespaces Kod detekcji i klasyfikacji kształtów kwadratowych}}{53}{figure.caption.56}\protected@file@percent }
+\newlabel{fig:square_detection}{{6.23}{53}{Kod detekcji i klasyfikacji kształtów kwadratowych}{figure.caption.56}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Wizualizacja wyników}{53}{section*.57}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.24}{\ignorespaces Kod wizualizacji wyników detekcji kolorów i kształtów}}{53}{figure.caption.58}\protected@file@percent }
+\newlabel{fig:visualization}{{6.24}{53}{Kod wizualizacji wyników detekcji kolorów i kształtów}{figure.caption.58}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Implementacja panelu operatorskiego}{53}{section.6.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Weryfikacja pracy robota}{55}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{ch:07}{{7}{55}{Weryfikacja i walidacja}{chapter.7}{}}
+\newlabel{ch:07}{{7}{55}{Weryfikacja pracy robota}{chapter.7}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {7.1}Sposób testowania}{55}{section.7.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {7.2}Wykryte i usunięte błędy}{55}{section.7.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {7.2.1}Błąd nieskończonej pracy silników}{55}{subsection.7.2.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {7.2.2}Błąd odbierania i wysyłania poleceń}{56}{subsection.7.2.2}\protected@file@percent }
+\babel@aux{british}{}
+\babel@aux{polish}{}
 \@writefile{toc}{\contentsline {subsection}{\numberline {7.2.3}Błąd dokładności jazdy}{56}{subsection.7.2.3}\protected@file@percent }
 \citation{bib:where-am-i}
 \abx@aux@cite{0}{bib:where-am-i}
 \abx@aux@segm{0}{0}{bib:where-am-i}
+\@writefile{lof}{\contentsline {figure}{\numberline {7.1}{\ignorespaces Zdjęcie przedstawiające stację dokującą oraz miejsce docelowe}}{58}{figure.caption.59}\protected@file@percent }
+\newlabel{fig:stacja}{{7.1}{58}{Zdjęcie przedstawiające stację dokującą oraz miejsce docelowe}{figure.caption.59}{}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {8}Podsumowanie i wnioski}{59}{chapter.8}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -302,19 +317,20 @@
 \babel@aux{polish}{}
 \babel@aux{british}{}
 \babel@aux{polish}{}
-\@writefile{toc}{\contentsline {chapter}{Bibliografia}{62}{chapter*.58}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{Spis skrótów i symboli}{65}{appendix*.59}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Bibliografia}{62}{chapter*.60}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Spis skrótów i symboli}{65}{appendix*.61}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \babel@aux{british}{}
 \babel@aux{polish}{}
 \babel@aux{british}{}
 \babel@aux{polish}{}
-\@writefile{toc}{\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{67}{appendix*.60}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{67}{appendix*.62}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{Spis rysunków}{70}{appendix*.61}\protected@file@percent }
-\abx@aux@read@bbl@mdfivesum{E8F07909E9A6CF9E414461091FE196F8}
+\@writefile{toc}{\contentsline {chapter}{Spis rysunków}{70}{appendix*.63}\protected@file@percent }
+\abx@aux@read@bbl@mdfivesum{36DE7C41416A9C52CD4D5CEC3571C853}
+\abx@aux@defaultrefcontext{0}{bib:konferencja}{nty/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{bib:enkoder-mag-opt}{nty/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{bib:artykul2}{nty/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{bib:encoders-pid}{nty/global//global/global/global}
@@ -326,13 +342,13 @@
 \abx@aux@defaultrefcontext{0}{bib:zjawisko-halla}{nty/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{bib:where-am-i}{nty/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{bib:manualLibcamera2}{nty/global//global/global/global}
-\abx@aux@defaultrefcontext{0}{bib:konferencja}{nty/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{bib:artykul1}{nty/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{bib:rgb-model}{nty/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{bib:hsv-model}{nty/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{bib:ycrcb-model}{nty/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{bib:wiki-regulacja}{nty/global//global/global/global}
 \abx@aux@defaultrefcontext{0}{bib:artykul}{nty/global//global/global/global}
+\abx@aux@defaultlabelprefix{0}{bib:konferencja}{}
 \abx@aux@defaultlabelprefix{0}{bib:enkoder-mag-opt}{}
 \abx@aux@defaultlabelprefix{0}{bib:artykul2}{}
 \abx@aux@defaultlabelprefix{0}{bib:encoders-pid}{}
@@ -344,7 +360,6 @@
 \abx@aux@defaultlabelprefix{0}{bib:zjawisko-halla}{}
 \abx@aux@defaultlabelprefix{0}{bib:where-am-i}{}
 \abx@aux@defaultlabelprefix{0}{bib:manualLibcamera2}{}
-\abx@aux@defaultlabelprefix{0}{bib:konferencja}{}
 \abx@aux@defaultlabelprefix{0}{bib:artykul1}{}
 \abx@aux@defaultlabelprefix{0}{bib:rgb-model}{}
 \abx@aux@defaultlabelprefix{0}{bib:hsv-model}{}

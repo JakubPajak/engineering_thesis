@@ -17,6 +17,32 @@
 \endgroup
 
 \datalist[entry]{nty/global//global/global/global}
+  \entry{bib:konferencja}{inproceedings}{}{}
+    \name{author}{1}{}{%
+      {{hash=ASVKKLPTVP}{%
+         family={Alexandr\bibnamedelima Stefek},
+         familyi={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+         suffix={Thuan Van\bibnamedelima Pham},
+         suffixi={T\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim
+  P\bibinitperiod},
+         given={Vaclav Krivanek Khac Lam\bibnamedelima Pham},
+         giveni={V\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim
+  K\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ASTVPVKKLP1}
+    \strng{fullhash}{ASTVPVKKLP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \field{booktitle}{IEEE Access}
+    \field{pages}{13}
+    \field{title}{Energy Comparison of Controllers Used for a Differential
+  Drive Wheeled Mobile Robot}
+    \field{year}{2020}
+  \endentry
+
   \entry{bib:enkoder-mag-opt}{online}{}{}
     \name{author}{1}{}{%
       {{hash=a}{%
@@ -273,27 +299,6 @@
     \field{sortinithash}{L}
     \field{title}{The Picamera2 Library. A libcamera-based Python library for
   Raspberry Pi cameras}
-  \endentry
-
-  \entry{bib:konferencja}{inproceedings}{}{}
-    \name{author}{1}{}{%
-      {{hash=MCOB}{%
-         family={Mihai\bibnamedelima Crenganis},
-         familyi={M\bibinitperiod\bibinitdelim C\bibinitperiod},
-         given={Octavian\bibnamedelima Bologa},
-         giveni={O\bibinitperiod\bibinitdelim B\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{MCOB1}
-    \strng{fullhash}{MCOB1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{sortinit}{M}
-    \field{sortinithash}{M}
-    \field{booktitle}{Konferencji ASTR}
-    \field{pages}{6}
-    \field{title}{PID CONTROLLER FOR A DIFFERENTIAL STEERING MOBILE PLATFORM}
-    \field{year}{2015}
   \endentry
 
   \entry{bib:artykul1}{article}{}{}

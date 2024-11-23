@@ -13,7 +13,7 @@ Podstawowym założeniem było wykorzystanie mikrokomputera Raspberry Pi, który
     \item Mikrokomputer Raspberry Pi – wybrany model Raspberry Pi 4 Model B, charakteryzuje się czterordzeniowym procesorem, zapewniającym wystarczającą moc obliczeniową do przetwarzania obrazu oraz zarządzania algorytmami sterowania.
     \item Kamera – zastosowano dedykowaną kamerę kompatybilną z Raspberry Pi, która umożliwia przechwytywanie obrazów w wysokiej rozdzielczości - do 16MPx. Kamera jest podłączona przez interfejs CSI (ang. \english{Camera Serial Interface}), co zapewnia niskie opóźnienia i wysoką jakość obrazu.
     \item Silniki i napęd różnicowy – do napędu platformy wykorzystano silniki prądu stałego z enkoderami, które umożliwiają precyzyjne kontrolowanie ruchu robota.
-    \item Zasilanie – robot zasilany jest z pakietu czterech ogniw litowo-jonowych, dostarczających wysatraczjącą ilość napięcia oraz umożliwiających pracę przez odpowieni czas.
+    \item Zasilanie – robot zasilany jest z pakietu czterech ogniw litowo-jonowych, dostarczających wystraczającą ilość napięcia oraz umożliwiających pracę przez odpowiedni czas.
     \item Chwytak - wykorzystano chwytak zasilany jednym serwomechanizmem, wystarczający do realizacji zadań. 
 \end{itemize}
 
@@ -22,7 +22,7 @@ Podstawowym założeniem było wykorzystanie mikrokomputera Raspberry Pi, który
     \item Python - język programowania bardzo dobrze sprawdzający się przy wykorzystaniu komputera Raspberry Pi.
     \item OpenCV - biblioteka umożliwiająca bardzo dużą ilość operacji na obrazie cyfrowym.
     \item Libcamera2 - biblioteka konieczna do poprawnego wykorzystywania kamery wraz z OpenCV na komputerze Raspberry Pi.
-    \item Raspbian OS - system operacyjny, będący specjalną implementacją systemu Linux, posiadającą wiele wbudwanych biliotek oraz innych udogodnień wspomagająych rozwój oprogramowania na komputerze Raspberry Pi. 
+    \item Raspbian OS - system operacyjny, będący specjalną implementacją systemu Linux, posiadającą wiele wbudowanych bibliotek oraz innych udogodnień wspomagających rozwój oprogramowania na komputerze Raspberry Pi. 
     \item git - system kontroli wersji, wykorzystany w celu spełnienia standardów rozwoju oprogramowania.
 \end{itemize}
 
@@ -81,7 +81,7 @@ Biblioteka \textit{Libcamera2} jest odpowiedzialna za obsługę kamery, która j
 \end{lstlisting}
 
 \subsection{Instalacja RPi.GPIO}
-Biblioteka \textit{RPi.GPIO} zapewnia interfejs programistyczny do korzystania z pinów GPIO (ang. \english{General Purpose Input/Output}) mikrokomputera Raspberry Pi. Zalecana jest instalacja poprzez repozytorium \textit{apt} zamiast \textit{pip}, przez wzgląd na możliwe probkemy z kompatybilnością.
+Biblioteka \textit{RPi.GPIO} zapewnia interfejs programistyczny do korzystania z pinów GPIO (ang. \english{General Purpose Input/Output}) mikrokomputera Raspberry Pi. Zalecana jest instalacja poprzez repozytorium \textit{apt} zamiast \textit{pip}, przez wzgląd na możliwe problemy z kompatybilnością.
 
 \begin{lstlisting}[language=bash]
     sudo apt-get update
@@ -96,7 +96,7 @@ Po zakończeniu instalacji wszystkich wymienionych pakietów i bibliotek, system
 
 Struktura programowania Flask umożliwia proste utworzenie aplikacji internetowej bazującej na szablonie HTML oraz kaskadowym arkuszu stylów (ang. \english{Cascading Style Sheets} [CSS]) zapewniającym pożądany wygląd aplikacji. 
 
-Instalacja przebiega za pomocą menadżęra pakietów \textit{pip}:
+Instalacja przebiega za pomocą menadżera pakietów \textit{pip}:
 
 \begin{lstlisting}[language=bash][H]
     pip install flask
@@ -142,7 +142,7 @@ libcamera-still -o test_image.jpg
 
 Jeżeli kamera działa poprawnie, komenda ta zapisze zdjęcie o nazwie \texttt{test\_image.jpg} w katalogu domyślnym. Otwarcie pliku i weryfikacja jego zawartości potwierdzi działanie kamery i poprawność instalacji.
 
-\subsection{Sposób aktywacji --->> JESLI WEB_APP TO DO ZMIANY !!!}
+\subsection{Sposób aktywacji}
 \label{sekcja:43}
 Proces aktywacji systemu sterowania robotem jest stosunkowo prosty, zakładając poprawną instalację wszystkich wymaganych bibliotek i pakietów. Należy jednak przed przystąpieniem do aktywacji zweryfikować, czy wszystkie wymagane komponenty zostały poprawnie zainstalowane, aby uniknąć potencjalnych problemów.
 

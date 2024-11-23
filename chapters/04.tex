@@ -221,6 +221,50 @@ W omawianym projekcie regulator PID znajduje zastosowanie w kontrolowaniu odleg�
 
 \clearpage
 
+
+\section{Napęd różnicowy}
+
+Napęd różnicowy jest często stosowanym rozwiązaniem w robotach mobilnych do wielu zastosowań, ze względu na stosunkową prostą konstrukcję oraz duże możliwości ruchu.  Konstrukcja napędu składa się z dwóch niezależnie napędzanych kół, umieszczonych po przeciwnych stronach osi robota. Dodatkowym elementem konstrukcyjnym może być jedno lub więcej biernych kół podporowych, zapewniających lepszą stabilność platformy - w przypadku poniższego projektu zostały zastosowane dwa elementy bierne podporowe. 
+
+\subsection{Kinematyka napędu różnicowego}
+
+Model kinematyczny napędu różnicowego opisuje związek między prędkościami kół a ruchem platformy w przestrzeni dwuwymiarowej. W przypadku idealnym zakładającym brak poślizgu kół oraz brak luzów na przekładni, prędkość liniowa platformy \(\upsilon\) oraz prędkość kątowa \(\omega\) wyrażają się równaniami [\ref{eq:linear}].
+
+\begin{equation}
+    \centering
+    \upsilon = \frac{\upsilon_r + \upsilon_l}{2},  \omega = \frac{\upsilon_r + \upsilon_l}{b},
+    \label{eq:linear}
+\end{equation}
+
+gdzie:
+\begin{itemize}
+    \item \(\upsilon_r\) oraz \(\upsilon_l\) to prędkości odpowiednio prawego oraz lewego koła,
+    \item \(b\) oznacza odległość pomiędzy osiami kół.
+\end{itemize}
+
+W bazowym układzie współrzędnych przemieszczenie robota opisują równania [\ref{angular}]:
+
+\begin{equation}
+    \centering
+    \dot{x} = \upsilon cos(\theta), \dot{y} = \upsilon sin(\theta), \dot(\theta) = \omega,
+    \label{eq:angular}
+\end{equation}
+
+gdzie:
+\begin{itemize}
+    \item \(x\) i \(y\) - współrzędne środka masy w układzie współrzędnych odniesienia
+    \item \(\theta\) - orientacja platformy.
+\end{itemize}
+
+\clearpage
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{./graf/diff-drive.png}
+    \caption{Grafika stanowiąca wizualizację przekształceń kinematyki robota \cite{bib:konferencja}}
+\end{figure}
+
+
 \section{Podstawy wykrywania krawędzi w wizji komputerowej}
 
 Wykrywanie krawędzi to jedna z podstawowych technik przetwarzania obrazów stosowana w wizji komputerowej, umożliwiająca ekstrakcję istotnych informacji strukturalnych z obrazu. Proces ten polega na detekcji nagłych zmian intensywności pikseli, które odpowiadają krawędziom obiektów w przestrzeni obrazu. Krawędzie dostarczają kluczowych danych o kształtach i konturach obiektów, wspomagając zadania takie jak segmentacja obrazu, rozpoznawanie obiektów oraz analiza ruchu. Wysoka jakość detekcji krawędzi jest zatem niezbędna dla dokładności i skuteczności systemów wizji komputerowej.

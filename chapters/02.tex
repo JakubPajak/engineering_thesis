@@ -16,13 +16,13 @@ Temat projektu osadza się w dziedzinach robotyki mobilnej oraz wizji komputerow
 \section{Studia literaturowe}
 \label{sec:studia_literaturowe}
 
-Podczas prac nad poszczególnym elementami projektu istoną rolę odgrywała analiza dostępnej literatury naukowej. Poniżej zajduje się analiza artykułów, książek, dokumentacji oraz stron internetowych, których treść okazała się przydatna podczas pracy. 
+Podczas prac nad poszczególnym elementami projektu istotną rolę odgrywała analiza dostępnej literatury naukowej. Poniżej znajduje się analiza artykułów, książek, dokumentacji oraz stron internetowych, których treść okazała się przydatna podczas pracy. 
 
 \subsection{Opracowanie systemu wizyjnego}
 
 System wizyjny oparty został na dedykowanej kamerze dla platformy Raspberry Pi oraz na popularnej bibliotece OpenCV, co pozwala na efektywną analizę obrazu i klasyfikację obiektów w czasie rzeczywistym. 
 
-W tym celu kluczowa okazała się dokumentacja biblioteki Libcamera2 \cite{bib:manualLibcamera2}, oferująca szczegółowe informacje na temat instalacji, konfiguracji kamery, oraz wykorzystania łącza CSI (ang. \english{Camera Serial Interface}) do przesyłu obrazu. Dokumentacja dostarczona przez Raspberry Pi Ltd zawiera obszerne wytyczne dotyczące ustawień obrazu, obsługi błędów oraz optymalizacji parametrów obrazu pod kątem specyficznych wymagań, co stanowiło cenną pomoc podczas implementacji i konfiguracji systemu wizyjnego.
+W tym celu kluczowa okazała się dokumentacja biblioteki Libcamera2 \cite{bib:manualLibcamera2}, oferująca szczegółowe informacje na temat instalacji, konfiguracji kamery, oraz wykorzystania łącza CSI (ang. \english{Camera Serial Interface}) do przesyła obrazu. Dokumentacja dostarczona przez Raspberry Pi Ltd zawiera obszerne wytyczne dotyczące ustawień obrazu, obsługi błędów oraz optymalizacji parametrów obrazu pod kątem specyficznych wymagań, co stanowiło cenną pomoc podczas implementacji i konfiguracji systemu wizyjnego.
 
 W celu zaawansowanego przetwarzania obrazu wykorzystano bibliotekę OpenCV. Dla zrozumienia jej funkcjonalności, zwłaszcza w kontekście realizacji projektu, cennym źródłem była literatura specjalistyczna, m.in. książka \cite{bib:ksiazka}, która stanowi kompleksowy przegląd możliwości tej biblioteki. Książka ta obejmuje szeroką gamę algorytmów i metod przetwarzania obrazu, z których jedynie wybrane fragmenty — jak detekcja krawędzi za pomocą algorytmu Canny’ego oraz analiza barw — zostały zaimplementowane w niniejszym projekcie. Wybór tych technik wynikał z ich efektywności oraz dostosowania do wymagań projektu, jakim jest klasyfikacja obiektów na podstawie koloru.
 
