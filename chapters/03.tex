@@ -1,11 +1,13 @@
 \chapter{Założenia wstępne}
 \label{ch:zalozenia-wstepne}
 
-W tym rozdziale przedstawiono opis wymagań funkcjonalnych, które określają, jakie zadania system musi spełniać oraz jakie kryteria jakościowe są wymagane do zapewnienia prawidłowego działania platformy mobilnej. Omówiono również schemat funkcjonalny aplikacji, opis wykorzystanego sprzętu elektronicznego oraz metodykę pracy i etapy projektu.
+W rozdziale trzecim przedstawiono opis wymagań funkcjonalnych, które określają, jakie zadania musi spełniać system robotyczny oraz jakie kryteria jakościowe są wymagane do zapewnienia prawidłowego działania platformy mobilnej. 
+
+Omówiono również schemat funkcjonalny aplikacji, opis wykorzystanego sprzętu elektronicznego oraz metodykę pracy i etapy projektu.
 
 
 \section{Wymagania funkcjonalne}
-Wymagania funkcjonalne odnoszą się do kluczowych funkcji systemu, które muszą zostać spełnione, aby system mógł realizować swoje podstawowe zadania. W przypadku autonomicznej platformy mobilnej do sortowania klocków funkcje te obejmują między innymi:
+Wymagania funkcjonalne odnoszą się do kluczowych funkcji systemu, które muszą zostać spełnione, aby system mógł realizować podstawowe zadania. W przypadku automatycznej platformy mobilnej do sortowania klocków funkcje te obejmują między innymi:
 \begin{itemize}
     \item \textbf{Rozpoznawanie kolorów klocków} – system musi identyfikować kolory klocków przy pomocy kamery i odpowiednich algorytmów przetwarzania obrazu (czerwony, zielony, niebieski).
     \item \textbf{Segregacja klocków} – po rozpoznaniu koloru, system transportuje klocek do odpowiedniego pojemnika.
@@ -14,9 +16,9 @@ Wymagania funkcjonalne odnoszą się do kluczowych funkcji systemu, które musz�
 
 \section{Przypadki użycia i diagramy UML}
 
-Diagram [\ref{rys1:schemat_uml}] zawiera schemat funkcjonalny aplikacji. Wyszczególniono na nim najważniejsze funkcjonalności oraz prawdopodobne możliwe zdarzenia. Szczegółowa obsługa błędów na poszczególnych etapach nie została wprowadzona ze względu na chęć utrzymania dobrego poziomu czytelności schematu. 
+Diagram UML (ang. \english{Unified Modelling Language} - zunifikowany język modelowania) [\ref{rys1:schemat_uml}] zawiera schemat funkcjonalny aplikacji. Wyszczególniono na nim najważniejsze funkcjonalności oraz prawdopodobne zdarzenia. Szczegółowa obsługa błędów na poszczególnych etapach nie została wprowadzona ze względu na chęć utrzymania dobrego poziomu czytelności schematu. 
 
-\begin{figure}[h]
+\begin{figure}[h!]
     \centering
     \includegraphics[width=1.0\textwidth]{./graf/uml.png}
     \caption{Schemat UML zawierający podstawowe funkcjonalności}
@@ -41,16 +43,16 @@ W projekcie wykorzystano wiele urządzeń elektronicznych w celu zapewnienia wym
 \end{itemize}
 
 \section{Metodyka pracy i etapy projektu}
-Projekt został zrealizowany zgodnie z metodyką iteracyjno-przyrostową (Agile), co umożliwiło sukcesywne rozwijanie i weryfikację funkcjonalności na poszczególnych etapach w rzeczywistych warunkach roboczych systemu. Na każdym etapie projektowania, implementacji oraz testowania gromadzono informacje zwrotne na temat działania systemu. Zebrane dane pozwalały na identyfikację obszarów wymagających poprawy, co skutkowało dostosowaniem parametrów systemu lub optymalizacją kodu w celu zapewnienia optymalnej wydajności.
+Projekt został zrealizowany zgodnie z metodyką iteracyjno-przyrostową (Agile), co umożliwiło sukcesywne rozwijanie i weryfikację funkcjonalności w miarę postępów prac. Na każdym etapie projektowania, implementacji oraz testowania gromadzono informacje zwrotne na temat działania systemu. Na ich podstawie podejmowane były decyzje o wprowadzeniu dodatkowych usprawnień oraz modyfikacji do pierwotnej wersji projektu.
 
 Prace rozpoczęto od przygotowania środowiska programistycznego oraz poprawnego połączenia kamery z mikrokomputerem Raspberry Pi. Na tym etapie skupiono się na konfiguracji narzędzi do programowania i przetestowaniu prawidłowego działania kamery. Był to kluczowy element, gdyż poprawny odczyt obrazu miał wpływ na późniejsze funkcje rozpoznawania kształtów i kolorów.
 
-Kolejnym krokiem było podłączenie elementów wykonawczych oraz implementacja aplikacji kontrolującej silniki i enkodery, które stanowiły podstawę sterowania ruchem robota. Po wdrożeniu sterowników przeprowadzono wstępne testy napędu różnicowego, analizując dokładność przemieszczenia oraz zliczania impulsów generowanych przez enkodery. 
+Kolejnym krokiem było podłączenie elementów wykonawczych oraz implementacja aplikacji kontrolującej silniki i enkodery, które stanowiły podstawę sterowania ruchem robota. Po wdrożeniu kontrolera przeprowadzono wstępne testy napędu różnicowego, analizując dokładność jazdy robota oraz zliczania impulsów generowanych przez enkodery. 
 
-Następnie wykonano prototyp podwozia robota, aby sprawdzić działanie algorytmów sterowania w kontekście rzeczywistych warunków pracy. Użycie prototypu pozwoliło ocenić jakość sterowania, co przyczyniło się do dokonania wczesnych poprawek w konstrukcji oraz programie. Po przeprowadzeniu testów prototypowych zaprojektowano właściwe podwozie i wykonano je w technologii druku 3D, umożliwiając integrację z wcześniej skonfigurowanymi komponentami elektronicznymi i mechanicznymi.
+Następnie wykonano prototyp podwozia robota, aby zweryfikować działanie algorytmów sterowania w kontekście rzeczywistych warunków pracy. Użycie prototypu pozwoliło ocenić jakość sterowania, co przyczyniło się do dokonania wczesnych poprawek w konstrukcji oraz programie. Po przeprowadzeniu testów prototypowych zaprojektowano właściwe podwozie i wykonano je w technologii druku 3D, umożliwiając integrację z wcześniej skonfigurowanymi komponentami elektronicznymi i mechanicznymi.
 
-W kolejnych iteracjach skupiono się na dalszym testowaniu i optymalizacji programu kontrolera silników, co pozwoliło uzyskać wymaganą precyzję i stabilność pracy napędu. 
+W kolejnych iteracjach skupiono się na dalszym testowaniu i dostosowywaniu parametrów kontrolera oraz poprawkach programowych w celu osiągnięcia wymaganej dokładności. 
 
-Po uzyskaniu satysfakcjonujących rezultatów z zakresu sterowania przystąpiono do projektowania górnej części obudowy robota, która miała za zadanie stabilne zamocowanie kamery oraz częściowe osłonięcie komponentów wewnętrznych. 
+Po uzyskaniu satysfakcjonujących rezultatów z zakresu precyzji jazdy przystąpiono do projektowania górnej części obudowy robota, która miała za zadanie stabilne zamocowanie kamery oraz częściowe osłonięcie komponentów wewnętrznych. 
 
 Ostatecznym etapem była pełna integracja wszystkich komponentów systemu oraz finalne testy funkcjonalne. Testy obejmowały analizę wszystkich kluczowych funkcji robota w warunkach rzeczywistych, umożliwiając ocenę pracy systemu jako całości oraz identyfikację ostatnich potencjalnych usprawnień. Cały proces zakończył się uzyskaniem gotowego rozwiązania, które spełniało założenia projektowe i osiągało zamierzoną funkcjonalność.

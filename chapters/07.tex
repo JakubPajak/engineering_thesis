@@ -53,3 +53,9 @@ Dodatkowo ze względu na nieidealną dokładność, autor wprowadził koncepcję
     \caption{Zdjęcie przedstawiające stację dokującą oraz miejsce docelowe}
     \label{fig:stacja}
 \end{figure}
+
+\subsection{Warunki początkowe}
+
+Ze względu na charakter pracy oraz sposób nawigacji oparty na uproszczonej odometrii przy użyciu enkoderów inkrementalnych, robot wykazuje dużą wrażliwość na warunki początkowe. Warunki te, definiujące początkowe położenie robota względem środowiska, mają kluczowe znaczenie dla dokładności jego działania. Nieprawidłowe ustawienie w pozycji bazowej może prowadzić do znaczących błędów w dalszej pracy, takich jak nieprecyzyjne podjechanie do stacji podajnikowej. Nawet niewielkie odchylenia, np. kilka stopni od linii zerowej, mogą skutkować krytycznymi problemami, takimi jak brak możliwości pobrania obiektu.
+
+W celu minimalizacji tych błędów robot korzysta ze stacji dokujących przy punktach kontrolnych, które umożliwiają korekcję pozycji, jednak zakres ich działania jest ograniczony i nie rozwiązuje problemu dużych odchyleń. Rozwiązaniem tego problemu jest zastosowanie wyraźnego szablonu lub prowadnicy, który zapewni precyzyjne ustawienie robota w pozycji bazowej. Takie podejście znacząco zmniejsza ryzyko błędów wynikających z nieścisłości w ręcznym ustawianiu robota.

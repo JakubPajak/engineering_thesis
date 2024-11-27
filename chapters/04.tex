@@ -264,6 +264,38 @@ gdzie:
     \caption{Grafika stanowiąca wizualizację przekształceń kinematyki robota \cite{bib:konferencja}}
 \end{figure}
 
+\section{Odometria - metoda przyrostowa}
+
+Odometria jest metodą znaną od lat, mimo to nadal szeroko stosowaną jako metodę nawigacji w robotyce mobilnej. Cechuje się dobrą dokładnością w krótkim oknie czasowym oraz relatywnie niską ceną wdrożenia. Podstawą odometrii jest całkowanie (sumowanie) przyrostowej informacji pozyskanej na przykład z enkoderów inkrementalnych (przyrostowych) zamontowanych na napędzie, w czasie. Może to prowadzić do dużej akumulacji błędów w przypadku szerokiego okna czasowego, a tym samym do znacznej zmiany orientacji robota względem założonej. Mimo to, metoda ta jest szeroko stosowana, między innymi w połączeniu z innymi metodami orientacji  robota w przestrzeni w celu eliminacji nagromadzonych błędów. 
+
+\hspace{1cm}
+
+Aby wyznaczyć, ile impulsów należy zliczyć w celu wykonania określonego przemieszczenia względem układu bazowego, należy skorzystać ze wzoru \ref{eq:impulsy}, a następnie \ref{eq:impulsy-odl}.
+
+\begin{equation}
+    \centering
+    c_m = \Pi \frac{D_n}{n C_e}
+    \label{eq:impulsy}
+\end{equation}
+,gdzie:
+\begin{itemize}
+    \item \(c_m\) - współczynnik przeliczenia impulsów licznika na przebytą odległość,
+    \item \(D_n\) - nominalna średnica kół,
+    \item \(C_e\) - rozdzielczość licznika w impulsach na obrót,
+    \item \(n\) - współczynnik biegu - przeliczenie obrotów silnika na obroty kół.
+\end{itemize}
+
+\begin{equation}
+    \centering
+    \Delta U_{R/L, I} = c_m N_{R/L, I}
+    \label{eq:impulsy-odl}
+\end{equation}
+,gdzie:
+\begin{itemize}
+    \item \(\Delta U_{R/L, I}\) - przebyta odległość,
+    \item \(c_m\) -  współczynnik przeliczenia impulsów licznika na przebytą odległość,
+    \item \(N_{R/L, I}\) - ilość zliczonych impulsów przez enkodery koła prawego (R) oraz lewego (L) w krótkim czasie \(I\). 
+\end{itemize}
 
 \section{Podstawy wykrywania krawędzi w wizji komputerowej}
 
