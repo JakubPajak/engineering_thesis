@@ -51,9 +51,8 @@ Projekt obejmuje szeroki zakres działań, zarówno w zakresie sprzętowym, jak 
 Struktura pracy została podzielona na następujące rozdziały:
 
 \begin{itemize}
-    \item \textbf{Rozdział 1: Wstęp} – Przedstawienie problemu, celów oraz zakresu projektu.
-    \item \textbf{Rozdział 2: Analiza tematu} – Przegląd dostępnych rozwiązań, technik oraz technologii stosowanych w podobnych systemach, a także omówienie aktualnego stanu wiedzy w tej dziedzinie.
-    \item \textbf{Rozdział 3: Założenia wstępne} – Opis wymagań projektowych, przedstawienie diagramów funkcjonalnych, opis wykorzystanego sprzętu elektronicznego oraz metodyka pracy. 
+    \item \textbf{Rozdział 1: Wstęp} – Przedstawienie problemu, celów, zakresu projektu, a także przegląd dostępnych rozwiązań, technik oraz technologii stosowanych w podobnych systemach i omówienie aktualnego stanu wiedzy w tej dziedzinie.
+    \item \textbf{Rozdział 3: Założenia projektowe} – Opis wymagań projektowych, przedstawienie diagramów funkcjonalnych, opis wykorzystanego sprzętu elektronicznego oraz metodyka pracy. 
     \item \textbf{Rozdział 4: Podstawy teoretyczne} – Przedstawienie teoretycznych podstaw działania wykorzystanych technologii. 
     \item \textbf{Rozdział 5: Wymagania i specyfikacja użytkowa} – Opis funkcjonalności systemu z perspektywy użytkownika,w tym sposobu instalacji oraz wykorzystania. 
     \item \textbf{Rozdział 6: Specyfikacja techniczna} – Szczegółowa analiza implementacji systemu, w tym struktury oprogramowania i integracji z komponentami sprzętowymi.
@@ -65,3 +64,38 @@ Struktura pracy została podzielona na następujące rozdziały:
 % \label{sec:wklad}
 
 % Projekt został w pełni zrealizowany przez autora. Autor odpowiada za wszystkie etapy pracy, począwszy od projektowania i budowy platformy, poprzez implementację algorytmów rozpoznawania kolorów i sterowania ruchem robota, aż po testowanie i optymalizację systemu. Ponadto, autor zaprojektował system kontrolny, który pozwala na monitorowanie pracy robota w czasie rzeczywistym oraz umożliwia wprowadzenie ewentualnych korekt.
+
+\section{Osadzenie tematu w kontekście aktualnego stanu wiedzy (\textit{state of the art})}
+\label{sec:state_of_the_art}
+
+Temat projektu osadzić można w dziedzinach robotyki mobilnej oraz wizji komputerowej. W ciągu ostatnich lat dynamiczny rozwój wizji komputerowej zaowocował licznymi artykułami naukowymi oraz książkami poświęconymi tej tematyce. 
+
+Robotyka mobilna, kinematyka robotów oraz teoria sterowania obecna jest w środowisku naukowym od wielu lat, dzięki czemu z łatwością można znaleźć wiele materiałów poświęconych tej problematyce. 
+
+\section{Studia literaturowe}
+\label{sec:studia_literaturowe}
+
+Podczas prac nad poszczególnym elementami projektu istotną rolę odgrywała analiza dostępnej literatury naukowej. W sekcjach [\ref{sec:opracowania-wizja}] oraz [\ref{sec:opracowanie-silnik}] znajduje się analiza artykułów, książek, dokumentacji oraz stron internetowych, których treść okazała się przydatna podczas pracy. 
+
+\subsection{Opracowanie systemu wizyjnego}
+\label{sec:opracowania-wizja}
+
+System wizyjny oparty został na dedykowanej kamerze dla platformy Raspberry Pi oraz na popularnej bibliotece OpenCV, co pozwala na efektywną analizę obrazu i klasyfikację obiektów w czasie rzeczywistym. 
+
+W tym celu kluczowa okazała się dokumentacja biblioteki Libcamera2 \cite{bib:manualLibcamera2}, oferująca szczegółowe informacje na temat instalacji, konfiguracji kamery, oraz wykorzystania łącza CSI (ang. \english{Camera Serial Interface}) do przesyła obrazu. Dokumentacja dostarczona przez Raspberry Pi Ltd zawiera obszerne wytyczne dotyczące ustawień obrazu, obsługi błędów oraz optymalizacji parametrów obrazu pod kątem specyficznych wymagań, takich jak rozmiar obrazu, automatycznego wyostrzenia obrazu, przestrzeni barw etc.
+
+W celu zaawansowanego przetwarzania obrazu wykorzystano bibliotekę OpenCV. Dla zrozumienia jej funkcjonalności, zwłaszcza w kontekście realizacji projektu, cennym źródłem była literatura specjalistyczna, m.in. książka \cite{bib:ksiazka}, która stanowi kompleksowy przegląd możliwości tej biblioteki. Książka ta obejmuje szeroką gamę algorytmów i metod przetwarzania obrazu, z których jedynie wybrane fragmenty — jak detekcja krawędzi za pomocą algorytmu Canny’ego oraz analiza barw — zostały zaimplementowane w niniejszym projekcie. Wybór tych technik wynikał z ich efektywności oraz dostosowania do wymagań projektu, jakim jest klasyfikacja obiektów na podstawie koloru.
+
+Przy opracowywaniu metody rozpoznawania kolorów wykorzystano również wyniki badań z publikacji \cite{bib:artykul2}, opisującej różnorodne metody i algorytmy analizy wizyjnej, stosowane w procesie klasyfikacji obiektów na podstawie ich cech kolorystycznych. Dzięki znajomości podstaw teoretycznych zaprezentowanych w tym dokumencie, wybór odpowiednich technik przetwarzania obrazu oraz implementacja algorytmu klasyfikacji kolorów przebiegały bardziej efektywnie.
+
+Kolejnym istotnym krokiem była analiza metod detekcji krawędzi w celu wykrycia klocka, przy czym szczególna uwaga została poświęcona algorytmom i funkcjom dostępnym w bibliotece OpenCV. Podczas przeprowadzania studiów literaturowych przeanalizowane zostały artykuł \cite{bib:artykul}, który szczegółowo omawia różne techniki detekcji krawędzi. Po dokonaniu analizy, jako metoda najbardziej odpowiednia dla projektu została wybrana detekcja krawędzi metodą Canny’ego, ze względu na jej skuteczność w kontekście warunków oświetleniowych oraz wysoką precyzję w identyfikacji krawędzi obiektów oraz praca popełniona przez twórcę metody - John'a Canny \cite{bib:canny-article}.
+
+
+\subsection{Opracowanie systemu kontroli silników}
+\label{sec:opracowanie-silnik}
+System kontroli silników platformy mobilnej oparto o napęd różnicowy, który wybrano ze względu na jego precyzję oraz stosunkowo prostą implementację algorytmów sterujących. Napęd różnicowy umożliwia manewrowanie robotem poprzez odpowiednie sterowanie prędkością oraz kierunkiem obrotu poszczególnych kół, co jest szczególnie istotne w zastosowaniach wymagających dokładności na ograniczonej przestrzeni. Przy opracowywaniu systemu sterowania, teoretyczną podstawę stanowiły wyniki badań opisane w artykule \cite{bib:konferencja} oraz \cite{bib:encoders-pid}, który szczegółowo omawia technikę regulacji PID (proporcjonalno-całkująco-różniczkującą) w zastosowaniu do robotów mobilnych z napędem różnicowym. 
+
+Istotnym elementem systemu kontroli była również implementacja funkcji zliczających impulsy enkoderów, które monitorują ruch robota i pozwalają na dokładną analizę przebytej drogi oraz prędkości. W projekcie dostępne były dwie metody odczytywania impulsów generowanych przez enkodery: poprzez przerwania generowane przy każdym impulsie oraz przy użyciu wbudowanego licznika mikrokontrolera. Wybór metody wiązał się z koniecznością dokładnego zrozumienia zarówno korzyści, jak i ograniczeń każdej z nich.
+
+Analiza dokumentacji mikrokontrolera ATMega328 \cite{bib:manualarduino} oraz literatury opisującej przerwania \cite{bib:artykul1}, umożliwiła dobre zrozumienie mechanizmów przerwań oraz wbudowanych modułów liczników. To pozwoliło na rozumienie ograniczeń wynikających z zastosowania kontrolera ATMega328 oraz wybór najlepszego dostępnego rozwiązania. 
+

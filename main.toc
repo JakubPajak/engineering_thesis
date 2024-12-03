@@ -12,118 +12,124 @@
 \contentsline {section}{\numberline {1.3}Cel pracy}{2}{section.1.3}%
 \contentsline {section}{\numberline {1.4}Zakres pracy}{2}{section.1.4}%
 \contentsline {section}{\numberline {1.5}Zwięzła charakterystyka rozdziałów}{3}{section.1.5}%
-\contentsline {chapter}{\numberline {2}Analiza tematu}{5}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Osadzenie tematu w kontekście aktualnego stanu wiedzy (\textit {state of the art})}{5}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Studia literaturowe}{5}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Opracowanie systemu wizyjnego}{5}{subsection.2.2.1}%
+\contentsline {section}{\numberline {1.6}Osadzenie tematu w kontekście aktualnego stanu wiedzy (\textit {state of the art})}{3}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Studia literaturowe}{3}{section.1.7}%
+\contentsline {subsection}{\numberline {1.7.1}Opracowanie systemu wizyjnego}{4}{subsection.1.7.1}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {subsection}{\numberline {2.2.2}Opracowanie systemu kontroli silników}{6}{subsection.2.2.2}%
-\contentsline {chapter}{\numberline {3}Założenia wstępne}{9}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Wymagania funkcjonalne}{9}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Przypadki użycia i diagramy UML}{9}{section.3.2}%
+\contentsline {subsection}{\numberline {1.7.2}Opracowanie systemu kontroli silników}{4}{subsection.1.7.2}%
+\contentsline {chapter}{\numberline {2}Założenia projektowe}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Wymagania funkcjonalne}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Przypadki użycia i diagramy UML}{7}{section.2.2}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {section}{\numberline {3.3}Opis wykorzystanego sprzętu elektronicznego}{10}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Metodyka pracy i etapy projektu}{11}{section.3.4}%
-\contentsline {chapter}{\numberline {4}Podstawy teoretyczne}{13}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Enkodery}{13}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Rodzaje enkoderów}{14}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Efekt Hall'a}{14}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Enkodery kwadraturowe oparte na efekcie Halla}{15}{subsection.4.1.3}%
-\contentsline {section}{\numberline {4.2}Regulator PID}{17}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Ogólny schemat układu regulacji}{17}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Działanie regulatora PID}{17}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Składnik proporcjonalny $P$}{18}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Składnik całkujący $I$}{18}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Składnik różniczkujący $D$}{19}{subsection.4.2.5}%
-\contentsline {subsection}{\numberline {4.2.6}Pełne równanie regulatora PID}{19}{subsection.4.2.6}%
-\contentsline {subsection}{\numberline {4.2.7}Stabilność układów dynamicznych}{20}{subsection.4.2.7}%
-\contentsline {subsection}{\numberline {4.2.8}Zastosowanie regulatora PID w sterowaniu robotem mobilnym}{21}{subsection.4.2.8}%
-\contentsline {section}{\numberline {4.3}Napęd różnicowy}{22}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Kinematyka napędu różnicowego}{22}{subsection.4.3.1}%
-\contentsline {section}{\numberline {4.4}Odometria - metoda przyrostowa}{23}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Podstawy wykrywania krawędzi w wizji komputerowej}{24}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Algorytm Canny’ego}{24}{subsection.4.5.1}%
-\contentsline {section}{\numberline {4.6}Podstawy rozpoznawania kolorów w wizji komputerowej}{27}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Teoria koloru}{27}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Proces rozpoznawania kolorów}{27}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}Algorytmy rozpoznawania kolorów}{28}{subsection.4.6.3}%
-\contentsline {chapter}{\numberline {5}Wymagania i specyfikacja użytkowa}{31}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Wymagania sprzętowe i programowe}{31}{section.5.1}%
+\contentsline {section}{\numberline {2.3}Opis wykorzystanego sprzętu elektronicznego}{9}{section.2.3}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {section}{\numberline {5.2}Sposób instalacji}{32}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Instalacja systemu operacyjnego}{32}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Aktualizacja systemu}{33}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Instalacja Python}{33}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Instalacja OpenCV}{34}{subsection.5.2.4}%
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\contentsline {subsection}{\numberline {5.2.5}Instalacja Libcamera2}{34}{subsection.5.2.5}%
-\contentsline {subsection}{\numberline {5.2.6}Instalacja RPi.GPIO}{34}{subsection.5.2.6}%
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\contentsline {subsection}{\numberline {5.2.7}Instalacja środowiska Python Flask}{34}{subsection.5.2.7}%
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\contentsline {subsection}{\numberline {5.2.8}Weryfikacja instalacji bibliotek}{35}{subsection.5.2.8}%
-\contentsline {subsubsection}{Weryfikacja instalacji Python}{35}{section*.20}%
-\contentsline {subsubsection}{Weryfikacja instalacji OpenCV}{35}{section*.21}%
-\contentsline {subsubsection}{Weryfikacja instalacji Libcamera2}{35}{section*.22}%
-\contentsline {subsection}{\numberline {5.2.9}Sposób aktywacji}{36}{subsection.5.2.9}%
-\contentsline {subsection}{\numberline {5.2.10}Kategorie użytkowników}{36}{subsection.5.2.10}%
-\contentsline {subsection}{\numberline {5.2.11}Sposób obsługi}{37}{subsection.5.2.11}%
-\contentsline {subsection}{\numberline {5.2.12}Przykład działania}{37}{subsection.5.2.12}%
-\contentsline {subsection}{\numberline {5.2.13}Scenariusze korzystania z systemu}{37}{subsection.5.2.13}%
-\contentsline {chapter}{\numberline {6}Specyfikacja techniczna}{39}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Konstrukcja}{39}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Implementacja kontrolera silników}{43}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Konfiguracja pinów i ustawienia PWM}{43}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Algorytm sterowania PID}{43}{subsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.2.3}Funkcja zliczająca impulsy enkoderów}{44}{subsection.6.2.3}%
-\contentsline {subsection}{\numberline {6.2.4}Realizacja komunikacji z Raspberry Pi}{45}{subsection.6.2.4}%
-\contentsline {subsection}{\numberline {6.2.5}Pętla główna programu}{45}{subsection.6.2.5}%
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\contentsline {section}{\numberline {6.3}Implementacja głównej aplikacji sterującej}{48}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Opis funkcji głównej aplikacji \texttt {mainTask()}}{48}{subsection.6.3.1}%
-\contentsline {subsubsection}{Tryb automatyczny}{49}{section*.35}%
-\contentsline {subsubsection}{Tryb ręczny i panel operatorski}{49}{section*.37}%
-\contentsline {subsubsection}{Zakończenie działania aplikacji}{50}{section*.39}%
-\contentsline {subsubsection}{Inicjalizacja funkcji pomocniczych}{50}{section*.41}%
-\contentsline {subsection}{\numberline {6.3.2}Opis sposobu komunikacji szeregowej}{50}{subsection.6.3.2}%
-\contentsline {subsubsection}{Inicjalizacja połączenia szeregowego}{51}{section*.43}%
-\contentsline {subsubsection}{Wysyłanie danych do Arduino}{51}{section*.45}%
-\contentsline {subsubsection}{Odbiór i potwierdzenie zakończenia operacji}{52}{section*.47}%
-\contentsline {subsubsection}{Obsługa błędów w komunikacji szeregowej}{52}{section*.49}%
-\contentsline {subsection}{\numberline {6.3.3}Opis sposobu detekcji klocka oraz rozpoznawania koloru}{53}{subsection.6.3.3}%
-\contentsline {subsubsection}{Definicja zakresów kolorów}{53}{section*.51}%
-\contentsline {subsubsection}{Detekcja koloru}{53}{section*.53}%
-\contentsline {subsubsection}{Detekcja i klasyfikacja kształtów}{54}{section*.55}%
-\contentsline {subsubsection}{Wizualizacja wyników}{55}{section*.57}%
-\contentsline {section}{\numberline {6.4}Implementacja panelu operatorskiego}{55}{section.6.4}%
-\contentsline {chapter}{\numberline {7}Weryfikacja pracy robota}{57}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Sposób testowania}{57}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Wykryte i usunięte błędy}{57}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Błąd nieskończonej pracy silników}{57}{subsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.2.2}Błąd odbierania i wysyłania poleceń}{58}{subsection.7.2.2}%
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
-\contentsline {subsection}{\numberline {7.2.3}Błąd dokładności jazdy}{58}{subsection.7.2.3}%
-\contentsline {subsection}{\numberline {7.2.4}Warunki początkowe}{59}{subsection.7.2.4}%
-\contentsline {chapter}{\numberline {8}Podsumowanie i wnioski}{63}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Podsumowanie}{63}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Kierunki ewentualnych przyszłych prac}{63}{section.8.2}%
+\contentsline {section}{\numberline {2.4}Metodyka pracy i etapy projektu}{14}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Podstawy teoretyczne}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Enkodery}{15}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Rodzaje enkoderów}{16}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Efekt Hall' a}{16}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Enkodery kwadraturowe oparte na efekcie Halla}{17}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Regulator PID}{19}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Ogólny schemat układu regulacji}{19}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Składnik proporcjonalny $P$}{19}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Składnik całkujący $I$}{20}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Składnik różniczkujący $D$}{20}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Pełne równanie regulatora PID}{21}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}Działanie regulatora PID}{21}{subsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.2.7}Zastosowanie regulatora PID w sterowaniu robotem mobilnym}{22}{subsection.3.2.7}%
+\contentsline {section}{\numberline {3.3}Napęd różnicowy}{22}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Kinematyka napędu różnicowego}{22}{subsection.3.3.1}%
+\contentsline {section}{\numberline {3.4}Odometria - metoda przyrostowa}{23}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Podstawy wykrywania krawędzi w wizji komputerowej}{24}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Algorytm Canny’ego}{24}{subsection.3.5.1}%
+\contentsline {section}{\numberline {3.6}Podstawy rozpoznawania kolorów w wizji komputerowej}{27}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Teoria koloru}{27}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Proces rozpoznawania kolorów}{27}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Algorytmy rozpoznawania kolorów}{28}{subsection.3.6.3}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {chapter}{Bibliografia}{66}{chapter*.60}%
-\contentsline {chapter}{Spis skrótów i symboli}{69}{appendix*.61}%
+\contentsline {chapter}{\numberline {4}Wymagania i specyfikacja użytkowa}{31}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Wymagania sprzętowe i programowe}{31}{section.4.1}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {section}{\numberline {4.2}Sposób instalacji}{32}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Instalacja systemu operacyjnego}{32}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Aktualizacja systemu}{33}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Instalacja Python}{33}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Instalacja OpenCV}{34}{subsection.4.2.4}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {subsection}{\numberline {4.2.5}Instalacja Libcamera2}{34}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}Instalacja RPi.GPIO}{34}{subsection.4.2.6}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {subsection}{\numberline {4.2.7}Instalacja środowiska Python Flask}{34}{subsection.4.2.7}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {subsection}{\numberline {4.2.8}Weryfikacja instalacji bibliotek}{35}{subsection.4.2.8}%
+\contentsline {subsubsection}{Weryfikacja instalacji Python}{35}{section*.36}%
+\contentsline {subsubsection}{Weryfikacja instalacji OpenCV}{35}{section*.37}%
+\contentsline {subsubsection}{Weryfikacja instalacji Libcamera2}{35}{section*.38}%
+\contentsline {subsection}{\numberline {4.2.9}Sposób aktywacji}{36}{subsection.4.2.9}%
+\contentsline {subsection}{\numberline {4.2.10}Sposób obsługi}{36}{subsection.4.2.10}%
+\contentsline {subsection}{\numberline {4.2.11}Przykład działania}{37}{subsection.4.2.11}%
+\contentsline {subsection}{\numberline {4.2.12}Scenariusze korzystania z systemu}{37}{subsection.4.2.12}%
+\contentsline {chapter}{\numberline {5}Specyfikacja techniczna}{39}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Konstrukcja}{39}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Pierwsza wersja konstrukcji}{39}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Właściwy projekt robota mobilnego}{40}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Implementacja kontrolera silników}{43}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Konfiguracja pinów i ustawienia PWM}{43}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Algorytm sterowania PID}{43}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Funkcja zliczająca impulsy enkoderów}{44}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Realizacja komunikacji z Raspberry Pi}{45}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Pętla główna programu}{45}{subsection.5.2.5}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {section}{\numberline {5.3}Implementacja głównej aplikacji sterującej}{48}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Opis funkcji głównej aplikacji \texttt {mainTask()}}{48}{subsection.5.3.1}%
+\contentsline {subsubsection}{Tryb automatyczny}{49}{section*.51}%
+\contentsline {subsubsection}{Tryb ręczny i panel operatorski}{49}{section*.53}%
+\contentsline {subsubsection}{Zakończenie działania aplikacji}{50}{section*.55}%
+\contentsline {subsubsection}{Inicjalizacja funkcji pomocniczych}{50}{section*.57}%
+\contentsline {subsection}{\numberline {5.3.2}Opis sposobu komunikacji szeregowej}{50}{subsection.5.3.2}%
+\contentsline {subsubsection}{Inicjalizacja połączenia szeregowego}{51}{section*.59}%
+\contentsline {subsubsection}{Wysyłanie danych do Arduino}{51}{section*.61}%
+\contentsline {subsubsection}{Odbiór i potwierdzenie zakończenia operacji}{52}{section*.63}%
+\contentsline {subsubsection}{Obsługa błędów w komunikacji szeregowej}{52}{section*.65}%
+\contentsline {subsection}{\numberline {5.3.3}Opis sposobu detekcji klocka oraz rozpoznawania koloru}{53}{subsection.5.3.3}%
+\contentsline {subsubsection}{Definicja zakresów kolorów}{53}{section*.67}%
+\contentsline {subsubsection}{Detekcja koloru}{53}{section*.69}%
+\contentsline {subsubsection}{Detekcja i klasyfikacja kształtów}{54}{section*.71}%
+\contentsline {subsubsection}{Wizualizacja wyników}{55}{section*.73}%
+\contentsline {section}{\numberline {5.4}Implementacja panelu operatorskiego}{55}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Weryfikacja pracy robota}{57}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Sposób testowania}{57}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Wykryte i usunięte błędy}{57}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Błąd nieskończonej pracy silników}{57}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Błąd odbierania i wysyłania poleceń}{58}{subsection.6.2.2}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {subsection}{\numberline {6.2.3}Błąd dokładności jazdy}{58}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}Warunki początkowe}{59}{subsection.6.2.4}%
+\contentsline {subsection}{\numberline {6.2.5}Niepoprawne działanie chwytaka}{61}{subsection.6.2.5}%
+\contentsline {chapter}{\numberline {7}Podsumowanie i wnioski}{63}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Podsumowanie}{63}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Kierunki ewentualnych przyszłych prac}{63}{section.7.2}%
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
-\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{71}{appendix*.62}%
-\contentsline {chapter}{Spis rysunków}{74}{appendix*.63}%
+\contentsline {chapter}{Bibliografia}{66}{chapter*.76}%
+\contentsline {chapter}{Spis skrótów i symboli}{69}{appendix*.77}%
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
+\contentsline {chapter}{Lista dodatkowych plików, uzupełniających tekst pracy}{71}{appendix*.78}%
+\contentsline {chapter}{Spis rysunków}{74}{appendix*.79}%

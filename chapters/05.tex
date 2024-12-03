@@ -143,7 +143,8 @@ libcamera-still -o test_image.jpg
 Jeżeli kamera działa poprawnie, komenda ta zapisze zdjęcie o nazwie \texttt{test\_image.jpg} w katalogu domyślnym. Otwarcie pliku i weryfikacja jego zawartości potwierdzi działanie kamery i poprawność instalacji.
 
 \subsection{Sposób aktywacji}
-\label{sekcja:43}
+\label{sek:aktywacja}
+
 Proces aktywacji systemu sterowania robotem jest stosunkowo prosty, zakładając poprawną instalację wszystkich wymaganych bibliotek i pakietów. Należy jednak przed przystąpieniem do aktywacji zweryfikować, czy wszystkie wymagane komponenty zostały poprawnie zainstalowane, aby uniknąć potencjalnych problemów.
 
 Po upewnieniu się, że wszystkie pakiety są zainstalowane poprawnie, można przystąpić do pobrania repozytorium zawierającego kod aplikacji. Aby to wykonać, należy w terminalu wprowadzić poniższe polecenie:
@@ -168,14 +169,16 @@ Po wykonaniu powyższych kroków aplikacja uruchomi się w trybie terminalowym. 
 
 Po uruchomieniu aplikacji wyświetli się menu wyboru trybu pracy, w którym użytkownik może wybrać tryb odpowiedni dla swoich potrzeb. Domyślnym trybem pracy robota jest tryb automatyczny, który nie wymaga ingerencji operatora. Inne opcje umożliwiają ręczną weryfikację działania systemów, takich jak system wizji komputerowej czy tryb sterowania manualnego.
 
-\subsection{Kategorie użytkowników}
-Obecna wersja systemu sterowania robotem nie różnicuje ról użytkowników, co oznacza, że każda osoba mająca dostęp do terminala może swobodnie obsługiwać robota. W planowanych przyszłych wersjach aplikacji, szczególnie tych działających w przeglądarce, zostanie wprowadzona autoryzacja użytkowników. Dzięki niej system będzie posiadał bazę danych użytkowników oraz przypisane im role, co zapewni lepsze zarządzanie dostępem zgodnie z kompetencjami użytkowników.
+% \subsection{Kategorie użytkowników}
+% Obecna wersja systemu sterowania robotem nie różnicuje ról użytkowników, co oznacza, że każda osoba mająca dostęp do terminala może swobodnie obsługiwać robota. W planowanych przyszłych wersjach aplikacji, szczególnie tych działających w przeglądarce, zostanie wprowadzona autoryzacja użytkowników. Dzięki niej system będzie posiadał bazę danych użytkowników oraz przypisane im role, co zapewni lepsze zarządzanie dostępem zgodnie z kompetencjami użytkowników.
 
 \subsection{Sposób obsługi}
-Aby rozpocząć pracę z robotem, należy ustawić go w pozycji startowej, zamieszczonej w załączniku [DODAC ZAŁĄCZNIK] oraz uruchomić aplikację zgodnie z instrukcją zawartą w sekcji \textit{Sposób aktywacji}. Robot automatycznie rozpocznie wykonywanie zadań w trybie autonomicznym, co oznacza, że obsługa użytkownika ograniczy się jedynie do monitorowania pracy robota i ewentualnej korekty ścieżki za pomocą dostępnych opcji sterowania manualnego.
+Aby rozpocząć pracę z robotem, należy ustawić go w pozycji startowej, zamieszczonej w załączniku oraz uruchomić aplikację zgodnie z instrukcją zawartą w sekcji \textit{Sposób aktywacji} [\ref{sek:aktywacja}]. Robot automatycznie rozpocznie wykonywanie zadań w trybie autonomicznym, co oznacza, że obsługa użytkownika ograniczy się jedynie do monitorowania pracy robota i ewentualnej korekty ścieżki za pomocą dostępnych opcji sterowania manualnego.
 
 \subsection{Przykład działania}
-Aby zapoznać się z przykładowym działaniem robotycznego systemu sortowania, użytkownik może obejrzeć nagrania zamieszczone na dołączonym nośniku CD. Nagrania ilustrują funkcjonowanie systemu podczas sortowania elementów według ustalonych kryteriów i przedstawiają interakcje pomiędzy poszczególnymi modułami.
+Aby zapoznać się z przykładem działania robotycznego systemu sortowania, użytkownik może zapoznać się z nagraniami znajdującymi się na dołączonym nośniku pamięci CD. Nagrania pokazują funkcjonowanie systemu podczas pracy.
+
+Pierwszym etapem jest ustawienie robota w pozycji początkowej, a następnie uruchomienie aplikacji. Następnie zgodnie z algorytmem sterowania robot dokonuje segregacji obiektów na podstawie ich cechy wizualnej - koloru. Robot wykonuje swoją pracę tak długo, aż nie otrzyma komendy kończącej pracę lub nie wykryje obiektu w stacji podajnikowej. 
 
 \subsection{Scenariusze korzystania z systemu}
 System sortowania został zaprojektowany z myślą o szerokim zastosowaniu w różnych gałęziach przemysłu, takich jak produkcja i zarządzanie powierzchniami magazynowymi. Dzięki elastycznej budowie robot może zostać rozbudowany o dodatkowe funkcje, które umożliwią wykorzystanie go w grupach autonomicznych robotów. Tego rodzaju rozwiązania mogą znaleźć zastosowanie w zadaniach wymagających pełnej autonomii, jak na przykład transport materiałów w rozbudowanych konfiguracjach magazynowych i produkcyjnych, zwiększając efektywność i automatyzację procesów.

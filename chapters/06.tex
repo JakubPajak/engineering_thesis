@@ -4,6 +4,8 @@
 \section{Konstrukcja}
 Proces konstrukcji robota przebiegał w dwóch głównych etapach. Pierwszy z nich miał na celu przygotowanie prototypowej wersji robota, która spełnia podstawowe wymagania wynikające z założeń konstrukcyjnych dotyczących napędu oraz sterowania. Drugi etap opiewał na wykonanie pełnego projektu robota w programie Autodesk Fusion 360, spełniającego wszystkie techniczne wymogi projektu, z bardzo dobrą dokładnością, w celu wyeliminowania błędów wynikających z konstrukcji mechanicznej.
 
+\subsection{Pierwsza wersja konstrukcji}
+
 W fazie prototypowej zdecydowano się na wykorzystanie sklejki brzozowej – materiału taniego, lekkiego oraz łatwego w obróbce. Platforma bazowa prototypu miała wymiary: 240 mm długości oraz 220 mm szerokości. Silniki zostały osadzone na osi poprzecznej robota, zgodnie z wymogami nakładanymi przez sposób napędu. 
 
 Taka konfiguracja umożliwiła szybką weryfikację działania elementów wykonawczych oraz systemu sterowania, jeszcze przed przystąpieniem do bardziej zaawansowanych prac konstrukcyjnych. Zdjęcie [\ref{zdj:prototyp}] przedstawia opisany prototyp. 
@@ -11,6 +13,22 @@ Taka konfiguracja umożliwiła szybką weryfikację działania elementów wykona
 \hspace{1cm}
 
 W toku prac nad wczesną wersją, po osiągnięciu zadowalającej precyzji sterowania, do konstrukcji dołączono przednią ścianę, do której przymocowano chwytak [\ref{zdj:prototyp-chwytak}]. Umożliwiło to przetestowanie poprawności działania wszystkich elementów wykonawczych obecnych na platformie mobilnej. Dodatkowo, równocześnie przeprowadzono testy pełnej komunikacji między kontrolerem silników a komputerem Raspberry Pi, który pełnił rolę głównej jednostki obliczeniowej robota. W tym kroku zweryfikowano, czy platforma poprawnie reaguje na przesyłane komendy oraz czy nie występują żadne błędy w komunikacji lub wykonaniu poleceń.
+
+% \begin{figure}[h!]
+%   \centering
+%   \includegraphics[width=0.7\textwidth]{./graf/upper.png}
+%   \caption{Model górnej części obudowy}
+%   \label{fig:ball-close}
+% \end{figure}
+
+% \begin{figure}[h!]
+%   \centering
+%   \includegraphics[width=0.7\textwidth]{./graf/upper.png}
+%   \caption{Model górnej części obudowy}
+%   \label{fig:ball-close}
+% \end{figure}
+
+\subsection{Właściwy projekt robota mobilnego}
 
 Po pozytywnym zakończeniu walidacji funkcjonowania algorytmów sterowania i komunikacji, przystąpiono do drugiego etapu konstrukcji – zaprojektowania i wytworzenia docelowej obudowy bazowej robota. Obudowa została wykonana przy użyciu technologii druku 3D, co pozwoliło na uzyskanie wysokiej precyzji oraz wprowadzeniu niezbędnych modyfikacji konstrukcyjnych w stosunku do prototypu. Ze względu na ograniczenia przestrzeni roboczej urządzenia drukującego, wymiary podstawy platformy zostały przeniesione na plan kwadratu o boku 220 mm.
 Przednia ściana została zaprojektowana jako część podłogi, w celu zwiększenia sztywności konstrukcji. Najcięższym elementem całego robota jest chwytak wraz z serwomechanizmem, przez co wytrzymałość przedniej ściany oraz podłogi była kluczowa. Zgodnie z osią do wewnątrz robota została poprowadzona przegroda, pełniąca funkcję podpory dla górnej części platformy.

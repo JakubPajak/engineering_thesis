@@ -8,7 +8,7 @@ Omówione zostaną najważniejsze zasady funkcjonowania enkoderów kwadraturowyc
 W dalszej części omówiono wybrane algorytmy z zakresu wizji komputerowej, takie jak detekcja krawędzi i rozpoznawanie kolorów, które stanowią istotne elementy systemu wizyjnego robota.
 
 \section{Enkodery}
-Enkodery są urządzeniami pomiarowymi, które umożliwiają śledzenie ruchu obrotowego lub liniowego. W zastosowaniach z zakresu robotyki, takich jak opisywana platforma mobilna, enkodery umożliwiają śledzenie oraz manipulowanie prędkością lub położeniem robota w przedstzeni dwuwymiarowej. Monitorowanie położenia robota za pomocą między innymi odczytów impulsów z enkoderów stanowi podstawę szerokiej dziedziny robotyki mobilnej - odometrii. W zależości od potrzeb, dodatkowym sensorem możliwym do wykorzystania jest czujnik żyroskopowy IMU - zwracający wartości przyspieszeń liniowych oraz kątowych. W tym projekcie zostały wykorzystane jedynie enkodery, ze względu na sposób poruszania się robota. 
+Enkodery są urządzeniami pomiarowymi, które umożliwiają śledzenie ruchu obrotowego lub liniowego. W zastosowaniach z zakresu robotyki, takich jak opisywana platforma mobilna, enkodery umożliwiają śledzenie oraz manipulowanie prędkością lub położeniem robota w przestrzeni dwuwymiarowej. Monitorowanie położenia robota za pomocą między innymi odczytów impulsów z enkoderów stanowi podstawę szerokiej dziedziny robotyki mobilnej - odometrii. W zależności od potrzeb, dodatkowym sensorem możliwym do wykorzystania jest czujnik żyroskopowy IMU - zwracający wartości przyspieszeń liniowych oraz kątowych. W tym projekcie zostały wykorzystane jedynie enkodery, ze względu na sposób poruszania się robota. 
 
 Enkodery dzielą się na enkodery optyczne, magnetyczne i mechaniczne, w zależności od zastosowanej technologii detekcji. Szczególna uwaga zostanie poświęcona enkoderom magnetycznym umożliwiających detekcję kierunku ruchu - enkoderom kwadraturowym. 
 
@@ -17,21 +17,21 @@ Enkodery dzielą się na enkodery optyczne, magnetyczne i mechaniczne, w zależn
 Enkodery klasyfikowane są na podstawie zjawisk fizycznych wykorzystywanych do wykrywania ruchu. Główne typy to\cite{bib:enkoder-mag-opt}:
 
 \begin{itemize}
-    \item \textbf{Enkodery optyczne} - podstawę budowy stanowi przeźroczysta tarcza kodowa, przymocowana do wału silnika. Na tarczy znajdują się otwory w określonych miejscach, przez które na układ elementów światłoczułych pada wiązka światła podczerowego generowanego przez diodę IR LED. 
-    \item \textbf{Enkodery magnetyczne} - działają w oparciu o zmiany pola magnetycznego, zwykle generowanego przez magnes przymocowany do wału silnika. Zastosowanie efektu Hall'a w tych enkoderach pozwala na wykrywanie zmian w polu magnetycznym, poprzez generowanie napięcia w czujnikach Hall'a.
+    \item \textbf{Enkodery optyczne} - podstawę budowy stanowi przeźroczysta tarcza kodowa, przymocowana do wału silnika. Na tarczy znajdują się otwory w określonych miejscach, przez które na układ elementów światłoczułych pada wiązka światła podczerwonego generowanego przez diodę IR LED. 
+    \item \textbf{Enkodery magnetyczne} - działają w oparciu o zmiany pola magnetycznego, zwykle generowanego przez magnes przymocowany do wału silnika. Zastosowanie efektu Hall' a w tych enkoderach pozwala na wykrywanie zmian w polu magnetycznym, poprzez generowanie napięcia w czujnikach Hall' a.
     \item \textbf{Enkodery mechaniczne} - najprostszy rodzaj enkoderów, wykorzystujący mechaniczne styki do generowania impulsów. Ze względu na ograniczoną trwałość są rzadziej stosowane w precyzyjnych aplikacjach.
 \end{itemize}
 
 
-\subsection{Efekt Hall'a}
+\subsection{Efekt Hall' a}
 
 Efekt Halla \cite{bib:zjawisko-halla} stanowi podstawę działania magnetycznych enkoderów kwadraturowych, wykorzystywanych do pomiaru prędkości i kąta położenia wałów obrotowych. Odkryty przez Edwina Halla w 1879 roku, efekt ten polega na generowaniu tzw. napięcia Halla – różnicy potencjałów w przewodniku umieszczonym w zewnętrznym polu magnetycznym, przez który przepływa prąd. Zjawisko to wynika z działania siły Lorentza na nośniki ładunku w przewodniku, kierującej je w stronę prostopadłą do kierunku przepływu prądu oraz linii pola magnetycznego.
 
 Siła Lorentza działająca na nośniki ładunku jest opisana równaniem:
 \[
-\vec{F} = q \cdot (\vec{E} + \vec{v} \times \vec{B}),
+\vec{F} = q \cdot (\vec{E} + \vec{v} \times \vec{B})
 \]
-gdzie:
+, gdzie:
 \begin{itemize}
     \item \( q \) - ładunek elektryczny nośnika prądu,
     \item \( \vec{E} \) - wektor pola elektrycznego,
@@ -41,9 +41,9 @@ gdzie:
 
 Efektem działania siły Lorentza jest przemieszczenie nośników ładunku w kierunku prostopadłym do przepływu prądu i pola magnetycznego, prowadzące do powstania napięcia Halla (\( U_H \)) w poprzek przewodnika. Wartość tego napięcia jest opisana wzorem:
 \[
-U_H = \frac{I B}{n \cdot q \cdot d},
+U_H = \frac{I B}{n \cdot q \cdot d}
 \]
-gdzie:
+, gdzie:
 \begin{itemize}
     \item \( I \) - natężenie prądu elektrycznego,
     \item \( B \) – indukcja magnetyczna,
@@ -53,16 +53,16 @@ gdzie:
 
 \subsection{Enkodery kwadraturowe oparte na efekcie Halla}
 
-Enkodery kwadraturowe są szeroko stosowane do precyzyjnego pomiaru prędkości i kąta obrotu silnika oraz umożliwiają określanie kierunku ruchu. W magnetycznych enkoderach kwadraturowych, zbudowanych w oparciu o efekt Halla, umieszcza się dwa czujniki Halla rozmieszczone pod kątem 90° względem siebie [\ref{rys2:encoders-sample}]. Podczas obrotu wału silnika wraz z magnesem, pole magnetyczne ulega zmianie wraz z obrotem, co powoduje zmiany w napięciu Halla i dalej do generowania impulsów oznaczjącyh ruch silnika. 
+Enkodery kwadraturowe są szeroko stosowane do precyzyjnego pomiaru prędkości i kąta obrotu silnika oraz umożliwiają określanie kierunku ruchu. W magnetycznych enkoderach kwadraturowych, zbudowanych w oparciu o efekt Halla, umieszcza się dwa czujniki Halla rozmieszczone pod kątem 90° względem siebie [\ref{rys2:encoders-sample}]. Podczas obrotu wału silnika wraz z magnesem, pole magnetyczne ulega zmianie wraz z obrotem, co powoduje zmiany w napięciu Halla i dalej do generowania impulsów oznaczających ruch silnika. 
 
-Zastosowanie jednego czujnika umożliwia wykrycie ruchu oraz zliczanie ilości impulsów generowanych przez obrót. Pewnym mankamanetem wykorzystania tylko jednego czujnika jest brak możliwości wykrycia kierunku obrotu. Dzięki dodaniu drugiego sensora Halla, kierunek ruchu można wykryć na podstawie odczytu sygnalu generowanego przez enkoder, ponieważ jeden z kanałów enkodera jako pierwszy zwróci stan wysoki, co będzie oznaczało obrót w konkretną stronę. Wizualizacja sygnalu generowanego przez enkoder kwadraturowy znajduje się na grafice [\ref{rys2:encoders-graf}].
+Zastosowanie jednego czujnika umożliwia wykrycie ruchu oraz zliczanie ilości impulsów generowanych przez obrót. Pewnym mankamentem wykorzystania tylko jednego czujnika jest brak możliwości wykrycia kierunku obrotu. Dzięki dodaniu drugiego sensora Halla, kierunek ruchu można wykryć na podstawie odczytu sygnału generowanego przez enkoder, ponieważ jeden z kanałów enkodera jako pierwszy zwróci stan wysoki, co będzie oznaczało obrót w konkretną stronę. Wizualizacja sygnału generowanego przez enkoder kwadraturowy znajduje się na grafice [\ref{rys2:encoders-graf}].
 
 Wysoka odporność na zużycie mechaniczne oraz stabilność działania w trudnych warunkach środowiskowych, takich jak wysoka wilgotność lub zapylenie, czynią magnetyczne enkodery kwadraturowe bardziej niezawodnymi niż ich optyczne odpowiedniki. Cechy te sprawiają, że magnetyczne enkodery kwadraturowe są szczególnie atrakcyjne w zastosowaniach przemysłowych oraz robotycznych, gdzie kluczowe są trwałość i precyzja.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{./graf/halla-enc.jpg}
-    \caption{Rysunek przedstawiający zasadę działania czujnika Hall'a \cite{bib:hall_net}}
+    \caption{Rysunek przedstawiający zasadę działania czujnika Hall' a \cite{bib:hall_net}}
     \label{rys2:encoders-graf}
 \end{figure}
 
@@ -76,7 +76,7 @@ Wysoka odporność na zużycie mechaniczne oraz stabilność działania w trudny
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{./graf/enkoder-silnik.png}
-    \caption{Przykładowy wygląd enkodera opartego o efekt Hall'a z oznaczonymi tranzystorami wykrywającymi zmiany pola magnetycznego podczas obrotu wału \cite{bib:botland-hall}}
+    \caption{Przykładowy wygląd enkodera opartego o efekt Hall' a z oznaczonymi tranzystorami wykrywającymi zmiany pola magnetycznego podczas obrotu wału \cite{bib:botland-hall}}
     \label{rys2:encoders-sample}
 \end{figure}
 
@@ -84,7 +84,7 @@ Wysoka odporność na zużycie mechaniczne oraz stabilność działania w trudny
 
 \section{Regulator PID}
 
-Regulator PID (ang. \textit{Proportional-Integral-Derivative}) jest jednym z najczęściej stosowanych regulatorów w systemach automatycznego sterowania, ze względu na wysoką jakość regulacji gwarantującą uzyskanie zerwej wartości uchybu. Dodatkowo wykorzystanie aż trzech członów - proporcjonalnego, całkującego oraz różniczkującego, daje projektantowi duże możliwości dostosowania charakterystyki odpowiedzi czasowej regulatora, tak aby spełnić wymagania projektowe. 
+Regulator PID (ang. \textit{Proportional-Integral-Derivative}) jest jednym z najczęściej stosowanych regulatorów w systemach automatycznego sterowania, ze względu na wysoką jakość regulacji gwarantującą uzyskanie zerowej wartości uchybu. Dodatkowo wykorzystanie aż trzech członów - proporcjonalnego, całkującego oraz różniczkującego, daje projektantowi duże możliwości dostosowania charakterystyki odpowiedzi czasowej regulatora, tak aby spełnić wymagania projektowe. 
 
 \subsection{Ogólny schemat układu regulacji}
 
@@ -92,7 +92,7 @@ Grafika [\ref{rys2:regulacja1}] przedstawia ideowy schemat zamkniętego układu 
 
 Wartość zadana jest kierowana na wejście regulatora, obliczającego sterowanie, które następnie jest wejściem dla urządzenia wykonawczego. Ostatnim elementem jest odczyt wartości uzyskanych i ponowne przekazanie ich na wejście układu w celu korekcji sterowania.
 
-Na zaprezentowanym schemacie występuje również czynnik \(z(t)\), reprezentuje on zakłócenia wpływające na zachowanie wartości regulowanej. Wartość zakłócenia istotnie może zmienić wartość sterowania, która zostanie odpowiednio dostosowana poprzez regulatow w celu kompensacji szumu. 
+Na zaprezentowanym schemacie występuje również czynnik \(z(t)\), reprezentuje on zakłócenia wpływające na zachowanie wartości regulowanej. Wartość zakłócenia istotnie może zmienić wartość sterowania, która zostanie odpowiednio dostosowana poprzez regulator w celu kompensacji szumu. 
 
 \begin{figure}[h]
     \centering
@@ -101,38 +101,12 @@ Na zaprezentowanym schemacie występuje również czynnik \(z(t)\), reprezentuje
     \label{rys2:regulacja1}
 \end{figure}
 
-\subsection{Działanie regulatora PID}
-
-Działanie regulatora PID opiera się na przetwarzaniu sygnału uchybu $e(t)$, różnicy między wartością zadaną $w(t)$ a wartością rzeczywistą $y(t)$ wielkości regulowanej:
-
-\begin{equation}
-e(t) = y_{set} - y(t)
-\end{equation}
-
-Uchyb jest jednym z podstawowych wskaźników jakości regulacji, określający jak dobrze wybrany regulator uzyskuje wartość zadaną. Cechą charakterystyczną regulatora PID jest całowika skuteczność uzyskania uchybu równego zero dla stabilnych układów dynamicznych. Zastosowanie innych regulatorów takich jak P (z jedynie członem proporcjonalnym) lub PI (z członem proporcjonalnym i drugim 
-członem całkującym) nie gwarantuje uzyskania uchuby równego zero. 
-
-\hspace{1cm}
-
-Regulator PID wyznacza wartość sygnału sterującego $u(t)$ jako sumę trzech składników:
-\begin{equation}
-u(t) = K_p e(t) + K_i \int_{0}^{t} e(\tau) d\tau + K_d \frac{de(t)}{dt}
-\end{equation}
-gdzie:
-\begin{itemize}
-    \item $K_p$ – współczynnik proporcjonalny, który wzmacnia aktualny uchyb,
-    \item $K_i$ – współczynnik całkujący, który reaguje na sumę uchybów w czasie,
-    \item $K_d$ – współczynnik różniczkujący, który reaguje na zmianę uchybu.
-\end{itemize}
-
-Każda ze składowych regulatora PID pełni inną funkcję. Połączenie ich w jedno równanie pozwala uzyskać bardzo dobrą jakość regulacji. 
-
 \subsection{Składnik proporcjonalny $P$}
 
 Składnik proporcjonalny jest liniowo zależny od uchybu $e(t)$ i odpowiada za natychmiastową reakcję na różnicę między wartością zadaną a rzeczywistą. Działa zgodnie ze wzorem:
 
 \begin{equation}
-P(t) = K_p e(t)
+P(t) = K_p e(t) .
 \end{equation}
 
 Im większa wartość wzmocnienia proporcjonalnego $K_p$, tym regulator bardziej dynamicznie reaguje na uchyb, co przyspiesza osiągnięcie wartości zadanej, ale przy zbyt dużych wartościach może prowadzić do przeregulowania, a w konsekwencji oscylacji.
@@ -145,29 +119,29 @@ Składnik całkujący sumuje wartości uchybu w czasie, co pozwala na eliminacj�
     e_u = \lim_{t \to \infty} e(t)
     \label{eq:lim_stab}
 \end{equation}
-
+, gdzie:
 \begin{itemize}
     \item $e_u$ - uchyb w stanie ustalonym,
     \item $e(t)$ - funkcja wiążąca wartość uchybu z czasem
 \end{itemize}
 
-Dla stabilnych układów dynamicznych wartość uchybu w granicy, gdzie czas dąży do nieskończonośći, osiąga wartość stałą. Im jest mniejsza, tym jakość regulacji jest bardziej dokładna. 
+Dla stabilnych układów dynamicznych wartość uchybu w granicy, gdzie czas dąży do nieskończoności, osiąga wartość stałą. Im jest mniejsza, tym jakość regulacji jest bardziej dokładna. 
 
 \hspace{1cm}
 
 Składnik całkujący jest dany równaniem:
 \begin{equation}
-I(t) = K_i \int_{0}^{t} e(\tau) d\tau
+I(t) = K_i \int_{0}^{t} e(\tau) d\tau .
 \end{equation}
 
-Dzięki temu składnikowi, regulator PID potrafi zniwelować długotrwały uchyb, chociaż przy zbyt dużych wartościach wzmocnienia $K_i$ może wystąpić zjawisko przeregulowania oraz niestabilności ukłądu - opisanej w sekcji [\ref{sek:stab}].
+Dzięki temu składnikowi, regulator PID potrafi zniwelować długotrwały uchyb, chociaż przy zbyt dużych wartościach wzmocnienia $K_i$ może wystąpić zjawisko przeregulowania oraz niestabilności układu.
 
 \subsection{Składnik różniczkujący $D$}
 
 Składnik różniczkujący uwzględnia szybkość zmian uchybu $e(t)$, co pozwala na szybsze reagowanie na gwałtowne zmiany i przeciwdziałanie efektowi przeregulowania. Opisuje go wyrażenie:
 
 \begin{equation}
-D(t) = K_d \frac{de(t)}{dt}
+D(t) = K_d \frac{de(t)}{dt} .
 \end{equation}
 
 Ten składnik regulatora poprawia stabilność i tłumi oscylacje, jednak zbyt duża wartość wzmocnienia $K_d$ może prowadzić do niestabilności układu, zwłaszcza w obecności szumów.
@@ -180,20 +154,20 @@ Ten składnik regulatora poprawia stabilność i tłumi oscylacje, jednak zbyt d
 u(t) = K_p e(t) + K_i \int_{0}^{t} e(\tau) d\tau + K_d \frac{de(t)}{dt}
 \end{equation}
 
-gdzie:
+, gdzie:
 \begin{itemize}
     \item $K_p e(t)$ – składnik proporcjonalny, który odpowiada za szybką reakcję na zmiany,
     \item $K_i \int_{0}^{t} e(\tau) d\tau$ – składnik całkujący, który eliminuje uchyb statyczny,
     \item $K_d \frac{de(t)}{dt}$ – składnik różniczkujący, który przeciwdziała nagłym zmianom uchybu.
 \end{itemize}
 
-Często ze względu na realtywnie prostsze obliczenia, szczególnie podczas analizy stabilności oraz wyznaczania charakterystyk dynamicznych stosuje się postać operatorową (przekształcając równianie w postaci czasowej za pomocą operatora Laplace’a [\mathcal{L}]) regulatora PID. 
+Często ze względu na relatywnie prostsze obliczenia, szczególnie podczas analizy stabilności oraz wyznaczania charakterystyk dynamicznych stosuje się postać operatorową (przekształcając równanie w postaci czasowej za pomocą operatora Laplace’a [\mathcal{L}]) regulatora PID. 
 
 \begin{equation}
-    U(s) = (K_p + \frac{K_i}{s} + K_d s) E(s),
+    U(s) = (K_p + \frac{K_i}{s} + K_d s) E(s)
 \end{equation}
 
-gdzie:
+, gdzie:
 \begin{itemize}
     \item $E(s)$ - uchyb w dziedzinie operatorowej,
     \item $K_p, K_i, K_d$ wartości wzmocnienień odpowiednich członów.
@@ -202,25 +176,21 @@ gdzie:
 
 Regulacja parametrów $K_p$, $K_i$ i $K_d$ pozwala na dostosowanie charakterystyki regulatora PID do specyfiki sterowanego obiektu. Optymalne wartości tych parametrów zazwyczaj są dobierane metodą prób i błędów lub za pomocą metod takich jak strojenie Zieglera-Nicholsa.
 
-\subsection{Stabilność układów dynamicznych}
-\label{sek:stab}
+\subsection{Działanie regulatora PID}
 
-Stabilność układów dynamicznych jest kluczowym zagadnieniem podczas projektowania układu regulacji. W analizie stabilności sprawdza się, czy układ dąży do stanu równowagi - minimalizuje uchyb, aby fianlnie osiągnąć wartość minimalną, w przypadku regulatora PID jest to zero. W przypadku układów niestabilnych, wartość uchybu dąży do nieskończoności, co jest szczególnie nieporządane podczas projektowania rzeczywistych układów, ze względu na możliwe uszkodzenie elementów wykonawczych poprzez podanie na ich wejście zbyt dużych wartości napięcia, prądu. 
+Działanie regulatora PID opiera się na przetwarzaniu sygnału uchybu $e(t)$, różnicy między wartością zadaną $w(t)$ a wartością rzeczywistą $y(t)$ wielkości regulowanej:
 
-W przypadku regulatora PID analiza stabilności opiera się wyznaczeniu charakterystyk dla zadanych nastaw - wartości parametrów wzmocnienia $K_p$, $K_i$, $K_d$. Najczęściej w celu weryfikacji stabilności układów stosuje się metody:
-\begin{itemize}
-    \item \textbf{Kryterium Hurwitza} – bazuje na analizie współczynników charakterystycznych układu dynamicznego w dziedzinie operatora Laplace’a. Metoda polega na ocenie znaku podwyznaczników macierzy Hurwitza, aby określić, czy wszystkie pierwiastki wielomianu charakterystycznego mają część rzeczywistą mniejszą od zera.
-    \item \textbf{Kryterium Nyquista} – metoda graficzna oparta na analizie funkcji transmitancji układu na wykresie Nyquista. Kryterium to bada, jak charakterystyka amplitudowo-fazowa zamkniętego układu reaguje na różne częstotliwości sygnału wejściowego. Wykres Nyquista pozwala ocenić stabilność systemu poprzez obserwację, czy jego kontur w dziedzinie częstotliwości otacza określony punkt krytyczny. Kryterium Nyquista nadaje się szczególnie do badania stabilności układów nieliniowych i bardziej złożonych systemów z opóźnieniami.
-\end{itemize}
+\begin{equation}
+e(t) = y_{set} - y(t) .
+\end{equation}
 
-Teoretyczna analiza stabilności jest punktem wyjścia przy projektowaniu regulatorów PID, ponieważ zbyt duże wartości parametrów $K_p$, $K_i$, lub $K_d$ mogą prowadzić do niestabilnych oscylacji. Przykładowo, wysoka wartość wzmocnienia proporcjonalnego $K_p$ zwiększa szybkość reakcji układu, ale zbyt duża może powodować oscylacje wokół wartości zadanej. Z kolei nadmierne wzmocnienie członu różniczkującego $K_d$ prowadzi do niestabilności w obecności szumu. Metody Hurwitza i Nyquista pomagają przewidzieć te reakcje i dobrać parametry regulatora tak, aby uzyskać stabilność i oczekiwane właściwości dynamiczne układu.
+Uchyb jest jednym z podstawowych wskaźników jakości regulacji, określający jak dobrze wybrany regulator uzyskuje wartość zadaną. Cechą charakterystyczną regulatora PID jest całkowita skuteczność uzyskania uchybu równego zero dla stabilnych układów dynamicznych. Zastosowanie innych regulatorów takich jak P (z jedynie członem proporcjonalnym) lub PI (z członem proporcjonalnym i drugim 
+członem całkującym) nie gwarantuje uzyskania uchybu równego zero. 
+
 
 \subsection{Zastosowanie regulatora PID w sterowaniu robotem mobilnym}
 
 W omawianym projekcie regulator PID znajduje zastosowanie w kontrolowaniu odległości jaką pokonuje platforma mobilna poprzez odpowiednie sterowanie napięciem zasilania elementów wykonawczych. Nastawy regulatora zostały dostosowane metodą prób i błędów. Uzyskana jakość regulacji jest wystarczająca do spełnienia wymagań projektowych. 
-
-\clearpage
-
 
 \section{Napęd różnicowy}
 
@@ -232,11 +202,11 @@ Model kinematyczny napędu różnicowego opisuje związek między prędkościami
 
 \begin{equation}
     \centering
-    \upsilon = \frac{\upsilon_r + \upsilon_l}{2},  \omega = \frac{\upsilon_r + \upsilon_l}{b},
+    \upsilon = \frac{\upsilon_r + \upsilon_l}{2},  \omega = \frac{\upsilon_r + \upsilon_l}{b}
     \label{eq:linear}
 \end{equation}
 
-gdzie:
+, gdzie:
 \begin{itemize}
     \item \(\upsilon_r\) oraz \(\upsilon_l\) to prędkości odpowiednio prawego oraz lewego koła,
     \item \(b\) oznacza odległość pomiędzy osiami kół.
@@ -246,11 +216,11 @@ W bazowym układzie współrzędnych przemieszczenie robota opisują równania [
 
 \begin{equation}
     \centering
-    \dot{x} = \upsilon cos(\theta), \dot{y} = \upsilon sin(\theta), \dot(\theta) = \omega,
+    \dot{x} = \upsilon cos(\theta), \dot{y} = \upsilon sin(\theta), \dot(\theta) = \omega
     \label{eq:angular}
 \end{equation}
 
-gdzie:
+, gdzie:
 \begin{itemize}
     \item \(x\) i \(y\) - współrzędne środka masy w układzie współrzędnych odniesienia
     \item \(\theta\) - orientacja platformy.
@@ -274,10 +244,10 @@ Aby wyznaczyć, ile impulsów należy zliczyć w celu wykonania określonego prz
 
 \begin{equation}
     \centering
-    c_m = \Pi \frac{D_n}{n C_e}
+    c_m = \pi \frac{D_n}{n C_e}
     \label{eq:impulsy}
 \end{equation}
-,gdzie:
+, gdzie:
 \begin{itemize}
     \item \(c_m\) - współczynnik przeliczenia impulsów licznika na przebytą odległość,
     \item \(D_n\) - nominalna średnica kół,
@@ -290,7 +260,7 @@ Aby wyznaczyć, ile impulsów należy zliczyć w celu wykonania określonego prz
     \Delta U_{R/L, I} = c_m N_{R/L, I}
     \label{eq:impulsy-odl}
 \end{equation}
-,gdzie:
+, gdzie:
 \begin{itemize}
     \item \(\Delta U_{R/L, I}\) - przebyta odległość,
     \item \(c_m\) -  współczynnik przeliczenia impulsów licznika na przebytą odległość,
@@ -363,7 +333,7 @@ Algorytm Canny’ego \cite{bib:canny-article} to złożona metoda wieloetapowa, 
 
 \section{Podstawy rozpoznawania kolorów w wizji komputerowej}
 
-Istotnym elementem wizji komputerowej jest możliwość rozpoznawania kolorów. Funkcjonalność ta jest szczególnie przydatna w automatyce, robotyce oraz w metodach sztucznej inteligencji. Pozwala na klasyfikację obiektów przy pomocy prostych algorytmów analizy wizyjnej, jak ma to miejsce w przypadku tego projektu, ale również jest częścią zaawansowanego trenowania sieci neuronowych, tym samym umożlwiając bardzo dokładną klasyfikację obiektów o różnym kształcie i kolorze. 
+Istotnym elementem wizji komputerowej jest możliwość rozpoznawania kolorów. Funkcjonalność ta jest szczególnie przydatna w automatyce, robotyce oraz w metodach sztucznej inteligencji. Pozwala na klasyfikację obiektów przy pomocy prostych algorytmów analizy wizyjnej, jak ma to miejsce w przypadku tego projektu, ale również jest częścią zaawansowanego trenowania sieci neuronowych, tym samym umożliwiając bardzo dokładną klasyfikację obiektów o różnym kształcie i kolorze. 
 
 W tej sekcji omówione zostaną podstawowe zasady oraz techniki wykorzystywane w procesie rozpoznawania kolorów.
 
@@ -391,7 +361,7 @@ Proces rozpoznawania kolorów obejmuje szereg etapów pozwalających na identyfi
 
 \subsection{Algorytmy rozpoznawania kolorów}
 
-W literaturze przedmiotu występuje wiele podejść do rozpoznawania kolorów, takich jak analiza histogramu, segmentacja obrazu oraz analiza cech. Histogramy kolorów pozwalają na szybkie określenie dominujących kolorów na obrazie, co może być użyteczne w aplikacjach czasu rzeczywistego. Segmentacja obrazu natomiast umożliwia wyodrębnienie obiektów o określonym kolorze, co może być realizowane przy pomocy algorytmów takich jak k-means clustering lub metoda watershed.
+W literaturze przedmiotu występuje wiele podejść do rozpoznawania kolorów, takich jak analiza histogramu, segmentacja obrazu oraz analiza cech. Histogramy kolorów pozwalają na szybkie określenie dominujących kolorów na obrazie, co może być użyteczne w aplikacjach czasu rzeczywistego. Segmentacja obrazu natomiast umożliwia wyodrębnienie obiektów o określonym kolorze, co może być realizowane przy pomocy algorytmów takich jak \english{k-means clustering} lub metoda \english{watershed}.
 
 
 \begin{figure}[h!]
@@ -414,3 +384,17 @@ W literaturze przedmiotu występuje wiele podejść do rozpoznawania kolorów, t
     \caption{Wizualizacja przestrzeni YCrCb \cite{bib:ycrcb-model}}
     \label{rys2:ycrcb1}
 \end{figure}
+
+
+% \subsection{Stabilność układów dynamicznych}
+% \label{sek:stab}
+
+% Stabilność układów dynamicznych jest kluczowym zagadnieniem podczas projektowania układu regulacji. W analizie stabilności sprawdza się, czy układ dąży do stanu równowagi - minimalizuje uchyb, aby fianlnie osiągnąć wartość minimalną, w przypadku regulatora PID jest to zero. W przypadku układów niestabilnych, wartość uchybu dąży do nieskończoności, co jest szczególnie nieporządane podczas projektowania rzeczywistych układów, ze względu na możliwe uszkodzenie elementów wykonawczych poprzez podanie na ich wejście zbyt dużych wartości napięcia, prądu. 
+
+% W przypadku regulatora PID analiza stabilności opiera się wyznaczeniu charakterystyk dla zadanych nastaw - wartości parametrów wzmocnienia $K_p$, $K_i$, $K_d$. Najczęściej w celu weryfikacji stabilności układów stosuje się metody:
+% \begin{itemize}
+%     \item \textbf{Kryterium Hurwitza} – bazuje na analizie współczynników charakterystycznych układu dynamicznego w dziedzinie operatora Laplace’a. Metoda polega na ocenie znaku podwyznaczników macierzy Hurwitza, aby określić, czy wszystkie pierwiastki wielomianu charakterystycznego mają część rzeczywistą mniejszą od zera.
+%     \item \textbf{Kryterium Nyquista} – metoda graficzna oparta na analizie funkcji transmitancji układu na wykresie Nyquista. Kryterium to bada, jak charakterystyka amplitudowo-fazowa zamkniętego układu reaguje na różne częstotliwości sygnału wejściowego. Wykres Nyquista pozwala ocenić stabilność systemu poprzez obserwację, czy jego kontur w dziedzinie częstotliwości otacza określony punkt krytyczny. Kryterium Nyquista nadaje się szczególnie do badania stabilności układów nieliniowych i bardziej złożonych systemów z opóźnieniami.
+% \end{itemize}
+
+% Teoretyczna analiza stabilności jest punktem wyjścia przy projektowaniu regulatorów PID, ponieważ zbyt duże wartości parametrów $K_p$, $K_i$, lub $K_d$ mogą prowadzić do niestabilnych oscylacji. Przykładowo, wysoka wartość wzmocnienia proporcjonalnego $K_p$ zwiększa szybkość reakcji układu, ale zbyt duża może powodować oscylacje wokół wartości zadanej. Z kolei nadmierne wzmocnienie członu różniczkującego $K_d$ prowadzi do niestabilności w obecności szumu. Metody Hurwitza i Nyquista pomagają przewidzieć te reakcje i dobrać parametry regulatora tak, aby uzyskać stabilność i oczekiwane właściwości dynamiczne układu.
