@@ -1,10 +1,66 @@
 \chapter{Spis skrótów i symboli}
 
+\subsubsection*{Skróty ogólne}
+
 \begin{itemize}
-\item[CSI] szeregowy interfejs kamery (ang. \english{Camera Serial Interface})
-\item[OpenCV] otwarta biblioteka wizji komputerowej(ang. \english{Open Source Computer Vision Library} )
-\item[$N$] liczebność zbioru danych
-\item[$\mu$] stopnień przyleżności do zbioru
-\item[$\mathbb{E}$] zbiór krawędzi grafu
-\item[$\mathcal{L}$] transformata Laplace'a 
+    \item[SBC] - Komputer jednopłytkowy (ang. \textit{Single Board Computer}), wykorzystywany jako główna jednostka obliczeniowa robota.
+    \item[CSI] - Szeregowy interfejs kamery (ang. \textit{Camera Serial Interface}), umożliwiający połączenie kamery z komputerem SBC.
+    \item[PID] - Regulator proporcjonalno-całkująco-różniczkujący (ang. \textit{Proportional-Integral-Derivative}), stosowany w systemach sterowania.
+    \item[IDE] - Zintegrowane środowisko programistyczne (ang. \textit{Integrated Development Environment}), służące do programowania i debugowania kodu.
+    \item[IMU] - Jednostka pomiaru inercyjnego (ang. \textit{Inertial Measurement Unit}), mierząca przyspieszenia liniowe i kątowe.
+    \item[UML] - Diagram języka modelowania UML (ang. \textit{Unified Modeling Language}), wykorzystywany do wizualizacji systemów.
+    \item[OpenCV] - Otwarte źródło biblioteki wizji komputerowej (ang. \textit{Open Source Computer Vision Library}), stosowanej do analizy obrazów.
+    \item[git] - System kontroli wersji umożliwiający śledzenie zmian w kodzie oraz zarządzanie repozytoriami.
+    \item[HDMI] - Interfejs multimedialny o wysokiej rozdzielczości (ang. \textit{High-Definition Multimedia Interface}), stosowany do przesyłania obrazu i dźwięku.
+    \item[GPIO] - Ogólne wejścia/wyjścia cyfrowe (ang. \textit{General Purpose Input/Output}), używane do sterowania zewnętrznymi urządzeniami.
+    \item[CSS] - Kaskadowe arkusze stylów (ang. \textit{Cascading Style Sheets}), używane do stylizacji stron internetowych.
+    \item[PWM] - Modulacja szerokości impulsu (ang. \textit{Pulse Width Modulation}), wykorzystywana do sterowania silnikami i innymi urządzeniami.
+    \item[USB] - Uniwersalna magistrala szeregowa (ang. \textit{Universal Serial Bus}), stosowana do podłączania urządzeń peryferyjnych.
+    \item[SLAM] - Jednoczesna lokalizacja i mapowanie (ang. \textit{Simultaneous Localization and Mapping}), technologia używana w robotyce mobilnej.
+    \item[LiDAR] - Detekcja i pomiar światła (ang. \textit{Light Detection and Ranging}), technologia służąca do tworzenia map 3D.
+    \item[ROS2] - Robotyczny system operacyjny w wersji 2 (ang. \textit{Robot Operating System 2}), platforma do projektowania i sterowania robotami.
+    \item[Docker] - Narzędzie do konteneryzacji, które umożliwia tworzenie, zarządzanie i uruchamianie aplikacji w izolowanych środowiskach.
+\end{itemize}
+
+\subsubsection*{Symbole dotyczące regulatora PID}
+
+\begin{itemize}
+    \item[\(e_u\)] - Uchyb w stanie ustalonym, definiujący różnicę między wartością zadaną a rzeczywistą w stanie ustalonym.
+    \item[\(e(t)\)] - Funkcja opisująca uchyb w czasie.
+    \item[\(K_p\)] - Wzmocnienie członu proporcjonalnego.
+    \item[\(K_i\)] - Wzmocnienie członu całkującego.
+    \item[\(K_d\)] - Wzmocnienie członu różniczkującego.
+    \item[\(E(s)\)] - Uchyb w dziedzinie operatorowej.
+    \item[\(\mathcal{L}\)] - Operator Laplace’a, używany w analizie systemów dynamicznych.
+    \item[\(y_{set}\)] - Wartość zadana (referencyjna).
+    \item[\(y(t)\)] - Wyjście układu regulacji w funkcji czasu.
+    \item[\(u(t)\)] - Funkcja sterująca regulatora PID w dziedzinie czasu.
+    \item[\(U(s)\)] - Funkcja sterująca w dziedzinie operatorowej.
+\end{itemize}
+
+\subsubsection*{Symbole dotyczące odometrii oraz napędu różnicowego}
+
+\begin{itemize}
+    \item[\(\omega\)] - Prędkość kątowa platformy mobilnej.
+    \item[\(\upsilon\)] - Prędkość liniowa platformy.
+    \item[\(\upsilon_{r, l}\)] - Prędkości liniowe odpowiednio prawego i lewego koła.
+    \item[\(b\)] - Odległość między osiami kół platformy.
+    \item[\(x , y\)]  - Współrzędne środka masy platformy.
+    \item[\(\theta\)]  - Orientacja platformy względem układu współrzędnych.
+    \item[\(c_m\)] - Współczynnik przeliczania impulsów enkodera na odległość.
+    \item[\(D_n\)] - Nominalna średnica kół.
+    \item[\(C_e\)] - Rozdzielczość enkodera (impulsy na obrót).
+    \item[\(n\)] - Przełożenie układu napędowego.
+    \item[\(\Delta U_{R/L, I}\)] - Przebyta odległość przez prawe/lewe koło w czasie \(I\).
+    \item[\(N_{R/L, I}\)] - Liczba impulsów zliczonych przez enkodery prawego/lewego koła w czasie \(I\).
+\end{itemize}
+
+\subsubsection*{Skróty oraz terminy dotyczące wizji komputerowej}
+
+\begin{itemize}
+    \item[Model RGB] - Model przestrzeni barw definiowany przez składowe: czerwony (\textit{Red}), zielony (\textit{Green}), niebieski (\textit{Blue}).
+    \item[Model HSV] - Model przestrzeni barw definiowany przez odcień (\textit{Hue}), nasycenie (\textit{Saturation}), jasność (\textit{Value}).
+    \item[Model YCrCb] - Model przestrzeni barw oddzielający luminancję (\textit{Y}) od chrominancji (\textit{Cr, Cb}).
+    \item[K-means] - Algorytm grupowania danych, używany m.in. do segmentacji obrazów na podstawie kolorów.
+    \item[Watershed] - Algorytm segmentacji obrazów oparty na analizie gradientów, wydzielający regiony o podobnych właściwościach.
 \end{itemize}

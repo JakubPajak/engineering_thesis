@@ -8,7 +8,7 @@ Omówione zostaną najważniejsze zasady funkcjonowania enkoderów kwadraturowyc
 W dalszej części omówiono wybrane algorytmy z zakresu wizji komputerowej, takie jak detekcja krawędzi i rozpoznawanie kolorów, które stanowią istotne elementy systemu wizyjnego robota.
 
 \section{Enkodery}
-Enkodery są urządzeniami pomiarowymi, które umożliwiają śledzenie ruchu obrotowego lub liniowego. W zastosowaniach z zakresu robotyki, takich jak opisywana platforma mobilna, enkodery umożliwiają śledzenie oraz manipulowanie prędkością lub położeniem robota w przestrzeni dwuwymiarowej. Monitorowanie położenia robota za pomocą między innymi odczytów impulsów z enkoderów stanowi podstawę szerokiej dziedziny robotyki mobilnej - odometrii. W zależności od potrzeb, dodatkowym sensorem możliwym do wykorzystania jest czujnik żyroskopowy IMU - zwracający wartości przyspieszeń liniowych oraz kątowych. W tym projekcie zostały wykorzystane jedynie enkodery, ze względu na sposób poruszania się robota. 
+Enkodery są urządzeniami pomiarowymi, które umożliwiają śledzenie ruchu obrotowego lub liniowego. W zastosowaniach z zakresu robotyki, takich jak opisywana platforma mobilna, enkodery umożliwiają śledzenie oraz manipulowanie prędkością lub położeniem robota w przestrzeni dwuwymiarowej. Monitorowanie położenia robota za pomocą między innymi odczytów impulsów z enkoderów stanowi podstawę szerokiej dziedziny robotyki mobilnej - odometrii. W zależności od potrzeb, dodatkowym sensorem możliwym do wykorzystania jest czujnik żyroskopowy IMU (ang. \english{Inertial Measurement Unit}) - zwracający wartości przyspieszeń liniowych oraz kątowych. W tym projekcie zostały wykorzystane jedynie enkodery, ze względu na sposób poruszania się robota. 
 
 Enkodery dzielą się na enkodery optyczne, magnetyczne i mechaniczne, w zależności od zastosowanej technologii detekcji. Szczególna uwaga zostanie poświęcona enkoderom magnetycznym umożliwiających detekcję kierunku ruchu - enkoderom kwadraturowym. 
 
@@ -55,7 +55,7 @@ U_H = \frac{I B}{n \cdot q \cdot d}
 
 Enkodery kwadraturowe są szeroko stosowane do precyzyjnego pomiaru prędkości i kąta obrotu silnika oraz umożliwiają określanie kierunku ruchu. W magnetycznych enkoderach kwadraturowych, zbudowanych w oparciu o efekt Halla, umieszcza się dwa czujniki Halla rozmieszczone pod kątem 90° względem siebie [\ref{rys2:encoders-sample}]. Podczas obrotu wału silnika wraz z magnesem, pole magnetyczne ulega zmianie wraz z obrotem, co powoduje zmiany w napięciu Halla i dalej do generowania impulsów oznaczających ruch silnika. 
 
-Zastosowanie jednego czujnika umożliwia wykrycie ruchu oraz zliczanie ilości impulsów generowanych przez obrót. Pewnym mankamentem wykorzystania tylko jednego czujnika jest brak możliwości wykrycia kierunku obrotu. Dzięki dodaniu drugiego sensora Halla, kierunek ruchu można wykryć na podstawie odczytu sygnału generowanego przez enkoder, ponieważ jeden z kanałów enkodera jako pierwszy zwróci stan wysoki, co będzie oznaczało obrót w konkretną stronę. Wizualizacja sygnału generowanego przez enkoder kwadraturowy znajduje się na grafice [\ref{rys2:encoders-graf}].
+Zastosowanie jednego czujnika umożliwia wykrycie ruchu oraz zliczanie ilości impulsów generowanych przez obrót. Pewnym mankamentem wykorzystania tylko jednego czujnika jest brak możliwości wykrycia kierunku obrotu. Dzięki dodaniu drugiego sensora Hall' a, kierunek ruchu można wykryć na podstawie odczytu sygnału generowanego przez enkoder, ponieważ jeden z kanałów enkodera jako pierwszy zwróci stan wysoki, co będzie oznaczało obrót w konkretną stronę. Wizualizacja sygnału generowanego przez enkoder kwadraturowy znajduje się na grafice [\ref{rys2:encoders-graf}].
 
 Wysoka odporność na zużycie mechaniczne oraz stabilność działania w trudnych warunkach środowiskowych, takich jak wysoka wilgotność lub zapylenie, czynią magnetyczne enkodery kwadraturowe bardziej niezawodnymi niż ich optyczne odpowiedniki. Cechy te sprawiają, że magnetyczne enkodery kwadraturowe są szczególnie atrakcyjne w zastosowaniach przemysłowych oraz robotycznych, gdzie kluczowe są trwałość i precyzja.
 
@@ -178,7 +178,7 @@ Regulacja parametrów $K_p$, $K_i$ i $K_d$ pozwala na dostosowanie charakterysty
 
 \subsection{Działanie regulatora PID}
 
-Działanie regulatora PID opiera się na przetwarzaniu sygnału uchybu $e(t)$, różnicy między wartością zadaną $w(t)$ a wartością rzeczywistą $y(t)$ wielkości regulowanej:
+Działanie regulatora PID opiera się na przetwarzaniu sygnału uchybu $e(t)$, różnicy między wartością zadaną $y_{set}$ a wartością rzeczywistą $y(t)$ wielkości regulowanej:
 
 \begin{equation}
 e(t) = y_{set} - y(t) .

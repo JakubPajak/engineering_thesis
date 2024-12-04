@@ -23,6 +23,8 @@
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Zdjęcie przedstawiające przetwornicę Step-down S13V30F5}}{13}{figure.caption.22}%
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Zdjęcie przedstawiające przykładowe ogniwa litowo-jonowe rodziny 16850}}{13}{figure.caption.24}%
 \addvspace {10\p@ }
+\babel@toc {british}{}\relax 
+\babel@toc {polish}{}\relax 
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Rysunek przedstawiający zasadę działania czujnika Hall' a \blx@tocontentsinit {0}\cite {bib:hall_net}}}{18}{figure.caption.25}%
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Rysunek przedstawiający ideową budowę enkodera kwadraturowego oraz sygnały przez niego generowane \blx@tocontentsinit {0}\cite {bib:encoders-pid}}}{18}{figure.caption.26}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Przykładowy wygląd enkodera opartego o efekt Hall' a z oznaczonymi tranzystorami wykrywającymi zmiany pola magnetycznego podczas obrotu wału \blx@tocontentsinit {0}\cite {bib:botland-hall}}}{18}{figure.caption.27}%
@@ -76,9 +78,6 @@
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Zdjęcie przedstawiające stację dokującą oraz miejsce docelowe}}{60}{figure.caption.75}%
-\addvspace {10\p@ }
-\babel@toc {british}{}\relax 
-\babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
 \addvspace {10\p@ }
@@ -86,4 +85,5 @@
 \babel@toc {polish}{}\relax 
 \babel@toc {british}{}\relax 
 \babel@toc {polish}{}\relax 
+\addvspace {10\p@ }
 \addvspace {10\p@ }
