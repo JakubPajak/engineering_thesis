@@ -97,7 +97,7 @@ W tej sekcji opisano kluczowe elementy aplikacji, w tym konfigurację pinów, al
 
 W kontrolerze skonfigurowano piny odpowiadające za obsługę enkoderów oraz sterowanie kierunkiem i prędkością silników za pomocą sygnałów PWM. Poniższy kod definiuje przypisanie pinów do odpowiednich funkcji, takich jak odczyt kanałów enkoderów oraz wyjść sterujących silnikami:
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \begin{lstlisting}
     // Encoders pins
@@ -121,7 +121,7 @@ W kontrolerze skonfigurowano piny odpowiadające za obsługę enkoderów oraz st
 
 Algorytm sterowania PID odpowiada za utrzymanie zadanej prędkości kątowej każdego z silników poprzez dostosowanie sygnału PWM. Wyjście regulatora PID jest obliczane na podstawie bieżącego błędu pozycji enkodera, wartości całki i pochodnej błędu. Parametry regulatora, takie jak wzmocnienie proporcjonalne (\texttt{Kp}), całkujące (\texttt{Ki}) oraz różniczkujące (\texttt{Kd}), zostały dobrane empirycznie i wynoszą:
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \begin{lstlisting}
     float Kp = 1.0; 
@@ -134,7 +134,7 @@ Algorytm sterowania PID odpowiada za utrzymanie zadanej prędkości kątowej ka�
 
 Na podstawie obliczonego błędu funkcja \texttt{performDrive()} dokonuje aktualizacji sygnału sterującego dla każdego silnika, uwzględniając przy tym warunki zatrzymania po osiągnięciu zadanej pozycji. Wartość wyjścia jest ograniczana do przedziału \( \pm 70 \), aby zapobiec zbyt dużemu skokowi napięcia sterującego:
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \begin{lstlisting}
     float error1 = targetCountsWheelRight - abs(pos1);
@@ -172,7 +172,7 @@ Dodatkowo został wykorzystany globalny marker \textit{stopCond1} odpowiedzialny
 
 Dla uzyskania dokładnych odczytów pozycji, w kontrolerze zastosowano obsługę przerwań na pinach podłączonych do enkoderów. Funkcje \texttt{readEncoder1()} i \texttt{readEncoder2()} zliczają impulsy z enkoderów, aktualizując wartość liczników pozycji. W ten sposób każda zmiana sygnału na kanale enkodera jest przetwarzana w czasie rzeczywistym, co umożliwia precyzyjne śledzenie pozycji kół:
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \begin{lstlisting}   
   void readEncoder1() {
@@ -211,7 +211,7 @@ Odczyt z magistrali szeregowej odbywa się w momencie, gdy są możliwe do odczy
 
 Fragment kodu realizujący odczyt znajduje się poniżej.
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \begin{lstlisting}
     if (Serial.available() >= 2) {  
@@ -242,7 +242,7 @@ W kolejnych instrukcjach warunkowych znajdują się wywołania odpowiednich funk
 
 Fragment realizujący zarządzanie zadaniami znajduje się poniżej. 
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \begin{lstlisting}
     if(movementType == 1 && targetCounts != 0){
@@ -288,7 +288,7 @@ Funkcja \texttt{mainTask()} pełni rolę głównej pętli zarządzającej dział
 
 W poniższym kodzie, fragment wstępny inicjalizuje odpowiednie elementy biblioteki \texttt{threading}, takie jak flaga statusu \texttt{status} (typ \texttt{Event}), która umożliwia asynchroniczne monitorowanie stanu zakończenia poszczególnych zadań, co pozwala na bezpieczne zakończenie każdego procesu:
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \begin{lstlisting}
 import threading
@@ -318,7 +318,7 @@ Tryb automatyczny, aktywowany wyborem opcji 1, uruchamia niezależny wątek kont
 
 Wątek \texttt{auto\_control\_thread} jest uruchamiany wewnątrz instrukcji \texttt{try-except}, co zabezpiecza program przed niespodziewanymi wyjątkami w trakcie jego działania, jak pokazano poniżej:
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \begin{lstlisting}
 if choice == '1':
@@ -347,7 +347,7 @@ Opcja 2, reprezentująca tryb manualny, jest zarezerwowana na dalszą implementa
 
 Opcja 3 natomiast uruchamia wątek \texttt{camera\_module\_task}, który włącza panel operatorski z wizualizacją kamery przy użyciu biblioteki OpenCV. Działa on poprzez funkcję \texttt{start\_web\_app\_task()}, która inicjalizuje obiekt klasy \texttt{WebAppVisu} i wywołuje metodę \texttt{run()} odpowiedzialną za uruchomienie serwera aplikacji wizualizacyjnej. Wybór trybu ręcznego i uruchomienie panelu operatorskiego przedstawiono poniżej:
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \begin{lstlisting}
 elif choice == '3':
@@ -366,7 +366,7 @@ elif choice == '3':
 
 Wybór opcji 5 inicjuje procedurę zakończenia pracy programu. Zaimplementowana instrukcja warunkowa sprawdza, czy wątek \texttt{auto\_control\_thread} jest aktywny. W przypadku jego działania ustawiany jest \texttt{status} jako zakończony, co umożliwia bezpieczne zamknięcie wątku poprzez wywołanie metody \texttt{join()}, a następnie bezpieczne zamknięcie aplikacji.
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \begin{lstlisting}
 elif choice == '5':
@@ -386,7 +386,7 @@ Funkcja \texttt{start\_auto\_control\_task()} inicjuje działanie klasy \texttt{
 
 Dodatkowo, funkcja \texttt{start\_web\_app\_task()} inicjuje aplikację wizualizacyjną \texttt{WebAppVisu}, umożliwiającą przesyłanie i odbiór danych z kamery robota, co daje operatorowi podgląd w czasie rzeczywistym.
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \begin{lstlisting}
 def start_auto_control_task(serial_com, status):
@@ -409,7 +409,7 @@ Komunikacja szeregowa między jednostką sterującą (Raspberry Pi) a mikrokontr
 
 Klasa \texttt{SerialCommunication} otwiera połączenie szeregowe na wybranym porcie (w tym przypadku \texttt{/dev/ttyUSB0}) oraz ustawia szybkość transmisji (baud rate) na poziomie 250000 bps, co pozwala na szybkie przesyłanie danych w czasie rzeczywistym. Podczas inicjalizacji sprawdzane jest, czy port został otwarty poprawnie, a następnie następuje reset buforów wejściowego i wyjściowego w celu zapewnienia spójności przesyłanych danych.
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \begin{lstlisting}
 def __init__(self):
@@ -429,7 +429,7 @@ def __init__(self):
 
 Metoda \texttt{send\_data} w klasie \texttt{SerialCommunication} odpowiada za przesyłanie preformatowanych instrukcji (dwubajtowych ramek binarnych) do Arduino. Funkcja przyjmuje jako argument \texttt{bytearray}, który reprezentuje ramkę danych składającą się z informacji dotyczących typu oraz parametrów ruchu robota. Każda ramka binarna jest zapisywana bezpośrednio do portu szeregowego jako surowe dane binarne, co zapewnia, że dane przesyłane są dokładnie w formacie oczekiwanym przez Arduino, bez dodatkowych konwersji.
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \begin{lstlisting}
 def send_data(self, data):
@@ -449,7 +449,7 @@ Po wysłaniu ramki \texttt{send\_data} oczekuje na potwierdzenie zakończenia za
 
 W przypadku obecności danych w buforze, metoda odczytuje zawartość jako strumień bajtów, konwertuje na tekst i sprawdza, czy zawiera on potwierdzenie zakończenia. Jeśli Arduino przesłało frazę \texttt{"FINISH"}, metoda zwraca wartość \texttt{True}, co wskazuje, że zadanie zostało wykonane pomyślnie. W przeciwnym razie, jeśli brak jest danych w buforze lub wystąpił błąd, metoda zwraca \texttt{False}.
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \begin{lstlisting}
 # Sprawdź, czy są dostępne dane do odczytu
@@ -479,7 +479,7 @@ Komunikacja szeregowa między Raspberry Pi a Arduino, mimo że jest stosunkowo n
 
 Dzięki temu rozwiązaniu aplikacja jest bardziej odporna na nieprzewidziane błędy i może odpowiednio reagować w sytuacjach awaryjnych, takich jak utrata łączności.
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \begin{lstlisting}
     except Exception as e:
@@ -498,7 +498,7 @@ Moduł kamery odpowiedzialny jest za detekcję klocków oraz rozpoznawanie ich k
 
 Aby zidentyfikować kolory klocków, każdy kolor definiowany jest przez odpowiedni zakres wartości HSV. Zakresy te określają dolną i górną granicę składowych H (Hue), S (Saturation) i V (Value), umożliwiając tworzenie masek kolorystycznych, które izolują wybrane kolory w obrazie.
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \begin{lstlisting}
 colors = {
@@ -519,7 +519,7 @@ Funkcja \texttt{find\_color} przetwarza obraz w przestrzeni HSV w celu detekcji 
 
 Dla każdego wykrytego konturu obliczane są jego momenty, co umożliwia wyznaczenie środka masy (współrzędnych \texttt{cx} oraz \texttt{cy}). Jeśli kolorowy kontur zostanie wykryty, funkcja zwraca kontur oraz jego położenie, co pozwala na dalsze przetwarzanie w klasie \texttt{CameraModule}.
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \begin{lstlisting}
 def find_color(frame, points):
@@ -547,7 +547,7 @@ Po przekształceniu obrazu na odcienie szarości generowany jest binarny obraz p
 
 Po rozpoznaniu kwadratu obliczane są jego momenty w celu określenia współrzędnych środka. Kwadraty oznaczane są zielonym konturem oraz etykietą „Square”, co pozwala na wizualne potwierdzenie ich detekcji w obrazie.
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \begin{lstlisting}
 for contour in contours:
@@ -571,7 +571,7 @@ for contour in contours:
 
 Wyniki detekcji są wizualizowane w czasie rzeczywistym na przechwyconym obrazie. Dla każdego zidentyfikowanego koloru rysowany jest kontur, etykieta koloru oraz punkt w centrum kształtu. W przypadku rozpoznania kwadratu, wokół konturu rysowana jest zielona ramka, a w jego środku wyświetlana etykieta „Square”. Proces przetwarzania kontynuowany jest w pętli, co pozwala na analizę kolejnych klatek obrazu w czasie rzeczywistym, aż do momentu zatrzymania programu.
 
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \begin{lstlisting}
 cv2.drawContours(frame, [c], -1, display_color, 3)

@@ -18,7 +18,7 @@
 \usepackage{listings}
 \lstset{%
 morekeywords={string,exception,std,vector},% słowa kluczowe rozpoznawane przez pakiet listings
-language=C++,% C, Matlab, Python, SQL, TeX, XML, bash, ... – vide https://www.ctan.org/pkg/listings
+language=C++, Python, bash % C, Matlab, Python, SQL, TeX, XML, bash, ... – vide https://www.ctan.org/pkg/listings
 commentstyle=\textit,%
 identifierstyle=\textsf,%
 keywordstyle=\sffamily\bfseries, %\texttt, %
@@ -32,6 +32,15 @@ breaklines=true,%
 escapeinside={@*}{*@},%
 }
 
+\usepackage{float}
+
+\tolerance=1 
+\emergencystretch=\maxdimen 
+\hyphenpenalty=10000 
+\hbadness=10000
+
+% \usepackage[draft,nosingleletter]{impnattypo}
+% \babelprovide[transforms = oneletter.nobreak]{polish} 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % pakiet minted

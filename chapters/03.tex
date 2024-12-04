@@ -18,96 +18,97 @@ Wymagania funkcjonalne odnoszą się do kluczowych funkcji systemu, które musz�
 
 Diagram UML (ang. \english{Unified Modelling Language} - zunifikowany język modelowania) [\ref{rys1:schemat_uml}] zawiera schemat funkcjonalny aplikacji. Wyszczególniono na nim najważniejsze funkcjonalności oraz prawdopodobne zdarzenia. Szczegółowa obsługa błędów na poszczególnych etapach nie została wprowadzona ze względu na chęć utrzymania dobrego poziomu czytelności schematu. 
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
-    \includegraphics[angle=90,origin=c,width=0.6\textwidth]{./graf/uml.png}
+    \includegraphics[angle=90,origin=c,width=0.5\textwidth]{./graf/uml.png}
     \caption{Schemat UML zawierający podstawowe funkcjonalności}
     \label{rys1:schemat_uml}
 \end{figure}
 
 \section{Opis wykorzystanego sprzętu elektronicznego}
-W poniższej sekcji znajduje się zestawienie oraz krótki opis najważniejszych elementów składających się na robota mobilnego wraz. Wybrane elementy zdaniem autora możliwie dobrze optymalizują stosunek kosztów do skuteczności systemu. 
+\label{sek:opis-sprzetu}
+W sekcji [\ref{sek:opis-sprzetu}] znajduje się zestawienie oraz krótki opis najważniejszych elementów składających się na robota mobilnego wraz. Wybrane elementy zdaniem autora możliwie dobrze optymalizują stosunek kosztów do skuteczności systemu. 
 
 \subsubsection*{Raspberry Pi Model 4B}
-Raspberry Pi 4B [\ref{zdj:raspi}] pełni rolę głównej jednostki obliczeniowej robota mobilnego. Dzięki czterordzeniowemu procesorowi Cortex-A72 oraz obsłudze 4GB pamięci podręcznej RAM, jest wystarczająco wydajny, aby przetwarzać dane z kamery w czasie rzeczywistym oraz kontrolować pracę robota. Dodatkowym atutem jest relatywnie prosta integracja z urządzeniami zewnętrznymi takimi jak kamera oraz możliwość wykorzystania dedykowanego systemu operacyjnego - RaspbianOS. Niewielkie rozmiary oraz bardzo duże możliwości powiązane ze stosunkowo prostym użytkowaniem i niską ceną zaważyło na decyzji o wyborze tego układu SBC. 
+Raspberry Pi 4B [\ref{zdj:raspi}] pełni rolę głównej jednostki obliczeniowej robota mobilnego. Dzięki czterordzeniowemu procesorowi Cortex-A72 oraz obsłudze 4GB pamięci podręcznej RAM, jest wystarczająco wydajny, aby przetwarzać dane z kamery w czasie rzeczywistym oraz kontrolować pracę robota. Dodatkowym atutem jest relatywnie prosta integracja z urządzeniami zewnętrznymi takimi jak kamera oraz możliwość wykorzystania dedykowanego systemu operacyjnego - RaspbianOS. Niewielkie rozmiary oraz duże możliwości powiązane ze stosunkowo prostym użytkowaniem i niską ceną zaważyły na decyzji o wyborze tego układu SBC. 
 
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{./graf/raspi-4b.png}
+    \caption{Układ SBC Raspberry Pi Model 4B}
     \label{zdj:raspi}
-    \caption{Zdjęcie przedstawiające układ SBC Raspberry Pi Model 4B}
 \end{figure}
 
 \subsubsection*{Arduino UNO R3}
 Arduino UNO R3 [\ref{zdj:arduino-r3}] zostało wybrane w celu wykorzystania go jako kontroler silników oraz enkoderów. Mikrokontroler ten bazuje na układzie elektronicznym ATMega328P, pozwalając na efektywną obsługę wszystkich podstawowych funkcjonalności. Dużym atutem tego mikrokontrolera jest prostota programowania w środowisku Arduino IDE oraz stosunkowo niska cena. Dodatkową zaletą jest duża dostępność porad oraz poradników ze względu na bardzo duża popularność układu. 
 
-\begin{figure}[h!]
+\begin{figure}[H]
         \centering
         \includegraphics[width=0.6\textwidth]{./graf/arduino-r3.png}
+        \caption{Mikrokontroler Arduino UNO R3}
         \label{zdj:arduino-r3}
-        \caption{Zdjęcie przedstawiające mikrokontroler Arduino UNO R3}
 \end{figure}
 
 \subsubsection*{Cytron MDD10A}
 Cytron MDD10A [\ref{zdj:cytron}] to wydajny sterownik silników prądu stałego, zaprojektowany do obsługi silników o wysokim prądzie, do 10 A na kanał. W przypadku zablokowania silników maksymalne natężenie prądu płynące z ogniw litowo-jonowych mogłoby uszkodzić sterownik o niższych możliwych wartościach chwilowych prądu. Dodatkowo sterownik lepszej jakości niż najtańsze proste mostki typu H umożliwia większą precyzję w sterowaniu prędkością obrotową silników. 
 
 
-\begin{figure}[h!]
+\begin{figure}[H]
         \centering
         \includegraphics[width=0.6\textwidth]{./graf/cytron-mdd10a.png}
+        \caption{Sterownik silników Cytron MDD10A}
         \label{zdj:cytron}
-        \caption{Zdjęcie przedstawiające sterownik silników Cytron MDD10A}
 \end{figure}
 
 \subsubsection*{Kamera Sony IMX519 16Mpx}
 Wybór kamery Sony IMX519 [\ref{zdj:kamera-sony}] był motywowany wysoką kompatybilnością z mikrokomputerem Raspberry Pi. Kamera cechuje się małymi rozmiarami, co było konieczne dla rozważanej konstrukcji. Dodatkowo układ akwizycji obrazu przesyła dane poprzez dedykowaną magistralę szeregową do przesyłu wizji - CSI. Kolejnym atutem jest wysoka rozdzielczość, co sprawia, że w przypadku implementacji bardziej zaawansowanych metod przetwarzania obrazu nie wystąpią problemy spowodowane niską jakością obrazu. 
 
-\begin{figure}[h!]
+\begin{figure}[H]
         \centering
         \includegraphics[width=0.5\textwidth]{./graf/kamera-sony.png}
+        \caption{Kamera Sony IMX519}
         \label{zdj:kamera-sony}
-        \caption{Zdjęcie przedstawiające kamerę Sony IMX519}
 \end{figure}
 
 \subsubsection*{Silniki DC Pololu 20,4:1 12V HP 25Dx65L}
 Klasyczne szczotkowe silniki prądu stałego firmy Pololu [\ref{zdj:silnik-pololu}] wyposażone w enkodery kwadraturowe opierają się na efekcie Halla, co zapewnia precyzję pomiaru przebytej drogi i prędkości obrotowej. Przekładnia 20,4:1 umożliwia osiągnięcie odpowiedniej siły przy jednoczesnym zachowaniu wymaganej prędkości robota. Wyższa jakość wykonania zapewnia mniejsze błędy natury mechanicznej, dzięki czemu platforma mobilna może wykonywać pracę bardziej efektywnie. 
 
-\begin{figure}[h!]
+\begin{figure}[H]
         \centering
         \includegraphics[width=0.4\textwidth]{./graf/silnik-pololu.png}
+        \caption{Silnik DC firmy Pololu z wbudowanymi enkoderami}
         \label{zdj:silnik-pololu}
-        \caption{Zdjęcie przedstawiające silnik DC firmy Pololu z wbudowanymi enkoderami}
 \end{figure}
 
 \subsubsection*{Serwomechanizm DS3218 MG wraz z chwytakiem}
 Serwomechanizm DS3218 MG wraz z metalowym chwytakiem [\ref{zdj:gripper}] został wykorzystany do realizacji ruchu chwytaka robota. Dzięki metalowym przekładniom oraz momentowi obrotowemu wynoszącemu aż 20 kg/cm, jest w stanie niezawodnie wykonywać zadania, takie jak chwytanie i przenoszenie przedmiotów. Dodatkowym atutem jest łatwa integracja z mikrokontrolerem Arduino dzięki prostemu sterowaniu za pomocą sygnału PWM. 
 
 
-\begin{figure}[h!]
+\begin{figure}[H]
         \centering
         \includegraphics[width=0.6\textwidth]{./graf/gripper.png}
+        \caption{Metalowy chwytak oraz serwomechanizm DS3218 MG}
         \label{zdj:gripper}
-        \caption{Zdjęcie przedstawiające metolowy chwytak oraz serwomechanizm DS3218 MG}
 \end{figure}
 
 \subsubsection*{Przetwornica Step-Up/Step-Down 5V S13V30F5}
 Wykorzystanie dobrej jakości przetwornicy typu Step-Down [\ref{zdj:step-down}] było kluczowe z perspektywy wewnętrznego zasilania mikrokomputera Raspberry Pi, ponieważ jest on wrażliwy na wahania napięcia zasilania, co mogłoby skutkować nagłym przerwaniem pracy robota. Ponadto w celu minimalizacji wagi, jest to zdecydowanie bardziej efektywne niż na przykład wykorzystanie magazynu energii wyprowadzającego napięcie poprzez złącze USB (ang. \english{powerbank}). 
 
-\begin{figure}[h!]
+\begin{figure}[H]
         \centering
         \includegraphics[width=0.4\textwidth]{./graf/step-down.png}
+        \caption{Przetwornica typu Step-down/Step-up S13V30F5}
         \label{zdj:step-down}
-        \caption{Zdjęcie przedstawiające przetwornicę Step-down S13V30F5}
 \end{figure}
 
 \subsubsection*{Ogniwa litowo-jonowe typu 16850}
 Pakiet czterech ogniw litowo-jonowych 18650 [\ref{zdj:ogniwa}] połączonych szeregowo zapewnia odpowiednią pojemność i napięcie wymagane do zasilania robota. Wybór tego typu ogniw wynika z ich wysokiej gęstości energii, długiej żywotności oraz możliwości łatwego ładowania i wymiany.
 
-\begin{figure}[h!]
+\begin{figure}[H]
         \centering
         \includegraphics[width=0.3\textwidth]{./graf/ogniwa.png}
+        \caption{Przykładowe ogniwa litowo-jonowe rodziny 16850}
         \label{zdj:ogniwa}
-        \caption{Zdjęcie przedstawiające przykładowe ogniwa litowo-jonowe rodziny 16850}
 \end{figure}
 
 \clearpage

@@ -19,7 +19,7 @@ Powodem takiego niepożądanego działania był warunek zakończenia pracy silni
 W związku z powyższym, została dodana flaga widoczna w spisie [\ref{fig:pseudokod:pid}], zapewniająca poprawność działania kodu w każdych warunkach. Jeżeli silnik raz osiągną wartość założoną, flaga uniemożliwia ponowne wejście programu do wznowienia pracy silnika. Stan zmiennej binarnej zostaje zmieniony dopiero po otrzymaniu nowych instrukcji z komputera nadrzędnego. 
 
 \subsection{Błąd odbierania i wysyłania poleceń}
-Podczas testów przeprowadzonych w fazie pierwszej, zaobserwowane zostało problematyczne zachowanie komunikacji między SBC Raspberry Pi a kontrolerem silników Ardunino UNO R3. Błąd polegał na zbyt wczesnym wysyłaniu kolejnych poleceń. Z pozoru łatwy do rozwiązania problem, okazał się nie tak trywialny. 
+Podczas testów przeprowadzonych w fazie pierwszej, zaobserwowane zostało problematyczne zachowanie komunikacji między SBC Raspberry Pi a kontrolerem silników Arduino UNO R3. Błąd polegał na zbyt wczesnym wysyłaniu kolejnych poleceń. Z pozoru łatwy do rozwiązania problem, okazał się nie tak trywialny. 
 
 Pierwsza wersja komunikacji polegała na stałym opóźnieniu z wykorzystaniem metody dostarczanej przez klasę \english{time} - \textit{sleep()}. Metoda ta umożliwia uśpienie wątku na określony czas (w sekundach). To podejście ma bardzo poważną wadę - jest nieelastyczne względem wysyłanych komunikatów. Oznacza to, że niezależnie od odległości jaką robot ma przebyć, kolejna komenda zostanie wysłana na przykład po czterech sekundach. 
 
@@ -45,7 +45,7 @@ Po zastosowaniu jednego kanału enkodera, opisane problemy zostały zmniejszone,
 
 \hspace{1cm}
 
-Dodatkowo ze względu na nieidealną dokładność, autor wprowadził koncepcję stacji dokujących [\ref{fig:stacja}] znajdujących się bezpośrednio przed podajnikiem oraz miejscami docelowymi. Umożliwiają one korekcję toru jazdy, tym samym niwelując błędy powstałe podczas pracy robota. Podobne podejście zostało wymienione w znanej pracy naukowców z Uniwersytetu w Michigan pod tytułem "Where am I", co po polsku znaczy "Gdzie jestem?"\cite{bib:where-am-i}. Wynika z niej, że podczas implementacji algorytmów sterowania opierających się jedynie na odczytach z enkoderów małe błędy, w przypadku powyższego projektu poniżej 1\%, potęgują się w czasie, co uniemożliwia długofalową pracę bez wsparcia na przykład wcześniej wymienionych stacji dokujących.  
+Dodatkowo ze względu na nieidealną dokładność, autor wprowadził koncepcję stacji dokujących [\ref{fig:stacja}] znajdujących się bezpośrednio przed podajnikiem oraz miejscami docelowymi. Umożliwiają one korekcję toru jazdy, tym samym niwelując błędy powstałe podczas pracy robota. Podobne podejście zostało wymienione w znanej pracy naukowców z Uniwersytetu w Michigan pod tytułem ,,Where am I'', co po polsku znaczy ,,Gdzie jestem?'' \cite{bib:where-am-i}. Wynika z niej, że podczas implementacji algorytmów sterowania opierających się jedynie na odczytach z enkoderów małe błędy, w przypadku powyższego projektu poniżej 1\%, potęgują się w czasie, co uniemożliwia długofalową pracę bez wsparcia na przykład wcześniej wymienionych stacji dokujących.  
 
 \begin{figure}
     \centering
