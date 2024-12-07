@@ -151,7 +151,8 @@ Ten składnik regulatora poprawia stabilność i tłumi oscylacje, jednak zbyt d
 Łącząc wszystkie trzy składniki, równanie regulatora PID przyjmuje postać:
 
 \begin{equation}
-u(t) = K_p e(t) + K_i \int_{0}^{t} e(\tau) d\tau + K_d \frac{de(t)}{dt}
+    u(t) = K_p e(t) + K_i \int_{0}^{t} e(\tau) d\tau + K_d \frac{de(t)}{dt}
+    \label{eq:pid-ideal}
 \end{equation}
 
 , gdzie:
@@ -160,6 +161,7 @@ u(t) = K_p e(t) + K_i \int_{0}^{t} e(\tau) d\tau + K_d \frac{de(t)}{dt}
     \item $K_i \int_{0}^{t} e(\tau) d\tau$ – składnik całkujący, który eliminuje uchyb statyczny,
     \item $K_d \frac{de(t)}{dt}$ – składnik różniczkujący, który przeciwdziała nagłym zmianom uchybu.
 \end{itemize}
+
 
 Często ze względu na relatywnie prostsze obliczenia, szczególnie podczas analizy stabilności oraz wyznaczania charakterystyk dynamicznych stosuje się postać operatorową (przekształcając równanie w postaci czasowej za pomocą operatora Laplace’a [\mathcal{L}]) regulatora PID. 
 
@@ -172,6 +174,23 @@ Często ze względu na relatywnie prostsze obliczenia, szczególnie podczas anal
     \item $E(s)$ - uchyb w dziedzinie operatorowej,
     \item $K_p, K_i, K_d$ wartości wzmocnienień odpowiednich członów.
 \end{itemize}
+
+\hspace*{}
+
+Równanie [\ref{eq:pid-ideal}] przedstawia model matematyczny idealnego regulatora. Jednak ze względu na realia elementów wykonawczych, elektronicznych i wielu innych czynników pochodzenia naturalnego, wzór ten nie sprawdza się dobrze w praktyce. W związku z powyższym stosuje się równanie rzeczywiste regulatora PID, dane wzorem [\ref{eq:pid-real}].
+
+\begin{equation}
+    U(s) = k_p [ 1 + \frac{1}{T_i s} + \frac{T_d s}{T_d s + 1}]
+    \label{eq:pid-real}
+\end{equation}
+
+, gdzie:
+\begin{itemize}
+    \item \(k_p\) - wzmocnienie regulatora PID,
+    \item \(T_i\) - stała czasowa składowej całkującej,
+    \item \(T_d\) - stała czasowa składowej różniczkującej.
+\end{itemize}
+
 
 
 Regulacja parametrów $K_p$, $K_i$ i $K_d$ pozwala na dostosowanie charakterystyki regulatora PID do specyfiki sterowanego obiektu. Optymalne wartości tych parametrów zazwyczaj są dobierane metodą prób i błędów lub za pomocą metod takich jak strojenie Zieglera-Nicholsa.
@@ -191,6 +210,12 @@ członem całkującym) nie gwarantuje uzyskania uchybu równego zero.
 \subsection{Zastosowanie regulatora PID w sterowaniu robotem mobilnym}
 
 W omawianym projekcie regulator PID znajduje zastosowanie w kontrolowaniu odległości jaką pokonuje platforma mobilna poprzez odpowiednie sterowanie napięciem zasilania elementów wykonawczych. Nastawy regulatora zostały dostosowane metodą prób i błędów. Uzyskana jakość regulacji jest wystarczająca do spełnienia wymagań projektowych. 
+
+\section{Metoda Eulera}
+
+W metodach numerycznych bardzo często stosuje się metody przybliżonego rozwiązywania równań różniczkowych zwyczajnych. Jedną z takich metod jest algorytm Eulera. Jest on wygodną i mało obciążającą obliczeniowo metodą, opierającą się na rekurencyjnym obliczaniu wartości funkcji bazując na pewnym niedużym przyroście jednostki czasu. 
+
+
 
 \section{Napęd różnicowy}
 
@@ -230,7 +255,7 @@ W bazowym układzie współrzędnych przemieszczenie robota opisują równania [
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{./graf/diff-drive.png}
+    \includegraphics[width=0.55\textwidth]{./graf/diff-drive.png}
     \caption{Grafika stanowiąca wizualizację przekształceń kinematyki robota \cite{bib:konferencja}}
 \end{figure}
 

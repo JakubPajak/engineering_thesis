@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.4)  4 DEC 2024 21:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.4)  7 DEC 2024 20:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1491,7 +1491,7 @@ LaTeX Font Info:    Trying to load font information for T1+lmss on input line 2
 (C:\Users\jakub\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<graf/politechnika_sl_logo_bw_pion_pl.pdf, id=330, 179.67125pt x 230.8625pt>
+<graf/politechnika_sl_logo_bw_pion_pl.pdf, id=334, 179.67125pt x 230.8625pt>
 File: graf/politechnika_sl_logo_bw_pion_pl.pdf Graphic file (type pdf)
 <use graf/politechnika_sl_logo_bw_pion_pl.pdf>
 Package pdftex.def Info: graf/politechnika_sl_logo_bw_pion_pl.pdf  used on inpu
@@ -1510,42 +1510,42 @@ ika_sl_logo_bw_pion_pl.pdf>]) [2
 
 ] (main.toc
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-1.
+0.
 
 (C:\Users\jakub\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-1.
+0.
 
 (C:\Users\jakub\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-11.
+10.
 
 (C:\Users\jakub\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-11.
+10.
 
 (C:\Users\jakub\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 11.
+(Font)              <12> on input line 10.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 11.
+(Font)              <8> on input line 10.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 11.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 11.
+(Font)              <6> on input line 10.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 10.
 
 
 (C:\Users\jakub\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 11.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 10.
 
 
 (C:\Users\jakub\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -1562,11 +1562,7 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
- (chapters/09.tex [7] [8
-
-] [9] [10{C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm
-.enc}{C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy
-.enc}]) [11] [12
+ [7] [8
 
 ] (chapters/01.tex
 Rozdzia\l  1.
@@ -1627,12 +1623,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 Rozdzia\l  2.
-<./graf/uml.png, id=535, 1029.8475pt x 434.07169pt>
-File: ./graf/uml.png Graphic file (type png)
-<use ./graf/uml.png>
-Package pdftex.def Info: ./graf/uml.png  used on input line 23.
-(pdftex.def)             Requested size: 1029.845pt x 434.07062pt.
+<./graf/uml1.png, id=517, 794.97pt x 614.295pt>
+File: ./graf/uml1.png Graphic file (type png)
+<use ./graf/uml1.png>
+Package pdftex.def Info: ./graf/uml1.png  used on input line 23.
+(pdftex.def)             Requested size: 455.24411pt x 351.79211pt.
 [7]
+<./graf/raspi-4b.png, id=526, 984.67876pt x 679.78969pt>
+File: ./graf/raspi-4b.png Graphic file (type png)
+<use ./graf/raspi-4b.png>
+Package pdftex.def Info: ./graf/raspi-4b.png  used on input line 37.
+(pdftex.def)             Requested size: 273.14923pt x 188.57645pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1641,13 +1643,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[8 <./graf/uml.png>]
-<./graf/raspi-4b.png, id=550, 984.67876pt x 679.78969pt>
-File: ./graf/raspi-4b.png Graphic file (type png)
-<use ./graf/raspi-4b.png>
-Package pdftex.def Info: ./graf/raspi-4b.png  used on input line 37.
-(pdftex.def)             Requested size: 273.14923pt x 188.57645pt.
-<./graf/arduino-r3.png, id=552, 967.36406pt x 816.04875pt>
+[8 <./graf/uml1.png>]
+<./graf/arduino-r3.png, id=535, 967.36406pt x 816.04875pt>
 File: ./graf/arduino-r3.png Graphic file (type png)
 <use ./graf/arduino-r3.png>
 Package pdftex.def Info: ./graf/arduino-r3.png  used on input line 47.
@@ -1664,55 +1661,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[9 <./graf/raspi-4b.png>]
-<./graf/cytron-mdd10a.png, id=563, 916.1728pt x 734.745pt>
+[9 <./graf/raspi-4b.png> <./graf/arduino-r3.png>]
+<./graf/cytron-mdd10a.png, id=545, 916.1728pt x 734.745pt>
 File: ./graf/cytron-mdd10a.png Graphic file (type png)
 <use ./graf/cytron-mdd10a.png>
 Package pdftex.def Info: ./graf/cytron-mdd10a.png  used on input line 58.
 (pdftex.def)             Requested size: 273.14923pt x 219.05742pt.
-
-Underfull \vbox (badness 2662) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[10 <./graf/arduino-r3.png> <./graf/cytron-mdd10a.png>]
-<./graf/kamera-sony.png, id=573, 1157.07281pt x 810.77907pt>
+<./graf/kamera-sony.png, id=547, 1157.07281pt x 810.77907pt>
 File: ./graf/kamera-sony.png Graphic file (type png)
 <use ./graf/kamera-sony.png>
 Package pdftex.def Info: ./graf/kamera-sony.png  used on input line 68.
 (pdftex.def)             Requested size: 227.62206pt x 159.49307pt.
-<./graf/silnik-pololu.png, id=575, 1190.19656pt x 1096.84781pt>
-File: ./graf/silnik-pololu.png Graphic file (type png)
-<use ./graf/silnik-pololu.png>
-Package pdftex.def Info: ./graf/silnik-pololu.png  used on input line 78.
-(pdftex.def)             Requested size: 182.09486pt x 167.80043pt.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[11 <./graf/kamera-sony.png> <./graf/silnik-pololu.png>]
-<./graf/gripper.png, id=587, 954.56625pt x 634.62094pt>
-File: ./graf/gripper.png Graphic file (type png)
-<use ./graf/gripper.png>
-Package pdftex.def Info: ./graf/gripper.png  used on input line 89.
-(pdftex.def)             Requested size: 273.14923pt x 181.59511pt.
-<./graf/step-down.png, id=589, 645.91313pt x 643.6547pt>
-File: ./graf/step-down.png Graphic file (type png)
-<use ./graf/step-down.png>
-Package pdftex.def Info: ./graf/step-down.png  used on input line 99.
-(pdftex.def)             Requested size: 182.09486pt x 181.45958pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1725,8 +1684,33 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[12 <./graf/gripper.png>]
-<./graf/ogniwa.png, id=600, 992.95969pt x 998.9822pt>
+[10 <./graf/cytron-mdd10a.png>]
+<./graf/silnik-pololu.png, id=558, 1190.19656pt x 1096.84781pt>
+File: ./graf/silnik-pololu.png Graphic file (type png)
+<use ./graf/silnik-pololu.png>
+Package pdftex.def Info: ./graf/silnik-pololu.png  used on input line 78.
+(pdftex.def)             Requested size: 182.09486pt x 167.80043pt.
+<./graf/gripper.png, id=560, 954.56625pt x 634.62094pt>
+File: ./graf/gripper.png Graphic file (type png)
+<use ./graf/gripper.png>
+Package pdftex.def Info: ./graf/gripper.png  used on input line 89.
+(pdftex.def)             Requested size: 273.14923pt x 181.59511pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[11 <./graf/kamera-sony.png> <./graf/silnik-pololu.png>]
+<./graf/step-down.png, id=573, 645.91313pt x 643.6547pt>
+File: ./graf/step-down.png Graphic file (type png)
+<use ./graf/step-down.png>
+Package pdftex.def Info: ./graf/step-down.png  used on input line 99.
+(pdftex.def)             Requested size: 182.09486pt x 181.45958pt.
+<./graf/ogniwa.png, id=575, 992.95969pt x 998.9822pt>
 File: ./graf/ogniwa.png Graphic file (type png)
 <use ./graf/ogniwa.png>
 Package pdftex.def Info: ./graf/ogniwa.png  used on input line 109.
@@ -1740,7 +1724,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[13 <./graf/step-down.png> <./graf/ogniwa.png>]) (chapters/04.tex
+[12 <./graf/gripper.png> <./graf/step-down.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[13 <./graf/ogniwa.png>]) (chapters/04.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1764,17 +1757,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[16]
-<./graf/halla-enc.jpg, id=628, 372.39125pt x 262.9825pt>
+[16{C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{
+C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
+<./graf/halla-enc.jpg, id=611, 372.39125pt x 262.9825pt>
 File: ./graf/halla-enc.jpg Graphic file (type jpg)
 <use ./graf/halla-enc.jpg>
 Package pdftex.def Info: ./graf/halla-enc.jpg  used on input line 64.
 (pdftex.def)             Requested size: 227.62206pt x 160.75214pt.
 
-
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./graf/enkoders.png, id=631, 1249.66875pt x 581.92406pt>
+<./graf/enkoders.png, id=614, 1249.66875pt x 581.92406pt>
 File: ./graf/enkoders.png Graphic file (type png)
 <use ./graf/enkoders.png>
 Package pdftex.def Info: ./graf/enkoders.png  used on input line 71.
@@ -1782,7 +1775,7 @@ Package pdftex.def Info: ./graf/enkoders.png  used on input line 71.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./graf/enkoder-silnik.png, id=634, 1023.825pt x 858.95906pt>
+<./graf/enkoder-silnik.png, id=617, 1023.825pt x 858.95906pt>
 File: ./graf/enkoder-silnik.png Graphic file (type png)
 <use ./graf/enkoder-silnik.png>
 Package pdftex.def Info: ./graf/enkoder-silnik.png  used on input line 78.
@@ -1808,7 +1801,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [18 <./graf/halla-enc.jpg> <./graf/enkoders.png> <./graf/enkoder-silnik.png>]
-<./graf/regulacja1.png, id=653, 688.5725pt x 223.83624pt>
+<./graf/regulacja1.png, id=638, 688.5725pt x 223.83624pt>
 File: ./graf/regulacja1.png Graphic file (type png)
 <use ./graf/regulacja1.png>
 Package pdftex.def Info: ./graf/regulacja1.png  used on input line 99.
@@ -1872,8 +1865,20 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.164 ...a pomocą operatora Laplace’a [\mathcal
+l.166 ...a pomocą operatora Laplace’a [\mathcal
                                                   {L}]) regulatora PID.
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   !
+l.178 \hspace*{}
+                
+? 
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   !
+l.178 \hspace*{}
+                
 ? 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1885,9 +1890,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [21]
 
-LaTeX Warning: Reference `angular' on page 22 undefined on input line 215.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -1896,11 +1898,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [22]
-<./graf/diff-drive.png, id=688, 1054.6903pt x 968.11688pt>
-File: ./graf/diff-drive.png Graphic file (type png)
-<use ./graf/diff-drive.png>
-Package pdftex.def Info: ./graf/diff-drive.png  used on input line 233.
-(pdftex.def)             Requested size: 318.66948pt x 292.50542pt.
+
+LaTeX Warning: Reference `angular' on page 23 undefined on input line 240.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1910,7 +1909,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[23
+[23]
+<./graf/diff-drive.png, id=680, 1054.6903pt x 968.11688pt>
+File: ./graf/diff-drive.png Graphic file (type png)
+<use ./graf/diff-drive.png>
+Package pdftex.def Info: ./graf/diff-drive.png  used on input line 258.
+(pdftex.def)             Requested size: 250.38564pt x 229.82674pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[24
 
  <./graf/diff-drive.png>]
 
@@ -1921,20 +1935,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[24]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
 [25]
-<./graf/canny-edge.png, id=716, 568.1225pt x 392.46625pt>
+<./graf/canny-edge.png, id=699, 568.1225pt x 392.46625pt>
 File: ./graf/canny-edge.png Graphic file (type png)
 <use ./graf/canny-edge.png>
-Package pdftex.def Info: ./graf/canny-edge.png  used on input line 328.
+Package pdftex.def Info: ./graf/canny-edge.png  used on input line 353.
 (pdftex.def)             Requested size: 273.14923pt x 188.69904pt.
 
 
@@ -1945,7 +1950,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[26 <./graf/canny-edge.png (PNG copy)>]
+[26]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1954,18 +1959,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[27
+[27 <./graf/canny-edge.png (PNG copy)>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[28
 
 ]
-<./graf/rgb-model.png, id=733, 401.5pt x 295.1025pt>
+<./graf/rgb-model.png, id=724, 401.5pt x 295.1025pt>
 File: ./graf/rgb-model.png Graphic file (type png)
 <use ./graf/rgb-model.png>
-Package pdftex.def Info: ./graf/rgb-model.png  used on input line 369.
+Package pdftex.def Info: ./graf/rgb-model.png  used on input line 394.
 (pdftex.def)             Requested size: 273.14923pt x 200.7796pt.
-<./graf/hsv-model.png, id=736, 853.1875pt x 505.89pt>
+<./graf/hsv-model.png, id=727, 853.1875pt x 505.89pt>
 File: ./graf/hsv-model.png Graphic file (type png)
 <use ./graf/hsv-model.png>
-Package pdftex.def Info: ./graf/hsv-model.png  used on input line 376.
+Package pdftex.def Info: ./graf/hsv-model.png  used on input line 401.
 (pdftex.def)             Requested size: 273.14923pt x 161.96529pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1979,11 +1993,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[28 <./graf/rgb-model.png>]
-<./graf/ycrcb-model.png, id=748, 340.8735pt x 248.72925pt>
+[29 <./graf/rgb-model.png>]
+<./graf/ycrcb-model.png, id=740, 340.8735pt x 248.72925pt>
 File: ./graf/ycrcb-model.png Graphic file (type png)
 <use ./graf/ycrcb-model.png>
-Package pdftex.def Info: ./graf/ycrcb-model.png  used on input line 383.
+Package pdftex.def Info: ./graf/ycrcb-model.png  used on input line 408.
 (pdftex.def)             Requested size: 273.14923pt x 199.32524pt.
 ) (chapters/05.tex
 
@@ -1994,20 +2008,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[29 <./graf/hsv-model.png> <./graf/ycrcb-model.png>]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[30
+[30 <./graf/hsv-model.png> <./graf/ycrcb-model.png>]
+Rozdzia\l  4.
+[31
 
 ]
-Rozdzia\l  4.
-[31]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2102,7 +2107,7 @@ ine 15.
 LaTeX Warning: Reference `fig:base-full' on page 40 undefined on input line 45.
 
 
-<./graf/upper.png, id=842, 1099.10625pt x 948.54375pt>
+<./graf/upper.png, id=829, 1099.10625pt x 948.54375pt>
 File: ./graf/upper.png Graphic file (type png)
 <use ./graf/upper.png>
 Package pdftex.def Info: ./graf/upper.png  used on input line 54.
@@ -2120,17 +2125,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [40]
-<./graf/full-close.png, id=848, 1554.55782pt x 797.98125pt>
+<./graf/full-close.png, id=835, 1554.55782pt x 797.98125pt>
 File: ./graf/full-close.png Graphic file (type png)
 <use ./graf/full-close.png>
 Package pdftex.def Info: ./graf/full-close.png  used on input line 61.
 (pdftex.def)             Requested size: 318.66948pt x 163.57503pt.
-<./graf/motor-close.png, id=849, 1506.3778pt x 759.58781pt>
+<./graf/motor-close.png, id=836, 1506.3778pt x 759.58781pt>
 File: ./graf/motor-close.png Graphic file (type png)
 <use ./graf/motor-close.png>
 Package pdftex.def Info: ./graf/motor-close.png  used on input line 69.
 (pdftex.def)             Requested size: 227.62206pt x 114.76776pt.
-<./graf/ball-close.png, id=850, 581.17125pt x 302.63063pt>
+<./graf/ball-close.png, id=837, 581.17125pt x 302.63063pt>
 File: ./graf/ball-close.png Graphic file (type png)
 <use ./graf/ball-close.png>
 Package pdftex.def Info: ./graf/ball-close.png  used on input line 76.
@@ -2145,7 +2150,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [41 <./graf/upper.png> <./graf/full-close.png> <./graf/motor-close.png>]
-<./graf/full.png, id=861, 1559.07469pt x 1035.11719pt>
+<./graf/full.png, id=849, 1559.07469pt x 1035.11719pt>
 File: ./graf/full.png Graphic file (type png)
 <use ./graf/full.png>
 Package pdftex.def Info: ./graf/full.png  used on input line 83.
@@ -2501,7 +2506,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2512,7 +2517,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2523,7 +2528,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2534,7 +2539,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2545,7 +2550,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2556,7 +2561,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2567,7 +2572,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2578,7 +2583,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2589,7 +2594,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2600,7 +2605,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2611,7 +2616,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2622,7 +2627,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2633,7 +2638,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2644,7 +2649,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2655,7 +2660,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2666,7 +2671,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2677,7 +2682,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2688,7 +2693,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2699,7 +2704,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2710,7 +2715,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2721,7 +2726,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2732,7 +2737,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2743,7 +2748,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2754,7 +2759,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2765,7 +2770,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2776,7 +2781,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2787,7 +2792,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2798,7 +2803,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2809,7 +2814,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2820,7 +2825,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2831,7 +2836,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2842,7 +2847,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2853,7 +2858,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2864,7 +2869,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2875,7 +2880,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.181 \addcontentsline
+l.178 \addcontentsline
                       {toc}{chapter}{Bibliografia}
 ? 
 
@@ -2888,9 +2893,38 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [68] [69
 
-] [70] (chapters/11.tex) [71
+] [70] (chapters/09.tex [71
 
-] (main.aux)
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[72]) (chapters/11.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[73]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[74
+
+]) [75] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
@@ -2903,16 +2937,16 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 507A567A2BEF76AA881E130D453CC621;16466.
+(rerunfilecheck)             Checksum: CCDA083AA1AB849F1718FB3336258EBF;16586.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46649 strings out of 474424
- 1021387 string characters out of 5741740
- 2085496 words of memory out of 5000000
- 67700 multiletter control sequences out of 15000+600000
+ 46654 strings out of 474424
+ 1021463 string characters out of 5741740
+ 2084496 words of memory out of 5000000
+ 67703 multiletter control sequences out of 15000+600000
  642855 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,12n,96p,1954b,2439s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2932,9 +2966,9 @@ b><C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb>
 <C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><
 C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><
 C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (83 pages, 13267782 bytes).
+Output written on main.pdf (83 pages, 13265701 bytes).
 PDF statistics:
- 1471 PDF objects out of 1728 (max. 8388607)
- 543 named destinations out of 1000 (max. 500000)
- 781 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1479 PDF objects out of 1728 (max. 8388607)
+ 545 named destinations out of 1000 (max. 500000)
+ 789 words of extra memory for PDF output out of 10000 (max. 10000000)
 

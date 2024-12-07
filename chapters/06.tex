@@ -425,7 +425,7 @@ def __init__(self):
   \label{fig:serial_init}
 \end{figure}
 
-\subsubsection{Wysyłanie danych do Arduino}
+\subsubsection*{Wysyłanie danych do Arduino}
 
 Metoda \texttt{send\_data} w klasie \texttt{SerialCommunication} odpowiada za przesyłanie preformatowanych instrukcji (dwubajtowych ramek binarnych) do Arduino. Funkcja przyjmuje jako argument \texttt{bytearray}, który reprezentuje ramkę danych składającą się z informacji dotyczących typu oraz parametrów ruchu robota. Każda ramka binarna jest zapisywana bezpośrednio do portu szeregowego jako surowe dane binarne, co zapewnia, że dane przesyłane są dokładnie w formacie oczekiwanym przez Arduino, bez dodatkowych konwersji.
 
@@ -443,7 +443,7 @@ def send_data(self, data):
   \label{fig:serial_send}
 \end{figure}
 
-\subsubsection{Odbiór i potwierdzenie zakończenia operacji}
+\subsubsection*{Odbiór i potwierdzenie zakończenia operacji}
 
 Po wysłaniu ramki \texttt{send\_data} oczekuje na potwierdzenie zakończenia zadania przez Arduino, które przesyła odpowiedź tekstową zawierającą frazę \texttt{"FINISH"} po zakończeniu zadanej operacji ruchu. Oczekiwanie na odpowiedź realizowane jest poprzez sprawdzenie, czy w buforze wejściowym pojawiły się dane do odczytu.
 
@@ -473,7 +473,7 @@ else:
   \label{fig:serial_receive}
 \end{figure}
 
-\subsubsection{Obsługa błędów w komunikacji szeregowej}
+\subsubsection*{Obsługa błędów w komunikacji szeregowej}
 
 Komunikacja szeregowa między Raspberry Pi a Arduino, mimo że jest stosunkowo niezawodna, może być podatna na błędy związane z zakłóceniami lub nieoczekiwanym przerwaniem połączenia. W związku z tym metoda \texttt{send\_data} zabezpieczona jest instrukcją \texttt{try-except}, która wyłapuje wyjątki występujące podczas przesyłania danych. W przypadku wykrycia błędu zostaje wyświetlony komunikat o błędzie, a metoda zwraca \texttt{False}, co sygnalizuje niepowodzenie wykonania zadania.
 
