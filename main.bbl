@@ -253,6 +253,30 @@
     \endverb
   \endentry
 
+  \entry{bib:rozprawa-odometria}{thesis}{}{}
+    \name{author}{1}{}{%
+      {{hash=miIH}{%
+         prefix={mgr\bibnamedelima inż.},
+         prefixi={m\bibinitperiod\bibinitdelim i\bibinitperiod},
+         family={Ireneusz\bibnamedelima Hallmann},
+         familyi={I\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{IHmi1}
+    \strng{fullhash}{IHmi1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{I}
+    \field{sortinithash}{I}
+    \field{title}{Lokalizacja robota mobilnego względem automatycznie
+  wybieranych obiektów}
+    \list{institution}{1}{%
+      {Polska Akademia Nauk, Instytut Podstawowych Problemów Techniki}%
+    }
+    \field{type}{phdthesis}
+    \field{year}{2007}
+  \endentry
+
   \entry{bib:where-am-i}{book}{}{}
     \name{author}{2}{}{%
       {{hash=JBHE}{%

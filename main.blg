@@ -121,45 +121,45 @@ Too many commas in name 1 of "Alexandr Stefek, Thuan Van Pham, Vaclav Krivanek, 
 while executing---line 2816 of file biblatex.bst
 Too many commas in name 1 of "Alexandr Stefek, Thuan Van Pham, Vaclav Krivanek, Khac Lam Pham" for entry bib:konferencja
 while executing---line 2816 of file biblatex.bst
-You've used 19 entries,
+You've used 20 entries,
             6402 wiz_defined-function locations,
-            1283 strings with 11663 characters,
-and the built_in function-call counts, 97847 in all, are:
-= -- 6935
-> -- 1735
-< -- 535
-+ -- 1977
-- -- 599
-* -- 6879
-:= -- 9696
+            1288 strings with 11853 characters,
+and the built_in function-call counts, 106484 in all, are:
+= -- 7699
+> -- 1876
+< -- 621
++ -- 2134
+- -- 623
+* -- 7414
+:= -- 10410
 add.period$ -- 0
-call.type$ -- 19
-change.case$ -- 228
+call.type$ -- 20
+change.case$ -- 300
 chr.to.int$ -- 44
-cite$ -- 36
-duplicate$ -- 9561
-empty$ -- 9485
-format.name$ -- 954
-if$ -- 20821
+cite$ -- 38
+duplicate$ -- 10252
+empty$ -- 10282
+format.name$ -- 1002
+if$ -- 22778
 int.to.chr$ -- 0
-int.to.str$ -- 43
+int.to.str$ -- 46
 missing$ -- 0
-newline$ -- 424
-num.names$ -- 829
-pop$ -- 6141
+newline$ -- 447
+num.names$ -- 935
+pop$ -- 6477
 preamble$ -- 1
-purify$ -- 279
+purify$ -- 353
 quote$ -- 0
-skip$ -- 3244
+skip$ -- 3587
 stack$ -- 0
-substring$ -- 12617
-swap$ -- 2140
-text.length$ -- 489
-text.prefix$ -- 18
+substring$ -- 14067
+swap$ -- 2320
+text.length$ -- 513
+text.prefix$ -- 19
 top$ -- 1
-type$ -- 634
+type$ -- 667
 warning$ -- 0
-while$ -- 1077
+while$ -- 1130
 width$ -- 0
-write$ -- 406
+write$ -- 428
 (There were 48 error messages)

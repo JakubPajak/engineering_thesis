@@ -8,53 +8,50 @@ Proces konstrukcji robota przebiegał w dwóch głównych etapach. Pierwszy z ni
 
 W fazie prototypowej zdecydowano się na wykorzystanie sklejki brzozowej – materiału taniego, lekkiego oraz łatwego w obróbce. Platforma bazowa prototypu miała wymiary: 240 mm długości oraz 220 mm szerokości. Silniki zostały osadzone na osi poprzecznej robota, zgodnie z wymogami nakładanymi przez sposób napędu. 
 
-Taka konfiguracja umożliwiła szybką weryfikację działania elementów wykonawczych oraz systemu sterowania, jeszcze przed przystąpieniem do bardziej zaawansowanych prac konstrukcyjnych. Zdjęcie [\ref{zdj:prototyp}] przedstawia opisany prototyp. 
+Taka konfiguracja umożliwiła szybką weryfikację działania elementów wykonawczych oraz systemu sterowania, jeszcze przed przystąpieniem do bardziej zaawansowanych prac konstrukcyjnych. Zdjęcie [\ref{zdj:proto-1}] przedstawia opisany prototyp. 
 
-\hspace{1cm}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{./graf/proto-1.jpg}
+  \caption{Pierwsza wersja platformy robota mobilnego}
+  \label{zdj:proto-1}
+\end{figure}
 
-W toku prac nad wczesną wersją, po osiągnięciu zadowalającej precyzji sterowania, do konstrukcji dołączono przednią ścianę, do której przymocowano chwytak [\ref{zdj:prototyp-chwytak}]. Umożliwiło to przetestowanie poprawności działania wszystkich elementów wykonawczych obecnych na platformie mobilnej. Dodatkowo, równocześnie przeprowadzono testy pełnej komunikacji między kontrolerem silników a komputerem Raspberry Pi, który pełnił rolę głównej jednostki obliczeniowej robota. W tym kroku zweryfikowano, czy platforma poprawnie reaguje na przesyłane komendy oraz czy nie występują żadne błędy w komunikacji lub wykonaniu poleceń.
+\clearpage
 
-% \begin{figure}[h!]
-%   \centering
-%   \includegraphics[width=0.7\textwidth]{./graf/upper.png}
-%   \caption{Model górnej części obudowy}
-%   \label{fig:ball-close}
-% \end{figure}
+W toku prac nad wczesną wersją, po osiągnięciu zadowalającej precyzji sterowania, do konstrukcji dołączono przednią ścianę, do której przymocowano chwytak [\ref{fig:full-proto}] [\ref{fig:full-proto1}]. Umożliwiło to przetestowanie poprawności działania wszystkich elementów wykonawczych obecnych na platformie mobilnej. Dodatkowo, równocześnie przeprowadzono testy pełnej komunikacji między kontrolerem silników a komputerem Raspberry Pi, który pełnił rolę głównej jednostki obliczeniowej robota. W tym kroku zweryfikowano, czy platforma poprawnie reaguje na przesyłane komendy oraz czy nie występują żadne błędy w komunikacji lub wykonaniu poleceń.
 
-% \begin{figure}[h!]
-%   \centering
-%   \includegraphics[width=0.7\textwidth]{./graf/upper.png}
-%   \caption{Model górnej części obudowy}
-%   \label{fig:ball-close}
-% \end{figure}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{./graf/proto-2.jpg}
+  \caption{Pełna wersja prototypu robota}
+  \label{fig:full-proto}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{./graf/proto-3.jpg}
+  \caption{Zbliżenie na przednią część robota z zamocowanym chwytakiem}
+  \label{fig:full-proto1}
+\end{figure}
 
 \subsection{Właściwy projekt robota mobilnego}
 
 Po pozytywnym zakończeniu walidacji funkcjonowania algorytmów sterowania i komunikacji, przystąpiono do drugiego etapu konstrukcji – zaprojektowania i wytworzenia docelowej obudowy bazowej robota. Obudowa została wykonana przy użyciu technologii druku 3D, co pozwoliło na uzyskanie wysokiej precyzji oraz wprowadzeniu niezbędnych modyfikacji konstrukcyjnych w stosunku do prototypu. Ze względu na ograniczenia przestrzeni roboczej urządzenia drukującego, wymiary podstawy platformy zostały przeniesione na plan kwadratu o boku 220 mm.
 Przednia ściana została zaprojektowana jako część podłogi, w celu zwiększenia sztywności konstrukcji. Najcięższym elementem całego robota jest chwytak wraz z serwomechanizmem, przez co wytrzymałość przedniej ściany oraz podłogi była kluczowa. Zgodnie z osią do wewnątrz robota została poprowadzona przegroda, pełniąca funkcję podpory dla górnej części platformy.
-Finalny projekt podstawy, przygotowany w programie Autodesk Fusion 360, został przedstawiony na rysunku [\ref{fig:full}].
-
-\hspace{1cm} 
-
-Ostatni etap obejmował zaprojektowanie górnej części obudowy, na której zostanie osadzony komputer Raspberry Pi oraz przymocowany uchwyt na kamerę. Sposób osadzenia górnej części na dolnym segmencie opiera się na precyzyjnie wykonanej przerwie, w którą wsuwa się wspornik bazy. Dzięki takiemu rozwiązaniu, w prosty i szybki sposób można zdjąć górną część i dokonać potrzebnych zmian lub modyfikacji. Te atrybuty są szczególnie przydatne podczas fazy testów i ciągłego ulepszania robota.
-
-W wersji docelowej, przeznaczonej do komercyjnego użytkowania, omawiane mocowanie zostałoby zastąpione przez standardowe połączenia śrubowe lub sklejenie, co zwiększyłoby trwałość obudowy.
-
-\hspace{1cm}
-
-Ostateczna wersja platformy mobilnej została zaprezentowana na zdjęciu [\ref{fig:base-full}] oraz jest widoczna na nagraniach załączonych do pracy. Model obudowy stanowi w pełni funkcjonalny, zgodny z założeniami, robot, jednak część mocowań w wersji przeznaczonej do sprzedaży należy zmienić. 
-
-W tym celu zastosowano mocowania, umożliwiające łatwe zdejmowanie i zakładanie górnej części obudowy na podstawę, co znacząco ułatwia konserwację oraz serwisowanie wewnętrznych komponentów.
-
-Finalna wersja platformy mobilnej została zaprezentowana na ilustracji \ref{fig:full}, a także na załączonych nagraniach.
+Finalny projekt podstawy, przygotowany w programie Autodesk Fusion 360, został przedstawiony na rysunku [\ref{fig:base-full}].
 
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.7\textwidth]{./graf/upper.png}
-  \caption{Model górnej części obudowy}
-  \label{fig:ball-close}
+  \includegraphics[width=1.0\textwidth]{./graf/base-full.png}
+  \caption{Projekt podstawy robota wraz z większą częścią komponentów elektronicznych}
+  \label{fig:base-full}
 \end{figure}
+
+Ostatni etap obejmował zaprojektowanie górnej części obudowy [\ref{fig:upper}], na której zostanie osadzony komputer Raspberry Pi oraz przymocowany uchwyt na kamerę. Sposób osadzenia górnej części na dolnym segmencie opiera się na precyzyjnie wykonanej przerwie, w którą wsuwa się wspornik bazy [\ref{fig:full-close}]. Dzięki takiemu rozwiązaniu, w prosty i szybki sposób można zdjąć górną część i dokonać potrzebnych zmian lub modyfikacji. Te atrybuty są szczególnie przydatne podczas fazy testów i poprawek.
+
+W wersji docelowej, przeznaczonej do komercyjnego użytkowania, omawiane mocowanie zostałoby zastąpione przez standardowe połączenia śrubowe lub sklejenie, co zwiększyłoby trwałość obudowy.
 
 \begin{figure}[H]
   \centering
@@ -63,27 +60,46 @@ Finalna wersja platformy mobilnej została zaprezentowana na ilustracji \ref{fig
   \label{fig:full-close}
 \end{figure}
 
-
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.5\textwidth]{./graf/motor-close.png}
-  \caption{Przybliżenie miejsca na mocowania silników}
-  \label{fig:base-close}
+  \includegraphics[width=0.7\textwidth]{./graf/upper.png}
+  \caption{Model górnej części obudowy}
+  \label{fig:upper}
 \end{figure}
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.5\textwidth]{./graf/ball-close.png}
-  \caption{Przybliżenie miejsca mocowania kulek podporowych w osi robota}
-  \label{fig:ball-close}
-\end{figure}
+Dodatkowo zaprojektowano uchwyt na kamerę, w taki sposób, aby jak najbardziej skupić zawartość obrazu na obiekcie. Z tego względu kamera znajduje się na nachylonym pod odpowiednim kątem elemencie. Pozwoliło to na pozbycie się zbędnych zakłóceń potencjalnie występujących w tle. 
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.9\textwidth]{./graf/full.png}
-  \caption{Prezentacja finalnej wersji obudowy robota}
+  \includegraphics[width=1.0\textwidth]{./graf/kamera-base.png}
+  \caption{Zbliżenie na mocowanie dla kamery}
   \label{fig:full}
 \end{figure}
+
+Ostateczna wersja platformy mobilnej została zaprezentowana na zdjęciu [\ref{fig:full}] oraz jest widoczna na nagraniach załączonych do pracy. Model obudowy stanowi w pełni funkcjonalny, zgodny z założeniami, robot, jednak część mocowań w wersji przeznaczonej do sprzedaży należy zmodyfikować. 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{./graf/official-full.png}
+  \caption{Model pełnej wersji robota mobilnego}
+  \label{fig:full}
+\end{figure}
+
+
+% \begin{figure}[H]
+%   \centering
+%   \includegraphics[width=0.5\textwidth]{./graf/motor-close.png}
+%   \caption{Przybliżenie miejsca na mocowania silników}
+%   \label{fig:base-close}
+% \end{figure}
+
+% \begin{figure}[H]
+%   \centering
+%   \includegraphics[width=0.5\textwidth]{./graf/ball-close.png}
+%   \caption{Przybliżenie miejsca mocowania kulek podporowych w osi robota}
+%   \label{fig:ball-close}
+% \end{figure}
+
  
 \clearpage
 
@@ -543,33 +559,47 @@ def find_color(frame, points):
 
 \subsubsection{Detekcja i klasyfikacja kształtów}
 
-Po przekształceniu obrazu na odcienie szarości generowany jest binarny obraz progowy, który pozwala na detekcję konturów. Dla każdego konturu wyliczana jest jego przybliżona forma przy pomocy metody \texttt{approxPolyDP}. Kontury, które posiadają dokładnie cztery wierzchołki oraz odpowiednią powierzchnię (>1000 pikseli), klasyfikowane są jako kwadraty.
+W celu detekcji kształtów obraz początkowo jest przekształcany do odcieni szarości, a następnie generowany jest obraz binarny na podstawie wartości progowych. Na tej podstawie wykrywane są kontury, które są następnie analizowane i przybliżane za pomocą metody \texttt{approxPolyDP}. Kontury zawierające dokładnie cztery wierzchołki i posiadające powierzchnię większą niż 1000 pikseli są klasyfikowane jako prostokąty.
 
-Po rozpoznaniu kwadratu obliczane są jego momenty w celu określenia współrzędnych środka. Kwadraty oznaczane są zielonym konturem oraz etykietą „Square”, co pozwala na wizualne potwierdzenie ich detekcji w obrazie.
+Efekt działania algorytmu został przedstawiony na rysunku \ref{img:klas-obj}. Grafika \ref{img:krawedzie} obrazuje skuteczność działania metody Canny’ego w wykrywaniu krawędzi. W przypadku ilustracji zamieszczonej w sekcji \ref{seq:canny}, na rysunku \ref{img:canny-sample}, widoczna jest większa ilość wykrytych krawędzi. Wynika to z zastosowania określonych wartości progowych w metodzie \textit{cv2.Canny(gray, thresh1, thresh2)}. Niższe wartości progowe skutkują większą liczbą wykrytych krawędzi, co może utrudnić proces dalszej analizy, w tym identyfikacji oczekiwanych obiektów.
+
+Dostosowanie wartości progowych w czasie rzeczywistym jest możliwe dzięki wykorzystaniu funkcji \textit{cv2.getTrackbarPos("Threshold1", "Parameters")}, co pozwala na wizualną ocenę skuteczności algorytmu i wybór optymalnych parametrów.
 
 \begin{figure}[H]
   \centering
   \begin{lstlisting}
-for contour in contours:
-    approx = cv2.approxPolyDP(contour, 0.02 * cv2.arcLength(contour, True), True)
-    if len(approx) == 4 and cv2.contourArea(approx) > 1000:
-        x, y, w, h = cv2.boundingRect(approx)
-        aspect_ratio = float(w) / h
-        if 0.8 <= aspect_ratio <= 1.2:
-            cv2.drawContours(frame, [approx], 0, (0, 255, 0), 3)
-            M = cv2.moments(contour)
-            if M['m00'] != 0:
-                cx = int(M['m10'] / M['m00'])
-                cy = int(M['m01'] / M['m00'])
-                cv2.putText(frame, "Square", (cx, cy), cv2.FONT_HERSHEY_SIMPLEX, 0.6, display_color, 2)
+    for contour in contours:
+      area = cv2.contourArea(contour)
+      if area > 1000:
+          cv2.drawContours(frame, contour, -1, (255, 0, 255), 7)
+          epsilon = 0.02 * cv2.arcLength(contour, True)
+          approx = cv2.approxPolyDP(contour, epsilon, True)
+          x_, y_, w_, l_ = cv2.boundingRect(approx)
+          cv2.rectangle(frame, (x_, y_), (x_ + w_, y_ + l_), (0, 255, 0), 5)
+
+    return frame
   \end{lstlisting}
   \caption{Kod detekcji i klasyfikacji kształtów kwadratowych}
   \label{fig:square_detection}
 \end{figure}
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{./graf/krawedzie.png}
+  \caption{Skuteczność wykrywania krawędzi widziana z perspektywy panelu operatorskiego}
+  \label{img:krawedzie}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{./graf/klasyfikacja-ksztaltu.png}
+  \caption{Skuteczność klasyfikacji kształtu obiektu widziana z perspektywy panelu operatorskiego}
+  \label{img:klas-obj}
+\end{figure}
+
 \subsubsection{Wizualizacja wyników}
 
-Wyniki detekcji są wizualizowane w czasie rzeczywistym na przechwyconym obrazie. Dla każdego zidentyfikowanego koloru rysowany jest kontur, etykieta koloru oraz punkt w centrum kształtu. W przypadku rozpoznania kwadratu, wokół konturu rysowana jest zielona ramka, a w jego środku wyświetlana etykieta „Square”. Proces przetwarzania kontynuowany jest w pętli, co pozwala na analizę kolejnych klatek obrazu w czasie rzeczywistym, aż do momentu zatrzymania programu.
+Wyniki procesu detekcji są przedstawiane w czasie rzeczywistym na obrazie przechwyconym z kamery. Dla wykrytego koloru algorytm rysuje kontur wokół obiektu oraz nanosi etykietę wskazującą zidentyfikowany kolor, co zilustrowano na rysunku \ref{img:kolor-detect}. Ponadto na obrazie zaznaczane są kontury prostokąta wykrytego w procesie klasyfikacji kształtów, co przedstawiono na rysunku \ref{img:klas-obj}. Dzięki wizualizacji na panelu operatorskim użytkownik ma możliwość bieżącej oceny skuteczności działania algorytmu oraz jego parametrów.
 
 \begin{figure}[H]
   \centering
@@ -580,6 +610,13 @@ cv2.putText(frame, name, (cx, cy), cv2.FONT_HERSHEY_SIMPLEX, 1, display_color, 2
   \end{lstlisting}
   \caption{Kod wizualizacji wyników detekcji kolorów i kształtów}
   \label{fig:visualization}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{./graf/kolory.png}
+  \caption{Wykryty kolor niebieski obiektu}
+  \label{img:kolor-detect}
 \end{figure}
 
 \section{Implementacja panelu operatorskiego}
@@ -594,3 +631,11 @@ Struktura projektu jest relatywnie prosta, zawiera trzy główne składniki:
   \item folder \textit{templates} - przechowuje pliki HTML, które definiują strukturę i wygląd interfejsu użytkownika. Flask wykorzystuje mechanizm szablonów Jinja2, co pozwala na dynamiczne wstawianie zmiennych i generowanie treści w zależności od danych otrzymywanych z robota w czasie rzeczywistym,
   \item plik \textit{app.py} -  pełni rolę głównego pliku aplikacji, obsługując zapytania HTTP oraz zarządzając komunikacją pomiędzy częścią serwerową a front-endem aplikacji. Plik ten inicjalizuje serwer Flask, odpowiada za odbieranie danych z robota oraz wysyłanie ich do szablonów HTML.
 \end{itemize} 
+
+
+Widok panelu operatorskiego został zilustrowany w sekcji dotyczącej detekcji konturów oraz wizualizacji wyników (\ref{img:krawedzie}, \ref{img:klas-obj}, \ref{img:kolor-detect}). Autor przewiduje dalszy rozwój panelu, który umożliwi użytkownikowi wybór rodzaju wyświetlanych danych, takich jak obrazy z wyróżnionymi krawędziami, maski kolorów, czy ustawienia wartości progowych dla algorytmu Canny’ego lub wartości zakresów wykrywanych kolorów HSV. Takie rozwiązanie pozwoli na szeroką personalizację oraz dostosowanie parametrów działania systemu w czasie rzeczywistym.
+
+
+
+
+

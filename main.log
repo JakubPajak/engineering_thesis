@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.4)  7 DEC 2024 20:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.4)  10 DEC 2024 21:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1318,9 +1318,6 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
 LaTeX Warning: Label `rys2:encoders-graf' multiply defined.
 
-
-LaTeX Warning: Label `fig:ball-close' multiply defined.
-
 )
 \openout1 = `main.aux'.
 
@@ -1491,7 +1488,7 @@ LaTeX Font Info:    Trying to load font information for T1+lmss on input line 2
 (C:\Users\jakub\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<graf/politechnika_sl_logo_bw_pion_pl.pdf, id=334, 179.67125pt x 230.8625pt>
+<graf/politechnika_sl_logo_bw_pion_pl.pdf, id=342, 179.67125pt x 230.8625pt>
 File: graf/politechnika_sl_logo_bw_pion_pl.pdf Graphic file (type pdf)
 <use graf/politechnika_sl_logo_bw_pion_pl.pdf>
 Package pdftex.def Info: graf/politechnika_sl_logo_bw_pion_pl.pdf  used on inpu
@@ -1553,8 +1550,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 [5{C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.en
 c}]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 9
-8.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
+00.
  (C:\Users\jakub\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1623,13 +1620,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 Rozdzia\l  2.
-<./graf/uml1.png, id=517, 794.97pt x 614.295pt>
+<./graf/uml1.png, id=529, 794.97pt x 614.295pt>
 File: ./graf/uml1.png Graphic file (type png)
 <use ./graf/uml1.png>
 Package pdftex.def Info: ./graf/uml1.png  used on input line 23.
 (pdftex.def)             Requested size: 455.24411pt x 351.79211pt.
 [7]
-<./graf/raspi-4b.png, id=526, 984.67876pt x 679.78969pt>
+<./graf/raspi-4b.png, id=538, 984.67876pt x 679.78969pt>
 File: ./graf/raspi-4b.png Graphic file (type png)
 <use ./graf/raspi-4b.png>
 Package pdftex.def Info: ./graf/raspi-4b.png  used on input line 37.
@@ -1644,7 +1641,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [8 <./graf/uml1.png>]
-<./graf/arduino-r3.png, id=535, 967.36406pt x 816.04875pt>
+<./graf/arduino-r3.png, id=547, 967.36406pt x 816.04875pt>
 File: ./graf/arduino-r3.png Graphic file (type png)
 <use ./graf/arduino-r3.png>
 Package pdftex.def Info: ./graf/arduino-r3.png  used on input line 47.
@@ -1662,12 +1659,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [9 <./graf/raspi-4b.png> <./graf/arduino-r3.png>]
-<./graf/cytron-mdd10a.png, id=545, 916.1728pt x 734.745pt>
+<./graf/cytron-mdd10a.png, id=557, 916.1728pt x 734.745pt>
 File: ./graf/cytron-mdd10a.png Graphic file (type png)
 <use ./graf/cytron-mdd10a.png>
 Package pdftex.def Info: ./graf/cytron-mdd10a.png  used on input line 58.
 (pdftex.def)             Requested size: 273.14923pt x 219.05742pt.
-<./graf/kamera-sony.png, id=547, 1157.07281pt x 810.77907pt>
+<./graf/kamera-sony.png, id=559, 1157.07281pt x 810.77907pt>
 File: ./graf/kamera-sony.png Graphic file (type png)
 <use ./graf/kamera-sony.png>
 Package pdftex.def Info: ./graf/kamera-sony.png  used on input line 68.
@@ -1685,12 +1682,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [10 <./graf/cytron-mdd10a.png>]
-<./graf/silnik-pololu.png, id=558, 1190.19656pt x 1096.84781pt>
+<./graf/silnik-pololu.png, id=570, 1190.19656pt x 1096.84781pt>
 File: ./graf/silnik-pololu.png Graphic file (type png)
 <use ./graf/silnik-pololu.png>
 Package pdftex.def Info: ./graf/silnik-pololu.png  used on input line 78.
 (pdftex.def)             Requested size: 182.09486pt x 167.80043pt.
-<./graf/gripper.png, id=560, 954.56625pt x 634.62094pt>
+<./graf/gripper.png, id=572, 954.56625pt x 634.62094pt>
 File: ./graf/gripper.png Graphic file (type png)
 <use ./graf/gripper.png>
 Package pdftex.def Info: ./graf/gripper.png  used on input line 89.
@@ -1705,12 +1702,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [11 <./graf/kamera-sony.png> <./graf/silnik-pololu.png>]
-<./graf/step-down.png, id=573, 645.91313pt x 643.6547pt>
+<./graf/step-down.png, id=585, 645.91313pt x 643.6547pt>
 File: ./graf/step-down.png Graphic file (type png)
 <use ./graf/step-down.png>
 Package pdftex.def Info: ./graf/step-down.png  used on input line 99.
 (pdftex.def)             Requested size: 182.09486pt x 181.45958pt.
-<./graf/ogniwa.png, id=575, 992.95969pt x 998.9822pt>
+<./graf/ogniwa.png, id=587, 992.95969pt x 998.9822pt>
 File: ./graf/ogniwa.png Graphic file (type png)
 <use ./graf/ogniwa.png>
 Package pdftex.def Info: ./graf/ogniwa.png  used on input line 109.
@@ -1759,7 +1756,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [16{C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}{
 C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}]
-<./graf/halla-enc.jpg, id=611, 372.39125pt x 262.9825pt>
+<./graf/halla-enc.jpg, id=623, 372.39125pt x 262.9825pt>
 File: ./graf/halla-enc.jpg Graphic file (type jpg)
 <use ./graf/halla-enc.jpg>
 Package pdftex.def Info: ./graf/halla-enc.jpg  used on input line 64.
@@ -1767,7 +1764,7 @@ Package pdftex.def Info: ./graf/halla-enc.jpg  used on input line 64.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./graf/enkoders.png, id=614, 1249.66875pt x 581.92406pt>
+<./graf/enkoders.png, id=626, 1249.66875pt x 581.92406pt>
 File: ./graf/enkoders.png Graphic file (type png)
 <use ./graf/enkoders.png>
 Package pdftex.def Info: ./graf/enkoders.png  used on input line 71.
@@ -1775,7 +1772,7 @@ Package pdftex.def Info: ./graf/enkoders.png  used on input line 71.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./graf/enkoder-silnik.png, id=617, 1023.825pt x 858.95906pt>
+<./graf/enkoder-silnik.png, id=629, 1023.825pt x 858.95906pt>
 File: ./graf/enkoder-silnik.png Graphic file (type png)
 <use ./graf/enkoder-silnik.png>
 Package pdftex.def Info: ./graf/enkoder-silnik.png  used on input line 78.
@@ -1801,7 +1798,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [18 <./graf/halla-enc.jpg> <./graf/enkoders.png> <./graf/enkoder-silnik.png>]
-<./graf/regulacja1.png, id=638, 688.5725pt x 223.83624pt>
+<./graf/regulacja1.png, id=650, 688.5725pt x 223.83624pt>
 File: ./graf/regulacja1.png Graphic file (type png)
 <use ./graf/regulacja1.png>
 Package pdftex.def Info: ./graf/regulacja1.png  used on input line 99.
@@ -1899,9 +1896,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [22]
 
-LaTeX Warning: Reference `angular' on page 23 undefined on input line 240.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -1910,11 +1904,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [23]
-<./graf/diff-drive.png, id=680, 1054.6903pt x 968.11688pt>
+
+LaTeX Warning: Reference `angular' on page 24 undefined on input line 271.
+
+<./graf/diff-drive.png, id=696, 1054.6903pt x 968.11688pt>
 File: ./graf/diff-drive.png Graphic file (type png)
 <use ./graf/diff-drive.png>
-Package pdftex.def Info: ./graf/diff-drive.png  used on input line 258.
-(pdftex.def)             Requested size: 250.38564pt x 229.82674pt.
+Package pdftex.def Info: ./graf/diff-drive.png  used on input line 288.
+(pdftex.def)             Requested size: 364.19667pt x 334.29613pt.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\cite' on input line 292.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1924,9 +1924,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[24
-
- <./graf/diff-drive.png>]
+[24 <./graf/diff-drive.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1936,12 +1934,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [25]
-<./graf/canny-edge.png, id=699, 568.1225pt x 392.46625pt>
-File: ./graf/canny-edge.png Graphic file (type png)
-<use ./graf/canny-edge.png>
-Package pdftex.def Info: ./graf/canny-edge.png  used on input line 353.
-(pdftex.def)             Requested size: 273.14923pt x 188.69904pt.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1950,7 +1942,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[26]
+[26
+
+]
+<./graf/canny-edge.png, id=722, 568.1225pt x 392.46625pt>
+File: ./graf/canny-edge.png Graphic file (type png)
+<use ./graf/canny-edge.png>
+Package pdftex.def Info: ./graf/canny-edge.png  used on input line 385.
+(pdftex.def)             Requested size: 273.14923pt x 188.69904pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1971,15 +1971,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [28
 
 ]
-<./graf/rgb-model.png, id=724, 401.5pt x 295.1025pt>
+<./graf/rgb-model.png, id=742, 401.5pt x 295.1025pt>
 File: ./graf/rgb-model.png Graphic file (type png)
 <use ./graf/rgb-model.png>
-Package pdftex.def Info: ./graf/rgb-model.png  used on input line 394.
+Package pdftex.def Info: ./graf/rgb-model.png  used on input line 426.
 (pdftex.def)             Requested size: 273.14923pt x 200.7796pt.
-<./graf/hsv-model.png, id=727, 853.1875pt x 505.89pt>
+<./graf/hsv-model.png, id=745, 853.1875pt x 505.89pt>
 File: ./graf/hsv-model.png Graphic file (type png)
 <use ./graf/hsv-model.png>
-Package pdftex.def Info: ./graf/hsv-model.png  used on input line 401.
+Package pdftex.def Info: ./graf/hsv-model.png  used on input line 433.
 (pdftex.def)             Requested size: 273.14923pt x 161.96529pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1994,10 +1994,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [29 <./graf/rgb-model.png>]
-<./graf/ycrcb-model.png, id=740, 340.8735pt x 248.72925pt>
+<./graf/ycrcb-model.png, id=758, 340.8735pt x 248.72925pt>
 File: ./graf/ycrcb-model.png Graphic file (type png)
 <use ./graf/ycrcb-model.png>
-Package pdftex.def Info: ./graf/ycrcb-model.png  used on input line 408.
+Package pdftex.def Info: ./graf/ycrcb-model.png  used on input line 440.
 (pdftex.def)             Requested size: 273.14923pt x 199.32524pt.
 ) (chapters/05.tex
 
@@ -2095,23 +2095,34 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 Rozdzia\l  5.
+<./graf/proto-1.jpg, id=842, 1184.425pt x 1577.895pt>
+File: ./graf/proto-1.jpg Graphic file (type jpg)
+<use ./graf/proto-1.jpg>
+Package pdftex.def Info: ./graf/proto-1.jpg  used on input line 15.
+(pdftex.def)             Requested size: 455.24411pt x 606.4682pt.
 
-LaTeX Warning: Reference `zdj:prototyp' on page 39 undefined on input line 11.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
+ [39]
 
-LaTeX Warning: Reference `zdj:prototyp-chwytak' on page 39 undefined on input l
-ine 15.
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
 
-[39]
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-LaTeX Warning: Reference `fig:base-full' on page 40 undefined on input line 45.
-
-
-<./graf/upper.png, id=829, 1099.10625pt x 948.54375pt>
-File: ./graf/upper.png Graphic file (type png)
-<use ./graf/upper.png>
-Package pdftex.def Info: ./graf/upper.png  used on input line 54.
-(pdftex.def)             Requested size: 318.66948pt x 275.01274pt.
+[40 <./graf/proto-1.jpg>]
+<./graf/proto-2.jpg, id=854, 711.4078pt x 977.90344pt>
+File: ./graf/proto-2.jpg Graphic file (type jpg)
+<use ./graf/proto-2.jpg>
+Package pdftex.def Info: ./graf/proto-2.jpg  used on input line 26.
+(pdftex.def)             Requested size: 318.66948pt x 438.053pt.
+<./graf/proto-3.jpg, id=855, 711.4078pt x 980.91469pt>
+File: ./graf/proto-3.jpg Graphic file (type jpg)
+<use ./graf/proto-3.jpg>
+Package pdftex.def Info: ./graf/proto-3.jpg  used on input line 33.
+(pdftex.def)             Requested size: 318.66948pt x 439.40189pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2124,22 +2135,31 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[40]
-<./graf/full-close.png, id=835, 1554.55782pt x 797.98125pt>
+[41
+
+ <./graf/proto-2.jpg>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[42 <./graf/proto-3.jpg>]
+<./graf/base-full.png, id=868, 1202.24156pt x 773.89125pt>
+File: ./graf/base-full.png Graphic file (type png)
+<use ./graf/base-full.png>
+Package pdftex.def Info: ./graf/base-full.png  used on input line 47.
+(pdftex.def)             Requested size: 455.24411pt x 293.04257pt.
+<./graf/full-close.png, id=871, 1554.55782pt x 797.98125pt>
 File: ./graf/full-close.png Graphic file (type png)
 <use ./graf/full-close.png>
-Package pdftex.def Info: ./graf/full-close.png  used on input line 61.
+Package pdftex.def Info: ./graf/full-close.png  used on input line 58.
 (pdftex.def)             Requested size: 318.66948pt x 163.57503pt.
-<./graf/motor-close.png, id=836, 1506.3778pt x 759.58781pt>
-File: ./graf/motor-close.png Graphic file (type png)
-<use ./graf/motor-close.png>
-Package pdftex.def Info: ./graf/motor-close.png  used on input line 69.
-(pdftex.def)             Requested size: 227.62206pt x 114.76776pt.
-<./graf/ball-close.png, id=837, 581.17125pt x 302.63063pt>
-File: ./graf/ball-close.png Graphic file (type png)
-<use ./graf/ball-close.png>
-Package pdftex.def Info: ./graf/ball-close.png  used on input line 76.
-(pdftex.def)             Requested size: 227.62206pt x 118.5288pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2149,12 +2169,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[41 <./graf/upper.png> <./graf/full-close.png> <./graf/motor-close.png>]
-<./graf/full.png, id=849, 1559.07469pt x 1035.11719pt>
-File: ./graf/full.png Graphic file (type png)
-<use ./graf/full.png>
-Package pdftex.def Info: ./graf/full.png  used on input line 83.
-(pdftex.def)             Requested size: 409.71692pt x 272.01453pt.
+[43 <./graf/base-full.png>]
+<./graf/upper.png, id=880, 1099.10625pt x 948.54375pt>
+File: ./graf/upper.png Graphic file (type png)
+<use ./graf/upper.png>
+Package pdftex.def Info: ./graf/upper.png  used on input line 65.
+(pdftex.def)             Requested size: 318.66948pt x 275.01274pt.
+<./graf/kamera-base.png, id=881, 709.90219pt x 337.26pt>
+File: ./graf/kamera-base.png Graphic file (type png)
+<use ./graf/kamera-base.png>
+Package pdftex.def Info: ./graf/kamera-base.png  used on input line 74.
+(pdftex.def)             Requested size: 455.24411pt x 216.28308pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2164,7 +2192,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[42 <./graf/ball-close.png> <./graf/full.png>]
+[44 <./graf/full-close.png> <./graf/upper.png>]
+<./graf/official-full.png, id=889, 988.44281pt x 540.51938pt>
+File: ./graf/official-full.png Graphic file (type png)
+<use ./graf/official-full.png>
+Package pdftex.def Info: ./graf/official-full.png  used on input line 83.
+(pdftex.def)             Requested size: 455.24411pt x 248.93884pt.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[45 <./graf/kamera-base.png> <./graf/official-full.png>]
 Underfull \vbox (badness 1107) has occurred while \output is active []
 
 
@@ -2176,36 +2219,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[43
+[46
 
 ]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[44]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[45]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[46]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2215,9 +2231,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [47]
-LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 285.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2226,9 +2239,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[48
-
-]
+[48]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2247,8 +2258,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [50]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 301.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2258,107 +2269,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[51]
+[51
 
-! LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.437         # Wyślij 
-                        ramkę danych
-? 
-
-! LaTeX Error: Invalid UTF-8 byte "9B.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.437         # Wyślij 
-                        ramkę danych
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.437         # Wyślij ramkę 
-                               danych
-? 
-
-! LaTeX Error: Invalid UTF-8 byte "99.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.437         # Wyślij ramkę 
-                               danych
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.455 # Sprawdź,
-                  czy są dostępne dane do odczytu
-? 
-
-! LaTeX Error: Invalid UTF-8 byte "BA.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.455 # Sprawdź,
-                  czy są dostępne dane do odczytu
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.455 # Sprawdź, czy są 
-                          dostępne dane do odczytu
-? 
-
-! LaTeX Error: Invalid UTF-8 byte "85.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.455 # Sprawdź, czy są 
-                          dostępne dane do odczytu
-? 
-
-! LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.455 # Sprawdź, czy są dostępne 
-                                    dane do odczytu
-? 
-
-! LaTeX Error: Invalid UTF-8 byte "99.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.455 # Sprawdź, czy są dostępne 
-                                    dane do odczytu
-? 
+]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2377,7 +2290,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [53]
-Underfull \vbox (badness 1675) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
@@ -2389,9 +2302,106 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [54]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
+! LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
 
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.453         # Wyślij 
+                        ramkę danych
+? 
+
+! LaTeX Error: Invalid UTF-8 byte "9B.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.453         # Wyślij 
+                        ramkę danych
+? 
+
+! LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.453         # Wyślij ramkę 
+                               danych
+? 
+
+! LaTeX Error: Invalid UTF-8 byte "99.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.453         # Wyślij ramkę 
+                               danych
+? 
+
+! LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.471 # Sprawdź,
+                  czy są dostępne dane do odczytu
+? 
+
+! LaTeX Error: Invalid UTF-8 byte "BA.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.471 # Sprawdź,
+                  czy są dostępne dane do odczytu
+? 
+
+! LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.471 # Sprawdź, czy są 
+                          dostępne dane do odczytu
+? 
+
+! LaTeX Error: Invalid UTF-8 byte "85.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.471 # Sprawdź, czy są 
+                          dostępne dane do odczytu
+? 
+
+! LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.471 # Sprawdź, czy są dostępne 
+                                    dane do odczytu
+? 
+
+! LaTeX Error: Invalid UTF-8 byte "99.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.471 # Sprawdź, czy są dostępne 
+                                    dane do odczytu
+? 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2409,7 +2419,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[56]) (chapters/07.tex
+[56]
+Underfull \vbox (badness 1675) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2420,6 +2433,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [57]
 
+LaTeX Warning: Reference `img:canny-sample' on page 58 undefined on input line 
+564.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
 (fancyhdr)                \setlength{\headheight}{14.49998pt}.
@@ -2427,11 +2448,71 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[58
+[58]
+<./graf/krawedzie.png, id=1199, 1910.63812pt x 1078.78032pt>
+File: ./graf/krawedzie.png Graphic file (type png)
+<use ./graf/krawedzie.png>
+Package pdftex.def Info: ./graf/krawedzie.png  used on input line 588.
+(pdftex.def)             Requested size: 455.24411pt x 257.03603pt.
+<./graf/klasyfikacja-ksztaltu.png, id=1200, 1721.68219pt x 1059.96pt>
+File: ./graf/klasyfikacja-ksztaltu.png Graphic file (type png)
+<use ./graf/klasyfikacja-ksztaltu.png>
+Package pdftex.def Info: ./graf/klasyfikacja-ksztaltu.png  used on input line 5
+95.
+(pdftex.def)             Requested size: 455.24411pt x 280.27347pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[59 <./graf/krawedzie.png>]
+<./graf/kolory.png, id=1220, 2080.77374pt x 1124.70187pt>
+File: ./graf/kolory.png Graphic file (type png)
+<use ./graf/kolory.png>
+Package pdftex.def Info: ./graf/kolory.png  used on input line 617.
+(pdftex.def)             Requested size: 455.24411pt x 246.06226pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[60 <./graf/klasyfikacja-ksztaltu.png>]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[61 <./graf/kolory.png>]) (chapters/07.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[62]
+Rozdzia\l  6.
+[63
 
 ]
-Rozdzia\l  6.
-[59]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2440,7 +2521,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[60]
+[64]
 File: ./graf/upper.png Graphic file (type png)
 <use ./graf/upper.png>
 Package pdftex.def Info: ./graf/upper.png  used on input line 52.
@@ -2454,7 +2535,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[61]
+[65]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2463,7 +2544,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[62]) (chapters/08.tex
+[66]) (chapters/08.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2472,7 +2553,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[63]
+[67]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2481,11 +2562,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[64
+[68
 
 ]
 Rozdzia\l  7.
-[65])
+[69])
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2494,7 +2575,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[66] [67
+[70] [71
 
 
 ]
@@ -2891,9 +2972,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[68] [69
+[72] [73
 
-] [70] (chapters/09.tex [71
+] [74] (chapters/09.tex [75
 
 ]
 
@@ -2904,7 +2985,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[72]) (chapters/11.tex
+[76]) (chapters/11.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2913,7 +2994,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[73]
+[77]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -2922,9 +3003,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[74
+[78
 
-]) [75] (main.aux)
+]) [79] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-03-14>
@@ -2936,39 +3017,57 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: CCDA083AA1AB849F1718FB3336258EBF;16586.
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 67CBB19B65ED5C1FACCD8ED7D1B61738;17146
+(rerunfilecheck)             After:  6956BA57296D42CACCE54A5D21B2C416;17146.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46654 strings out of 474424
- 1021463 string characters out of 5741740
- 2084496 words of memory out of 5000000
- 67703 multiletter control sequences out of 15000+600000
+ 46735 strings out of 474424
+ 1023371 string characters out of 5741740
+ 2074496 words of memory out of 5000000
+ 67765 multiletter control sequences out of 15000+600000
  642855 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,12n,96p,1954b,2439s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pf
-b><C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.p
-fb><C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.
-pfb><C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.
-pfb><C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.
-pfb><C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.p
-fb><C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pf
-b><C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb>
-<C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C
-:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C
-:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C
-:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb>
-<C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
-<C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><
-C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><
-C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (83 pages, 13265701 bytes).
+ 89i,12n,96p,1954b,3180s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{appendix*.89} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{appendix*.84} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{chapter*.83} has been referenced but does not exist
+, replaced by a fixed one
+
+<C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb>
+<C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.pfb
+><C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pf
+b><C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pf
+b><C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pf
+b><C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb
+><C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb>
+<C:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C
+:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/
+Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/
+Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/
+Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C
+:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C
+:/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:
+/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:
+/Users/jakub/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
+Output written on main.pdf (87 pages, 19570179 bytes).
 PDF statistics:
- 1479 PDF objects out of 1728 (max. 8388607)
- 545 named destinations out of 1000 (max. 500000)
- 789 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1546 PDF objects out of 1728 (max. 8388607)
+ 564 named destinations out of 1000 (max. 500000)
+ 835 words of extra memory for PDF output out of 10000 (max. 10000000)
 

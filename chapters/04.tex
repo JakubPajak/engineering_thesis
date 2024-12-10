@@ -213,9 +213,40 @@ W omawianym projekcie regulator PID znajduje zastosowanie w kontrolowaniu odleg�
 
 \section{Metoda Eulera}
 
-W metodach numerycznych bardzo często stosuje się metody przybliżonego rozwiązywania równań różniczkowych zwyczajnych. Jedną z takich metod jest algorytm Eulera. Jest on wygodną i mało obciążającą obliczeniowo metodą, opierającą się na rekurencyjnym obliczaniu wartości funkcji bazując na pewnym niedużym przyroście jednostki czasu. 
+W metodach numerycznych bardzo często stosuje się przybliżone rozwiązania równań różniczkowych zwyczajnych. Jedną z takich metod jest algorytm Eulera. Jest on wygodną i mało obciążającą obliczeniowo metodą, opierającą się na rekurencyjnym obliczaniu wartości funkcji bazując na pewnym niedużym przyroście jednostki czasu oraz wartości poprzedniej. 
 
+Podstawowy wzór metody Eulera opisuje obliczenie kolejnej wartości funkcji \(y(t)\) w czasie \(t + h\) jako:
 
+\begin{equation}
+    y(t + h) = y(t) + h \cdot f(t, y(t)),
+\end{equation}
+
+, gdzie:
+\begin{itemize}
+    \item \(h\) - krok czasowy,
+    \item \(f(t, y(t))\) - pochodna funkcji \(y(t)\).
+\end{itemize}
+
+\subsection{Zastosowanie w regulatorze PID}
+
+W regulatorach PID, człon całkujący i różniczkujący mogą być przybliżane metodą Eulera w następujący sposób:
+
+\subsubsection*{Dla członu całkującego}
+
+\begin{equation}
+    I(t + h) = I(t) + h \cdot  e(t),
+\end{equation}
+gdzie \(e(t)\) to uchyb w chwili \(t\).
+
+\subsubsection*{Dla członu różniczkującego}
+
+\begin{equation}
+    D(t) = \frac{e(t) - e(t - h)}{h}.
+\end{equation}
+
+\subsection{Implementacja w sterowaniu PWM}
+
+W przypadku sterowania PWM, metoda Eulera pozwala obliczyć kolejne wartości sygnału sterującego w zależności od obliczonego uchybu oraz jego zmian w czasie. Dyskretny model regulatora PID, bazujący na tej metodzie, jest często wykorzystywany w systemach z ograniczonymi zasobami obliczeniowymi, takich jak mikrokontrolery (np. Arduino). Dzięki temu można zaktualizować sygnał sterujący w każdej iteracji pętli czasowej, zapewniając płynność i stabilność działania.
 
 \section{Napęd różnicowy}
 
@@ -251,15 +282,14 @@ W bazowym układzie współrzędnych przemieszczenie robota opisują równania [
     \item \(\theta\) - orientacja platformy.
 \end{itemize}
 
-\clearpage
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.55\textwidth]{./graf/diff-drive.png}
+    \includegraphics[width=0.8\textwidth]{./graf/diff-drive.png}
     \caption{Grafika stanowiąca wizualizację przekształceń kinematyki robota \cite{bib:konferencja}}
 \end{figure}
 
-\section{Odometria - metoda przyrostowa}
+\section{Odometria - metoda przyrostowa \cite{bib:rozprawa-odometria}}
 
 Odometria jest metodą znaną od lat, mimo to nadal szeroko stosowaną jako metodę nawigacji w robotyce mobilnej. Cechuje się dobrą dokładnością w krótkim oknie czasowym oraz relatywnie niską ceną wdrożenia. Podstawą odometrii jest całkowanie (sumowanie) przyrostowej informacji pozyskanej na przykład z enkoderów inkrementalnych (przyrostowych) zamontowanych na napędzie, w czasie. Może to prowadzić do dużej akumulacji błędów w przypadku szerokiego okna czasowego, a tym samym do znacznej zmiany orientacji robota względem założonej. Mimo to, metoda ta jest szeroko stosowana, między innymi w połączeniu z innymi metodami orientacji  robota w przestrzeni w celu eliminacji nagromadzonych błędów. 
 
@@ -292,8 +322,10 @@ Aby wyznaczyć, ile impulsów należy zliczyć w celu wykonania określonego prz
     \item \(N_{R/L, I}\) - ilość zliczonych impulsów przez enkodery koła prawego (R) oraz lewego (L) w krótkim czasie \(I\). 
 \end{itemize}
 
-\section{Podstawy wykrywania krawędzi w wizji komputerowej}
+\clearpage
 
+\section{Podstawy wykrywania krawędzi w wizji komputerowej}
+\label{seq:canny}
 Wykrywanie krawędzi to jedna z podstawowych technik przetwarzania obrazów stosowana w wizji komputerowej, umożliwiająca ekstrakcję istotnych informacji strukturalnych z obrazu. Proces ten polega na detekcji nagłych zmian intensywności pikseli, które odpowiadają krawędziom obiektów w przestrzeni obrazu. Krawędzie dostarczają kluczowych danych o kształtach i konturach obiektów, wspomagając zadania takie jak segmentacja obrazu, rozpoznawanie obiektów oraz analiza ruchu. Wysoka jakość detekcji krawędzi jest zatem niezbędna dla dokładności i skuteczności systemów wizji komputerowej.
 
 Jednym z najbardziej uznanych algorytmów wykrywania krawędzi jest metoda Canny'ego, opracowana przez Johna F. Canny’ego w 1986 roku. Algorytm ten jest ceniony za swoje właściwości w zakresie selektywnej detekcji krawędzi przy jednoczesnym tłumieniu szumów, co zapewnia spójną i wyraźną detekcję konturów.
@@ -351,7 +383,7 @@ Algorytm Canny’ego \cite{bib:canny-article} to złożona metoda wieloetapowa, 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{./graf/canny-edge.png}
-    \caption{Zdjęcie przedstawiające skuteczność wykrywania krawędzi algorytmem Canny'ego}
+    \caption{Skuteczność wykrywania krawędzi algorytmem Canny'ego}
 \end{figure}
 
 \clearpage
