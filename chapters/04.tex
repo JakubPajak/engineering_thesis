@@ -212,7 +212,7 @@ członem całkującym) nie gwarantuje uzyskania uchybu równego zero.
 W omawianym projekcie regulator PID znajduje zastosowanie w kontrolowaniu odległości jaką pokonuje platforma mobilna poprzez odpowiednie sterowanie napięciem zasilania elementów wykonawczych. Nastawy regulatora zostały dostosowane metodą prób i błędów. Uzyskana jakość regulacji jest wystarczająca do spełnienia wymagań projektowych. 
 
 \section{Metoda Eulera}
-
+\label{seq:Euler}
 W metodach numerycznych bardzo często stosuje się przybliżone rozwiązania równań różniczkowych zwyczajnych. Jedną z takich metod jest algorytm Eulera. Jest on wygodną i mało obciążającą obliczeniowo metodą, opierającą się na rekurencyjnym obliczaniu wartości funkcji bazując na pewnym niedużym przyroście jednostki czasu oraz wartości poprzedniej. 
 
 Podstawowy wzór metody Eulera opisuje obliczenie kolejnej wartości funkcji \(y(t)\) w czasie \(t + h\) jako:
@@ -384,6 +384,7 @@ Algorytm Canny’ego \cite{bib:canny-article} to złożona metoda wieloetapowa, 
     \centering
     \includegraphics[width=0.6\textwidth]{./graf/canny-edge.png}
     \caption{Skuteczność wykrywania krawędzi algorytmem Canny'ego}
+    \label{img:canny-sample}
 \end{figure}
 
 \clearpage

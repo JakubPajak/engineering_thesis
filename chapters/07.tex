@@ -50,7 +50,7 @@ Dodatkowo ze względu na nieidealną dokładność, autor wprowadził koncepcję
 \begin{figure}
     \centering
     \includegraphics[width=0.5\textwidth]{./graf/stacja-dokujaca.png}
-    \caption{Zdjęcie przedstawiające stację dokującą oraz miejsce docelowe}
+    \caption{Zdjęcie przedstawiające stację dokującą}
     \label{fig:stacja}
 \end{figure}
 
@@ -64,6 +64,6 @@ W celu minimalizacji tych błędów robot korzysta ze stacji dokujących przy pu
 
 Serwomechanizm odpowiadający za zamykanie oraz otwieranie chwytaka jest zasilany stałym prądem o napięciu 5V pochodzącym z mikrokontrolera Arduino UNO. Niepożądane zachowanie serwomechanizmu pojawiło się w końcowej fazie testowania pełnej funkcjonalności robota. 
 
-W teorii kabel USB (ang. \english{Universal Serial Bus} - Uniwersalna magistrala szeregowa) gwarantuje zasilanie napięciem stałym na poziomie 5V oraz 500 mA. Taka wartość natężenia prądu oraz napięcia umożliwia zasilanie enkoderów oraz chwytaka, jednak po dodaniu akwizycji oraz przetwarzania obrazu cyfrowego przez mikrokomputer Raspberry Pi, wartości zasilania zmniejszyły się, przez większy pobór prądu przez układ SBC. W wyniku takiego efektu, chwytak często nie zamykał się w określonym czasie lub wcale nie osiągał pozycji końcowej ze względu na zbyt małe wartości prądu. 
+W teorii kabel USB (ang. \english{Universal Serial Bus} - Uniwersalna magistrala szeregowa) gwarantuje zasilanie napięciem stałym na poziomie 5V oraz 500 mA. Taka wartość natężenia prądu oraz napięcia umożliwia zasilanie enkoderów oraz chwytaka, jednak po dodaniu akwizycji oraz przetwarzania obrazu cyfrowego przez mikrokomputer Raspberry Pi, dostępne napięcie oraz natężenie prądu zmniejszyły się, w wyniku zwiększonego poboru prądu przez układ SBC. W związku z powyższym, chwytak często nie zamykał się w określonym czasie lub wcale nie osiągał pozycji końcowej ze względu na zbyt małe wartości zasilania. 
 
 Rozwiązaniem tego problemu było wyprowadzenie napięcia o wartości 5V bezpośrednio z przetwornicy typu Step-down. Dzięki temu mikrokontroler może bezpiecznie realizować obliczenia, bez ryzyka zbyt dużego spadku napięcia lub dostarczenia niewystarczającej energii do enkoderów oraz serwomechanizmu. 

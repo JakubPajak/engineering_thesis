@@ -34,6 +34,8 @@ Pierwszym krokiem w procesie instalacji systemu kontroli robota jest zainstalowa
 
 Zaleca się korzystanie z 64-bitowej wersji systemu Raspbian, zapewnia to lepszą wydajność i większą kompatybilność z aplikacjami.
 
+\vspace*{1cm}
+
 Po utworzeniu nośnika rozruchowego, należy umieścić kartę microSD lub przenośny dysk USB w odpowiednim gnieździe mikrokomputera Raspberry Pi. Następnie, po podłączeniu urządzenia do źródła zasilania, rozpocznie się proces instalacji systemu operacyjnego. W przypadku, gdy obraz nie jest wyświetlany po podłączeniu mikrokomputera do monitora za pomocą kabla microHDMI, użytkownik powinien zweryfikować ustawienia pliku konfiguracyjnego \textit{config.txt} znajdującego się na nośniku startowym. W szczególności, aby dostosować rozdzielczość wyświetlacza, należy dodać lub zmodyfikować odpowiednie linie w tym pliku. Przykładowy fragment kodu, który można umieścić w pliku \textit{config.txt}, aby ustawić rozdzielczość na 1920x1080, wygląda następująco:
 
 \begin{lstlisting}
@@ -112,7 +114,7 @@ Po zakończeniu procesu instalacji pakietów i bibliotek warto przeprowadzić we
 Aby sprawdzić, czy Python jest poprawnie zainstalowany, w terminalu wpisz:
 
 \begin{lstlisting}[language=bash]
-python3 --version
+    python3 --version
 \end{lstlisting}
 
 Komenda ta powinna wyświetlić zainstalowaną wersję Python, np. \texttt{Python 3.x.x}. Jeśli polecenie działa bez błędów, oznacza to, że Python jest zainstalowany poprawnie.
@@ -121,14 +123,14 @@ Komenda ta powinna wyświetlić zainstalowaną wersję Python, np. \texttt{Pytho
 Aby upewnić się, że biblioteka OpenCV jest dostępna, można przeprowadzić test bezpośrednio w Python. Uruchom interpreter Python komendą:
 
 \begin{lstlisting}[language=bash]
-python3
+    python3
 \end{lstlisting}
 
 Następnie zaimportuj bibliotekę OpenCV, wpisując:
 
 \begin{lstlisting}[language=Python]
-import cv2
-print(cv2.__version__)
+    import cv2
+    print(cv2.__version__)
 \end{lstlisting}
 
 Polecenie to wyświetli wersję OpenCV, np. \texttt{4.5.x}. Jeśli import przebiegnie bez błędów, oznacza to, że biblioteka OpenCV działa poprawnie.
@@ -137,7 +139,7 @@ Polecenie to wyświetli wersję OpenCV, np. \texttt{4.5.x}. Jeśli import przebi
 Aby sprawdzić poprawność instalacji biblioteki Libcamera2 oraz połączenie kamery, wykonaj testowe przechwycenie obrazu za pomocą poniższej komendy:
 
 \begin{lstlisting}[language=bash]
-libcamera-still -o test_image.jpg
+    libcamera-still -o test_image.jpg
 \end{lstlisting}
 
 Jeżeli kamera działa poprawnie, komenda ta zapisze zdjęcie o nazwie \texttt{test\_image.jpg} w katalogu domyślnym. Otwarcie pliku i weryfikacja jego zawartości potwierdzi działanie kamery i poprawność instalacji.
@@ -147,7 +149,7 @@ Jeżeli kamera działa poprawnie, komenda ta zapisze zdjęcie o nazwie \texttt{t
 
 Proces aktywacji systemu sterowania robotem jest stosunkowo prosty, zakładając poprawną instalację wszystkich wymaganych bibliotek i pakietów. Należy jednak przed przystąpieniem do aktywacji zweryfikować, czy wszystkie wymagane komponenty zostały poprawnie zainstalowane, aby uniknąć potencjalnych problemów.
 
-Po upewnieniu się, że wszystkie pakiety są zainstalowane poprawnie, można przystąpić do pobrania repozytorium zawierającego kod aplikacji. Aby to wykonać, należy w terminalu wprowadzić poniższe polecenie:
+Następnie, jeśli wszystkie pakiety zostały zainstalowane poprawnie, można przystąpić do pobrania repozytorium zawierającego kod aplikacji. Aby to wykonać, należy w terminalu wprowadzić poniższe polecenie:
 
 \begin{lstlisting}[language=bash]
     git clone https://github.com/JakubPajak/robot-control-system.git
@@ -165,9 +167,9 @@ Następnie uruchomić główny plik aplikacji:
     python3 main.py
 \end{lstlisting}
 
-Po wykonaniu powyższych kroków aplikacja uruchomi się w trybie terminalowym. Planowane jest, aby przyszłe wersje aplikacji zostały dostosowane do uruchamiania w przeglądarce, poprawi jakoś użytkowania oraz umożliwi wprowadzenie dodatkowych funkcji.
+Wykonanie powyższych kroków umożliwi uruchomienie aplikacji w trybie terminalowym. Planowane jest, aby przyszłe wersje aplikacji zostały dostosowane do uruchamiania w przeglądarce, poprawi jakoś użytkowania oraz umożliwi wprowadzenie dodatkowych funkcji.
 
-Po uruchomieniu aplikacji wyświetli się menu wyboru trybu pracy, w którym użytkownik może wybrać tryb odpowiedni dla swoich potrzeb. Domyślnym trybem pracy robota jest tryb automatyczny, który nie wymaga ingerencji operatora. Inne opcje umożliwiają ręczną weryfikację działania systemów, takich jak system wizji komputerowej czy tryb sterowania manualnego.
+Po uruchomieniu programu wyświetli się menu wyboru trybu pracy, w którym użytkownik może wybrać tryb odpowiedni dla swoich potrzeb. Domyślnym trybem pracy robota jest tryb automatyczny, który nie wymaga ingerencji operatora. Inne opcje umożliwiają ręczną weryfikację działania systemów, takich jak system wizji komputerowej czy tryb sterowania manualnego.
 
 % \subsection{Kategorie użytkowników}
 % Obecna wersja systemu sterowania robotem nie różnicuje ról użytkowników, co oznacza, że każda osoba mająca dostęp do terminala może swobodnie obsługiwać robota. W planowanych przyszłych wersjach aplikacji, szczególnie tych działających w przeglądarce, zostanie wprowadzona autoryzacja użytkowników. Dzięki niej system będzie posiadał bazę danych użytkowników oraz przypisane im role, co zapewni lepsze zarządzanie dostępem zgodnie z kompetencjami użytkowników.
